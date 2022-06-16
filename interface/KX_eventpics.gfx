@@ -2771,6 +2771,10 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/Europe/Russia/rus_savinkoc_event.png"
 	}
 	SpriteType = {
+		name = "GFX_report_event_RUS_Cosmicism"
+		texturefile = "gfx/event_pictures/Europe/Russia/RUS_Cosmicism.png"
+	}
+	SpriteType = {
 		name = "GFX_rus_gorguloff_event"
 		texturefile = "gfx/event_pictures/Europe/Russia/rus_gorguloff_event.png"
 	}
@@ -3674,6 +3678,18 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_MEX_rocha"
 		texturefile = "gfx/event_pictures/North_America/Mexico/rocha.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_MEX_toledano_secures_power"
+		texturefile = "gfx/event_pictures/North_America/Mexico/toledano_secures_power.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_MEX_syndie_party_congress"
+		texturefile = "gfx/event_pictures/North_America/Mexico/syndie_party_congress.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_MEX_velazquez"
+		texturefile = "gfx/event_pictures/North_America/Mexico/velazquez.png"
 	}
 	
 	

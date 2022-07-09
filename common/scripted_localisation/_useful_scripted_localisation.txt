@@ -326,19 +326,24 @@ defined_text = {
 		}
 		localization_key = tot_developing_leftism_subtype
 	}
-        text = {
+	text = {
+		trigger = {
+			has_country_leader_ideology = richytskyi_thought_subtype
+		}
+		localization_key = richytskyi_thought_subtype
+	}
+    text = {
 		trigger = {
 			has_country_leader_ideology = anarcho_pastoralism_subtype
 		}
 		localization_key = anarcho_pastoralism_subtype
 	}
-        text = {
+	text = {
 		trigger = {
 			has_country_leader_ideology = tot_tridemism_subtype
 		}
 		localization_key = tot_tridemism_subtype
 	}
-
 	text = {
 		trigger = {
 			has_country_leader_ideology = syndicalist_subtype
@@ -538,11 +543,17 @@ defined_text = {
 		}
 		localization_key = radsoc_obammunism_subtype
 	}
-		text = {
+	text = {
 		trigger = {
 			has_country_leader_ideology = radsoc_communism_subtype
 		}
 		localization_key = radsoc_communism_subtype
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = radsoc_national_communism_subtype
+		}
+		localization_key = radsoc_national_communism_subtype
 	}
 	text = {
 		trigger = {
@@ -676,6 +687,12 @@ defined_text = {
 			has_country_leader_ideology = austromarxism_subtype
 		}
 		localization_key = austromarxism_subtype
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = radsoc_austromarxism_subtype
+		}
+		localization_key = radsoc_austromarxism_subtype
 	}
 	text = {
 		trigger = {
@@ -1247,6 +1264,12 @@ defined_text = {
 		}
 		localization_key = vlasovism_subtype
 	}
+        text = {
+		trigger = {
+			has_country_leader_ideology = washingtonism_subtype
+		}
+		localization_key = washingtonism_subtype
+	}
 
 	text = {
 		trigger = {
@@ -1364,6 +1387,12 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			has_country_leader_ideology = austropopulism_subtype
+		}
+		localization_key = austropopulism_subtype
+	}
+	text = {
+		trigger = {
 			has_country_leader_ideology = hussitism_subtype
 		}
 		localization_key = hussitism_subtype
@@ -1415,6 +1444,24 @@ defined_text = {
 			has_country_leader_ideology = pataut_baltic_christianity_subtype
 		}
 		localization_key = pataut_baltic_christianity_subtype
+	}
+        text = {
+		trigger = {
+			has_country_leader_ideology = pataut_clientelism_subtype
+		}
+		localization_key = pataut_clientelism_subtype
+	}
+        text = {
+		trigger = {
+			has_country_leader_ideology = pataut_washingtonism_subtype
+		}
+		localization_key = pataut_washingtonism_subtype
+	}
+        text = {
+		trigger = {
+			has_country_leader_ideology = right_technocracy_subtype
+		}
+		localization_key = right_technocracy_subtype
 	}
 	
 	text = {
@@ -1621,6 +1668,12 @@ defined_text = {
 			has_country_leader_ideology = baltic_christianity_subtype
 		}
 		localization_key = baltic_christianity_subtype
+	}	
+	text = {
+		trigger = {
+			has_country_leader_ideology = ukrainian_nationalism_subtype
+		}
+		localization_key = ukrainian_nationalism_subtype
 	}
 	
 	### YOU GO IN THE CORNER OF SHAME ###
@@ -1666,5 +1719,17 @@ defined_text = {
 			has_country_leader_ideology = commie_elfism_subtype
 		}
 		localization_key = commie_elfism_subtype
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = leftcraftism_subtype
+		}
+		localization_key = leftcraftism_subtype
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = tot_leftcraftism_subtype
+		}
+		localization_key = tot_leftcraftism_subtype
 	}
 }

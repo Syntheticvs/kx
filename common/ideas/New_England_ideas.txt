@@ -257,6 +257,7 @@ ideas = {
 				stability_factor = 0.05
 			}
 		}
+		
 
 		NEE_maritime_industry_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_maritime_industry_idea"}
@@ -785,6 +786,40 @@ ideas = {
 			picture = generic_disjointed_gov
 		}
 		
+	### British ###
+	NEE_new_sons_resistance = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_republican_resistance"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = USA_republican_loyalism
+			modifier = {
+				stability_factor = -0.2
+				stability_weekly_factor = -0.005
+				political_power_gain = -0.25
+			}
+		}
+	NEE_new_sons_resistance_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_republican_resistance"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = USA_republican_loyalism
+			modifier = {
+				stability_factor = -0.10
+				stability_weekly_factor = -0.003
+				political_power_gain = -0.15
+			}
+		}
+	NEE_new_sons_resistance_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea NEE_republican_resistance"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = USA_republican_loyalism
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.05
+			}
+		}		
+	
 	
 	### Nordic League ###
 		NEE_racial_science = {
@@ -2243,7 +2278,7 @@ ideas = {
 			picture = ROM_king_carol_ii_hedonist
 			modifier = {
 				stability_factor = 0.10
-				political_power_gain = 0.03
+				political_power_gain = 0.05
 			}
 		}
 		NEE_canadian_occupation = {
@@ -2346,7 +2381,7 @@ ideas = {
 		}
 		NEE_lovecraft_church = {#Lovecraftian Church
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NEE_lovecraft_church"}
-			picture = IRE_catholic
+			picture = NEE_church_lovecraft
 			modifier = {
 				political_power_gain = 0.25
 				army_org_factor	= 0.05
@@ -2362,7 +2397,7 @@ ideas = {
 		}
 		NEE_lovecraft_book = {#The Profits of Our Sales
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NEE_lovecraft_book"}
-			picture = educational_spending
+			picture = NEE_sell_book_lovecraft
 			modifier = {
 				political_power_gain = -0.05
 				consumer_goods_factor = -0.05
@@ -2370,7 +2405,7 @@ ideas = {
 		}
 		NEE_christian_moral = {#Christian Moral
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NEE_christian_moral"}
-			picture = IRE_catholic
+			picture = NEE_christian_morals
 			modifier = {
 				stability_factor = 0.10
 				war_support_factor = -0.05
@@ -2383,7 +2418,7 @@ ideas = {
 		}
 		NEE_lovecraftism_idea = {#lovecraftism
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NEE_lovecraftism_idea"}
-			picture = NEE_political_machine
+			picture = NEE_lovecraftism_defined
 			modifier = {
 				political_power_gain = 0.10
 				stability_factor = 0.05
@@ -2391,7 +2426,7 @@ ideas = {
 		}
 		NEE_sci_fi_idea = {#To the Future!
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NEE_sci_fi_idea"}
-			picture = ivy_league
+			picture = NEE_sci_fi
 			modifier = {
 				political_power_gain = 0.05
 				research_speed_factor = 0.15
@@ -2399,7 +2434,7 @@ ideas = {
 		}
 		NEE_supernatural_science = {#Supernatural Science
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NEE_supernatural_science"}
-			picture = NEE_signs
+			picture = NEE_supernatural_science
 			modifier = {
 				political_power_gain = 0.30
 				research_speed_factor = -0.05
@@ -2408,7 +2443,7 @@ ideas = {
 		}
 		NEE_whitehead_creature = {#Supernatural Science
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NEE_whitehead_creature"}
-			picture = NEE_lovecraft_generic
+			picture = NEE_frankenstein
 			modifier = {
 				stability_factor = -0.10
 				army_infantry_attack_factor = 0.10
@@ -2417,7 +2452,7 @@ ideas = {
 		}
 		NEE_providence_fp = {#The Call of Providence
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NEE_providence_fp"}
-			picture = NEE_lovecraft_generic
+			picture = NEE_providence_call
 			modifier = {
 				war_support_factor = 0.03
 				war_support_weekly = 0.005
@@ -2430,10 +2465,22 @@ ideas = {
 		}
 		NEE_anglo_fp = {#The Fruits of Cooperation
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NEE_anglo_fp"}
-			picture = entente_support
+			picture = NEE_fruits_cooperation
 			modifier = {
 				stability_factor = 0.05
 				research_speed_factor = 0.05
+			}
+		}
+		NEE_prepared_the_rebels = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NEE_wealth_cooperation"}
+			allowed = {	always = no	}
+			picture = ZAM_british_army_hat_idea
+			modifier = { 
+			army_org_factor = 0.07
+			conscription_factor = 0.15
+            command_power_gain_mult	= 0.05	
+			defence = 0.05
+			experience_gain_army_factor = 0.05
 			}
 		}
 	}

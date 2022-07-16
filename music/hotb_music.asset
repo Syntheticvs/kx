@@ -512,6 +512,11 @@ music = {
 	volume = 1.25
 }
 music = {
+	name = "national_anthem_of_ireland_english"
+	file = "national_anthem_of_ireland_english.ogg"
+	volume = 1.25
+}
+music = {
 	name = "go_on_home_british_soldiers"
 	file = "go_on_home_british_soldiers.ogg"
 	volume = 1.25
@@ -609,5 +614,30 @@ music = {
 music = {
 	name = "twa_recuiting_sergeants"
 	file = "twa_recuiting_sergeants.ogg"
+	volume = 1.25
+}
+music = {
+	name = "krummavsur"
+	file = "krummavsur.ogg"
+	volume = 1.25
+}
+music = {
+	name = "slandsklukk"
+	file = "slandsklukk.ogg"
+	volume = 1.25
+}
+music = {
+	name = "lafur_liljurs"
+	file = "lafur_liljurs.ogg"
+	volume = 1.25
+}
+music = {
+	name = "sprengisandi"
+	file = "sprengisandi.ogg"
+	volume = 1.25
+}
+music = {
+	name = "tyrkjarnid"
+	file = "tyrkjarnid.ogg"
 	volume = 1.25
 }

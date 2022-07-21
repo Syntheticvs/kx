@@ -641,3 +641,28 @@ music = {
 	file = "tyrkjarnid.ogg"
 	volume = 1.25
 }
+music = {
+	name = "robesonussr"
+	file = "robesonussr.ogg"
+	volume = 1.25
+}
+music = {
+	name = "robesonwarszawianka"
+	file = "robesonwarszawianka.ogg"
+	volume = 1.25
+}
+music = {
+	name = "pendergast"
+	file = "pendergast.ogg"
+	volume = 1.25
+}
+music = {
+	name = "capone"
+	file = "capone.ogg"
+	volume = 1.25
+}
+music = {
+	name = "marechal_nous_voila"
+	file = "marechal_nous_voila.ogg"
+	volume = 1.25
+}

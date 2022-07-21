@@ -779,6 +779,7 @@ country_event = { #Elections
 			ruling_party = radical_socialist
 			elections_allowed = yes
 		}
+		drop_cosmetic_tag = yes
 		remove_all_ministers = yes
 		add_ideas = {
 			NYC_John_Steinbeck_hog_rso
@@ -1670,7 +1671,6 @@ country_event = { #Tammany Takeover
 			NYC_Carmine_DeSapio_sec_sco
 		}
 		hidden_effect = {
-                        drop_cosmetic_tag = yes
 			if = {
 				limit = {
 					has_idea = NYC_nypd_2
@@ -8510,10 +8510,11 @@ country_event = { #NYLP internal debate
 		name = NYC_flavor.80.c
 		create_country_leader = {
 			name = "Meyer London"
+			desc = "POLITICS_MEYER_LONDON_DESC"
 			picture = "gfx/leaders/CSA/Portrait_CSA_Meyer_London.png"
 			expire = "1965.1.1"
-			ideology = radical_progressivism_subtype
-			traits = { }
+			ideology = bellamyism_subtype
+			traits = { tenacious_negotiator }
 		}
 	}
 
@@ -8523,7 +8524,18 @@ country_event = { #NYLP internal debate
 			name = "August Claessens"
 			picture = "gfx/leaders/NYC/Portrait_NYC_August_Claessens.png"
 			expire = "1965.1.1"
-			ideology = radical_progressivism_subtype
+			ideology = radsoc_communism_subtype 
+			traits = { }
+		}
+	}
+
+        option = { # 
+		name = NYC_flavor.80.f
+		create_country_leader = {
+			name = "Vito Marcantonio"
+			picture = "gfx/leaders/NYC/Portrait_NYC_Vito_Marcantonio.png"
+			expire = "1965.1.1"
+			ideology = christian_socialism_subtype 
 			traits = { }
 		}
 	}

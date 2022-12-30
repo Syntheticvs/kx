@@ -7,6 +7,11 @@ equipments = {
 		can_be_produced = {
 			NOT = { has_country_flag = cannot_produce_aircraft }
 		}
+		
+		allow_mission_type = {
+			paradrop
+			air_supply
+		}
 
 		is_archetype = yes
 		is_convertable = yes
@@ -50,7 +55,7 @@ equipments = {
 		}
 		
 		manpower = 25
-		fuel_consumption = 0.26
+		fuel_consumption = 0.5
 
 		naval_strike_attack = 5
 		naval_strike_targetting = 10
@@ -65,9 +70,9 @@ equipments = {
 
 		air_range = 500
 		maximum_speed = 200
-		air_agility = 40
+		air_agility = 35
 		air_attack = 12
-		air_defence = 20
+		air_defence = 15
 		air_ground_attack = 18
 
 		build_cost_ic = 30
@@ -79,8 +84,8 @@ equipments = {
 		}
 		
 
-		naval_strike_attack = 1
-		naval_strike_targetting = 10
+		naval_strike_attack = 3
+		naval_strike_targetting = 15
 	}
 
 }

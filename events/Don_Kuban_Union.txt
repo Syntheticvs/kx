@@ -18,7 +18,7 @@ add_namespace = germans
 	id = dkb.206
 	title = dkb.206.t
 	desc = dkb.206.d
-        picture = GFX_report_event_RUS_army_1
+		picture = GFX_report_event_RUS_army_1
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
@@ -43,7 +43,7 @@ add_namespace = germans
 	immediate = { log = "[GetDateText]: [Root.GetName]: event dkb.1" }
 	title = dkb.213.t
 	desc = dkb.213.d
-        picture = GFX_report_event_DKB_roa
+		picture = GFX_report_event_DKB_roa
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -63,7 +63,7 @@ add_namespace = germans
 	immediate = { log = "[GetDateText]: [Root.GetName]: event dkb.1" }
 	title = dkb.214.t
 	desc = dkb.214.d
-        picture = GFX_report_event_DKB_vlasov
+		picture = GFX_report_event_DKB_vlasov
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -483,14 +483,53 @@ country_event = { #expel the garrsion
 		name = dongerman.10.a
 		add_stability = 0.05
 		add_popularity = {
-		ideology = paternal_autocrat
-		popularity = -0.30
+			ideology = paternal_autocrat
+			popularity = -0.30
 		}
-		GER = { diplomatic_relation = {
-		country = DKB
-		relation = military_access
-		active = no
+		GER = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = KR_hostile
+			}
+			if = {
+				limit = { has_guaranteed = ROOT }
+				diplomatic_relation = {
+					country = ROOT
+					relation = guarantee
+					active = no
+				}
+			}
+			if = {
+				limit = { has_non_aggression_pact_with = ROOT }
+				diplomatic_relation = {
+					country = ROOT
+					relation = military_access
+					active = no
+				}
+			}
+			if = {
+				limit = { has_military_access_to = ROOT }
+				ROOT = {
+					diplomatic_relation = {
+						country = PREV
+						relation = military_access
+						active = no
+					}
+				}
+			}
+			if = {
+				limit = { gives_military_access_to = ROOT }
+				diplomatic_relation = {
+					country = ROOT
+					relation = military_access
+					active = no
+				}
+			}
 		}
+		GER_remove_from_mitteleuropa = yes
+		if = {
+			limit = { is_in_tech_sharing_group = german_research }
+			remove_from_tech_sharing_group = german_research
 		}
 	}
 }
@@ -503,7 +542,7 @@ country_event = { #vlasov ded
 	is_triggered_only = yes
 	option = {
 		name = germans.1.a
-		add_stability 0.05
+		add_stability = 0.05
 		add_manpower = -1
 	}
 	}
@@ -518,6 +557,21 @@ country_event = { #vlasov ded
 		add_popularity = {
 			ideology = national_populist
 			popularity = 0.15
+		}
+                        hidden_effect = {
+                        division_template = {
+                        name = "Gorkovskaya Diviziya"
+                        division_names_group = DKB_INF_01
+                        regiments = {
+                        militia = { x = 0 y = 0 }
+                        militia = { x = 0 y = 1 }
+                        militia = { x = 1 y = 0 }
+                        militia = { x = 1 y = 1 }
+                        }
+                        support = {
+                        military_police = { x = 0 y = 0 }
+                        }
+                        }
 			}
 			218 = {
 			create_unit = {
@@ -594,6 +648,7 @@ country_event = { #vlasov ded
 		name = germans.4.a
 		add_stability = 0.20
 		add_political_power = 150
+		remove_ideas_with_trait = head_of_government
 		add_ideas = DKB_Pannwitz_hog_sde
 	}
 	}
@@ -648,7 +703,7 @@ country_event = { #vlasov ded
 		}
 		set_country_flag = DKB_willy_2
 		}
-		
+		remove_all_ministers = yes
 		add_ideas = {
 		DKB_Pannwitz_hog_sde
 		DKB_Weizsacker_for_mli
@@ -683,6 +738,7 @@ country_event = { #vlasov ded
 	is_triggered_only = yes
 	option = {
 		name = germans.11.a
+		remove_ideas_with_trait = economy_minister
 		add_ideas = DKB_Andrei_Shkuro_eco_ade
 		hidden_effect = {
 		country_event = {
@@ -1068,7 +1124,7 @@ country_event = { #vlasov ded
 			days = 450
 			}
 			country_event = {
-				id = germans.24
+				id = germans.240
 				days = 10
 			}
 		}
@@ -1136,6 +1192,7 @@ country_event = { #Become authdem
 			long_name = DKB_authoritarian_democrat_willy_long
 			name = DKB_authoritarian_democrat_willy
 		}
+		remove_ideas_with_trait = head_of_government
 		add_ideas = DKB_Luka_L_Bych_hog_mli
 	}
 }
@@ -1243,14 +1300,13 @@ country_event = { # the, the death of vighelm
 			name = "Vilgelm I"
 			ruling_only = yes
 		}	
-		has_global_flag = wilhelmiided
 		NOT = { has_country_flag = DKB_willy_2 }
+		date > 1941.7.04
 	}
 
 
 	option = {
 		name = germans.23.a
-		kill_country_leader = yes
 		create_country_leader = {
 			name = "Vilgelm II"
 			picture = "gfx/leaders/GER/Portrait_Germany_Wilhelm_III_field_marshall.png"
@@ -1273,7 +1329,7 @@ country_event = { #Rostov Manifesto
 	id = vlasov.1
 	title = vlasov.1.t
 	desc = vlasov.1.d
-        picture = GFX_report_event_DKB_rostov_manifesto
+		picture = GFX_report_event_DKB_rostov_manifesto
 	fire_only_once = yes
 	is_triggered_only = yes
 	
@@ -1301,7 +1357,7 @@ country_event = { #Cossacks Sideline
 	id = vlasov.2
 	title = vlasov.2.t
 	desc = vlasov.2.d
-        picture = GFX_report_event_RUS_cossacks_1
+		picture = GFX_report_event_RUS_cossacks_1
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -1320,7 +1376,7 @@ country_event = { #Cossack Autonomy
 	id = vlasov.3
 	title = vlasov.3.t
 	desc = vlasov.3.d
-        picture = GFX_report_event_RUS_cossacks_3
+		picture = GFX_report_event_RUS_cossacks_3
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = { 
@@ -1335,7 +1391,7 @@ country_event = { #ROA Propaganda
 	id = vlasov.4
 	title = vlasov.4.t
 	desc = vlasov.4.d
-        picture = GFX_report_event_DKB_roa
+		picture = GFX_report_event_DKB_roa
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -1353,7 +1409,7 @@ country_event = { #Copying Solidarism
 	id = vlasov.5
 	title = vlasov.5.t
 	desc = vlasov.5.d
-        picture = GFX_event_russia_solidarists
+		picture = GFX_event_russia_solidarists
 	fire_only_once = yes
 	is_triggered_only = yes
 	
@@ -1364,7 +1420,7 @@ country_event = { #Kolchakite Question
 	id = vlasov.6
 	title = vlasov.6.t
 	desc = vlasov.6.d
-        picture = GFX_report_event_DKB_kolchak
+		picture = GFX_report_event_DKB_kolchak
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = { #We need them
@@ -1398,7 +1454,7 @@ country_event = { #Kolchakite Question
 	id = vlasov.7
 	title = vlasov.7.t
 	desc = vlasov.7.d
-        picture = GFX_report_event_DKB_vlasov
+		picture = GFX_report_event_DKB_vlasov
 	fire_only_once = yes
 	is_triggered_only = yes
 	
@@ -1436,7 +1492,7 @@ country_event = { #TRM refused
 	id = vlasov.8
 	title = vlasov.8.t
 	desc = vlasov.8.d
-        picture = GFX_report_event_DKB_kolchak
+		picture = GFX_report_event_DKB_kolchak
 	fire_only_once = yes
 	is_triggered_only = yes
 	
@@ -1457,7 +1513,7 @@ country_event = { #Trials
 	id = vlasov.9
 	title = vlasov.9.t
 	desc = vlasov.9.d
-        picture = GFX_report_event_RUS_trial_2
+		picture = GFX_report_event_RUS_trial_2
 	fire_only_once = yes
 	is_triggered_only = yes
 	
@@ -1479,7 +1535,7 @@ country_event = { #Birth of United Russia
 	id = vlasov.10
 	title = vlasov.10.t
 	desc = vlasov.10.d
-        picture = GFX_report_event_DKB_united_russia
+		picture = GFX_report_event_DKB_united_russia
 	fire_only_once = yes
 	is_triggered_only = yes
 	
@@ -1508,7 +1564,7 @@ country_event = { #A New Revolution?
 	id = vlasov.14
 	title = vlasov.14.t
 	desc = vlasov.14.d
-        picture = GFX_report_event_RUS_crowd2
+		picture = GFX_report_event_RUS_crowd2
 	fire_only_once = yes
 	is_triggered_only = yes
 	
@@ -1529,7 +1585,7 @@ country_event = { #A New Revolution?
 	id = vlasov.15
 	title = vlasov.15.t
 	desc = vlasov.15.d
-        picture = GFX_report_event_RUS_kremlin3
+		picture = GFX_report_event_RUS_kremlin3
 	fire_only_once = yes
 	is_triggered_only = yes
 	
@@ -1606,7 +1662,7 @@ country_event = { #A New Revolution?
 				name = "Andrey Vlasov"
 				picture = "gfx/leaders/DKB/Portrait_DKB_Andrey_Vlasov_suit.png"
 				expire = "1965.1.1"
-				ideology = libertarian_subtype
+				ideology = free_market_capitalist_subtype 
 			}
 			if = {
 				limit = { has_country_leader = { name = "Andrey Vlasov" ruling_only = yes } }
@@ -1689,7 +1745,7 @@ country_event = { #A New Revolution?
 	id = vlasov.17
 	title = vlasov.17.t
 	desc = vlasov.17.d
-        picture = GFX_report_event_DKB_vlasov2
+		picture = GFX_report_event_DKB_vlasov2
 	fire_only_once = yes
 	is_triggered_only = yes
 	
@@ -1781,7 +1837,7 @@ country_event = { #A New Revolution?
 	id = vlasov.18
 	title = vlasov.18.t
 	desc = vlasov.18.d
-        picture = GFX_report_event_DKB_vlasov3
+		picture = GFX_report_event_DKB_vlasov3
 	fire_only_once = yes
 	is_triggered_only = yes
 	
@@ -1836,7 +1892,7 @@ country_event = { #A New Revolution?
 	id = vlasov.19
 	title = vlasov.19.t
 	desc = vlasov.19.d
-        picture = GFX_report_event_rus_army_reform
+		picture = GFX_report_event_rus_army_reform
 	fire_only_once = yes
 	is_triggered_only = yes
 	
@@ -1854,7 +1910,7 @@ country_event = { #A New Revolution?
 	id = vlasov.20
 	title = vlasov.20.t
 	desc = vlasov.20.d
-        picture = GFX_report_event_RUS_peasants1
+		picture = GFX_report_event_RUS_peasants1
 	fire_only_once = yes
 	is_triggered_only = yes
 	
@@ -1876,7 +1932,7 @@ country_event = { #A New Revolution?
 	id = vlasov.21
 	title = vlasov.21.t
 	desc = vlasov.21.d
-        picture = GFX_event_russia_solidarists2
+		picture = GFX_event_russia_solidarists2
 	fire_only_once = yes
 	is_triggered_only = yes
 	
@@ -1895,7 +1951,7 @@ country_event = { #A New Revolution?
 	id = vlasov.22
 	title = vlasov.22.t
 	desc = vlasov.22.d
-        picture = GFX_report_event_DKB_kaminski
+		picture = GFX_report_event_DKB_kaminski
 	fire_only_once = yes
 	is_triggered_only = yes
 	
@@ -2132,7 +2188,7 @@ country_event = { #Take shit up north
 	is_triggered_only = yes
 	option = {
 		name = dkb.208.a
-		add_stability -0.05
+		add_stability = -0.05
 	}
 	}
 	
@@ -2147,14 +2203,14 @@ country_event = { #Take shit up north
 	factor = 75
 	}
 	name = dkb.209.a
-	add_stability -0.05
+	add_stability = -0.05
 	}
 	option = {
 	ai_chance = {
 	factor = 25
 	}
 		name = dkb.209.b
-		add_stability -0.05
+		add_stability = -0.05
 		declare_war_on = {
 		target = DKB
 		type = annex_everything
@@ -2815,9 +2871,11 @@ country_event = { #Kalmyks
 		}
 		remove_state_core = 237
 		remove_state_core = 1191
+		remove_state_core = 1266
 		KLY = {
 			transfer_state = 237
 			transfer_state = 1191
+			transfer_state = 1266
 			transfer_technology_without_doctrines = yes
 			hidden_effect = {
 				load_oob = KLY
@@ -2848,9 +2906,11 @@ country_event = { #Kalmyks
 		}
 		remove_state_core = 237
 		remove_state_core = 1191
+		remove_state_core = 1266
 		KLY = {
 			transfer_state = 237
 			transfer_state = 1191
+			transfer_state = 1266
 			transfer_technology_without_doctrines = yes
 			hidden_effect = {
 				load_oob = KLY
@@ -4925,12 +4985,48 @@ country_event = { #Expel Germans
 		GER = {
 			add_opinion_modifier = {
 				target = ROOT
-				modifier = KR_outraged
+				modifier = KR_hostile
 			}
 		}
 		add_popularity = {
 			ideology = paternal_autocrat
 			popularity = -0.3
+		}
+		GER = {
+			if = {
+				limit = { has_guaranteed = ROOT }
+				diplomatic_relation = {
+					country = ROOT
+					relation = guarantee
+					active = no
+				}
+			}
+			if = {
+				limit = { has_non_aggression_pact_with = ROOT }
+				diplomatic_relation = {
+					country = ROOT
+					relation = military_access
+					active = no
+				}
+			}
+			if = {
+				limit = { has_military_access_to = ROOT }
+				ROOT = {
+					diplomatic_relation = {
+						country = PREV
+						relation = military_access
+						active = no
+					}
+				}
+			}
+			if = {
+				limit = { gives_military_access_to = ROOT }
+				diplomatic_relation = {
+					country = ROOT
+					relation = military_access
+					active = no
+				}
+			}
 		}
 	}
 }
@@ -4977,11 +5073,7 @@ country_event = { #Demand incorporation
 	option = {
 		name = dkbfor.1.a
 		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 3
-				FROM = { same_government_type_as_ROOT = yes }
-			}
+			factor = 10
 			modifier = {
 				factor = 0
 				OR = {
@@ -4993,7 +5085,7 @@ country_event = { #Demand incorporation
 					}
 					AND = {
 						tag = KLY
-						NOT = { has_government = paternal_autocrat }
+						KLY = { has_completed_focus = KLY_Ties_With_Cossacks }
 					}
 				}
 			}
@@ -5008,10 +5100,21 @@ country_event = { #Demand incorporation
 	option = {
 		name = dkbfor.1.b
 		ai_chance = {
-			factor = 75
+			factor = 90
 			modifier = {
-				add = -50
-				FROM = { same_government_type_as_ROOT = yes }
+				factor = 0
+				AND = {
+					tag = KUB
+					OR = {
+						has_government = social_conservative
+						has_authoritarian_government = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				tag = KLY
+				KLY = { has_completed_focus = KLY_Ties_With_Cossacks }
 			}
 		}
 		FROM = {
@@ -5032,6 +5135,11 @@ country_event = { #Agreed
 
 	option = {
 		name = dkbfor.2.a
+		FROM = {
+			every_unit_leader = {
+				set_nationality = ROOT
+			}
+		}
 		annex_country = {
 			target = FROM
 			transfer_troops = no

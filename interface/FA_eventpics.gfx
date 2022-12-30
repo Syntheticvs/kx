@@ -309,6 +309,10 @@ spriteTypes = {
 		name = "GFX_report_event_KSV_helicopters"
 		texturefile = "gfx/event_pictures/Africa/Congo/report_event_KSV_helicopters.png"
 	}
+	spriteType = {
+		name = "GFX_report_event_KSV_kurtz"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_KSV_kurtz.png"
+	}
 	
 	##Gabon##
 	spriteType = {
@@ -330,6 +334,26 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_GAB_mba"
 		texturefile = "gfx/event_pictures/Africa/Gabon/report_event_GAB_mba.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_GAB_mba2"
+		texturefile = "gfx/event_pictures/Africa/Gabon/report_event_GAB_mba2.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_GAB_mba3"
+		texturefile = "gfx/event_pictures/Africa/Gabon/report_event_GAB_mba3.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_GAB_mba_microphone"
+		texturefile = "gfx/event_pictures/Africa/Gabon/report_event_GAB_mba_microphone.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_GAB_mba_party"
+		texturefile = "gfx/event_pictures/Africa/Gabon/report_event_GAB_mba_party.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_GAB_fea_map"
+		texturefile = "gfx/event_pictures/Africa/Gabon/report_event_GAB_fea_map.png"
 	}
 	spriteType = {
 		name = "GFX_report_event_GAB_sousatte"

@@ -524,7 +524,7 @@ focus_tree = {
 
 	focus = {
 		id = TRM_Ind_Transsib
-		icon = MON_dev_sib_railway
+		icon = GFX_MON_dev_sib_railway
 		x = 0
 		y = 1
 		relative_position_id = TRM_Ind_Vlad
@@ -927,7 +927,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 2
+			factor = 70
 			modifier = {
 				factor = 3
 				has_war = yes
@@ -961,7 +961,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = TRM_Continue_The_Militarisation
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 2
 			modifier = {
@@ -991,7 +991,7 @@ focus_tree = {
 		x = -2
 		y = 3
 		relative_position_id = TRM_Continue_The_Militarisation
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 10
 			modifier = {
@@ -1025,7 +1025,7 @@ focus_tree = {
 		x = -1
 		y = 4
 		relative_position_id = TRM_Continue_The_Militarisation
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 10
 			modifier = {
@@ -1061,7 +1061,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = TRM_Continue_The_Militarisation
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 3
 			modifier = {
@@ -1105,7 +1105,7 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = TRM_Continue_The_Militarisation
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 3
 			modifier = {
@@ -1133,12 +1133,12 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = TRM_Continue_The_Militarisation
-		cost = 8
+		cost = 5
 		prerequisite = {
 			focus = TRM_Continue_The_Militarisation
 		}
 		ai_will_do = {
-			factor = 3
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRM_Improve_Supply_Network"
@@ -1175,7 +1175,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = TRM_Continue_The_Militarisation
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -1235,7 +1235,7 @@ focus_tree = {
 		x = 1
 		y = 3
 		relative_position_id = TRM_Continue_The_Militarisation
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -1325,13 +1325,8 @@ focus_tree = {
 				name = TRM_Air_Fighter
 				bonus = 1
 				uses = 2
-				technology = early_fighter
-				technology = fighter1
-				technology = fighter2
-				technology = fighter3
-				technology = heavy_fighter1
-				technology = heavy_fighter2
-				technology = heavy_fighter3
+				category = light_fighter
+				category = cat_heavy_fighter
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1451,7 +1446,7 @@ focus_tree = {
 
 	focus = {
 		id = TRM_Air_Bases_Vlad
-		icon = MON_improve_construction
+		icon = GFX_MON_improve_construction
 		x = 6
 		y = 0
 		relative_position_id = TRM_Air_Planes
@@ -1894,10 +1889,10 @@ focus_tree = {
 						politically_connected 
 						war_hero  
 						harsh_leader   
-						organizer    
-						skilled_staffer     
-						hill_fighter      
-						ranger       
+						organizer	
+						skilled_staffer	
+						hill_fighter	
+						ranger	
 					}
 					skill = 4
 					attack_skill = 3
@@ -1929,15 +1924,9 @@ focus_tree = {
 						category = train_tech
 					}
 				}
-				create_equipment_variant = { 
+				create_railway_gun = {
+					equipment = railway_gun_equipment_1
 					name = "Orlik" 
-					type = railway_gun_equipment_1 
-					icon = "gfx/interface/technologies/Russia/TRM_railway_gun.png"
-				}
-				add_equipment_to_stockpile = {
-					type = railway_gun_equipment_1
-					amount = 1
-					producer = TRM
 				}				
 			}
 		}
@@ -2024,6 +2013,10 @@ focus_tree = {
 			TRM_decrease_rovs_loyalty = yes
 			unlock_decision_tooltip = TRM_open_chita_assembly
 			unlock_decision_tooltip = TRM_open_blagoveschensk_assembly
+			add_days_mission_timeout = {
+				mission = TRM_oblastniki_committee
+				days = 15
+			}
 		}
 	}
 	focus = {
@@ -2960,7 +2953,7 @@ focus_tree = {
 			}
 			modifier = {
 				factor = 5
-				RUS = { has_war_with = SOV }
+				RUS = { has_war_with = RVA }
 			}
 		}
 		bypass = {
@@ -3003,9 +2996,6 @@ focus_tree = {
 		ai_will_do = {
 			base = 10000
 		}
-		bypass = {
-			RUS = { has_country_flag = soviet_russia_restored }			
-		}
 		available_if_capitulated = no
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRM_FE_SOV"
@@ -3035,28 +3025,12 @@ focus_tree = {
 					has_war_with = GER
 				}
 			}
-			if = {
-				limit = {
-					SOV = {
-						controls_state = 566
-					}
-				}
-				SOV = {
-					has_war_with = GER
-				}
-			}
 		}
 		bypass = {
-			OR = {
 				RUS = {
 					exists = yes
 					has_war_with = TRM
 				}
-				SOV = {
-					exists = yes
-					has_war_with = TRM
-				}
-			}
 		}
 		prerequisite = {focus = TRM_FE_RUS focus = TRM_FE_SOV}
 		x = 0
@@ -3077,24 +3051,14 @@ focus_tree = {
 						has_war = yes
 						any_enemy_country = { is_actual_major = yes }
 					}
-					SOV = {
-						has_war = yes
-						any_enemy_country = { is_actual_major = yes }
-					}
 				}
 			}
 			modifier = {
 				factor = 2
-				OR = {
 					RUS = {
 						has_war = yes
 						any_enemy_country = { is_actual_major = yes }
 					}
-					SOV = {
-						has_war = yes
-						any_enemy_country = { is_actual_major = yes }
-					}
-				}
 			}
 		}
 		completion_reward = {
@@ -3183,10 +3147,7 @@ focus_tree = {
 			hidden_effect = {
 				every_state = {
 					limit = {
-						OR = {
 							is_core_of = RUS
-							is_core_of = SOV
-						}
 						NOT = { is_core_of = TRM }
 					}
 					if = {
@@ -5868,7 +5829,7 @@ focus = {
 							popularity = 0.05
 						}
 				}
-    }
+	}
 	focus = {
 		id = TRM_vlad_conference
 		text = TRM_vlad_conference
@@ -6138,7 +6099,7 @@ focus = {
 								}
 						}
 				}
-    }
+	}
 	focus = {
 		id = TRM_orthodox
 		text = TRM_orthodox
@@ -6252,10 +6213,7 @@ focus = {
 					hidden_effect = {
 							every_state = {
 									limit = {
-											OR = {
 													is_core_of = RUS
-													is_core_of = SOV
-												}
 											NOT = {
 													is_core_of = TRM
 												}
@@ -6389,7 +6347,7 @@ focus = {
 								}
 						}
 				}
-    }
+	}
 	focus = {
 		id = TRM_take_back_alaska
 		icon = GFX_TRM_retake_alaska
@@ -6556,7 +6514,7 @@ focus = {
 				ideology = national_populist
 				popularity = 0.03
 			}
-                        hidden_effect = {
+						hidden_effect = {
 				country_event = {
 					id = trammlad.533
 					days = 16
@@ -7350,7 +7308,7 @@ focus = {
 		relative_position_id = TRM_Legitimate_Ruler_Is_Back
 		x = 0
 		y = 3
-		cost = 8
+		cost = 5
 		prerequisite = {
 			focus = TRM_Guided_Democracy
 		}
@@ -7421,7 +7379,7 @@ focus = {
 
 	focus = {
 		id = TRM_Ind_CA
-		icon = MON_improve_infrastructure_in_the_east
+		icon = GFX_MON_improve_infrastructure_in_the_east
 		x = 1
 		y = 1
 		
@@ -8042,15 +8000,7 @@ focus = {
 			has_war = no
 			has_country_flag = TRM_become_russia
 			is_subject = no
-			if = {
-				limit = {
-					country_exists = OTT
-				}
-				is_neighbor_of = OTT
-			}
-			else = {
 				is_neighbor_of = TUR
-			}
 				
 		}
 		x = 4
@@ -8067,7 +8017,6 @@ focus = {
 		}
 		bypass = {
 			NOT = {
-				country_exists = OTT
 				country_exists = TUR
 			}
 		}
@@ -8081,15 +8030,6 @@ focus = {
 					is_claim_or_core_of_ROOT = no
 				}
 				add_claim_by = ROOT
-			}
-			if = {
-				limit = {
-					country_exists = OTT
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = OTT
-				}
 			}
 			if = {
 				limit = {
@@ -8415,21 +8355,7 @@ focus = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TRM_Attack_CA"
-			every_state = {
-				limit = {
-					OR = {
-						state = 883
-						state = 884
-						state = 714
-						state = 717
-					}
-				}
-				add_claim_by = ROOT
-			}
-			country_event = {
-				id = rusfor.1401
-				days = 1
-			}
+			country_event = tram.408
 		}
 	}	
 

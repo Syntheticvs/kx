@@ -31,7 +31,30 @@ RUS_entente_strategy_plan = {
 
 	focus_factors = {
 		RUS_Feast_In_Time_Of_Plague = 0
+		RUS_join_the_co_prosperity_sphere = 0
 	}				
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+RUS_sphere_strategy_plan = {
+	name = ""
+	desc = ""
+
+	enable = {
+		original_tag = RUS
+		has_game_rule = { rule = RUS_foreign_policy option = RUS_FOREIGN_POLICY_JAPAN }
+	}
+
+	focus_factors = {
+		RUS_Assert_Our_Influence_Far_East = 0
+		RUS_Approach_Our_Old_Allies = 0
+	}
 
 	weight = {
 		factor = 1.0
@@ -52,7 +75,8 @@ RUS_internationale_strategy_plan = {
 
 	focus_factors = {
 		RUS_The_Iron_Curtain = 0
-	}				
+		RUS_join_the_co_prosperity_sphere = 0
+	}
 
 	weight = {
 		factor = 1.0
@@ -74,7 +98,8 @@ RUS_accord_strategy_plan = {
 	focus_factors = {
 		RUS_Feast_In_Time_Of_Plague = 0
 		RUS_Approach_Our_Old_Allies = 0
-	}				
+		RUS_join_the_co_prosperity_sphere = 0
+	}
 
 	weight = {
 		factor = 1.0
@@ -478,7 +503,6 @@ HOL_neutrality_strategy_plan = {
 
 	focus_factors = {
 		HOL_join_mitteleuropa = 0
-		HOL_block_german_trade = 0
 		HOL_join_international = 0
 	}				
 
@@ -538,10 +562,10 @@ HOL_Entente_strategy_plan = {
 			NOT = {
 				OR = {
 					AST = {
-						 has_completed_focus = AST_restore_order_1
+						has_completed_focus = AST_restore_order_1
 					}
 					AST = {
-						 has_completed_focus = AST_restore_order_2
+						has_completed_focus = AST_restore_order_2
 					} 
 				}
 			}
@@ -1435,10 +1459,10 @@ WLL_constitutional_monarchy_path = {
 }
 
 WLL_degrelle_path = {
-    name = ""
+	name = ""
 	desc = ""
 	
-	  enable = {
+	enable = {
 		original_tag = WLL
 		OR = {
 			has_game_rule = { rule = WLL_political_path option = WLL_POLITICAL_PATH_DEGRELLE }
@@ -1508,7 +1532,7 @@ OTT_soccon_strategy_plan = {
 	desc = ""
 	
 	enable = {
-		original_tag = OTT
+		original_tag = TUR
 		has_game_rule = { rule = OTT_PATHS option = OTT_PATHS_SOCCON }
 	}
 	
@@ -1530,7 +1554,7 @@ OTT_Fevzi_military_government_strategy_plan = {
 	desc = ""
 	
 	enable = {
-		original_tag = OTT
+		original_tag = TUR
 		has_game_rule = { rule = OTT_PATHS option = OTT_PATHS_FEVZI }
 	}
 	
@@ -1551,7 +1575,7 @@ OTT_endeavour_natpop_strategy_plan = {
 	desc = ""
 	
 	enable = {
-		original_tag = OTT
+		original_tag = TUR
 		has_game_rule = { rule = OTT_PATHS option = OTT_PATHS_ENDEAVOUR_NATPOP }
 	}
 	
@@ -1559,7 +1583,7 @@ OTT_endeavour_natpop_strategy_plan = {
 		OTT_Consolidate_Military_Dictatorship = 0
 		OTT_Break_Up_State_Monopolies_FEV = 0
 		OTT_Cooperate_Private_Sector = 0
-    }
+	}
 	
 	weight = {
 		factor = 1.0
@@ -1574,7 +1598,7 @@ OTT_endeavour_autdem_strategy_plan = {
 	desc = ""
 	
 	enable = {
-		original_tag = OTT
+		original_tag = TUR
 		has_game_rule = { rule = OTT_PATHS option = OTT_PATHS_ENDEAVOUR_AUTDEM }
 	}
 	
@@ -1582,7 +1606,7 @@ OTT_endeavour_autdem_strategy_plan = {
 		OTT_Consolidate_Military_Dictatorship = 0
 		OTT_Break_Up_State_Monopolies_FEV = 0
 		OTT_Incorporate_Kadroist_Movement = 0
-    }
+	}
 	
 	weight = {
 		factor = 1.0
@@ -1597,7 +1621,7 @@ OTT_endeavour_marlib_strategy_plan = {
 	desc = ""
 	
 	enable = {
-    original_tag = OTT
+	original_tag = TUR
 		has_game_rule = { rule = OTT_PATHS option = OTT_PATHS_ENDEAVOUR_MARLIB }
 	}
 	
@@ -1619,7 +1643,7 @@ FIN_diplomacy_plan = {
 	desc = ""
 	
 	enable = {
-    original_tag = FIN
+	original_tag = FIN
 		has_game_rule = { rule = FIN_expansionism option = FIN_EXPANSIONISM_DIPLOMACY }
 	}
 	
@@ -1640,7 +1664,7 @@ FIN_aggressive_expansionism_plan = {
 	desc = ""
 	
 	enable = {
-    original_tag = FIN
+	original_tag = FIN
 		has_game_rule = { rule = FIN_expansionism option = FIN_EXPANSIONISM_DIPLOMACY }
 	}
 	
@@ -1661,7 +1685,7 @@ GRE_diplomacy_plan = {
 	desc = ""
 	
 	enable = {
-    original_tag = GRE
+	original_tag = GRE
 		has_game_rule = { rule = GRE_expansionism option = GRE_EXPANSIONISM_DIPLOMACY }
 	}
 	
@@ -1682,13 +1706,51 @@ GRE_megali_plan = {
 	desc = ""
 	
 	enable = {
-    original_tag = GRE
+	original_tag = GRE
 		has_game_rule = { rule = GRE_expansionism option = GRE_EXPANSIONISM_MEGALI }
 	}
 	
 	focus_factors = {
 		GRE_diplomacy_focus = 0
 	}
+	
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+MAF_collapse_strategy_plan = {
+  name = ""
+	desc = ""
+	
+	enable = {
+	original_tag = MAF
+		has_game_rule = { rule = MAF_politic option = MAF_POLITIC_COLLAPSE }
+	}
+	
+	focus_factors = {
+		MAF_Sovereign_State = 100
+		MAF_Establish_Lion_Society = 100
+		MAF_revenge = 100
+		MAF_tap_into_black_market = 100
+		MAF_rule_of_fear = 100
+		MAF_mittelafrikan_reich = 100
+		MAF_stand_as_one = 100
+		MAF_equals_with_the_kaiser = 100
+		MAF_goerings_greater_afrika = 100
+		MAF_End_Protectorates = 100
+		MAF_end_self_govenance = 100
+		MAF_unlimited_power = 100
+		MAF_centralize_administration = 100
+		MAF_Annex_British_Colonies = 100
+		MAF_secure_loyalty_by_force = 100
+		MAF_cult_of_the_stalhatter = 100
+		MAF_brace_for_the_worsr = 100
+		MAF_Vizekonig = 100
+  }
 	
 	weight = {
 		factor = 1.0
@@ -1897,7 +1959,7 @@ OTT_neutral_plan = {
 	desc = ""
 	
 	enable = {
-		original_tag = OTT
+		original_tag = TUR
 		has_game_rule = { rule = OTT_foreign_policy option = OTT_FOREIGN_POLICY_NEUTRAL }
 	}
 	
@@ -1923,7 +1985,7 @@ OTT_istambul_pact_plan = {
 	desc = ""
 	
 	enable = {
-		original_tag = OTT
+		original_tag = TUR
 		has_game_rule = { rule = OTT_foreign_policy option = OTT_FOREIGN_POLICY_ISTANBUL_PACT }
 	}
 	
@@ -1947,7 +2009,7 @@ OTT_austria_plan = {
 	desc = ""
 	
 	enable = {
-		original_tag = OTT
+		original_tag = TUR
 		has_game_rule = { rule = OTT_foreign_policy option = OTT_FOREIGN_POLICY_AUSTRIA }
 	}
 	
@@ -1969,7 +2031,7 @@ OTT_reichspakt_plan = {
 	desc = ""
 	
 	enable = {
-		original_tag = OTT
+		original_tag = TUR
 		has_game_rule = { rule = OTT_foreign_policy option = OTT_FOREIGN_POLICY_REICHSPAKT }
 	}
 	
@@ -1993,7 +2055,7 @@ OTT_entente_plan = {
 	desc = ""
 	
 	enable = {
-		original_tag = OTT
+		original_tag = TUR
 		has_game_rule = { rule = OTT_foreign_policy option = OTT_FOREIGN_POLICY_ENTENTE }
 	}
 	
@@ -2065,74 +2127,6 @@ WIF_governor_coup_plan = {
 	
 	focus_factors = {
 		CAF_restore_democracy = 0
-	}
-	
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-	}
-}
-
-NFA_SUS_PRD_plan = {
-	name = ""
-	desc = ""
-	
-	enable = {
-	original_tag = NFA
-		has_game_rule = { rule = NFA_government_path option = NFA_GOVERNMENT_PATH_SUS_PRD }
-	}
-	
-	focus_factors = {
-		NATFRA_cement_the_coalition = 0
-		NATFRA_constitutional_referendum = 0
-	}
-	
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-	}
-}
-
-NFA_SUS_COALITION_plan = {
-	name = ""
-	desc = ""
-	
-	enable = {
-	original_tag = NFA
-		has_game_rule = { rule = NFA_government_path option = NFA_GOVERNMENT_PATH_SUS_COALITION }
-	}
-	
-	focus_factors = {
-		NATFRA_neutralize_the_psf = 0
-		NATFRA_constitutional_referendum = 0
-		NATFRA_the_concentration_republicaine_theory = 0
-		NATFRA_expand_the_mass_party = 0
-	}
-	
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-	}
-}
-
-NFA_SUS_PSF_plan = {
-	name = ""
-	desc = ""
-	
-	enable = {
-	original_tag = NFA
-		has_game_rule = { rule = NFA_government_path option = NFA_GOVERNMENT_PATH_SUS_PSF }
-	}
-	
-	focus_factors = {
-		NATFRA_cement_the_coalition = 0
-		NATFRA_neutralize_the_psf = 0
 	}
 	
 	weight = {
@@ -2355,7 +2349,7 @@ SCZ_Industrial_GRANDIOSE_PLAN_plan = {
 		SZC_The_Lord_Of_Sichuan = 0
 		SZC_Form_The_National_Protection_Alliance = 0
 	}
-	 
+	
 	weight = {
 		factor = 1.0
 		modifier = {
@@ -2376,7 +2370,7 @@ SZC_Armament_ZHILI_AUTDEM_plan = {
 	focus_factors = {
 		SZC_Continue_Military_Primacy = 0
 	}
-	 
+	
 	weight = {
 		factor = 1.0
 		modifier = {
@@ -2397,7 +2391,7 @@ SZC_Armament_SZC_Armament_ZHILI_PATAUT_plan = {
 	focus_factors = {
 		SZC_Embrace_The_Civilian_Wing = 0
 	}
-	 
+	
 	weight = {
 		factor = 1.0
 		modifier = {
@@ -2418,7 +2412,7 @@ SHX_STRUGGLE_FENG_JOIN_THE_FRAY_plan = {
 	focus_factors = {
 		SHX_Fengs_Crusade = 0
 	}
-	 
+	
 	weight = {
 		factor = 1.0
 		modifier = {
@@ -2439,7 +2433,7 @@ SHX_STRUGGLE_FENG_FENGS_CRUSADE_plan = {
 	focus_factors = {
 		SHX_Join_The_Fray = 0
 	}
-	 
+	
 	weight = {
 		factor = 1.0
 		modifier = {
@@ -2464,7 +2458,33 @@ PRI_BACK_TO_UNION_PLAN = {
 		PRI_social_status = 100
 		PRI_back_to_the_Union = 100
 	}
-	 
+	
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+YUN_LONG_YUN_PLAN = {
+	name = ""
+	desc = ""
+	
+	enable = {
+	original_tag = YUN
+		OR = {
+			has_game_rule = { rule = YUN_path option = YUN_long_yun_isolationist }
+			has_game_rule = { rule = YUN_path option = YUN_long_yun_expansionism }
+		}
+	}
+	
+	focus_factors = {
+		YUN_Continue_Isolation = 0
+		YUN_situation_defused = 0
+		YUN_Bastion_of_Republicanism = 0
+	}
+	
 	weight = {
 		factor = 1.0
 		modifier = {

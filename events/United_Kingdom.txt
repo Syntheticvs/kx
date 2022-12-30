@@ -164,8 +164,10 @@ country_event = { # Liberation of the UK
 				limit = {
 					GBR = { is_in_faction_with = CAN }
 				}
-				GBR = {
+				CAN = {
 					country_event = { id = canada.302 days = 6 }
+				}
+				GBR = {
 					add_timed_idea = {
 						idea = CAN_british_arrivals
 						days = 365
@@ -1646,6 +1648,7 @@ country_event = {
 		custom_effect_tooltip = GBR_improve_resistance_effect_5
 		subtract_from_variable = { GBR_synd_unrest = 5 }
 		GBR_recalculate_syndicalist_resistance = yes
+		set_country_leader_ideology = social_democrat_subtype
 		hidden_effect = {
 			add_popularity = { ideology = paternal_autocrat popularity = new_pataut }
 			add_popularity = { ideology = social_democrat popularity = bra_supp }
@@ -1803,6 +1806,7 @@ country_event = {
 			subtract_from_variable = { GBR_synd_unrest = 5 }
 			GBR_recalculate_syndicalist_resistance = yes
 		}
+		set_country_leader_ideology = social_democrat_subtype
 		hidden_effect = {
 			if = {
 				limit = { has_country_flag = GBR_labour_leader_gaitskell }
@@ -3492,7 +3496,7 @@ country_event = {
 				}
 				add_ideas = {
 					IRE_Sean_Lemass_hog_mli
-					IRE_Eamon_de_Valera_for_sli
+					IRE_John_O'Hanlon_for_sli
 					IRE_Frank_Aiken_eco_sli
 					IRE_James_Dillon_sec_sco
 				}
@@ -3559,7 +3563,7 @@ country_event = {
 				}
 				add_ideas = {
 					IRE_Sean_Lemass_hog_mli
-					IRE_Eamon_de_Valera_for_sli
+					IRE_John_O'Hanlon_for_sli
 					IRE_Frank_Aiken_eco_sli
 					IRE_James_Dillon_sec_sco
 				}

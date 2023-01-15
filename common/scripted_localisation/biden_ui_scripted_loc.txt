@@ -4698,9 +4698,23 @@ defined_text = {
 	
 	text = { 
 		trigger = {
-			has_idea = SWI_Jules_Humbert_Droz_hog_syn
+			has_idea = SWI_Jules_Humbert_Droz_hog_rso
 		}
-		localization_key = SWI_Jules_Humbert_Droz_hog_syn
+		localization_key = SWI_Jules_Humbert_Droz_hog_rso
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SWI_Jakob_Herzog_hog_syn
+		}
+		localization_key = SWI_Jakob_Herzog_hog_syn
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SWI_Fritz_Platten_hog_tot
+		}
+		localization_key = SWI_Fritz_Platten_hog_tot
 	}
 	
 	text = { 
@@ -7832,9 +7846,23 @@ defined_text = {
 	
 	text = { 
 		trigger = {
-			has_idea = SWI_Jules_Humbert_Droz_hog_syn
+			has_idea = SWI_Jules_Humbert_Droz_hog_rso
 		}
 		localization_key = GFX_Portrait_Switzerland_Jules_Humphert_Droz
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SWI_Jakob_Herzog_hog_syn
+		}
+		localization_key = GFX_Portrait_Switzerland_Jakob_Herzog
+	}
+	
+	text = { 
+		trigger = {
+			has_idea = SWI_Fritz_Platten_hog_tot
+		}
+		localization_key = GFX_Portrait_Switzerland_Fritz_Platten
 	}
 	
 	text = { 
@@ -7864,19 +7892,19 @@ defined_text = {
 		trigger = {
 			has_idea = SIC_Julius_Evola_hog_npo
 		}
-		localization_key = GFX_Portrait_TRM_Alexander_Kazembek_regent
+		localization_key = GFX_Julius_Evola_Baron
 	}
 	text = { #Fired by Minister Ideas
 		trigger = {
 			has_idea = TRM_Alexander_Kazembek_hog_tot
 		}
-		localization_key = GFX_Portrait_TRM_Anastasiy_Vonsyatsky
+		localization_key = GFX_Portrait_TRM_Alexander_Kazembek_regent
 	}
 	text = { #Fired by Minister Ideas
 		trigger = {
 			has_idea = TRM_Anastasiy_Vonsyatsky_hog_npo
 		}
-		localization_key = GFX_Julius_Evola_Baron
+		localization_key = GFX_Portrait_TRM_Anastasiy_Vonsyatsky
 	}
 	
 	text = { #Fired by Minister Ideas

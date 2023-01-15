@@ -526,7 +526,7 @@ on_actions = {
 			random_country = {
 				limit = { is_ai = yes }
 				country_event = kr.political.10
-			}
+			}			
 		}
 	}
 
@@ -969,18 +969,6 @@ on_actions = {
 					}
 					annex_country = { target = FROM transfer_troops = no }
 				}
-				### temp workaround for countries not getting annexed after a conference
-				else_if = {
-					limit = { is_in_faction = yes }
-					faction_leader = { annex_country = { target = FROM transfer_troops = no } }
-				}
-				else_if = {
-					limit = { is_subject = yes }
-					overlord = { annex_country = { target = FROM transfer_troops = no } }
-				}
-				else = {
-					annex_country = { target = FROM transfer_troops = no }
-				}
 			}
 		}
 	}
@@ -1018,7 +1006,7 @@ on_actions = {
 			if = {
 				limit = { is_faction_leader = yes }
 				every_country = {
-					limit = { is_ally_with = ROOT }
+					limit = { is_ally_of_ROOT = yes }
 					every_controlled_state = {
 						limit = {
 							owner = {

@@ -84,6 +84,12 @@ difficulty_settings = {
 		multiplier = 2.0
 	}
 	difficulty_setting = {
+		key = "custom_diff_strong_brt"
+		modifier = diff_strong_ai_generic
+		countries = { BRT }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
 		key = "custom_diff_strong_bhc"
 		modifier = diff_strong_ai_generic
 		countries = { BHC }
@@ -822,6 +828,12 @@ difficulty_settings = {
 		multiplier = 2.0
 	}
 	difficulty_setting = {
+		key = "custom_diff_strong_kor"
+		modifier = diff_strong_ai_generic
+		countries = { KOR }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
 		key = "custom_diff_strong_txs"
 		modifier = diff_strong_ai_generic
 		countries = { TXS }
@@ -945,6 +957,12 @@ difficulty_settings = {
 		key = "custom_diff_strong_syr"
 		modifier = diff_strong_ai_generic
 		countries = { SYR }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_tke"
+		modifier = diff_strong_ai_generic
+		countries = { TKE }
 		multiplier = 2.0
 	}
 	difficulty_setting = {

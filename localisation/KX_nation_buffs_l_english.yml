@@ -25,6 +25,7 @@
  custom_diff_strong_bra:0 "@BRA Strengthen Brazil"
  custom_diff_strong_brd:0 "@BRD Strengthen Burundi"
  custom_diff_strong_brm:0 "@BRM Strengthen the Kingdom of Burma"
+ custom_diff_strong_brt:0 "@BRT Strengthen Barotseland"
  custom_diff_strong_bry:0 "@BRY Strengthen Buryat-Mongolia"
  custom_diff_strong_bul:0 "@BUL Strengthen the Tsardom of Bulgaria"
 
@@ -108,6 +109,7 @@
  custom_diff_strong_kiv:0 "@KIV Strengthen the Kivu Clique"
  custom_diff_strong_kly:0 "@KLY Strengthen the Kalmyk Khanate"
  custom_diff_strong_kog:0 "@KOG Strengthen the Kongo"
+ custom_diff_strong_kor:0 "@KOR Strengthen the Republic of Korea"
  custom_diff_strong_kub:0 "@KUB Strengthen the Kuban People's Republic"
  custom_diff_strong_kyr:0 "@KYR Strengthen the Republic of Kokand"
 
@@ -187,6 +189,7 @@
  # T
  custom_diff_strong_tan:0 "@TAN Strengthen the Kumul Khanate"
  custom_diff_strong_tib:0 "@TIB Strengthen Tibet"
+ custom_diff_strong_tke:0 "@TKE Strengthen the Tekeland Clique"
  custom_diff_strong_trk:0 "@TRK Strengthen the Emirate of Bukhara"
  custom_diff_strong_trm:0 "@TRM Strengthen the Far Eastern Republic of Transamur"
  custom_diff_strong_trp:0 "@TRP Strengthen Tripolitania"

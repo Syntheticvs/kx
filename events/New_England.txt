@@ -825,6 +825,19 @@ country_event = { # America is reunited
 			add_ideas = USA_civil_war_war_aftermath_idea
 			add_ideas = USA_civil_war_political_aftermath_idea
 			set_country_flag = NEE_groves_post
+			hidden_effect = {
+				create_corps_commander = {
+				name = "William C. Westmoreland"
+				portrait_path = "gfx/leaders/NEE/Portrait_NEE_William_Westmoreland_general.png"
+				traits = { infantry_officer }
+				skill = 2
+
+				attack_skill = 2
+				defense_skill = 1
+				planning_skill = 3
+				logistics_skill = 2
+				}
+			}
 		}
 		if = {
 			limit = {
@@ -869,9 +882,27 @@ country_event = { # America is reunited
 			every_state = {
 				remove_ACW_cores = yes
 			}
-			country_event = {
+			if = {
+				 limit = {
+					NOT = {
+						has_completed_focus = NEE_New_Sons_of_Liberty
+					}
+				 }
+				 country_event = {
 				id = miscnee.185
 				days = 3
+			}
+			}
+			if = {
+				 limit = {
+
+					has_completed_focus = NEE_New_Sons_of_Liberty
+
+				 }
+				 country_event = {
+				id = miscnee.1855
+				days = 3
+			}
 			}
 			country_event = { id = miscnee.1 days = 600 random_days = 200 }
 		}
@@ -16840,7 +16871,7 @@ country_event = { #an end to new englandism
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newenglandmilflavor.9"}
 	title = newenglandmilflavor.28.t
 	desc = newenglandmilflavor.28.d
-	picture = GFX_NEE_new_egnland
+	picture = GFX_NEE_new_england
 	
 	fire_only_once = yes
 	
@@ -16875,8 +16906,14 @@ country_event = { #new england stands with us
 	
 	option = { #harsh
 		name = newenglandmilflavor.29.a
+		NEE = {
+			get_current_government_type = yes
+		}
 		puppet = NEE
 		add_war_support = 0.15
+		NEE = {
+			restore_previous_government_type = yes
+		}
 	}
 
 }
@@ -17666,7 +17703,15 @@ country_event = {# formation of new parties
 
 country_event = {# whigg primary
 	id = newenglandmilflavor.42
-	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.238"}
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.238"
+	clr_country_flag = NEE_whigg_babson
+	clr_country_flag = NEE_whigg_gerry
+	clr_country_flag = NEE_whigg_JPK
+	clr_country_flag = NEE_whigg_Powell
+	clr_country_flag = NEE_whigg_trump
+	clr_country_flag = NEE_whigg_curley
+	clr_country_flag = NEE_whigg_curtis
+	clr_country_flag = NEE_whigg_vanderbilt }
 	title = newenglandmilflavor.42.t
 	desc = newenglandmilflavor.42.d
 	picture = GFX_NEE_whigs
@@ -17705,6 +17750,9 @@ country_event = {# whigg primary
 	}
 	option = {#Adam Clayton Powell Jr.
 		name = newenglandmilflavor.42.e
+                trigger = {
+			owns_state = 358
+		}
 		set_country_flag = NEE_whigg_Powell
 		hidden_effect = {
 			country_event = {
@@ -17761,7 +17809,13 @@ country_event = {# whigg primary
 
 country_event = {# fed primary
 	id = newenglandmilflavor.43
-	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.238"}
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.238"
+	clr_country_flag = NEE_fed_Hughes
+	clr_country_flag = NEE_fed_grant
+	clr_country_flag = NEE_fed_rockefeller
+	clr_country_flag = NEE_fed_Sinatra
+	clr_country_flag = NEE_fed_Valentine
+	clr_country_flag = NEE_fed_Kennedy }
 	title = newenglandmilflavor.43.t
 	desc = newenglandmilflavor.43.d
 	picture = GFX_NEE_federalists
@@ -17844,7 +17898,13 @@ country_event = {# fed primary
 
 country_event = {# DR primary
 	id = newenglandmilflavor.44
-	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.238"}
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.238"
+	clr_country_flag = NEE_dr_jfk
+	clr_country_flag = NEE_dr_Roosevelt
+	clr_country_flag = NEE_dr_Coolidge
+	clr_country_flag = NEE_dr_McCormick
+	clr_country_flag = NEE_dr_la_Guardia
+	clr_country_flag = NEE_dr_Welles  }
 	title = newenglandmilflavor.44.t
 	desc = newenglandmilflavor.44.d
 	picture = GFX_NEE_democratic_republicans
@@ -17932,16 +17992,7 @@ country_event = {# DR primary
 country_event = {# pershing elections
 	id = newenglandmilflavor.45
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.238"
-	hidden_effect = {
-		if = {
-			limit = {
-				NOT = {
-					has_country_flag = NEE_not_first_election
-				}
-			}
-			set_country_flag = NEE_not_first_election
-		}
-	}}
+	}
 	title = newenglandmilflavor.45.t
 	desc = {
 		text = newenglandmilflavor.45.d
@@ -17963,6 +18014,16 @@ country_event = {# pershing elections
 	
 	option = {#whigs
 		name = newenglandmilflavor.45.a
+		hidden_effect = {
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = NEE_not_first_election
+				}
+			}
+			set_country_flag = NEE_not_first_election
+		}
+	}
 		set_country_flag = NEE_whigg_victory
 		if = {
 			limit = {
@@ -18112,6 +18173,18 @@ country_event = {# pershing elections
 			elections_allowed = no
 		}
 		
+		meta_effect = {
+			text = {
+				set_politics = {
+					ruling_party = social_conservative
+					last_election = "[CURRENT_DATE]"
+					election_frequency = 48
+					elections_allowed = yes
+				}
+			}
+			CURRENT_DATE = "[?global.date.GetDateStringNoHour]"
+		}
+		
 			country_event = {
 				id = newenglandmilflavor.42
 				days = 1460
@@ -18121,6 +18194,16 @@ country_event = {# pershing elections
 
 	option = {#federalists
 		name = newenglandmilflavor.45.b
+		hidden_effect = {
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = NEE_not_first_election
+				}
+			}
+			set_country_flag = NEE_not_first_election
+		}
+	}
 		set_country_flag = NEE_fed_victory
 		hidden_effect = { 
 			set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
@@ -18294,6 +18377,18 @@ country_event = {# pershing elections
 			elections_allowed = no
 		}
 		
+		meta_effect = {
+			text = {
+				set_politics = {
+					ruling_party = market_liberal
+					last_election = "[CURRENT_DATE]"
+					election_frequency = 48
+					elections_allowed = yes
+				}
+			}
+			CURRENT_DATE = "[?global.date.GetDateStringNoHour]"
+		}
+		
 			country_event = {
 				id = newenglandmilflavor.42
 				days = 1460
@@ -18303,6 +18398,16 @@ country_event = {# pershing elections
 
 	option = {#democratic-republicans
 		name = newenglandmilflavor.45.c
+		hidden_effect = {
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = NEE_not_first_election
+				}
+			}
+			set_country_flag = NEE_not_first_election
+		}
+	}
 		set_country_flag = NEE_dr_victory
 		hidden_effect = { 
 			set_temp_variable = { coalition_partner_var = token:social_democrat }
@@ -18483,6 +18588,18 @@ country_event = {# pershing elections
 			elections_allowed = no
 		}
 		
+		meta_effect = {
+			text = {
+				set_politics = {
+					ruling_party = social_liberal
+					last_election = "[CURRENT_DATE]"
+					election_frequency = 48
+					elections_allowed = yes
+				}
+			}
+			CURRENT_DATE = "[?global.date.GetDateStringNoHour]"
+		}
+		
 			country_event = {
 				id = newenglandmilflavor.42
 				days = 1460
@@ -18623,7 +18740,7 @@ country_event = {# groves retire?
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.238"}
 	title = newenglandmilflavor.48.t
 	desc = newenglandmilflavor.48.d
-	picture = GFX_groves_2
+	picture = GFX_NEE_groves_2
 
 	is_triggered_only = yes
 	
@@ -19155,7 +19272,7 @@ country_event = {# treason
 	immediate = {log = "[GetDateText]: [Root.GetName]: event newengland.238"}
 	title = newenglandmilflavor.66.t
 	desc = newenglandmilflavor.66.d
-	picture = GFX_groves_2
+	picture = GFX_NEE_groves_2
 
 	is_triggered_only = yes
 	
@@ -19723,6 +19840,13 @@ country_event = {# groves jfk
 		name = newenglandmilflavor.91.b
 		add_political_power = -25
 		set_country_flag = NEE_grooves_support_jfk
+		every_unit_leader = { #JFK
+					limit = {
+						has_id = 4583
+					}
+
+					promote_leader = yes
+				}
 		
 	}	
 }
@@ -21207,6 +21331,25 @@ country_event = { # 1940 Election
 		}
 	}
 	
+}
+
+country_event = { #ending the 17th
+	id = newenglandmilflavor.111
+	immediate = {log = "[GetDateText]: [Root.GetName]: event newenglandmilflavor.9"}
+	title = newenglandmilflavor.111.t
+	desc = newenglandmilflavor.111.d
+	picture = GFX_NEE_repeal_17th
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Nice
+		name = newenglandmilflavor.111.a	
+		add_political_power = -25
+		add_stability = 0.15
+		
+	}
 }
 
 
@@ -25418,6 +25561,9 @@ country_event = { # Capital for the new America
 			owns_state = 932
 			owns_state = 373
 		}
+		NOT = {
+			has_completed_focus = NEE_New_Sons_of_Liberty
+		}
 	}
 
 	option = { # Washington DC
@@ -25451,6 +25597,177 @@ country_event = { # Capital for the new America
 		set_capital = { state = 373 remember_old_capital = no }
 	}
 }
+
+country_event = { # Capital for the new America but sons of liberty
+	id = miscnee.1855
+	immediate = { log = "[GetDateText]: [Root.GetName]: event miscnee.185 FROM = [From.GetName]" }
+	title = miscnee.1855.t
+	desc = miscnee.1855.d
+	picture = GFX_report_event_generic_diplomacy2
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = NEE
+		controls_all_owned_states = yes
+		count_triggers = {
+			amount = 2
+			owns_state = 361
+			owns_state = 932
+			owns_state = 373
+		}
+		has_completed_focus = NEE_New_Sons_of_Liberty
+	}
+
+	option = { # Washington DC
+		trigger = {
+			owns_state = 361
+		}
+		name = miscnee.1855.a
+		ai_chance = {
+			base = 70
+		}
+		set_capital = { state = 361 remember_old_capital = no }
+	}
+	option = { # New York
+		trigger = {
+			owns_state = 358
+		}
+		name = miscnee.1855.b
+		ai_chance = {
+			base = 30
+		}
+		set_capital = { state = 358 remember_old_capital = no }
+	}
+	option = { # Boston
+		trigger = {
+			owns_state = 932
+		}
+		name = miscnee.1855.c
+		ai_chance = {
+			base = 30
+		}
+		set_capital = { state = 932 remember_old_capital = no }
+	}
+	option = { # Baltimore
+	
+		name = miscnee.1855.e
+		ai_chance = {
+			base = 30
+		}
+		set_capital = { state = 361 remember_old_capital = no }
+		set_victory_points = {
+			province = 6984
+			value = 50
+			}
+	}
+	option = { # Annapolis
+	
+		name = miscnee.1855.f
+		ai_chance = {
+			base = 30
+		}
+		set_capital = { state = 361 remember_old_capital = no }
+		set_victory_points = {
+			province = 11892
+			value = 50
+			}
+	}
+	option = { # Trenton
+	
+		name = miscnee.1855.g
+		ai_chance = {
+			base = 30
+		}
+		set_capital = { state = 359 remember_old_capital = no }
+		set_victory_points = {
+			province = 11782
+			value = 50
+			}
+	}
+
+	option = { # Trenton
+	
+		name = "Let me see the other Capitals."
+		ai_chance = {
+			base = 30
+		}
+		country_event = miscnee.1856
+	}
+	
+
+}
+
+country_event = { # Capital for the new America but sons of liberty
+	id = miscnee.1856
+	immediate = { log = "[GetDateText]: [Root.GetName]: event miscnee.185 FROM = [From.GetName]" }
+	title = miscnee.1855.t
+	desc = miscnee.1855.d
+	picture = GFX_report_event_generic_diplomacy2
+
+	
+	is_triggered_only = yes
+
+
+	option = { # Princeton
+	
+		name = miscnee.1855.h
+		ai_chance = {
+			base = 30
+		}
+		set_capital = { state = 359 remember_old_capital = no }
+		set_victory_points = {
+			province = 3863
+			value = 50
+			}
+	}
+
+	option = { # Lancaster
+	
+		name = miscnee.1855.i
+		ai_chance = {
+			base = 30
+		}
+		set_capital = { state = 360 remember_old_capital = no }
+		set_victory_points = {
+			province = 3824
+			value = 50
+			}
+	}
+	option = { # York
+	
+		name = miscnee.1855.j
+		ai_chance = {
+			base = 30
+		}
+		set_capital = { state = 360 remember_old_capital = no }
+		set_victory_points = {
+			province = 822
+			value = 50
+			}
+	}
+	option = { # Philadelphia
+	
+		name = miscnee.1855.k
+		ai_chance = {
+			base = 30
+		}
+		set_capital = { state = 360 remember_old_capital = no }
+	}
+
+	option = { # Trenton
+	
+		name = "Let me see the other Capitals."
+		ai_chance = {
+			base = 30
+		}
+		country_event = miscnee.1855
+	}
+	
+
+}
+
+
 
 country_event = { # Eleanor Roosevelt
 	id = miscnee.186

@@ -1,5 +1,11 @@
 spooky_portraits = {
 	if = {	
+		limit = { has_country_leader = { name = "Huynh Phu So" ruling_only = yes } }
+		set_country_leader_portrait = {
+			portrait = "gfx/leaders/FUN/Portrait_Vietnam_Huynh_Phu_So_fun.png"
+		}
+	}
+	if = {	
 		limit = { has_country_leader = { name = "Cathal Brugha" ruling_only = yes } }
 		set_country_leader_portrait = {
 			portrait = "gfx/leaders/FUN/Portrait_Ireland_Cathal_Brugha_fun.png"
@@ -948,12 +954,12 @@ spooky_portraits = {
 			TUR = {
 				has_completed_focus = OTT_german_military_command
 				NOT = {
-					has_cosmetic_tag = TUR_german_fun
+					has_cosmetic_tag = OTT_german_fun
 				}
 			}
 		}
 		TUR = {
-		set_cosmetic_tag = TUR_german_fun
+		set_cosmetic_tag = OTT_german_fun
 		}
 	}
 	if = {	
@@ -1243,6 +1249,42 @@ spooky_portraits = {
 			portrait = "gfx/leaders/FUN/Portrait_France_Gabriel_Jeantet_fun.png"
 		}
 	}
+        if = {	
+		limit = { has_country_leader = { name = "J. Robert Oppenheimer" ruling_only = yes } }
+		set_country_leader_portrait = {
+			portrait = "gfx/leaders/FUN/Portrait_CSA_J_Robert_Oppenheimer_fun.png"
+		}
+	}
+        if = {	
+		limit = { has_country_leader = { name = "Maria Spiridonova" ruling_only = yes } }
+		set_country_leader_portrait = {
+			portrait = "gfx/leaders/FUN/Portrait_RUS_Maria_Spiridonova_FUN.png"
+		}
+	}
+        if = {	
+		limit = { has_country_leader = { name = "Nicholas Roerich" ruling_only = yes } }
+		set_country_leader_portrait = {
+			portrait = "gfx/leaders/FUN/Portrait_TIB_Nicholas_Roerich_fun.png"
+		}
+	}
+        if = {	
+		limit = { has_country_leader = { name = "Avatar of the Red Mahatma" ruling_only = yes } }
+		set_country_leader_portrait = {
+			portrait = "gfx/leaders/FUN/Portrait_TIB_Ghost_Lenin_fun.png"
+		}
+	}  
+	if = {	
+		limit = { has_country_leader = { name = "Hoja-Niyaz" ruling_only = yes } }
+		set_country_leader_portrait = {
+			portrait = "gfx/leaders/FUN/Portrait_TAN_Hoja_Niyaz_Haji_FUN.png"
+		}
+	}
+        if = {	
+		limit = { has_country_leader = { name = "Enoch L. Johnson" ruling_only = yes } }
+		set_country_leader_portrait = {
+			portrait = "gfx/leaders/FUN/Portrait_NYC_Nucky_Johnson_fun.png"
+		}
+	}
 	if = {	
 		limit = { AUS = {
 			NOT = {
@@ -1398,6 +1440,16 @@ spooky_portraits = {
 			set_cosmetic_tag = NEE_prohib_america_fun2
 			}
 			}
+		}
+	}
+	if = {	
+		limit = { 
+		VIN = {
+				has_cosmetic_tag = VIN_CAO_DAI_WORLD
+			}
+		} 
+		VIN = {
+			set_cosmetic_tag = VIN_CAO_DAI_WORLD_FUN
 		}
 	}
 	if = {	

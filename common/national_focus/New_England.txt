@@ -4994,7 +4994,7 @@ focus_tree = {
 
 	focus = {
 		id = NEE_Colombia_Gem_of_the_Ocean
-		icon = GFX_goal_TEX_naval_prominence
+		icon = GFX_goal_NEE_navy3
 		cost = 5
 		prerequisite = {
 			focus = NEE_light_cruiser_effort
@@ -5426,7 +5426,7 @@ focus_tree = {
 
 	focus = {
 		id = NEE_Reestablish_Minutemen
-		icon = GFX_goal_USA_national_guard
+		icon = GFX_goal_NEE_army2
 		cost = 5
 		x = 54
 		y = 0
@@ -10400,12 +10400,6 @@ focus = {
 	
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus NEE_true_heirs"
-		if = {	
-			limit = { has_country_leader = { name = "John J. Pershing" ruling_only = yes } }
-			set_country_leader_portrait = {
-				portrait = "gfx/leaders/NEE/Portrait_NEE_John_Pershing_uniform.png"
-			}
-		}	
 		NEE = {
 			create_wargoal = {
 				type = annex_everything
@@ -16440,9 +16434,6 @@ focus = {
 			is_major = yes
 			has_army_manpower = { size > 105000 }
 		}
-		allow_branch = {
-			has_country_flag = NEE_united_america
-		}
 		ai_will_do = {
 			factor = 40
 			modifier = {
@@ -17777,7 +17768,7 @@ focus = {
 
 	focus = {
 		id = NEE_arsenal_of_democracy
-		icon = GFX_focus_generic_combined_arms
+		icon = GFX_goal_USA_arsenal_of_democracy
 		cost = 5.00
 		prerequisite = {
 			focus = NEE_enter_the_fray
@@ -18641,6 +18632,7 @@ focus = {
 			has_government = authoritarian_democrat
 			has_government = paternal_autocrat
 			has_government = national_populist
+                        has_country_flag = NEE_MILITARY_IN_POWER
 			}
 		}
 		relative_position_id = NEE_back_in_business
@@ -19096,6 +19088,8 @@ focus = {
 				}
 			}
 			add_state_claim = 100
+			add_state_claim = 698
+			add_state_claim = 697
 		}
 	}
 	focus = {
@@ -19251,7 +19245,10 @@ focus = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_demand_the_philippines"
 			add_war_support = 0.03
 			create_wargoal = { type = annex_everything target = PHI }
-			add_state_claim = 327
+			every_state = {
+			limit = { is_core_of = PHI }
+			add_claim_by = USA
+			}
 		}
 	}
 
@@ -19283,12 +19280,10 @@ focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NEE_claim_the_east_indies"
 			add_war_support = 0.03
-			add_state_claim	= 334
-			add_state_claim	= 335
-			add_state_claim	= 667
-			add_state_claim	= 668
-			add_state_claim	= 672
-			add_state_claim	= 673
+			every_state = {
+			limit = { is_core_of = INS }
+			add_claim_by = USA
+			}
 		}
 	}
 	

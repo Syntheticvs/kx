@@ -7440,7 +7440,7 @@ country_event = { #Fate of Bucovina
 	is_triggered_only = yes
 	
 	option = {
-		name = annex.43.n # Release BUK
+		name = annex.43.q # Release BUK
 		trigger = {
 			NOT = {
 				tag = AUS
@@ -9066,6 +9066,9 @@ country_event = { #The Fate of Russia
 					state = 654 #Ulala
 					state = 811 #Minusinsk
 					state = 329 #Tuva
+					state = 1287
+					state = 1293 # Orsha
+					state = 1292 # Orsha
 				}
 			}
 			transfer_state_to = var:tag_to_release
@@ -9127,6 +9130,9 @@ country_event = { #The Fate of Russia
 					state = 243 #Krichev
 					state = 722 #Petsamo
 					state = 755 #Vitebsk
+					state = 1287
+					state = 1293 # Orsha
+					state = 1292 # Orsha
 					state = 880 #Dvinsk
 					state = 564 #Verkhneudinsk
 					state = 563 #Chita
@@ -11852,7 +11858,7 @@ country_event = { # Abkhazia
 	}
 	
 	option = { #occupy
-		name = annex.68.b
+		name = annex.occupation
 		ai_chance = {
 			factor = 0
 		}
@@ -11865,6 +11871,23 @@ country_event = { # Abkhazia
 country_event = { #The Irish Question
 	id = annex.68
 	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.68" }
+	immediate = {
+		hidden_effect = {
+			add_to_temp_array = { core_removal_array = IRE }
+			remove_all_cores_and_claims_of_tags = yes
+			IRE = {
+				add_state_core = 119 
+				add_state_core = 134 
+				add_state_core = 113 
+				add_state_core = 135
+				drop_cosmetic_tag = yes
+				every_unit_leader = {
+					limit = { has_unit_leader_flag = GEO_leader }
+					set_nationality = GEO
+				}
+			}
+		}
+	}
 	title = annexation_IRE_CONQ
 	desc = annexation_IRE_CONQ_desc
 	is_triggered_only = yes
@@ -15594,13 +15617,15 @@ country_event = { #The Annexation of Armenia
 	id = annex.113
 	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.113" }
 	immediate = { 
-		hidden_effect = {			
+		hidden_effect = {
+                        ARM = {			
 			create_country_leader = {
 				name = "Hayk Asatryan"
 				picture = "gfx/leaders/ARM/Portrait_Armenia_Hayk_Asatryan.png"
 				expire = "1965.1.1"
 				ideology = tseghakronism_subtype
 			}
+                        }
 		}
 	}
 	title = annexation_ARM_CONQ
@@ -22005,7 +22030,7 @@ country_event = { #Albania Liberation
 				desc = "POLITICS_WILLIAM_WIED_DESC"
 				picture = "gfx/leaders/ALB/Portrait_Albania_Wilhelm_Wied.png"
 				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
+				ideology = prussian_constitutionalism_subtype
 			}
 			set_party_name = {
 				ideology = authoritarian_democrat
@@ -34203,6 +34228,11 @@ country_event = { #The Annexation of Shan
 
 		set_temp_variable = { tag_to_release = SHA }
 		release_targeted_tag = yes
+		hidden_effect = {
+			SHA = {
+				country_event = shan.18
+			}
+		}
 	}
 
 	option = {
@@ -43479,6 +43509,9 @@ country_event = { #Fate of Eastern Belarus
 					state = 1292 #Smolensk
 					state = 243 #Krichev
 					state = 755 #Vitebsk
+					state = 1287
+					state = 1293 # Orsha
+					state = 1292 # Orsha
 				}
 			}
 			transfer_state_and_add_claim = yes
@@ -43522,6 +43555,9 @@ country_event = { #Fate of Eastern Belarus
 					state = 1292 #Smolensk
 					state = 243 #Krichev
 					state = 755 #Vitebsk
+					state = 1287
+					state = 1293 # Orsha
+					state = 1292 # Orsha
 				}
 			}
 			transfer_state_and_add_core = yes
@@ -43559,6 +43595,9 @@ country_event = { #Fate of Eastern Belarus
 					state = 1292 #Smolensk
 					state = 243 #Krichev
 					state = 755 #Vitebsk
+					state = 1287
+					state = 1293 # Orsha
+					state = 1292 # Orsha
 				}
 			}
 			transfer_state_and_add_claim = yes
@@ -43660,6 +43699,9 @@ country_event = { #Fate of Eastern Belarus
 				OR = {
 					state = 243 #Krichev
 					state = 755 #Vitebsk
+					state = 1287
+					state = 1293 # Orsha
+					state = 1292 # Orsha
 				}
 			}
 			transfer_state_and_add_claim = yes
@@ -46930,7 +46972,7 @@ country_event = { #Fate of the East Galicia
 						state = 91
 						state = 1140
 						state = 89
-						state = 1125
+						state = 80
 						state = 1126
 						state = 1127
 					}
@@ -47379,5 +47421,47 @@ country_event = { #Fate of Northern Manchuria
 		ai_chance = { base = 0 }
 		occupy_small_country = yes
 		set_country_flag = NORTHERN_MANCHURIA_CONQ
+	}
+}
+
+country_event = { #Fate of Sikkim
+
+	id = annex.406
+	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.406" }
+	title = annexation_SKM_CONQ
+	desc = annexation_SKM_CONQ_desc
+	is_triggered_only = yes
+
+	option = { #puppet
+		name = annex.406.b
+		ai_chance = { factor = 10 }
+		set_temp_variable = { tag_to_release = SKM }
+		release_targeted_tag = yes
+	}
+
+	option = { #integrate
+		trigger = {
+			OR = {
+				tag = DEH
+				tag = BHC
+				tag = PRF
+				tag = INR
+				tag = TIB
+				tag = BHU
+				tag = NEP
+			}
+		}
+		name = annex.406.c
+		ai_chance = { factor = 90 }
+		add_political_power = -50
+		add_state_core = 888
+		set_country_flag = SKM_CONQ
+	}
+
+	option = { #occupation
+		name = annex.406.a
+		ai_chance = { factor = 0 }
+		set_country_flag = SKM_CONQ
+		occupy_small_country = yes
 	}
 }

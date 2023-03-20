@@ -416,6 +416,12 @@ defined_text = {
 		}
 		localization_key = internationalism_subtype
 	}
+        text = {
+		trigger = {
+			has_country_leader_ideology = corn_communism_subtype
+		}
+		localization_key =  corn_communism_subtype
+	}
     text = {
 		trigger = {
 			has_country_leader_ideology = tot_right_panafricanism_subtype
@@ -424,10 +430,11 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			has_country_leader_ideology = corn_communism_subtype
+			has_country_leader_ideology = machiavellian_socialism_subtype
 		}
-		localization_key =  corn_communism_subtype
+		localization_key =  machiavellian_socialism_subtype
 	}
+        
 	
 	text = {
 		trigger = {
@@ -831,6 +838,12 @@ defined_text = {
 			has_country_leader_ideology = radsoc_esoteric_leninism_subtype
 		}
 		localization_key = radsoc_esoteric_leninism_subtype
+	}
+        text = {
+		trigger = {
+			has_country_leader_ideology = radsoc_machiavellian_socialism_subtype
+		}
+		localization_key =  radsoc_machiavellian_socialism_subtype
 	}
 
 	text = {
@@ -1315,12 +1328,21 @@ defined_text = {
 		}
 		localization_key = soclib_christian_democracy_subtype
 	}
-    text = {
+
+	text = {
+		trigger = {
+			has_country_leader_ideology = soclib_kotahitanga_subtype
+		}
+		localization_key = soclib_kotahitanga_subtype 
+   	}
+
+	text = {
 		trigger = {
 			has_country_leader_ideology = soclib_progressive_democracy_subtype
 		}
 		localization_key = soclib_progressive_democracy_subtype
 	}
+ 
 	text = {
 		trigger = {
 			has_country_leader_ideology = soclib_sardism_subtype
@@ -1471,6 +1493,18 @@ defined_text = {
 			has_country_leader_ideology = mercenary_democracy_subtype
 		}
 		localization_key = mercenary_democracy_subtype
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = marlib_kotahitanga_subtype
+		}
+		localization_key = marlib_kotahitanga_subtype
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = marlib_police_state_subtype
+		}
+		localization_key = marlib_police_state_subtype
 	}
 
 	text = {
@@ -1876,6 +1910,7 @@ defined_text = {
 		}
 		localization_key = authdem_jacksonianism_subtype
 	}
+
     text = {
 		trigger = {
 			has_country_leader_ideology = authdem_austropopulism_subtype
@@ -1883,6 +1918,12 @@ defined_text = {
 		localization_key = authdem_austropopulism_subtype
 	}
 	text = {
+		trigger = {
+			has_country_leader_ideology = authdem_social_credit_subtype
+		}
+		localization_key = authdem_social_credit_subtype	
+	}
+        text = {
 		trigger = {
 			has_country_leader_ideology = authdem_pirate_republic_subtype
 		}
@@ -2167,6 +2208,12 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			has_country_leader_ideology = social_credit_subtype
+		}
+		localization_key = social_credit_subtype
+	}
+        text = {
+		trigger = {
 			has_country_leader_ideology = pirate_republic_subtype
 		}
 		localization_key = pirate_republic_subtype
@@ -2195,7 +2242,15 @@ defined_text = {
 		}
 		localization_key = roerichism_subtype
 	}
-    text = {
+
+	text = {
+		trigger = {
+			has_country_leader_ideology = pataut_kotahitanga_subtype
+		}
+		localization_key = pataut_kotahitanga_subtype
+	}
+
+	text = {
 		trigger = {
 			has_country_leader_ideology = pataut_hispanism_subtype
 		}
@@ -2207,7 +2262,12 @@ defined_text = {
 		}
 		localization_key = pataut_popular_patriotism_subtype
 	}
-	
+	text = {
+		trigger = {
+			has_country_leader_ideology = carlism_subtype
+		}
+		localization_key = carlism_subtype
+	}
 	text = {
 		trigger = {
 			has_country_leader_ideology = national_populist_subtype
@@ -2545,6 +2605,24 @@ defined_text = {
 			has_country_leader_ideology = natpop_roerichism_subtype
 		}
 		localization_key = natpop_roerichism_subtype
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = anarcho_totalitarianism_subtype
+		}
+		localization_key = anarcho_totalitarianism_subtype
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = natpop_neo_feudalism_subtype
+		}
+		localization_key = natpop_neo_feudalism_subtype
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = natpop_carlism_subtype
+		}
+		localization_key = natpop_carlism_subtype
 	}
 	
 	### YOU GO IN THE CORNER OF SHAME ###

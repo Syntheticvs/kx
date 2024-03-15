@@ -6,7 +6,7 @@ ideas = {
 		### Civil War Ideas ###
 		bbr_new_republic_idea = { #New Republic
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea bbr_new_republic_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
 				NOT = { has_global_flag = USA_civil_war_over_flag }
 			}
@@ -23,9 +23,8 @@ ideas = {
 	### National Totalist Path ###
 		BBR_the_crusaders_idea = { #The Crusaders
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_crusaders_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = totalist
 			}
 			modifier = {
@@ -41,9 +40,8 @@ ideas = {
 		}
 		BBR_children_of_the_sun_idea = { #Children of the Sun
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_children_of_the_sun_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				OR = {
 					has_government = totalist
 					has_country_leader = { ruling_only = yes name = "Wentworth Arthur Matthew" }
@@ -61,9 +59,8 @@ ideas = {
 		}
 		BBR_the_black_pharoah_idea = { #The Black Pharoah
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_black_pharoah_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = totalist
 			}
 			modifier = {
@@ -77,9 +74,8 @@ ideas = {
 		}
 		BBR_the_black_pharoah_idea_2 = { #The Black Pharoah
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_black_pharoah_idea_2"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = totalist
 			}
 			modifier = {
@@ -94,9 +90,8 @@ ideas = {
 		}
 		BBR_the_black_pharoah_idea_3 = { #The Black Pharoah
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_black_pharoah_idea_3"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = totalist
 			}
 			modifier = {
@@ -111,13 +106,77 @@ ideas = {
 			removal_cost = -1
 			picture = BBR_black_pharaoh_idea
 		}
+		BBR_trve_communism_idea = { #Ham Returns to National Communism
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_trve_communism_idea"}
+			allowed = { always = no }
+			available = {
+				has_government = totalist
+			}
+			modifier = {
+				totalist_drift = 0.01
+				weekly_manpower = 25
+				justify_war_goal_time = -0.1
+				production_lack_of_resource_penalty_factor = -0.04
+				production_speed_buildings_factor = 0.02
+				production_factory_start_efficiency_factor = 0.01
+				production_factory_max_efficiency_factor = 0.01
+				production_factory_efficiency_gain_factor = 0.01
+				party_popularity_stability_factor = 0.04
+				monthly_population	= 0.04
+			}
+			removal_cost = -1
+			picture = BBR_all_for_the_party_idea
+		}
+		BBR_trve_communism_idea_2 = { #Ham Returns to National Communism
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_trve_communism_idea_2"}
+			allowed = { always = no }
+			available = {
+				has_government = totalist
+			}
+			modifier = {
+				totalist_drift = 0.03
+				weekly_manpower = 50
+				justify_war_goal_time = -0.3
+				production_lack_of_resource_penalty_factor = -0.06
+				local_resources	= 0.05
+				production_speed_buildings_factor = 0.06
+				production_factory_start_efficiency_factor = 0.03
+				production_factory_max_efficiency_factor = 0.03
+				production_factory_efficiency_gain_factor = 0.03
+				party_popularity_stability_factor = 0.09
+				monthly_population	= 0.08
+			}
+			removal_cost = -1
+			picture = BBR_all_for_the_party_idea
+		}
+		BBR_trve_communism_idea_3 = { #Ham Returns to National Communism
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_trve_communism_idea_3"}
+			allowed = { always = no }
+			available = {
+				has_government = totalist
+			}
+			modifier = {
+				totalist_drift = 0.05
+				weekly_manpower = 100
+				justify_war_goal_time = -0.5
+				production_lack_of_resource_penalty_factor = -0.08
+				local_resources	= 0.12
+				production_speed_buildings_factor = 0.11
+				production_factory_start_efficiency_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				party_popularity_stability_factor = 0.16
+				monthly_population	= 0.12
+			}
+			removal_cost = -1
+			picture = BBR_all_for_the_party_idea
+		}
 	
 		### Red Totalist Path ###
 		BBR_top_down_army_idea = { #Top Down Red Army
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_top_down_army_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = totalist
 			}
 			modifier = {
@@ -134,9 +193,8 @@ ideas = {
 		}
 		BBR_league_of_revolutionary_struggle_idea = { #League of Revolutionary Struggle
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_league_of_revolutionary_struggle_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = totalist
 			}
 			modifier = {
@@ -154,9 +212,8 @@ ideas = {
 		}
 		BBR_a_party_with_a_state_idea = { #A Party with a State
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_a_party_with_a_state_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = totalist
 			}
 			modifier = {
@@ -171,9 +228,8 @@ ideas = {
 		}
 		BBR_a_party_with_a_state_idea_2 = { #All to the Party
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_a_party_with_a_state_idea_2"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = totalist
 			}
 			modifier = {
@@ -189,9 +245,8 @@ ideas = {
 		}
 		BBR_haywood_economics = { #All to the Party
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_haywood_economics"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = totalist
 			}
 			modifier = {
@@ -211,9 +266,8 @@ ideas = {
 		}
 		BBR_haywood_economics_2 = { #All to the Party
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_haywood_economics_2"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = totalist
 			}
 			modifier = {
@@ -233,9 +287,8 @@ ideas = {
 		}
 		BBR_total_radicalism = { #All to the Party
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_total_radicalism"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = totalist
 			}
 			modifier = {
@@ -252,15 +305,14 @@ ideas = {
 		}
 		BBR_workers_market_idea = { #Workers Market
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_workers_market_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = totalist
 			}
 			modifier = {
 			production_factory_efficiency_gain_factor = 0.05
 			line_change_production_efficiency_factor = 0.05
-			consumer_goods_factor = 0.05
+			consumer_goods_factor = 0.1
 			conversion_cost_mil_to_civ_factor = -0.3
 			trade_opinion_factor = 0.5
 			monthly_population = 0.05
@@ -270,9 +322,8 @@ ideas = {
 		}
 		BBR_socialist_civic_identity_idea = { #Social Civic identity
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_socialist_civic_identity_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = totalist
 			}
 			modifier = {
@@ -290,14 +341,13 @@ ideas = {
 	### Syndie Path ###
 		BBR_equality_of_wealth_idea = { #Equality of Wealth
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_equality_of_wealth_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = syndicalist
 			}
 			modifier = {
 			surrender_limit = 0.05
-			consumer_goods_factor = -0.05
+			consumer_goods_factor = -0.15
 			industrial_capacity_factory	= -0.02
 			production_factory_start_efficiency_factor = 0.3
 			production_factory_max_efficiency_factor = -0.3
@@ -309,14 +359,13 @@ ideas = {
 		}
 		BBR_workers_coupons_idea = { #Equality of Wealth
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_workers_coupons_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = syndicalist
 			}
 			modifier = {
 			stability_weekly_factor = 0.005
-			consumer_goods_factor = -0.06
+			consumer_goods_factor = -0.16
 			surrender_limit = 0.05
 			production_factory_start_efficiency_factor = 0.3
 			production_factory_max_efficiency_factor = -0.1
@@ -327,9 +376,8 @@ ideas = {
 		}
 		BBR_red_militias_idea = { #Equality of Wealth
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_red_militias_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = syndicalist
 			}
 			modifier = {
@@ -348,9 +396,8 @@ ideas = {
 		}
 		BBR_accelerate_integration_idea = { #Equality of Wealth
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_accelerate_integration_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = syndicalist
 			}
 			modifier = {
@@ -364,9 +411,8 @@ ideas = {
 		}
 		BBR_internationale_aid = { #Equality of Wealth
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_internationale_aid"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = syndicalist
 			}
 			modifier = {
@@ -380,14 +426,13 @@ ideas = {
 	### Rad-Soc Path ###
 		BBR_solidarity_economics_idea = { #Solidarity Economics
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_solidarity_economics_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = radical_socialist
 			}
 			modifier = {
 			stability_weekly_factor = 0.005
-			consumer_goods_factor = -0.02
+			consumer_goods_factor = -0.06
 			industry_repair_factor = 0.05
 			production_speed_industrial_complex_factor = 0.05
 			production_factory_start_efficiency_factor = -0.05
@@ -399,15 +444,14 @@ ideas = {
 		}
 		BBR_solidarity_economics_idea_2 = { #Solidarity Economics
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_solidarity_economics_idea_2"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = radical_socialist
 			}
 			modifier = {
 			stability_weekly_factor = 0.007
 			monthly_population = 0.03
-			consumer_goods_factor = -0.04
+			consumer_goods_factor = -0.14
 			industry_repair_factor = 0.08
 			production_factory_start_efficiency_factor = -0.03
 			production_factory_max_efficiency_factor = 0.1
@@ -418,9 +462,8 @@ ideas = {
 		}
 		BBR_solidarity_economics_idea_3 = { #Solidarity Economics
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_solidarity_economics_idea_3"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = radical_socialist
 			}
 			modifier = {
@@ -428,7 +471,7 @@ ideas = {
 			monthly_population = 0.05
 			production_speed_infrastructure_factor = 0.05
 			production_speed_industrial_complex_factor = 0.08
-			consumer_goods_factor = -0.06
+			consumer_goods_factor = -0.16
 			industry_repair_factor = 0.1
 			production_factory_start_efficiency_factor = -0.02
 			production_factory_max_efficiency_factor = 0.15
@@ -439,9 +482,8 @@ ideas = {
 		}
 		BBR_solidarity_economics_idea_4 = { #Solidarity Economics
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_solidarity_economics_idea_4"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = radical_socialist
 			}
 			modifier = {
@@ -451,7 +493,7 @@ ideas = {
 			research_speed_factor = 0.05
 			production_speed_infrastructure_factor = 0.05
 			production_speed_industrial_complex_factor = 0.08
-			consumer_goods_factor = -0.05
+			consumer_goods_factor = -0.15
 			industry_repair_factor = 0.1
 			production_factory_start_efficiency_factor = -0.02
 			production_factory_max_efficiency_factor = 0.15
@@ -462,9 +504,8 @@ ideas = {
 		}
 		BBR_talented_tenth_idea = { #Talented Tenth
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_talented_tenth_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = radical_socialist
 			}
 			modifier = {
@@ -478,16 +519,15 @@ ideas = {
 		}
 		BBR_freethought_societies_idea = { #Freethought Societies
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_freethought_societies_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = radical_socialist
 			}
 			modifier = {
 			encryption = 0.03
 			stability_weekly_factor = 0.01
 			political_power_gain = 0.02
-			consumer_goods_factor = -0.01
+			consumer_goods_factor = -0.11
 			research_speed_factor = 0.03
 			party_popularity_stability_factor = 0.05
 			}
@@ -496,9 +536,8 @@ ideas = {
 		}
 		BBR_freethought_societies_idea_2 = { #Freethought Societies
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_freethought_societies_idea_2"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = radical_socialist
 			}
 			modifier = {
@@ -506,7 +545,7 @@ ideas = {
 			stability_weekly_factor = 0.015
 			political_power_gain = 0.02
 			monthly_population = 0.05
-			consumer_goods_factor = -0.05
+			consumer_goods_factor = -0.15
 			research_speed_factor = 0.03
 			party_popularity_stability_factor = 0.1
 			}
@@ -515,15 +554,14 @@ ideas = {
 		}
 		BBR_birth_control_idea = { #Birth Control
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_birth_control_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = radical_socialist
 			}
 			modifier = {
 			stability_weekly_factor = 0.003
 			monthly_population = -0.03
-			consumer_goods_factor = -0.05
+			consumer_goods_factor = -0.15
 			research_speed_factor = 0.03
 			party_popularity_stability_factor = 0.1
 			war_stability_factor = 0.05
@@ -534,13 +572,12 @@ ideas = {
 	### Soc-Dem Path ###
 		BBR_freedom_budget_idea = { #Worker Aid
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_freedom_budget_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = social_democrat
 			}
 			modifier = {
-			consumer_goods_factor = 0.03
+			consumer_goods_factor = 0.13
 			political_power_gain = 0.03
 			production_factory_start_efficiency_factor = 0.1
 			production_factory_efficiency_gain_factor = -0.03
@@ -552,13 +589,12 @@ ideas = {
 		}
 		BBR_freedom_budget_2 = { #Worker Aid
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_freedom_budget_2"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = social_democrat
 			}
 			modifier = {
-			consumer_goods_factor = 0.01
+			consumer_goods_factor = 0.11
 			political_power_gain = 0.03
 			monthly_population = 0.02
 			production_factory_start_efficiency_factor = 0.15
@@ -573,13 +609,12 @@ ideas = {
 		}
 		BBR_freedom_budget_3 = { #Freedom Budget
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_freedom_budget_3"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = social_democrat
 			}
 			modifier = {
-			consumer_goods_factor = -0.03
+			consumer_goods_factor = -0.1
 			political_power_gain = 0.04
 			monthly_population = 0.05
 			local_manpower = 0.01
@@ -595,13 +630,12 @@ ideas = {
 		}
 		BBR_freedom_budget_4 = { #Freedom Budget
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_freedom_budget_4"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = social_democrat
 			}
 			modifier = {
-			consumer_goods_factor = -0.04
+			consumer_goods_factor = -0.14
 			political_power_gain = 0.05
 			monthly_population = 0.06
 			local_manpower = 0.01
@@ -616,13 +650,12 @@ ideas = {
 		}
 		BBR_freedom_budget_5 = { #Freedom Budget
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_freedom_budget_5"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = social_democrat
 			}
 			modifier = {
-			consumer_goods_factor = -0.04
+			consumer_goods_factor = -0.14
 			political_power_gain = 0.03
 			monthly_population = 0.08
 			local_manpower = 0.03
@@ -637,13 +670,12 @@ ideas = {
 		}
 		BBR_living_wage_idea = { #Living Wage
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_living_wage_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = social_democrat
 			}
 			modifier = {
-			consumer_goods_factor = -0.02
+			consumer_goods_factor = -0.06
 			local_manpower = 0.01
 			production_factory_start_efficiency_factor = 0.05
 			production_factory_efficiency_gain_factor = -0.02
@@ -656,13 +688,12 @@ ideas = {
 		}
 		BBR_living_wage_idea_2 = { #Fair Employment
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_living_wage_idea_2"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = social_democrat
 			}
 			modifier = {
-			consumer_goods_factor = -0.03
+			consumer_goods_factor = -0.1
 			research_speed_factor = 0.01
 			local_manpower = 0.02
 			production_factory_start_efficiency_factor = 0.05
@@ -676,13 +707,12 @@ ideas = {
 		}
 		BBR_civil_rights_act_idea = { #Civil Rights
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_civil_rights_act_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = social_democrat
 			}
 			modifier = {
-			consumer_goods_factor = -0.02
+			consumer_goods_factor = -0.06
 			research_speed_factor = 0.02
 			stability_weekly_factor = 0.005
 			conscription_factor = 0.01
@@ -696,9 +726,8 @@ ideas = {
 	### Market Liberal Path ###
 		BBR_expand_tuskeegee_idea = { #Expand Tuskeegee
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_expand_tuskeegee_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				NOT = {
 				OR = {
 				has_government = syndicalist
@@ -717,9 +746,8 @@ ideas = {
 		}
 		BBR_bookerite_education = { #Expand Tuskeegee
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_bookerite_education"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				NOT = {
 				OR = {
 				has_government = syndicalist
@@ -738,9 +766,8 @@ ideas = {
 		}
 		BBR_bookerite_machine_idea = { #GOP Machine
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_bookerite_machine_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				NOT = {
 				OR = {
 				has_government = syndicalist
@@ -754,16 +781,15 @@ ideas = {
 			local_manpower = 0.02
 			party_popularity_stability_factor = 0.2
 			production_speed_buildings_factor = -0.05
-			consumer_goods_factor = 0.01
+			consumer_goods_factor = 0.11
 			}
 			removal_cost = -1
 			picture = BBR_new_republican_machine
 		}
 		BBR_nnbl_idea = { #Expand Tuskeegee
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_nnbl_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				NOT = {
 				OR = {
 				has_government = syndicalist
@@ -772,7 +798,7 @@ ideas = {
 				}
 			}
 			modifier = {
-			consumer_goods_factor = -0.04
+			consumer_goods_factor = -0.14
 			political_power_gain = -0.03
 			local_resources = 0.01
 			production_factory_efficiency_gain_factor = 0.05
@@ -783,9 +809,8 @@ ideas = {
 		}
 		BBR_nnbl_idea_2 = { #Expand Tuskeegee
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_nnbl_idea_2"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				NOT = {
 				OR = {
 				has_government = syndicalist
@@ -794,7 +819,7 @@ ideas = {
 				}
 			}
 			modifier = {
-			consumer_goods_factor = -0.07
+			consumer_goods_factor = -0.17
 			stability_weekly_factor = 0.002
 			political_power_gain = -0.03
 			local_resources = 0.01
@@ -808,9 +833,8 @@ ideas = {
 		}
 		BBR_nnbl_idea_3 = { #NNBL Idea
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_nnbl_idea_3"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				NOT = {
 				OR = {
 				has_government = syndicalist
@@ -819,7 +843,7 @@ ideas = {
 				}
 			}
 			modifier = {
-			consumer_goods_factor = -0.1
+			consumer_goods_factor = -0.3
 			stability_weekly_factor = 0.005
 			political_power_gain = -0.03
 			local_resources = 0.03
@@ -833,9 +857,8 @@ ideas = {
 		}
 		BBR_entente_trade_idea = { #NNBL Idea
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_entente_trade_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				NOT = {
 				OR = {
 				has_government = syndicalist
@@ -844,7 +867,7 @@ ideas = {
 				}
 			}
 			modifier = {
-			consumer_goods_factor = -0.02
+			consumer_goods_factor = -0.06
 			industrial_capacity_factory = 0.02
 			industrial_capacity_dockyard = 0.02
 			production_factory_efficiency_gain_factor = 0.02
@@ -859,13 +882,11 @@ ideas = {
 	### Soc-Lib Path ###
 		BBR_fairer_taxes_idea = { #Fairer Taxes
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_fairer_taxes_idea"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 			political_power_gain = 0.02
-			consumer_goods_factor = 0.01
+			consumer_goods_factor = 0.11
 			production_factory_start_efficiency_factor = 0.05
 			production_factory_efficiency_gain_factor = -0.02
 			party_popularity_stability_factor = 0.05
@@ -875,10 +896,8 @@ ideas = {
 		}
 		BBR_wage_floors_idea = { #Wage Floors
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_wage_floors_idea"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 			stability_weekly_factor = 0.002
 			political_power_gain = 0.03
@@ -891,15 +910,13 @@ ideas = {
 		}
 		BBR_minor_farm_aid = { #Wage Floors
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_minor_farm_aid"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 			stability_weekly_factor = 0.001
 			monthly_population = 0.08
 			min_export = -0.01
-			consumer_goods_factor = 0.01
+			consumer_goods_factor = 0.11
 			party_popularity_stability_factor = 0.05
 			}
 			removal_cost = -1
@@ -907,13 +924,11 @@ ideas = {
 		}
 		BBR_elderly_support_idea = { #Wage Floors
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_elderly_support_idea"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 			stability_weekly_factor = 0.003
-			consumer_goods_factor = -0.02
+			consumer_goods_factor = -0.06
 			party_popularity_stability_factor = 0.05
 			}
 			removal_cost = -1
@@ -921,14 +936,12 @@ ideas = {
 		}
 		BBR_vet_support_idea = { #Wage Floors
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_vet_support_idea"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 			stability_weekly_factor = 0.001
 			political_power_gain = 0.01
-			consumer_goods_factor = -0.01
+			consumer_goods_factor = -0.11
 			army_morale_factor	= 0.05
 			conscription_factor = 0.01
 			production_factory_efficiency_gain_factor = -0.01
@@ -941,14 +954,13 @@ ideas = {
 	### Soc Con Path ###
 		BBR_cash_only_idea = { #Cash Only
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_cash_only_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = social_conservative
 			}
 			modifier = {
 			stability_weekly_factor = 0.003
-			consumer_goods_factor = -0.02
+			consumer_goods_factor = -0.06
 			research_speed_factor = -0.05
 			encryption = 0.05
 			political_power_gain = -0.02
@@ -962,14 +974,13 @@ ideas = {
 		}
 		BBR_economic_independence_idea = { #Economic Independence
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_economic_independence_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = social_conservative
 			}
 			modifier = {
 			stability_weekly_factor = 0.006
-			consumer_goods_factor = -0.05
+			consumer_goods_factor = -0.15
 			research_speed_factor = -0.03
 			encryption = 0.05
 			political_power_gain = -0.01
@@ -983,14 +994,13 @@ ideas = {
 		}
 		BBR_economic_independence_idea_2 = { #Economic Independence 2
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_economic_independence_idea_2"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = social_conservative
 			}
 			modifier = {
 			stability_weekly_factor = 0.01
-			consumer_goods_factor = -0.08
+			consumer_goods_factor = -0.18
 			research_speed_factor = -0.02
 			monthly_population = 0.05
 			encryption = 0.05
@@ -1004,15 +1014,14 @@ ideas = {
 		}
 		BBR_modesty_codes_idea = { #Modesty Codes
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_modesty_codes_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = social_conservative
 			}
 			modifier = {
 			stability_weekly_factor = 0.001
 			political_power_gain = 0.01
-			consumer_goods_factor = -0.03
+			consumer_goods_factor = -0.1
 			production_factory_efficiency_gain_factor = -0.02
 			party_popularity_stability_factor = 0.2
 			}
@@ -1021,16 +1030,15 @@ ideas = {
 		}
 		BBR_modesty_codes_idea_2 = { #Modesty Codes
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_modesty_codes_idea_2"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = social_conservative
 			}
 			modifier = {
 			stability_weekly_factor = 0.002
 			political_power_gain = 0.05
 			supply_consumption_factor = -0.05
-			consumer_goods_factor = -0.05
+			consumer_goods_factor = -0.15
 			local_resources_factor = 0.02
 			production_factory_efficiency_gain_factor = -0.01
 			party_popularity_stability_factor = 0.2
@@ -1040,9 +1048,8 @@ ideas = {
 		}
 		BBR_ipm_idea = { #International Peace Movement
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_ipm_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = social_conservative
 			}
 			modifier = {
@@ -1060,9 +1067,8 @@ ideas = {
 		}
 		BBR_interracial_faith = { #Interracial Faith
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_interracial_faith"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = social_conservative
 			}
 			modifier = {
@@ -1076,9 +1082,8 @@ ideas = {
 		}
 		BBR_interracial_faith_2 = { #Interracial Faith
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_interracial_faith_2"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = social_conservative
 			}
 			modifier = {
@@ -1098,9 +1103,8 @@ ideas = {
 	### Auth-Dem Path ###
 		worker_aid_idea = { #Worker Aid
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea worker_aid_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = authoritarian_democrat
 			}
 			modifier = {
@@ -1116,16 +1120,15 @@ ideas = {
 		}
 		afp_aid_idea = { #Rural Aid
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea afp_aid_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = authoritarian_democrat
 			}
 			modifier = {
 			stability_weekly_factor = 0.002
 			local_manpower = 0.05
 			local_resources = 0.05
-			consumer_goods_factor = 0.01
+			consumer_goods_factor = 0.11
 			monthly_population = 0.05
 			production_factory_max_efficiency_factor = 0.05
 			party_popularity_stability_factor = 0.05
@@ -1135,9 +1138,8 @@ ideas = {
 		}
 		BBR_citizen_recruitment = { #Mass Recruitment
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_citizen_recruitment"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = authoritarian_democrat
 			}
 			modifier = {
@@ -1151,7 +1153,7 @@ ideas = {
 		}
 		BBR_citizen_army = { #Mass Recruitment
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_citizen_army"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
 				NOT = { has_global_flag = USA_civil_war_over_flag }
 			}
@@ -1170,7 +1172,7 @@ ideas = {
 		}
 		BBR_citizen_army_2 = { #Mass Recruitment
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_citizen_army_2"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
 				NOT = { has_global_flag = USA_civil_war_over_flag }
 			}
@@ -1180,7 +1182,7 @@ ideas = {
 				conscription_factor = 0.07
 				production_factory_efficiency_gain_factor = 0.05
 				experience_gain_army = 0.03
-				consumer_goods_factor = 0.01
+				consumer_goods_factor = 0.11
 				army_org_Factor = 0.05
 				local_manpower = 0.08
 				monthly_population = 0.02
@@ -1192,15 +1194,14 @@ ideas = {
 		}
 		BBR_fair_play_idea = { #Fair Play
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_fair_play_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = authoritarian_democrat
 			}
 			modifier = {
 			stability_weekly_factor = 0.002
 			political_power_gain = -0.02
-			consumer_goods_factor = -0.05
+			consumer_goods_factor = -0.15
 			line_change_production_efficiency_factor = 0.03
 			production_factory_max_efficiency_factor = 0.03
 			production_factory_efficiency_gain_factor = 0.03
@@ -1210,14 +1211,13 @@ ideas = {
 		}
 		BBR_fair_play_idea_2 = { #Fair Play
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_fair_play_idea_2"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = authoritarian_democrat
 			}
 			modifier = {
 			stability_weekly_factor = 0.005
-			consumer_goods_factor = -0.04
+			consumer_goods_factor = -0.14
 			research_speed_factor = 0.02
 			line_change_production_efficiency_factor = 0.05
 			local_manpower = 0.02
@@ -1232,14 +1232,13 @@ ideas = {
 		}
 		BBR_fair_play_idea_3 = { #Fair Play
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_fair_play_idea_3"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = authoritarian_democrat
 			}
 			modifier = {
 			stability_weekly_factor = 0.01
-			consumer_goods_factor = -0.03
+			consumer_goods_factor = -0.1
 			research_speed_factor = 0.04
 			line_change_production_efficiency_factor = 0.05
 			local_manpower = 0.05
@@ -1255,9 +1254,8 @@ ideas = {
 	### Pat Aut Path ###
 		BBR_african_legion_idea = { #Mass Recruitment
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_african_legion_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = paternal_autocrat
 			}
 			modifier = {
@@ -1278,9 +1276,8 @@ ideas = {
 		}
 		BBR_african_legion_idea_2 = { #Mass Recruitment
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_african_legion_idea_2"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = paternal_autocrat
 			}
 			modifier = {
@@ -1303,16 +1300,15 @@ ideas = {
 		}
 		BBR_black_separatism_idea = { #Mass Recruitment
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_black_separatism_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				OR = {
 					has_government = paternal_autocrat
 					has_country_leader = { ruling_only = yes name = "Wentworth Arthur Matthew" }
 				}
 			}
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 				supply_consumption_factor = 0.01
 				conscription_factor = -0.02
 				local_manpower = -0.05
@@ -1329,13 +1325,12 @@ ideas = {
 		}
 		BBR_black_separatism_idea_2 = { #Mass Recruitment
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_black_separatism_idea_2"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = paternal_autocrat
 			}
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 				supply_consumption_factor = 0.01
 				conscription_factor = -0.04
 				local_manpower = -0.03
@@ -1353,13 +1348,12 @@ ideas = {
 		}
 		BBR_black_star_line_idea = { #Mass Recruitment
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_black_star_line_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = paternal_autocrat
 			}
 			modifier = {
-				consumer_goods_factor = -0.01
+				consumer_goods_factor = -0.11
 				repair_speed_naval_base_factor = 0.05
 				production_speed_dockyard_factor = -0.05
 				industrial_capacity_dockyard = 0.05
@@ -1371,11 +1365,10 @@ ideas = {
 	### Nat Pop Path ###
 		BBR_fruit_of_islam_idea = { #Fruit of Islam
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_fruit_of_islam_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = national_populist
-				has_country_leader = { ruling_only = yes name = "Elijah Muhammad" }
+				NOT = { has_country_leader = { ruling_only = yes name = "Wentworth Arthur Matthew" } }
 			}
 			modifier = {
 				training_time_army_factor = -0.05
@@ -1394,14 +1387,13 @@ ideas = {
 		}
 		BBR_black_society = { #Blacks Only
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_black_society"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = national_populist
-				has_country_leader = { ruling_only = yes name = "Elijah Muhammad" }
+				NOT = { has_country_leader = { ruling_only = yes name = "Wentworth Arthur Matthew" } }
 			}
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 				political_power_gain = 0.05
 				conscription_factor = -0.05
 				stability_weekly_factor = 0.002
@@ -1416,11 +1408,10 @@ ideas = {
 		}
 		BBR_islamic_schools_idea = { #Islamic Schools
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_islamic_schools_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = national_populist
-				has_country_leader = { ruling_only = yes name = "Elijah Muhammad" }
+				NOT = { has_country_leader = { ruling_only = yes name = "Wentworth Arthur Matthew" } }
 			}
 			modifier = {
 				research_speed_factor = 0.02
@@ -1437,11 +1428,10 @@ ideas = {
 		}
 		BBR_islamic_schools_idea_2 = { #Islamic Schools
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_islamic_schools_idea_2"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = national_populist
-				has_country_leader = { ruling_only = yes name = "Elijah Muhammad" }
+				NOT = { has_country_leader = { ruling_only = yes name = "Wentworth Arthur Matthew" } }
 			}
 			modifier = {
 				research_speed_factor = 0.02
@@ -1459,15 +1449,14 @@ ideas = {
 		}
 		BBR_black_economics_idea = { #Islamic Schools
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_black_economics_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = national_populist
-				has_country_leader = { ruling_only = yes name = "Elijah Muhammad" }
+				NOT = { has_country_leader = { ruling_only = yes name = "Wentworth Arthur Matthew" } }
 			}
 			modifier = {
 				political_power_gain = 0.03
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 				local_resources = 0.02
 				production_factory_start_efficiency_factor = 0.1
 				production_factory_efficiency_gain_factor = -0.03
@@ -1479,15 +1468,14 @@ ideas = {
 		}
 		BBR_national_savings_plan_idea  = { #Islamic Schools
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_national_savings_plan_idea "}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = national_populist
-				has_country_leader = { ruling_only = yes name = "Elijah Muhammad" }
+				NOT = { has_country_leader = { ruling_only = yes name = "Wentworth Arthur Matthew" } }
 			}
 			modifier = {
 				political_power_gain = 0.03
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.1
 				local_resources = -0.01
 				production_factory_start_efficiency_factor = -0.05
 			}
@@ -1496,11 +1484,10 @@ ideas = {
 		}
 		BBR_the_prophet_idea = { #Islamic Schools
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_prophet_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = national_populist
-				has_country_leader = { ruling_only = yes name = "Elijah Muhammad" }
+				NOT = { has_country_leader = { ruling_only = yes name = "Wentworth Arthur Matthew" } }
 			}
 			modifier = {
 				political_power_gain = 0.15
@@ -1516,9 +1503,8 @@ ideas = {
 		### Funny Jews ###
 		BBR_abrehamic_resestienec = { #abrehamic resstience
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_prophet_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = national_populist
 			}
 			modifier = {
@@ -1532,9 +1518,8 @@ ideas = {
 		}
 		BBR_abrehamic_resestienec_2 = { #abrehamic resstience 
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_prophet_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = national_populist
 			}
 			modifier = {
@@ -1548,13 +1533,12 @@ ideas = {
 		}
 		BBR_jew_nat = { #garveist nationalism
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_prophet_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = national_populist
 			}
 			modifier = {
-				consumer_goods_factor = -0.01
+				consumer_goods_factor = -0.11
 				political_power_gain = 0.05
 			}
 			removal_cost = -1
@@ -1562,9 +1546,8 @@ ideas = {
 		}
 		BBR_true_child_of_god = { #true child of god
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_prophet_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = national_populist
 			}
 			modifier = {
@@ -1577,9 +1560,8 @@ ideas = {
 		}
 		BBR_halie_hassie_boi_idea = { #true child of god
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_prophet_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = national_populist
 			}
 			modifier = {
@@ -1594,7 +1576,6 @@ ideas = {
 		BBR_prepared_for_final_battleidea = { #true child of god
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_prophet_idea"}
 			available = {
-				tag = BBR
 				has_government = national_populist
 			}
 			modifier = {
@@ -1609,9 +1590,8 @@ ideas = {
 		}
 		BBR_welcoming_da_jews = { #true child of god
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_prophet_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = national_populist
 			}
 			modifier = {
@@ -1623,9 +1603,8 @@ ideas = {
 		}
 		BBR_jew_swaying = { #true child of god
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_prophet_idea"}
-                        allowed = { always = no }
+			allowed = { always = no }
 			available = {
-				tag = BBR
 				has_government = national_populist
 			}
 			modifier = {
@@ -1639,7 +1618,6 @@ ideas = {
 		BBR_funny_jews_with_gun = { #true child of god
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_prophet_idea"}
 			available = {
-				tag = BBR
 				has_government = national_populist
 			}
 			modifier = {
@@ -1654,12 +1632,10 @@ ideas = {
 		### Sun Ra ###
 		BBR_african_rebirth = { #garveist nationalism
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_prophet_idea"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
-				consumer_goods_factor = -0.1
+				consumer_goods_factor = -0.3
 				political_power_gain = 0.05
 			}
 			removal_cost = -1
@@ -1667,12 +1643,10 @@ ideas = {
 		}
 		BBR_lefty_future = { #garveist nationalism
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_prophet_idea"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.1
 				production_factory_start_efficiency_factor = 0.1
 				production_speed_arms_factory_factor = 0.1
 				industrial_capacity_factory = 0.1
@@ -1682,12 +1656,10 @@ ideas = {
 		}
 		BBR_lefty_future_2 = { #garveist nationalism
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_prophet_idea"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
-				consumer_goods_factor = 0.1
+				consumer_goods_factor = 0.2
 				production_factory_start_efficiency_factor = 0.15
 				production_speed_arms_factory_factor = 0.15
 				industrial_capacity_factory = 0.15
@@ -1699,10 +1671,8 @@ ideas = {
 		}
 		BBR_reaction_future = { #garveist nationalism
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_prophet_idea"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 				war_support_factor = 0.1
 				training_time_factor = -0.1
@@ -1716,10 +1686,8 @@ ideas = {
 		}
 		BBR_reaction_future_2 = { #garveist nationalism
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_prophet_idea"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 				war_support_factor = 0.15
 				training_time_factor = -0.15
@@ -1738,10 +1706,8 @@ ideas = {
 		}
 		BBR_music_and_stuff = { #garveist nationalism
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_prophet_idea"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 				political_power_cost = -0.1
 				stability_factor = 0.15
@@ -1751,10 +1717,8 @@ ideas = {
 		}
 		BBR_music_and_stuff_2 = { #garveist nationalism
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_prophet_idea"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 				political_power_cost = -0.15
 				stability_factor = 0.2
@@ -1767,12 +1731,10 @@ ideas = {
 		}
 		BBR_african_sun_ra = { #garveist nationalism
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_prophet_idea"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 				conscription_factor = 0.1
 				political_power_factor = 0.2			
 
@@ -1782,10 +1744,8 @@ ideas = {
 		}
 		BBR_blacks_only_idea = { #garveist nationalism
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_prophet_idea"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 				stability_factor = 0.2
 				war_support_factor = 0.1
@@ -1798,14 +1758,12 @@ ideas = {
 		}
 		BBR_open_arms_to_black_people = { #garveist nationalism
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_prophet_idea"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 				monthly_population = 0.15
 				stability_factor = -0.1
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 
 			}
 			removal_cost = -1
@@ -1813,10 +1771,8 @@ ideas = {
 		}
 		BBR_TO_SAT_idea = { #garveist nationalism
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_the_prophet_idea"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 				army_speed_factor = 0.1
 				production_speed_buildings_factor = 0.10
@@ -1828,15 +1784,7 @@ ideas = {
 		### Redeem Africa ###
 		BBR_redeem_africa_idea = { #Purge Africans
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_redeem_africa_idea"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-				OR = {
-				has_government = national_populist
-				has_government = totalist
-				has_government = paternal_autocrat
-				}
-			}
+			allowed = { always = no }
 			modifier = {
 				local_non_core_manpower = -0.30
 				monthly_population = -0.45
@@ -1848,10 +1796,8 @@ ideas = {
 		}
 		BBR_reach_inwards_ideas = { #Redeem Africa
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_reach_inwards_ideas"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 				local_non_core_manpower = 0.02
 				monthly_population = 0.05
@@ -1863,10 +1809,8 @@ ideas = {
 		### Military Paths ###
 		BBR_davis_plan_idea = { #Davis Plan
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_davis_plan_idea"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 				supply_consumption_factor = 0.03
 				army_speed_factor = 0.05
@@ -1877,10 +1821,8 @@ ideas = {
 		}
 		BBR_davis_plan_idea_2 = { #Davis Plan
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_davis_plan_idea_2"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 				supply_consumption_factor = 0.03
 				army_speed_factor = 0.05
@@ -1909,10 +1851,8 @@ ideas = {
 		}
 		BBR_davis_plan_idea_3 = { #Davis Plan
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_davis_plan_idea_3"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 				supply_consumption_factor = 0.02
 				army_speed_factor = 0.08
@@ -1933,10 +1873,8 @@ ideas = {
 		}
 		BBR_young_plan_idea = { #Officer Training
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_young_plan_idea"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 				max_planning = 0.05
 				out_of_supply_factor = 0.05
@@ -1951,10 +1889,8 @@ ideas = {
 		}
 		BBR_young_plan_idea_2 = { #Officer Training
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_young_plan_idea_2"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 				max_planning = 0.1
 				out_of_supply_factor = 0.03
@@ -1971,10 +1907,8 @@ ideas = {
 		}
 		BBR_young_plan_idea_3 = { #Officer Training
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_young_plan_idea_3"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 				max_planning = 0.15
 				out_of_supply_factor = 0.02
@@ -1993,10 +1927,8 @@ ideas = {
 		}
 		BBR_page_doctrine_idea = { #Page Doctrine
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_page_doctrine_idea"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 				land_reinforce_rate	= 0.01
 				army_org_Factor = -0.2
@@ -2007,10 +1939,8 @@ ideas = {
 		}
 		BBR_page_doctrine_idea_2 = { #Page Doctrine
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_page_doctrine_idea_2"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 				conscription_factor = 0.04
 				land_reinforce_rate	= 0.02
@@ -2022,10 +1952,8 @@ ideas = {
 		}
 		BBR_page_doctrine_idea_3 = { #Page Doctrine
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_page_doctrine_idea_3"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 				conscription_factor = 0.05
 				land_reinforce_rate	= 0.05
@@ -2040,10 +1968,9 @@ ideas = {
 		}
 		BBR_militia_support = { #Page Doctrine
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_militia_support"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			name = BBR_militia_support_idea
+			
 			modifier = {
 				conscription_factor = 0.02
 				land_reinforce_rate	= 0.03
@@ -2057,10 +1984,8 @@ ideas = {
 		}
 		BBR_militia_support_2 = { #Page Doctrine
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_militia_support_2"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 				conscription_factor = 0.02
 				land_reinforce_rate	= 0.03
@@ -2075,10 +2000,8 @@ ideas = {
 		}
 		BBR_officer_training_idea = { #Officer Training
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_officer_training_idea"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 				experience_gain_army = 0.05
 				military_leader_cost_factor = -0.30
@@ -2091,10 +2014,8 @@ ideas = {
 		}
 		BBR_cavalry_bonus = { #Officer Training
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_cavalry_bonus"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 			recon_factor = 0.1
 			org_loss_when_moving = -0.05
@@ -2108,10 +2029,8 @@ ideas = {
 		}
 		BBR_flipper_doctrine_idea = { #Flipper Doctrine
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_flipper_doctrine_idea"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 				army_attack_factor = 0.03
 				combat_width_factor = 0.1
@@ -2124,10 +2043,8 @@ ideas = {
 		}
 		BBR_flipper_doctrine_idea_2 = { #Flipper Doctrine
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_flipper_doctrine_idea_2"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 				army_attack_factor = 0.05
 				breakthrough_factor	= 0.05
@@ -2149,10 +2066,8 @@ ideas = {
 		}
 		BBR_flipper_doctrine_idea_3 = { #Flipper Doctrine
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_flipper_doctrine_idea_3"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 				army_attack_factor = 0.05
 				breakthrough_factor	= 0.05
@@ -2176,10 +2091,8 @@ ideas = {
 		}
 		BBR_military_engineers_idea = { #Flipper Doctrine
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_military_engineers_idea"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 				encryption_factor = 0.05
 				decryption_factor = 0.05
@@ -2202,10 +2115,8 @@ ideas = {
 		}
 		BBR_military_engineers_idea_2 = { #Flipper Doctrine
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea BBR_military_engineers_idea_2"}
-                        allowed = { always = no }
-			available = {
-				tag = BBR
-			}
+			allowed = { always = no }
+			
 			modifier = {
 				encryption_factor = 0.05
 				decryption_factor = 0.08
@@ -2297,7 +2208,7 @@ ideas = {
 	}
 
 	### Weapons Manufacturers ###
-	weapons_manufacturer = {
+	materiel_manufacturer = {
 		designer = yes
 		Negro_factories_corporation = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Negro_factories_corporation"}

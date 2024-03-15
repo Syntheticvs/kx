@@ -65,9 +65,6 @@ SWI_romandy_crisis_desc:0 "Agitated by supporters in the neighbouring French Com
 
 #Foreign Aid
 
-SWI_austrian_assisstance:0 "Alliance with Austria"
-SWI_austrian_assisstance_desc:0 "Responding to our calls for aid, our longtime neighbour the Austrian Empire has responded and promised to defend our sovereignty against French aggression. With the aid of a power such as Austria, we are surely capable of holding against the French invaders."
-
 SWI_alpine_rhine:0 "Expand the Alpine Rhine Crossing"
 SWI_alpine_rhine_desc:0 "Our border with Austria is complicated by rivers and mountains that make traversing the terrain slow and difficult. Expansion of these passages between our two nations will enhance the Austrian's ability to send troops and materials to our aid when advancing westwards into the Commune."
 
@@ -490,7 +487,6 @@ SWI_liscense_foregin_designs_desc:0 "Foreign aircraft have proven to be deadly a
 
 ### Tooltips ###
 SWI_has_eugen_bircher:0 "Has unit leader §HEugen Bircher§!"
-SWI_has_eugen_bircher:0 "Has unit leader §HEugen Bircher§!"
 SWI_has_ulrich_wille:0 "Has unit leader §HUlrich Wille Jr.§!"
 SWI_has_henri_guisan:0 "Has unit leader §HHenri Guisan§!"
 SWI_geneva_faded_tt:0 "The memories of the event in Geneva has faded away from the public conciousness."
@@ -837,8 +833,8 @@ swiss.50.b:0 "The capital will stay in Bern."
 swiss.51.t:0 "The [GetYear] Swiss Federal Elections"
 swiss.51.d:0 "The time has come again for the people of Switzerland to vote, and decide which party will seize the majority in the National Council. Only one party can come out on top, which will it be?"
 swiss.51.a:0 "Sozialdemokratische Partei der Schweiz!"
-swiss.51.b:0 "Freisinnig-Demokratische Partei - Demokraten!"
-swiss.51.c:0 "Freisinnig-Demokratische Partei - Liberale!"
+swiss.51.b:0 "Freisinnig-Demokratische Partei - Liberale!"
+swiss.51.c:0 "Freisinnig-Demokratische Partei - Demokraten!"
 swiss.51.e:0 "Katholisch-Konservative Partei der Schweiz!"
 swiss.51.f:0 "Bauern-, Gewerbe- und Bürgerpartei!"
 
@@ -1460,6 +1456,12 @@ swiss.209.b:0 "The Syndicalist Grand Coalition Holds."
 swiss.209.c:0 "Herzog's Authoritarian Syndicalist faction wins."
 swiss.209.e:0 "Humbert-Droz's Market Socialist faction wins."
 
+swiss.210.t:0 "The Dream of a Greater Switzerland"
+swiss.210.d:0 "Despite our commitment to the concept of Swiss Neutrality, which has existed since 1815 with the signing of the Second Treaty of Paris, a certain group has begun to grow in popularity throughout the Cantons. Largely pushed by the Swiss People’s Party and other Nationalist or Right-wing groups, as well as by the growing Alemannic separatist movement that seeks to create a state for the Alemannic-speaking people of Central-Western Europe centered in Switzerland, this nebulous group calls for the creation of a Greater Swiss State. Citing the growing world tension and rising international violence, the group believes that if Switzerland is to survive the coming maelstrom of world war and modernity, then our confederation must grow and adapt. A larger territory would grant many benefits to our state, though we would have to integrate these lands into our already-strained confederative system of autonomous cantons which would likely cause many new growing pains and a high level of national unrest, for we are already bogged down with political tensions, international aggressors, and the Jura and Romaine separatist movements as well. What should we do?"
+swiss.210.a:0 "Stay dedicated to our vow of Swiss Neutrality."
+swiss.210.b:0 "Pursue this idea of Greater Switzerland!"
+swiss.210.c:0 "So shall rise the Alemannic Confederation!"
+
 #Note: I am Aware that this is not how Swiss Politics Works, however this is probably the best way to represent it in game while working with what KR has made and without making a whole new mechanic
 
 ### Parties ###
@@ -1470,9 +1472,9 @@ SWI_syndicalist_party_long:0 "Syndikalistische Partei der Schweiz"
 SWI_social_democrat_party:0 "SP"
 SWI_social_democrat_party_long:0 "Sozialdemokratische Partei der Schweiz"
 SWI_social_liberal_party:0 "FDP"
-SWI_social_liberal_party_long:0 "Freisinnig-Demokratische Partei (Democrats)"
+SWI_social_liberal_party_long:0 "Freisinnig-Demokratische Partei (Liberals)"
 SWI_market_liberal_party:0 "FDP"
-SWI_market_liberal_party_long:0 "Freisinnig-Demokratische Partei (Liberals)"
+SWI_market_liberal_party_long:0 "Freisinnig-Demokratische Partei (Democrats)"
 SWI_social_conservative_party:0 "KKP"
 SWI_social_conservative_party_long:0 "Katholisch-Konservative Partei der Schweiz"
 SWI_authoritarian_democrat_party:0 "BGB"
@@ -1571,7 +1573,7 @@ SWI_join_GER_peace_desc:0 "While the Communard threat is temporarily subdued, th
 SWI_join_GER_war_desc:0 "In our great time of need, the German Empire came to our aid. We have since become de-facto members of their sphere, and it is only appropriate that we return their favor and formally join the Reichspakt, supporting them in their future military endeavors."
 SWI_internationale:0 "Join the Third Internationale"
 SWI_internationale_desc:0 "Our French allies were a great help in the liberation of our people. To protect us from the dirty imperialists surrounding us, we must formally join their military alliance."
-
+SWI_even_greater_switzerland:0 "The Question of Alemannic Unity"
 ### Other Stuff ###
 SWI_conquest_decisions:0 "Unlocks §YGreater Switzerland§! Decisions"
 SWI_romandie_confrontation:0 "§RThis will begin a confrontation with Switzerland and could lead to war.§!"
@@ -1645,24 +1647,6 @@ SWI_guard_tooltip:0 "You will gain §Y3§! Infantry Divisions."
 SWI_forts_tooltip:0 "gains moderate defensive infrastructure.\n"
 SWI_coast_tooltip:0 "You must own a port for this focus to have an effect"
 
-### Monarchy Path ###
-SWI_funni_monarchism:0 "Birth of Swiss Monarchism"
-SWI_funni_monarchism_desc:0 "With 1936 dawning, we must accept the harsh reality we are faced with - Republicanism is a failed ideology. This truth has been proved both in our council chambers and in the fires of the Weltkrieg, showing our tiny nation the light of monarchism as the Kaiser marched to victory. With many believing that a second war is on the horizon, we must prepare ourselves for the coming storm, and what better way to prepare than to establish a monarchy, finally bringing prestige, stability, and order in these trying times?"
-SWI_crown_willy:0 "Crown Wilhelm II"
-SWI_crown_willy_desc:0 "In our quest for a monarch, what better man is there than the Kaiser himself, the victor of the Great War? Switzerland is a Germanic nation, and we deserve a Germanic King!"
-SWI_crown_karl:0 "Crown Karl I"
-SWI_crown_karl_desc:0 "What better man for a Swiss monarch than Karl of Austria himself? A pious and holy man, his leadership would surely lead us to greatness."
-SWI_crown_eddie:0 "Crown Edward VIII"
-SWI_crown_eddie_desc:0 "If any man is fit to rule Switzerland, surely it is the exiled King of England, Edward, is it not? Though he and his father may have lost their throne in London, the Anglos will have a second shot at glory here."
-SWI_crown_krill:0 "Crown Kirill I"
-SWI_crown_krill_desc:0 "Kirill I, claimant to the vacant Romanov throne is surely a fitting man for the new Swiss throne. After all, a little experience in leadership would help him in Russia greatly."
-SWI_enternal_regency:0 "Eternal Regency"
-SWI_enternal_regency_desc:0 "If we are being honest, no man is fit to rule our fair lands, thus the regency shall endure indefinably."
-SWI_crown_krill_desc:0 "Kirill I, claimant to the vacant Romanov throne, is surely the most fitting man for the new Swiss throne. After all, a little experience in leadership would help him in Russia greatly, should he ever reclaim his birthright."
-SWI_enternal_regency:0 "Eternal Regency"
-SWI_enternal_regency_desc:0 "If we are being honest, no man is fit to rule our fair lands, thus the regency shall endure indefinitely. We shall build monarchism without a monarch, no matter how stupid that seems."
-SWI_abolish_monarchy:0 "Abolish the Monarchy"
-SWI_abolish_monarchy_desc:0 "Despite our best efforts, the Monarchy has done nothing but bring chaos and instability to our little mountain home. To remedy this ailment, the monarchy shall be torn down, the throne destroyed, and any traces of regality and nobility eradicated. The Republic shall be born anew from this ash, ready to guide the Swiss people into modernity."
 ### Cosmetic Tags ###
 SWIS_totalist:0 "Helvetic Commune"
 SWIS_totalist_ADJ:0 "Helvetic"
@@ -1703,6 +1687,6 @@ SWIM_national_populist:0 "Swiss State"
 SWIM_national_populist_ADJ:0 "Swiss"
 SWIM_national_populist_DEF:0 "the Swiss State"
 
-SWI_monarchist:0 "Kingdom of Switzerland"
-SWI_monarchist_ADJ:0 "Swiss"
-SWI_monarchist_DEF:0 "the Kingdom of Switzerland"
+SWI_ALEMANNIC:0 "Alemannic Confederation"
+SWI_ALEMANNIC_ADJ:0 "Alemannic"
+SWI_ALEMANNIC_DEF:0 "the Alemannic Confederation"

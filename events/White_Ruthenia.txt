@@ -21,104 +21,15 @@ country_event = { # Rethinking our commitment to Germany
 	is_triggered_only = yes
 
 	option = {
-		name = whiteruthenia.2.a
-		trigger = {
-			has_global_flag = voldemaras_coup_in_lithuania
-			country_exists = LIT
-			LIT = {
-				OR = {
-					has_government = national_populist
-					has_government = paternal_autocrat
-				}
-			}
-			is_in_faction_with = GER
-			LIT = {
-				is_subject = no
-			}
-			NOT = {
-				is_in_faction_with = RUS
-				is_in_faction_with = LIT
-			}
-		}
-
-		ai_chance = { factor = 60 
-		modifier = {
-				factor = 0
-				OR = {
-					has_game_rule = {
-						rule = WHR_foreign_policy
-						option = WHR_FOREIGN_POLICY_NEUTRALITY_GERMAN_INTERVENTION
-					}
-					has_game_rule = {
-						rule = WHR_foreign_policy
-						option = WHR_FOREIGN_POLICY_NEUTRALITY_GERMAN_ACQUIESCENCE
-					}
-					has_game_rule = {
-						rule = WHR_foreign_policy
-						option = WHR_FOREIGN_POLICY_RUSSIA
-					}
-					has_game_rule = {
-						rule = WHR_foreign_policy
-						option = WHR_FOREIGN_POLICY_RUSSIA_FAIL
-					}
-					has_game_rule = {
-						rule = WHR_foreign_policy
-						option = WHR_FOREIGN_POLICY_STAY_WITH_GERMAN
-					}
-				}
-			}
-		}
-
-		if = {
-			limit = {
-				is_subject = yes
-			}
-			overlord = {
-				set_autonomy = {
-					target = WHR
-					autonomy_state = autonomy_free
-				}
-			}
-		}
-		if = {
-			limit = {
-				is_in_faction = yes
-			}
-			leave_faction = yes
-		}
-		separate_peace_all_wars = yes
-
-		hidden_effect = {
-			LIT = {
-				country_event = {
-					days = 2
-					id = whiteruthenia.29
-				}
-			}
-		}
-	}
-
-	option = {
 		name = whiteruthenia.2.c
-		ai_chance = { factor = 30 
-		modifier = {
+		ai_chance = { 
+			factor = 20 
+			modifier = {
 				factor = 0
 				OR = {
 					has_game_rule = {
 						rule = WHR_foreign_policy
-						option = WHR_FOREIGN_POLICY_NEUTRALITY_GERMAN_INTERVENTION
-					}
-					has_game_rule = {
-						rule = WHR_foreign_policy
-						option = WHR_FOREIGN_POLICY_NEUTRALITY_GERMAN_ACQUIESCENCE
-					}
-					has_game_rule = {
-						rule = WHR_foreign_policy
-						option = WHR_FOREIGN_POLICY_LITHUANIA_GERMAN_INTERVENTION
-					}
-					has_game_rule = {
-						rule = WHR_foreign_policy
-						option = WHR_FOREIGN_POLICY_LITHUANIA_GERMAN_ACQUIESCENCE
+						option = WHR_FOREIGN_POLICY_NEUTRALITY
 					}
 					has_game_rule = {
 						rule = WHR_foreign_policy
@@ -126,11 +37,16 @@ country_event = { # Rethinking our commitment to Germany
 					}
 					has_game_rule = {
 						rule = WHR_foreign_policy
-						option = WHR_FOREIGN_POLICY_RUSSIA_FAIL
+						option = WHR_FOREIGN_POLICY_INTERNATIONALE
+					}
+					has_game_rule = {
+						rule = WHR_foreign_policy
+						option = WHR_FOREIGN_POLICY_UKRAINE
 					}
 				}
 			}
 		}
+		set_country_flag = WHR_decided_to_stay_with_GER
 		reverse_add_opinion_modifier = {
 			target = GER
 			modifier = KR_pleased
@@ -138,188 +54,29 @@ country_event = { # Rethinking our commitment to Germany
 	}
 
 	option = {
-		name = whiteruthenia.2.e
-		ai_chance = { factor = 10 
-		modifier = {
+		name = whiteruthenia.2.b
+		ai_chance = { 
+			factor = 80
+			modifier = {
 				factor = 0
-				OR = {
-					has_game_rule = {
-						rule = WHR_foreign_policy
-						option = WHR_FOREIGN_POLICY_LITHUANIA_GERMAN_INTERVENTION
-					}
-					has_game_rule = {
-						rule = WHR_foreign_policy
-						option = WHR_FOREIGN_POLICY_LITHUANIA_GERMAN_ACQUIESCENCE
-					}
-					has_game_rule = {
-						rule = WHR_foreign_policy
-						option = WHR_FOREIGN_POLICY_RUSSIA
-					}
-					has_game_rule = {
-						rule = WHR_foreign_policy
-						option = WHR_FOREIGN_POLICY_RUSSIA_FAIL
-					}
-					has_game_rule = {
-						rule = WHR_foreign_policy
-						option = WHR_FOREIGN_POLICY_STAY_WITH_GERMAN
-					}
+				has_game_rule = {
+					rule = WHR_foreign_policy
+					option = WHR_FOREIGN_POLICY_STAY_WITH_GERMAN
 				}
 			}
 		}
-
-		if = {
-			limit = {
-				is_subject = yes
-			}
-			overlord = {
-				set_autonomy = {
-					target = WHR
-					autonomy_state = autonomy_free
-				}
-			}
-		}
-		if = {
-			limit = {
-				is_in_faction = yes
-			}
-			leave_faction = yes
-		}
-		separate_peace_all_wars = yes
-
+		clear_all_relations = yes
 		hidden_effect = {
+			if = {
+				limit = { has_country_flag = MIE_member_will_be_couped }
+				hidden_effect = { UKR = { country_event = ukrsun.60 } }
+			}
 			GER = {
 				country_event = {
 					days = 2
 					id = whiteruthenia.5
 				}
 			}
-		}
-	}
-}
-
-country_event = { # An offer from White Ruthenia
-	id = whiteruthenia.3
-	immediate = { log = "[GetDateText]: [Root.GetName]: event whiteruthenia.3" }
-	title = whiteruthenia.3.t
-	desc = whiteruthenia.3.d
-
-	is_triggered_only = yes
-
-	option = {
-		name = whiteruthenia.3.a
-		ai_chance = { factor = 90 
-		modifier = {
-				factor = 0
-				has_game_rule = {
-					rule = WHR_foreign_policy
-					option = WHR_FOREIGN_POLICY_RUSSIA_FAIL
-				}
-			}
-		}
-
-		if = {
-			limit = { is_in_faction = no }
-			create_faction = moscow_accord
-		}
-		add_to_faction = WHR
-		hidden_effect = {
-			GER = {
-				country_event = {
-					days = 2
-					id = whiteruthenia.4
-				}
-			}
-		}
-	}
-
-	option = {
-		name = whiteruthenia.3.b
-		ai_chance = { 
-			factor = 5 
-			modifier = {
-				factor = 0
-				OR = {
-					has_game_rule = {
-						rule = WHR_foreign_policy
-						option = WHR_FOREIGN_POLICY_RUSSIA
-					}
-					has_game_rule = {
-						rule = WHR_foreign_policy
-						option = WHR_FOREIGN_POLICY_RUSSIA_FAIL
-					}
-				}
-			}
-		}
-		reverse_add_opinion_modifier = {
-			target = WHR
-			modifier = KR_hates_govt
-		}
-		hidden_effect = {
-			GER = {
-				country_event = {
-					days = 2
-					id = whiteruthenia.5
-				}
-			}
-		}
-	}
-
-	option = {
-		name = whiteruthenia.3.c
-
-		trigger = {
-			OR = {
-				is_ai = no
-				has_game_rule = {
-					rule = WHR_foreign_policy
-					option = WHR_FOREIGN_POLICY_RUSSIA_FAIL
-				}
-			}
-		}
-		ai_chance = { 
-			factor = 80 
-			modifier = {
-				factor = 0
-				has_game_rule = {
-					rule = WHR_foreign_policy
-					option = WHR_FOREIGN_POLICY_RUSSIA
-				}
-			}
-		}
-		declare_war_on = {
-			target = WHR
-			type = annex_everything
-		}
-	}
-}
-
-country_event = { # White Ruthenia has left us
-	id = whiteruthenia.4
-	immediate = { log = "[GetDateText]: [Root.GetName]: event whiteruthenia.4" }
-	title = whiteruthenia.4.t
-	desc = whiteruthenia.4.d
-
-	is_triggered_only = yes
-
-	option = {
-		name = whiteruthenia.4.a
-		ai_chance = { factor = 100 }
-		reverse_add_opinion_modifier = {
-			target = WHR
-			modifier = KR_hates_govt
-		}
-		reverse_add_opinion_modifier = {
-			target = RUS
-			modifier = KR_hates_govt
-		}
-	}
-
-	option = {
-		name = whiteruthenia.4.b
-		ai_chance = { factor = 0 }
-		declare_war_on = {
-			target = WHR
-			type = annex_everything
 		}
 	}
 }
@@ -334,12 +91,13 @@ country_event = { # White Ruthenia has left us
 
 	option = {
 		name = whiteruthenia.5.a
-		ai_chance = { factor = 95 
-		modifier = {
+		ai_chance = { 
+			factor = 35 
+			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = WHR_foreign_policy
-					option = WHR_FOREIGN_POLICY_NEUTRALITY_GERMAN_INTERVENTION
+					rule = WHR_german_intervention
+					option = WHR_GERMAN_INTERVENTION_TRUE
 				}
 			}
 		}
@@ -348,15 +106,16 @@ country_event = { # White Ruthenia has left us
 			modifier = KR_hates_govt
 		}
 	}
-
+	
 	option = {
 		name = whiteruthenia.5.b
-		ai_chance = { factor = 5 
-		modifier = {
+		ai_chance = { 
+			factor = 65
+			modifier = {
 				factor = 0
 				has_game_rule = {
-					rule = WHR_foreign_policy
-					option = WHR_FOREIGN_POLICY_NEUTRALITY_GERMAN_ACQUIESCENCE
+					rule = WHR_german_intervention
+					option = WHR_GERMAN_INTERVENTION_FALSE
 				}
 			}
 		}
@@ -364,166 +123,14 @@ country_event = { # White Ruthenia has left us
 			target = WHR
 			modifier = KR_outraged
 		}
+		declare_war_on = {
+			target = WHR
+			type = annex_everything
+		}
+		activate_mission = WHR_crush_the_belarusian_revolt
 		hidden_effect = {
-			GER = {
-				country_event = {
-					days = 5
-					id = whiteruthenia.6
-				}
-			}
+			WHR = { activate_mission = WHR_resist_the_germans }
 		}
-	}
-}
-
-country_event = { # Fall Jungingen
-	id = whiteruthenia.6
-	immediate = { log = "[GetDateText]: [Root.GetName]: event whiteruthenia.6" }
-	title = whiteruthenia.6.t
-	desc = whiteruthenia.6.d
-
-	is_triggered_only = yes
-
-	option = {
-		name = whiteruthenia.6.a
-		ai_chance = { factor = 90 }
-
-		declare_war_on = {
-			target = WHR
-			type = annex_everything
-		}
-	}
-
-	option = {
-		name = whiteruthenia.6.b
-		ai_chance = { factor = 10 
-		modifier = {
-				factor = 0
-				has_game_rule = {
-					rule = WHR_foreign_policy
-					option = WHR_FOREIGN_POLICY_NEUTRALITY_GERMAN_INTERVENTION
-				}
-			}
-		}
-
-		add_stability = -0.06
-	}
-}
-
-country_event = { # A message from White Ruthenia
-	id = whiteruthenia.29
-	immediate = { log = "[GetDateText]: [Root.GetName]: event whiteruthenia.29" }
-	title = whiteruthenia.29.t
-	desc = whiteruthenia.29.d
-
-	is_triggered_only = yes
-
-	option = {
-		name = whiteruthenia.29.a
-		ai_chance = { factor = 90 }
-
-		if = {
-			limit = { has_war_with = WHR }
-			WHR = { white_peace_with_ROOT = yes }
-		}
-
-		WHR = {
-			create_faction = litrut_faction
-			add_to_faction = LIT
-		}
-
-		if = {
-			limit = {
-				NOT = {
-					is_in_faction_with = GER
-				}
-			}
-
-			hidden_effect = {
-				GER = {
-					country_event = {
-						days = 2
-						id = whiteruthenia.36
-					}
-				}
-			}
-		}
-	}
-
-	option = {
-		name = whiteruthenia.29.b
-		ai_chance = { factor = 10 
-		modifier = {
-				factor = 0
-				OR = {
-					has_game_rule = {
-						rule = WHR_foreign_policy
-						option = WHR_FOREIGN_POLICY_LITHUANIA_GERMAN_INTERVENTION
-					}
-					has_game_rule = {
-						rule = WHR_foreign_policy
-						option = WHR_FOREIGN_POLICY_LITHUANIA_GERMAN_ACQUIESCENCE
-					}
-				}
-			}
-		}
-		reverse_add_opinion_modifier = {
-			target = WHR
-			modifier = KR_hates_govt
-		}
-		hidden_effect = {
-			GER = {
-				country_event = {
-					days = 2
-					id = whiteruthenia.5
-				}
-			}
-		}
-	}
-}
-
-country_event = { # Nationalism in the East
-	id = whiteruthenia.36
-	immediate = { log = "[GetDateText]: [Root.GetName]: event whiteruthenia.36" }
-	title = whiteruthenia.36.t
-	desc = whiteruthenia.36.d
-
-	is_triggered_only = yes
-
-	option = {
-		name = whiteruthenia.36.a
-		ai_chance = { factor = 85 
-		modifier = {
-				factor = 0
-				has_game_rule = {
-					rule = WHR_foreign_policy
-					option = WHR_FOREIGN_POLICY_LITHUANIA_GERMAN_ACQUIESCENCE
-				}
-			}
-		}
-
-		declare_war_on = {
-			target = LIT
-			type = annex_everything
-		}
-		declare_war_on = {
-			target = WHR
-			type = annex_everything
-		}
-	}
-
-	option = {
-		name = whiteruthenia.36.b
-		ai_chance = { factor = 15 
-		modifier = {
-				factor = 0
-				has_game_rule = {
-					rule = WHR_foreign_policy
-					option = WHR_FOREIGN_POLICY_LITHUANIA_GERMAN_INTERVENTION
-				}
-			}
-		}
-
-		add_stability = -0.04
 	}
 }
 
@@ -1044,6 +651,10 @@ country_event = {
 					}
 					has_game_rule = {
 						rule = WHR_situation
+						option = WHR_SITUATION_BSDP_KING
+					}
+					has_game_rule = {
+						rule = WHR_situation
 						option = WHR_SITUATION_CENTRAL_RADA
 					}
 					has_game_rule = {
@@ -1108,16 +719,8 @@ country_event = {
 		}
 		else = { add_ideas = WHR_Jan_Sierada_eco_sli }
 		add_ideas = WHR_Anton_Luckievic_sec_sde
-		hidden_effect = { 
-			set_temp_variable = { coalition_partner_var = token:radical_socialist }
-				add_to_coalition = yes 
-		}
-		custom_effect_tooltip = radsoc_will_join_coalition_tt
-		hidden_effect = { 
-			set_temp_variable = { coalition_partner_var = token:social_liberal }
-				add_to_coalition = yes 
-		}
-		custom_effect_tooltip = soclib_will_join_coalition_tt
+		add_radsoc_to_coalition = yes
+		add_soclib_to_coalition = yes
 		
 		country_event = { id = whrpol.2 days = 14 } #Necessity of Reform
 	}
@@ -1284,6 +887,10 @@ country_event = {
 					}
 					has_game_rule = {
 						rule = WHR_situation
+						option = WHR_SITUATION_BSDP_KING
+					}
+					has_game_rule = {
+						rule = WHR_situation
 						option = WHR_SITUATION_BPSR
 					}
 					has_game_rule = {
@@ -1361,6 +968,10 @@ country_event = {
 					has_game_rule = {
 						rule = WHR_situation
 						option = WHR_SITUATION_BSDP
+					}
+					has_game_rule = {
+						rule = WHR_situation
+						option = WHR_SITUATION_BSDP_KING
 					}
 					has_game_rule = {
 						rule = WHR_situation
@@ -1486,6 +1097,10 @@ country_event = {
 					}
 					has_game_rule = {
 						rule = WHR_situation
+						option = WHR_SITUATION_BSDP_KING
+					}
+					has_game_rule = {
+						rule = WHR_situation
 						option = WHR_SITUATION_BPSR
 					}
 					has_game_rule = {
@@ -1567,6 +1182,10 @@ country_event = {
 					has_game_rule = {
 						rule = WHR_situation
 						option = WHR_SITUATION_BSDP
+					}
+					has_game_rule = {
+						rule = WHR_situation
+						option = WHR_SITUATION_BSDP_KING
 					}
 					has_game_rule = {
 						rule = WHR_situation
@@ -1707,6 +1326,10 @@ country_event = {
 						rule = WHR_situation
 						option = WHR_SITUATION_BSDP
 					}
+					has_game_rule = {
+						rule = WHR_situation
+						option = WHR_SITUATION_BSDP_KING
+					}
 				}
 			}
 		}
@@ -1806,7 +1429,7 @@ country_event = {
 				name = "Radasłaŭ Astroŭski"
 				desc = "POLITICS_RADASLAU_ASTROUSKI_DESC"
 				picture = "gfx/leaders/WHR/Portrait_WHR_Radaslau_Astrouski.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = junta_subtype
 			}
 		}
@@ -1873,9 +1496,15 @@ country_event = {
 	option = {
 		name = whiteruthenia.48.a
 		ai_chance = { factor = 100 }
-		add_to_faction = WHR
+		if = {
+			limit = { has_country_flag = soviet_russia_restored }
+			SOV_puppet_FROM_effect = yes
+		}
+		else = {
+			effect_tooltip = { add_to_faction = FROM }
+		}
 		add_stability = 0.07
-		WHR = {
+		FROM = {
 			country_event = {
 				id = whiteruthenia.49
 				days = 1
@@ -2066,13 +1695,13 @@ country_event = {
 
 	option = {
 		name = whiteruthenia.59.a
-		ai_chance = { factor = 100 }
+		ai_chance = { factor = 99 }
 		add_stability = -0.05
 	}
 
 	option = {
 		name = whiteruthenia.59.b
-		ai_chance = { factor = 0 }
+		ai_chance = { factor = 1 }
 		create_wargoal = {
 			type = annex_everything
 			target = RUS
@@ -2090,6 +1719,9 @@ country_event = {
 
 	option = {
 		name = whiteruthenia.63.a
+		transfer_state = 1287
+		transfer_state = 243
+		transfer_state = 755
 		RUS = {
 			country_event = {
 				id = whiteruthenia.64
@@ -2109,18 +1741,10 @@ country_event = {
 
 	option = {
 		name = whiteruthenia.64.a
-		ai_chance = { 
-			factor = 85 
-		}
 		add_stability = -0.1
-		WHR = {
-			transfer_state = 1287
-			transfer_state = 1292
-			transfer_state = 243
-			transfer_state = 755
-		}
 		every_other_country = {
 			limit = {
+				NOT = { tag = ROOT }
 				OR = {
 					tag = WRA
 					tag = RRF
@@ -2131,31 +1755,6 @@ country_event = {
 				days = 5
 				id = whiteruthenia.65
 			}
-		}
-	}
-
-	option = {
-		name = whiteruthenia.64.b
-		ai_chance = { 
-			factor = 15 
-			modifier = {
-				factor = 0
-				OR = {
-					FROM = { RUS_dont_attack_if_target_is_stronger = yes }
-					FROM = { RUS_dont_attack_if_faction_is_stronger = yes }
-					FROM = { RUS_dont_attack_if_overlord_is_stronger = yes }
-				}
-			}
-		}
-		WHR = {
-			transfer_state = 1287
-			transfer_state = 1292
-			transfer_state = 243
-			transfer_state = 755
-		}
-		declare_war_on = {
-			type = annex_everything
-			target = WHR
 		}
 	}
 }
@@ -2241,7 +1840,8 @@ country_event = {
 		name = whiteruthenia.69.a
 		if = {
 			limit = {
-				UKR = {
+				var:202.owner = {
+					is_ukrainian_tag = yes
 					controls_state = 93
 				}
 			}
@@ -2251,7 +1851,8 @@ country_event = {
 		}
 		if = {
 			limit = {
-				UKR = {
+				var:202.owner = {
+					is_ukrainian_tag = yes
 					controls_state = 241
 				}
 			}
@@ -2261,7 +1862,8 @@ country_event = {
 		}
 		if = {
 			limit = {
-				UKR = {
+				var:202.owner = {
+					is_ukrainian_tag = yes
 					controls_state = 997
 				}
 			}
@@ -2308,7 +1910,7 @@ country_event = {
 	option = {
 		name = whiteruthenia.71.a
 		ai_chance = { factor = 60 }
-		UKR = {
+		var:202.owner = {
 			country_event = {
 				days = 2
 				id = whiteruthenia.72
@@ -2409,7 +2011,7 @@ country_event = {
 	option = {
 		name = whiteruthenia.75.a
 		ai_chance = { factor = 60 }
-		UKR = {
+		var:202.owner = {
 			country_event = {
 				days = 2
 				id = whiteruthenia.76
@@ -3768,20 +3370,37 @@ country_event = {
 
 	trigger = {
 		tag = WHR
-		owns_state = 1287
-		owns_state = 1292
-		owns_state = 243
-		owns_state = 755
+		OR = {
+			owns_state = 1287
+			owns_state = 243
+			owns_state = 755
+		}
 	}
-
+	
 	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 6
+	}
 
 	option = {
 		name = whiteruthenia.96.a
-		add_state_core = 1287
-		add_state_core = 1292
-		add_state_core = 243
-		add_state_core = 755
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 1287
+					state = 243
+					state = 755
+				}
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+				has_resistance = yes
+			}
+			add_state_modifier = {
+				modifier = {
+					compliance_gain = 0.25 #boost to compliance to help core faster
+				}
+			}
+		}		
 	}
 }
 
@@ -3793,16 +3412,38 @@ country_event = {
 
 	trigger = {
 		tag = WHR
-		owns_state = 93
-		owns_state = 241
+		OR = {
+			owns_state = 93
+			owns_state = 241
+			owns_state = 997
+		}		
 	}
 
 	fire_only_once = yes
-
+	mean_time_to_happen = {
+		months = 3
+	}
+	
 	option = {
 		name = whiteruthenia.97.a
-		add_state_core = 93
-		add_state_core = 241
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 93
+					state = 241
+					state = 997
+					state = 1230
+				}
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+				has_resistance = yes
+			}
+			add_state_modifier = {
+				modifier = {
+					compliance_gain = 0.25 #boost to compliance to help core faster
+				}
+			}
+		}
 	}
 }
 
@@ -4095,7 +3736,10 @@ country_event = { #future of monarchy?
 			days = 3
 		}
 		hidden_effect = {
-			WHR_setup_republican_leaders = yes
+			if = {
+				limit = { WHR_is_monarchy = yes }
+				WHR_setup_republican_leaders = yes
+			}
 			set_cosmetic_tag = WHR_BEL
 			news_event = worldnews.186
 		}		
@@ -4160,7 +3804,6 @@ country_event = { # Starting situation
 	option = {
 		name = whrpol.1.a
 		country_event = whrpol.intro
-		hidden_effect = { activate_targeted_decision = { target = GER decision = WHR_limit_exports } }
 	}
 }
 
@@ -4194,10 +3837,8 @@ country_event = { # Necessity of Reform
 		custom_effect_tooltip = radsoc_will_join_coalition_tt
 		custom_effect_tooltip = soclib_will_join_coalition_tt
 		hidden_effect = {
-			set_temp_variable = { coalition_partner_var = token:radical_socialist }
-			add_to_coalition = yes
-			set_temp_variable = { coalition_partner_var = token:social_liberal }
-			add_to_coalition = yes
+			add_radsoc_to_coalition = yes
+			add_soclib_to_coalition = yes
 			country_event = { id = whrmisc.10 days = 420 }
 			country_event = { id = whrlandreform.2 days = 75 }
 			country_event = { id = whrlandreform.3 days = 115 }
@@ -4238,10 +3879,16 @@ country_event = { # The Assembly Meets
 			factor = 60
 			modifier = {
 				factor = 1000
-				has_game_rule = {
-					rule = WHR_situation
-					option = WHR_SITUATION_BSDP
-				}
+				OR = {
+					has_game_rule = {
+						rule = WHR_situation
+						option = WHR_SITUATION_BSDP
+					}
+					has_game_rule = {
+						rule = WHR_situation
+						option = WHR_SITUATION_BSDP_KING
+					}
+				}	
 			}
 		}
 		add_popularity = {
@@ -4254,10 +3901,8 @@ country_event = { # The Assembly Meets
 				NOT = { has_government = social_democrat }
 			}
 			set_politics = { ruling_party = social_democrat }
-			set_temp_variable = { coalition_partner_var = token:radical_socialist }
-			add_to_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:social_liberal }
-			add_to_coalition = yes 
+			add_radsoc_to_coalition = yes
+			add_soclib_to_coalition = yes
 			remove_all_ministers = yes
 			add_ideas = WHR_Jazep_Ljosik_hog_sde
 			add_ideas = WHR_Anton_Lutskevic_for_sde
@@ -4324,8 +3969,7 @@ country_event = { # The Assembly Meets
 				add_ideas = WHR_Dmitry_Pryshchepau_eco_rso
 				add_ideas = WHR_Pavel_Valoshin_sec_rso
 				end_coalition = yes
-				set_temp_variable = { coalition_partner_var = token:social_democrat }
-				add_to_coalition = yes				
+				add_socdem_to_coalition = yes			
 			}
 		}
 	}
@@ -4429,6 +4073,7 @@ country_event = { # PatAut Coup
 			ruling_party = paternal_autocrat
 		}
 		hidden_effect = {
+			clr_global_flag = RUS_will_puppet_belarus
 			clr_country_flag = LandReformPlanBSRH
 			clr_country_flag = LandReformPlanBSDP
 			clr_country_flag = LandReformPlanBPSF
@@ -4877,6 +4522,7 @@ country_event = { # natpop coup
 
 	option = {
 		name = whrpol.22.a
+		clr_global_flag = WHR_The_Countercoup
 		complete_national_focus = WHR_The_Countercoup
 		set_politics = {
 			ruling_party = national_populist
@@ -4894,6 +4540,7 @@ country_event = { # natpop coup
 		clr_country_flag = WHR_ai_revolution
 		clr_country_flag = WHR_ai_german
 		clr_country_flag = WHR_ai_anarchy
+		clr_country_flag = sigismund_I_HoS
 		hidden_effect = {
 			news_event = { id = worldnews.469 days = 1}
 			GER = { country_event = whiteruthenia.1000 }
@@ -4912,6 +4559,7 @@ country_event = { # Astrouski forms anti-syndie government
 
 	option = {
 		name = whrpol.23.a
+		clr_global_flag = WHR_The_Countercoup
 		add_popularity = {
 			ideology = authoritarian_democrat
 			popularity = 0.20
@@ -4932,7 +4580,7 @@ country_event = { # Astrouski forms anti-syndie government
 				name = "Radasłaŭ Astroŭski"
 				desc = "POLITICS_RADASLAU_ASTROUSKI_DESC"
 				picture = "gfx/leaders/WHR/Portrait_WHR_Radaslau_Astrouski.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = authdem_junta_subtype 
 			}
 		}
@@ -4941,15 +4589,13 @@ country_event = { # Astrouski forms anti-syndie government
 				name = "Žyhimont"
 				desc = "POLITICS_SIGISMUND_DESC"
 				picture = "gfx/leaders/WHR/Portrait_WHR_Zyhimont.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = prussian_constitutionalism_subtype
 			}
 		}
 		remove_all_ministers = yes
-		set_temp_variable = { coalition_partner_var = token:social_conservative }
-		add_to_coalition = yes 
-		set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
-		add_to_coalition = yes 
+		add_soccon_to_coalition = yes
+		add_pataut_to_coalition = yes 
 		add_ideas = WHR_Radaslau_Astrouski_hog_ade
 		add_ideas = WHR_Klaudzij_Sciapanavic_Duz_Duseuski_for_ade
 		add_ideas = WHR_Andrej_Jakubiecki_eco_ade
@@ -5010,10 +4656,16 @@ country_event = { # post-1939 elections, soccons are also electable alongside th
 			factor = 20
 			modifier = {
 				factor = 100
-				has_game_rule = {
-					rule = WHR_situation
-					option = WHR_SITUATION_BSDP
-				}
+				OR = {
+					has_game_rule = {
+						rule = WHR_situation
+						option = WHR_SITUATION_BSDP
+					}
+					has_game_rule = {
+						rule = WHR_situation
+						option = WHR_SITUATION_BSDP_KING
+					}
+				}	
 			}
 		}
 		end_coalition = yes
@@ -5030,10 +4682,8 @@ country_event = { # post-1939 elections, soccons are also electable alongside th
 				election_frequency = 48
 				elections_allowed = yes
 			}
-			set_temp_variable = { coalition_partner_var = token:radical_socialist }
-			add_to_coalition = yes 
-			set_temp_variable = { coalition_partner_var = token:social_liberal }
-			add_to_coalition = yes 
+			add_radsoc_to_coalition = yes
+			add_soclib_to_coalition = yes
 			remove_all_ministers = yes
 			add_ideas = WHR_Jazep_Ljosik_hog_sde
 			add_ideas = WHR_Anton_Lutskevic_for_sde
@@ -5080,10 +4730,8 @@ country_event = { # post-1939 elections, soccons are also electable alongside th
 				elections_allowed = yes
 			}
 		}
-		set_temp_variable = { coalition_partner_var = token:social_democrat }
-		add_to_coalition = yes
-		set_temp_variable = { coalition_partner_var = token:social_liberal }
-		add_to_coalition = yes
+		add_socdem_to_coalition = yes
+		add_soclib_to_coalition = yes
 		remove_all_ministers = yes
 		add_ideas = WHR_Jazep_Ljosik_hog_sde
 		add_ideas = WHR_Anton_Lutskevic_for_sde
@@ -5093,6 +4741,7 @@ country_event = { # post-1939 elections, soccons are also electable alongside th
 		}
 		else = { add_ideas = WHR_Jan_Sierada_eco_sli }
 		add_ideas = WHR_Anton_Luckievic_sec_sde
+		clr_country_flag = sigismund_I_HoS
 	}		
 	option = { # BPSF
 		name = whrpol.26.c
@@ -5114,6 +4763,7 @@ country_event = { # post-1939 elections, soccons are also electable alongside th
 				}
 			}
 		}
+		clr_global_flag = WHR_The_Countercoup
 		end_coalition = yes
 		add_popularity = {
 			ideology = social_liberal
@@ -5138,13 +4788,13 @@ country_event = { # post-1939 elections, soccons are also electable alongside th
 				elections_allowed = yes
 			}
 		}
-		set_temp_variable = { coalition_partner_var = token:market_liberal }
-		add_to_coalition = yes
+		add_marlib_to_coalition = yes
 		remove_all_ministers = yes
 		add_ideas = WHR_Mikola_Abramcyk_hog_sli
 		add_ideas = WHR_Jerzy_Osmolowski_for_mli
 		add_ideas = WHR_Jan_Sierada_eco_sli
 		add_ideas = WHR_Mitrofan_Dovnar_Zapolsky_sec_mli
+		clr_country_flag = sigismund_I_HoS
 	}
 	option = { # NDA coalition wins!
 		name = whrpol.26.b
@@ -5158,6 +4808,7 @@ country_event = { # post-1939 elections, soccons are also electable alongside th
 				}
 			}
 		}
+		clr_global_flag = WHR_The_Countercoup
 		end_coalition = yes
 		add_popularity = {
 			ideology = social_conservative
@@ -5177,8 +4828,7 @@ country_event = { # post-1939 elections, soccons are also electable alongside th
 				elections_allowed = yes
 			}
 		}
-		set_temp_variable = { coalition_partner_var = token:market_liberal }
-		add_to_coalition = yes
+		add_marlib_to_coalition = yes
 		remove_all_ministers = yes
 		add_ideas = WHR_Adam_Stankievic_hog_sco
 		add_ideas = WHR_Jerzy_Osmolowski_for_mli
@@ -5195,6 +4845,7 @@ country_event = { # post-1939 elections, soccons are also electable alongside th
 				ruling_only = yes
 			}
 		}
+		clr_global_flag = WHR_The_Countercoup
 		end_coalition = yes
 		ai_chance = {
 			factor = 20
@@ -5233,6 +4884,7 @@ country_event = { # post-1939 elections, soccons are also electable alongside th
 		trigger = {
 			has_country_flag = Vasil_Zacharka_dead
 		}
+		clr_global_flag = WHR_The_Countercoup
 		end_coalition = yes
 		ai_chance = {
 			factor = 20
@@ -5336,11 +4988,12 @@ country_event = { # semi-direct rule from Berlin
 		add_political_power = -50
 		add_stability = -0.10
 		clr_country_flag = WHRcivilwar
+		clr_global_flag = WHR_The_Countercoup
 		create_country_leader = {
 			name = "Werner Kempf"
 			desc = "POLITICS_WERNER_KEMPF_DESC"
 			picture = "gfx/leaders/WHR/Portrait_WHR_Werner_Kempf.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = junta_subtype
 		}
 		set_party_name = {
@@ -5662,7 +5315,6 @@ country_event = { # Separate peace for WHR-RUS?
 				surrender_progress > 0.20
 				NOT = {
 					controls_state = 1287
-					controls_state = 1292
 					controls_state = 243
 					controls_state = 755
 				}
@@ -5671,7 +5323,6 @@ country_event = { # Separate peace for WHR-RUS?
 				factor = 0
 				OR = {
 					controls_state = 1287
-					controls_state = 1292
 					controls_state = 243
 					controls_state = 755
 				}
@@ -5691,7 +5342,6 @@ country_event = { # Separate peace for WHR-RUS?
 				surrender_progress > 0.20
 				OR = {
 					controls_state = 1287
-					controls_state = 1292
 					controls_state = 243
 					controls_state = 755
 				}
@@ -5699,7 +5349,6 @@ country_event = { # Separate peace for WHR-RUS?
 			modifier = {
 				factor = 0
 				controls_state = 1287
-				controls_state = 1292
 				controls_state = 243
 				controls_state = 755
 			}
@@ -5718,14 +5367,12 @@ country_event = { # Separate peace for WHR-RUS?
 				surrender_progress > 0.20
 				controls_state = 243
 				controls_state = 1287
-				controls_state = 1292
 				controls_state = 755
 			}
 			modifier = {
 				factor = 0
 				OR = {
 					NOT = { controls_state = 1287 }
-					NOT = { controls_state = 1292 }
 					NOT = { controls_state = 243 }
 					NOT = { controls_state = 755 }
 				}
@@ -5793,7 +5440,6 @@ country_event = { # RUS counter-offer
 				factor = 0
 				NOT = {
 					controls_state = 1287
-					controls_state = 1292
 					controls_state = 243
 					controls_state = 755
 				}
@@ -5895,51 +5541,24 @@ country_event = { # Peace and join TI
 
 	option = { # No longer just RadSoc in the sheets
 		name = whrpol.42.a
-		set_politics = {
-			ruling_party = radical_socialist
-			elections_allowed = no
-		}
 		separate_peace_all_wars = yes
-		custom_effect_tooltip = socdem_will_join_coalition_tt
-		country_event = whrpol.46
-		remove_all_ministers = yes
-		add_ideas = WHR_Symon_Rak_Michajlouski_hog_rso
-		add_ideas = WHR_Pyotar_Myatla_for_rso
-		add_ideas = WHR_Dmitry_Pryshchepau_eco_rso
-		add_ideas = WHR_Pavel_Valoshin_sec_rso
-		add_popularity = {
-			ideology = social_democrat
-			popularity = -0.3
-		}
-		add_popularity = {
-			ideology = radical_socialist
-			popularity = 0.3
-		}
-		set_temp_variable = { coalition_partner_var = token:social_democrat }
-		add_to_coalition = yes
-		if = {
-			limit = { SOV = { is_faction_leader = yes } }
-			SOV = { add_to_faction = WHR }
-		}
-		else = {
-			INT = { add_to_faction = WHR }
-		}
+		FROM = { add_to_faction = WHR }
 		if = {
 			limit = {
 				has_country_flag = WHR_peace_all_claims
+				FROM = { tag = RUS }
 			}
 			transfer_state = 1287
 			transfer_state = 243
 			transfer_state = 755
-			transfer_state = 1292
 			clr_country_flag = WHR_peace_all_claims
 		}
 		else_if = {
 			limit = {
 				has_country_flag = WHR_peace_split_offered
+				FROM = { tag = RUS }
 			}
 			transfer_state = 243
-			transfer_state = 1292
 			clr_country_flag = WHR_peace_split_offered
 		}
 		else_if = {
@@ -6180,7 +5799,7 @@ country_event = { # Anti-German Revolution
 			name = "Stanisłaŭ Bułak-Bałachowič"
 			desc = "POLITICS_BULAK_BALACHOWIC_DESC"
 			picture = "gfx/leaders/WHR/Portrait_WHR_Stanislaw_Bulak_Balachowicz.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = junta_subtype
 		}
 		set_party_name = {
@@ -6214,7 +5833,7 @@ country_event = { # Anti-German Revolution
 					}
 				}
 				NOT = {
-					soviets_exist = yes
+					RUS = { has_country_flag = soviet_russia_restored }
 					has_war_with = RUS
 				}
 			}
@@ -6245,7 +5864,7 @@ country_event = { # Anti-German Revolution
 		create_country_leader = {
 			name = "Revaliucyjny Savet Belarusi"
 			picture = "gfx/leaders/WHR/Portrait_WHR_Revolutionary_Council_of_Belarus.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = anarcho_bolshevism_subtype
 		}
 		set_party_name = {
@@ -6288,7 +5907,26 @@ country_event = { # Hramada Fate
 	id = whrpol.51
 	immediate = { log = "[GetDateText]: [Root.GetName]: event whrpol.51" }
 	title = whrpol.51.t
-	desc = whrpol.51.d
+	desc = {
+		text = whrpol.51.d
+		trigger = {
+			NOT = {
+				has_country_leader = {
+					name = "Uladzimir"
+					ruling_only = yes
+				}
+			}
+		}
+	}
+	desc = {
+		text = whrpol.51.dk
+		trigger = {
+			has_country_leader = {
+				name = "Uladzimir"
+				ruling_only = yes
+			}
+		}
+    }
 	picture = GFX_report_event_WHR_sojm_meeting
 
 	is_triggered_only = yes
@@ -6436,8 +6074,7 @@ country_event = { # Hramada Fate
 		add_ideas = WHR_Dmitry_Pryshchepau_eco_rso
 		add_ideas = WHR_Pavel_Valoshin_sec_rso
 		end_coalition = yes
-		set_temp_variable = { coalition_partner_var = token:social_democrat }
-		add_to_coalition = yes
+		add_socdem_to_coalition = yes
 		clear_all_relations = yes
 		set_country_flag = { flag = WHR_allies days = 30 value = 1 }
 		GER = {
@@ -6456,6 +6093,10 @@ country_event = { # Hramada Fate
 					has_game_rule = {
 						rule = WHR_situation
 						option = WHR_SITUATION_BSDP
+					}
+					has_game_rule = {
+						rule = WHR_situation
+						option = WHR_SITUATION_BSDP_KING
 					}
 					has_game_rule = {
 						rule = WHR_situation
@@ -6483,10 +6124,8 @@ country_event = { # Hramada Fate
 			elections_allowed = yes
 		}
 		end_coalition = yes
-		set_temp_variable = { coalition_partner_var = token:radical_socialist }
-		add_to_coalition = yes
-		set_temp_variable = { coalition_partner_var = token:social_liberal }
-		add_to_coalition = yes
+		add_radsoc_to_coalition = yes
+		add_soclib_to_coalition = yes
 	}
 	option = { # BPSF
 		name = whrpol.51.e
@@ -6528,6 +6167,7 @@ country_event = { # Hramada Fate
 		add_ideas = WHR_Jazep_Varonka_sec_sli
 		complete_national_focus = WHR_BPSF
 		clear_all_relations = yes
+		clr_country_flag = sigismund_I_HoS
 		GER = {
 			country_event = {
 				id = whiteruthenia.1000 days = 1
@@ -6553,7 +6193,7 @@ country_event = { # Separate peace for WHR-RUS?
 		}
 		WHR = {
 			set_country_flag = WHR_peace_all_claims
-			country_event = whrpol.40
+			country_event = whrpol.53
 		}
 	}
 	option = { # Only if we keep Smolensk
@@ -6567,7 +6207,7 @@ country_event = { # Separate peace for WHR-RUS?
 		}
 	}
 	option = { # Only with no territorial changes
-		name = whrpol.10.a
+		name = whrpol.52.a
 		ai_chance = {
 			base = 10
 		}
@@ -6628,7 +6268,6 @@ country_event = { # RUS counter-offer
 					owner = { is_ally_with = WHR }
 					NOT = { state = 242 }
 					NOT = { state = 205 }
-					NOT = { state = 1293 }
 				}
 				WHR = {	transfer_state = PREV }
 			}
@@ -6646,7 +6285,6 @@ country_event = { # RUS counter-offer
 					NOT = { state = 242 }
 					NOT = { state = 205 }
 					NOT = { state = 1293 }
-					NOT = { state = 1292 }
 					NOT = { state = 1287 }
 					NOT = { state = 243 }
 				}
@@ -6699,6 +6337,7 @@ country_event = { # BPSR leader picker
 	immediate = { log = "[GetDateText]: [Root.GetName]: event whrpol.55" }
 	title = whrpol.55.t
 	desc = whrpol.55.d
+	picture = GFX_report_event_WHR_badunova_hryb
 	
 	is_triggered_only = yes
 
@@ -6711,8 +6350,353 @@ country_event = { # BPSR leader picker
 			name = "Tamaš Hryb"
 			desc = "POLITICS_TAMAS_HRYB_DESC"
 			picture = "gfx/leaders/WHR/Portrait_WHR_Tamas_Hryb.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = anarcho_syndicalist_subtype
+		}
+	}
+}
+
+country_event = { #An Offer from Moscow
+	id = whrpol.56
+	immediate = { log = "[GetDateText]: [Root.GetName]: event whrpol.56 FROM = [From.GetName]" }
+	title = whrpol.56.t
+	desc = whrpol.56.d
+	picture = GFX_report_event_RUS_kremlin2
+
+	is_triggered_only = yes
+
+	option = {
+		name = whrpol.56.a #An interesting proposal
+		ai_chance = {
+			base = 80
+			modifier = {
+				add = opinion@RUS
+				NOT = {
+					has_game_rule = { rule = WHR_foreign_policy option = WHR_FOREIGN_POLICY_STAY_WITH_GERMAN }
+					has_game_rule = { rule = WHR_foreign_policy option = WHR_FOREIGN_POLICY_INTERNATIONALE }
+					has_game_rule = { rule = WHR_foreign_policy option = WHR_FOREIGN_POLICY_UKRAINE }
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = { rule = WHR_foreign_policy option = WHR_FOREIGN_POLICY_STAY_WITH_GERMAN }
+					has_game_rule = { rule = WHR_foreign_policy option = WHR_FOREIGN_POLICY_INTERNATIONALE }
+					has_game_rule = { rule = WHR_foreign_policy option = WHR_FOREIGN_POLICY_UKRAINE }
+				}
+			}
+		}
+		custom_effect_tooltip = WHR_effects_when_war_begins
+		effect_tooltip = {
+			if = {
+				limit = { RUS = { owns_state = 243 } }
+				transfer_state = 243
+			}
+			if = {
+				limit = { RUS = { owns_state = 755 } }
+				transfer_state = 755
+			}
+			if = {
+				limit = { RUS = { owns_state = 1287 } }
+				transfer_state = 1287
+			}
+			set_cosmetic_tag = WHR_SOV
+			RUS = {
+				set_autonomy = {
+					target = ROOT
+					autonomy_state = kr_autonomous_soviet_republic
+					end_wars = no
+				}
+			}
+			add_to_war = {
+				targeted_alliance = RUS
+				enemy = GER
+			}
+		}
+		FROM = { country_event = { id = whrpol.57 days = 1 } }
+	}
+
+	option = {
+		name = whrpol.56.b #Russia should not be trusted
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = WHR_foreign_policy option = WHR_FOREIGN_POLICY_RUSSIA_SECRET_PACT }
+			}
+		}
+		FROM = { country_event = { id = whrpol.58 days = 1 } }
+	}
+}
+
+country_event = { #Belarus Accepts
+	id = whrpol.57
+	immediate = { log = "[GetDateText]: [Root.GetName]: event whrpol.57 FROM = [From.GetName]" }
+	title = whrpol.57.t
+	desc = whrpol.57.d
+	picture = GFX_report_event_WHR_sojm_meeting
+
+	is_triggered_only = yes
+
+	option = {
+		name = whrpol.57.a #Germany will never see this coming!
+		set_global_flag = RUS_will_puppet_belarus
+		custom_effect_tooltip = WHR_effects_when_war_begins
+		effect_tooltip = {
+			if = {
+				limit = { RUS = { owns_state = 243 } }
+				transfer_state = 243
+			}
+			if = {
+				limit = { RUS = { owns_state = 755 } }
+				transfer_state = 755
+			}
+			if = {
+				limit = { RUS = { owns_state = 1287 } }
+				transfer_state = 1287
+			}
+			set_cosmetic_tag = WHR_SOV
+			set_autonomy = {
+				target = ROOT
+				autonomy_state = kr_autonomous_soviet_republic
+				end_wars = no
+			}
+			FROM = {
+				add_to_war = {
+					targeted_alliance = ROOT
+					enemy = GER
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Belarus Refuses
+	id = whrpol.58
+	immediate = { log = "[GetDateText]: [Root.GetName]: event whrpol.58 FROM = [From.GetName]" }
+	title = whrpol.58.t
+	desc = whrpol.58.d
+	picture = GFX_report_event_WHR_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = whrpol.58.a #It was expected
+	}
+}
+
+country_event = { #Time to Choose
+	id = whrpol.59
+	immediate = { log = "[GetDateText]: [Root.GetName]: event whrpol.59 FROM = [From.GetName]" }
+	title = whrpol.59.t
+	desc = whrpol.59.d
+	picture = GFX_report_event_WHR_soldiers_review
+
+	trigger = {
+		has_global_flag = RUS_will_puppet_belarus
+		OR = {
+			is_subject = no
+			is_subject_of = GER
+		}
+		RUS = { is_faction_leader = yes }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = whrpol.59.a #Side with Russia
+		clr_global_flag = RUS_will_puppet_belarus
+		add_stability = -0.2
+		add_war_support = -0.15
+		custom_effect_tooltip = tooltip_white_line
+		if = {
+			limit = { is_in_faction = yes }
+			hidden_effect = {
+				every_owned_state = {
+					teleport_armies = {
+						limit = {
+							is_ally_with = ROOT
+							NOT = { tag = ROOT }
+						}
+						to_state_array = owned_controlled_states
+					}
+				}
+			}
+			faction_leader = { country_event = whrpol.60 }
+		}
+		clear_all_relations = yes
+		custom_effect_tooltip = tooltip_white_line
+		get_current_government_type = yes
+		effect_tooltip = {
+			if = {
+				limit = { RUS = { owns_state = 243 } }
+				transfer_state = 243
+			}
+			if = {
+				limit = { RUS = { owns_state = 755 } }
+				transfer_state = 755
+			}
+			if = {
+				limit = { RUS = { owns_state = 1287 } }
+				transfer_state = 1287
+			}			
+		}
+		set_cosmetic_tag = WHR_SOV
+		RUS = {
+			set_autonomy = {
+				target = ROOT
+				autonomy_state = kr_autonomous_soviet_republic
+				end_wars = no
+			}
+			if = {
+				limit = { has_wargoal_against = ROOT }
+				remove_wargoal = {
+					type = all
+					target = ROOT
+				}
+			}
+			country_event = whrpol.61
+		}
+		add_to_war = {
+			targeted_alliance = RUS
+			enemy = GER
+		}
+		restore_previous_government_type = yes #restores popularities
+		hidden_effect = {
+			if = {
+				limit = { WHR_is_monarchy = yes }
+				WHR_setup_republican_leaders = yes
+			}
+			news_event = { id = whrpol.57 days = 1 }
+		}
+	}
+
+	option = {
+		name = whrpol.59.b #Side with Germany
+		ai_chance = { base = 0 }
+		clr_global_flag = RUS_will_puppet_belarus
+		RUS = { country_event = whrpol.56 }
+	}
+}
+
+country_event = { #Belarus Betrays Us!
+	id = whrpol.60
+	immediate = { log = "[GetDateText]: [Root.GetName]: event whrpol.60 FROM = [From.GetName]" }
+	title = whrpol.60.t
+	desc = whrpol.60.d
+	picture = GFX_report_event_WHR_partisans
+	is_triggered_only = yes
+
+	option = {
+		name = whrpol.60.a #Traitors!
+		add_war_support = 0.1
+	}
+}
+
+country_event = { #Formation of the Belarusian Autonomy
+	id = whrpol.61
+	immediate = { log = "[GetDateText]: [Root.GetName]: event whrpol.61 FROM = [From.GetName]" }
+	title = whrpol.61.t
+	desc = whrpol.61.d
+	picture = GFX_report_event_WHR_poster
+
+	is_triggered_only = yes
+
+	option = {
+		name = whrpol.61.a #Excellent
+		if = {
+			limit = { owns_state = 243 }
+			remove_state_core = 243
+			remove_state_claim = 243
+			FROM = { transfer_state = 243 }
+		}
+		if = {
+			limit = { owns_state = 755 }
+			remove_state_core = 755
+			remove_state_claim = 755
+			FROM = { transfer_state = 755 }
+		}
+		if = {
+			limit = { owns_state = 1287 }
+			remove_state_core = 1287
+			remove_state_claim = 1287
+			FROM = { transfer_state = 1287 }
+		}
+		effect_tooltip = {
+			FROM = { set_cosmetic_tag = WHR_SOV }
+			set_autonomy = {
+				target = FROM
+				autonomy_state = kr_autonomous_soviet_republic
+				end_wars = no
+			}
+		}
+	}
+}
+
+country_event = { #Belarus Breaks the Deal
+	id = whrpol.62
+	immediate = { log = "[GetDateText]: [Root.GetName]: event whrpol.62 FROM = [From.GetName]" }
+	title = whrpol.62.t
+	desc = whrpol.62.d
+	picture = GFX_report_event_WHR_soldiers_review
+
+	is_triggered_only = yes
+
+	option = {
+		name = whrpol.62.a #Not unexpected
+	}
+}
+
+news_event = { #Betrayal in the Reichspakt
+	id = whrpol.63
+	immediate = { log = "[GetDateText]: [Root.GetName]: event whrpol.63 FROM = [From.GetName]" }
+	title = whrpol.63.t
+	desc = whrpol.63.d
+	picture = GFX_news_event_bulgarian_partisans
+
+	major = yes
+	fire_for_sender = no
+	is_triggered_only = yes
+
+	trigger = {
+		wants_world_news = yes
+	}
+
+	show_major = {
+		regional_europe_news = yes
+		NOT = {
+			tag = GER
+			tag = RUS
+		}
+	}
+
+	option = {
+		name = whrpol.63.a #Wonderful news!
+		trigger = {
+			OR = {
+				is_in_faction_with = INT
+				is_in_faction_with = RUS
+				has_war_with = GER
+			}
+		}
+	}
+
+	option = {
+		name = whrpol.63.b #This is a catastrophe!
+		trigger = {
+			is_in_faction_with = GER
+		}
+	}
+
+	option = {
+		name = whrpol.63.c #Germany's empire crumbles...
+		trigger = {
+			NOT = {
+				is_in_faction_with = GER
+				is_in_faction_with = INT
+				is_in_faction_with = RUS
+				has_war_with = GER
+			}
 		}
 	}
 }
@@ -6722,6 +6706,7 @@ country_event = { # Anarchists
 	immediate = { log = "[GetDateText]: [Root.GetName]: event whrpol.100" }
 	title = whrpol.100.t
 	desc = whrpol.100.d
+	picture = GFX_report_event_WHR_kropotkin
 	
 	is_triggered_only = yes
 
@@ -6744,13 +6729,13 @@ country_event = { # Anarchists
 		create_country_leader = {
 			name = "Mark Mratchny"
 			picture = "gfx/leaders/WHR/Portrait_WHR_Mark_Mratchny.png"
-			expire = "1965.1.1"
-			ideology = illegalism_subtype
+			expire = "1.1.1"
+			ideology = anarcho_communism_subtype
 		}
 		create_country_leader = {
 			name = "Juda Grossman"
 			picture = "gfx/leaders/WHR/Portrait_WHR_Juda_Grossman.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = anarcho_bolshevism_subtype
 		}
 		set_politics = {
@@ -6758,12 +6743,14 @@ country_event = { # Anarchists
 			elections_allowed = no
 		}
 		end_coalition = yes
-		set_temp_variable = { coalition_partner_var = token:totalist }
-		add_to_coalition = yes
+		add_tot_to_coalition = yes
 		remove_ideas = WHR_Juda_Grossman_hog_tot
 		remove_ideas = WHR_Mark_Mratchny_for_rso
 		add_ideas = WHR_Mark_Mratchny_hog_rso
 		add_ideas = WHR_Juda_Grossman_for_tot
+		hidden_effect = {
+			country_event = { id = whrpol.108 days = 32 }
+		}
 	}
 	option = { # Fine
 		name = whrpol.100.b
@@ -6782,18 +6769,17 @@ country_event = { # Anarchists
 		create_country_leader = {
 			name = "Mark Mratchny"
 			picture = "gfx/leaders/WHR/Portrait_WHR_Mark_Mratchny.png"
-			expire = "1965.1.1"
-			ideology = illegalism_subtype
+			expire = "1.1.1"
+			ideology = anarcho_communism_subtype
 		}
 		create_country_leader = {
 			name = "Juda Grossman"
 			picture = "gfx/leaders/WHR/Portrait_WHR_Juda_Grossman.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = anarcho_bolshevism_subtype
 		}
 		end_coalition = yes
-		set_temp_variable = { coalition_partner_var = token:radical_socialist }
-		add_to_coalition = yes
+		add_radsoc_to_coalition = yes
 		add_popularity = {
 			ideology = totalist
 			popularity = 0.15
@@ -6806,6 +6792,7 @@ country_event = { # Anarchists
 	immediate = { log = "[GetDateText]: [Root.GetName]: event whrpol.101" }
 	title = whrpol.101.t
 	desc = whrpol.101.d
+	picture = GFX_report_event_WHR_goods_voucher
 	
 	is_triggered_only = yes
 
@@ -6841,6 +6828,7 @@ country_event = { # Anarchists
 	immediate = { log = "[GetDateText]: [Root.GetName]: event whrpol.102" }
 	title = whrpol.102.t
 	desc = whrpol.102.d
+	picture = GFX_report_event_WHR_criminals
 	
 	is_triggered_only = yes
 
@@ -6868,6 +6856,7 @@ country_event = { # Anarchists
 	immediate = { log = "[GetDateText]: [Root.GetName]: event whrpol.103" }
 	title = whrpol.103.t
 	desc = whrpol.103.d
+	picture = GFX_report_event_WHR_labourers
 	
 	is_triggered_only = yes
 
@@ -6888,6 +6877,7 @@ country_event = { # Anarchists
 	immediate = { log = "[GetDateText]: [Root.GetName]: event whrpol.104" }
 	title = whrpol.104.t
 	desc = whrpol.104.d
+	picture = GFX_report_event_WHR_leisure_class
 	
 	is_triggered_only = yes
 
@@ -6914,6 +6904,7 @@ country_event = { # Anarchists
 	immediate = { log = "[GetDateText]: [Root.GetName]: event whrpol.105" }
 	title = whrpol.105.t
 	desc = whrpol.105.d
+	picture = GFX_report_event_WHR_liberation_theology
 	
 	is_triggered_only = yes
 
@@ -6939,6 +6930,7 @@ country_event = { # Anarchists
 	immediate = { log = "[GetDateText]: [Root.GetName]: event whrpol.106" }
 	title = whrpol.106.t
 	desc = whrpol.106.d
+	picture = GFX_report_event_WHR_schools
 	
 	is_triggered_only = yes
 
@@ -6960,6 +6952,7 @@ country_event = { # Anarchists
 	immediate = { log = "[GetDateText]: [Root.GetName]: event whrpol.107" }
 	title = whrpol.107.t
 	desc = whrpol.107.d
+	picture = GFX_report_event_WHR_congress
 	
 	is_triggered_only = yes
 
@@ -6970,7 +6963,7 @@ country_event = { # Anarchists
 		every_owned_state = {
 			if = {
 				limit = {
-					NOT = { is_core_of = ROOT }
+					is_claimed_by = ROOT
 				}
 				remove_claim_by = ROOT
 				add_core_of = ROOT
@@ -6994,7 +6987,7 @@ country_event = { # Anarchists
 		every_owned_state = {
 			if = {
 				limit = {
-					NOT = { is_core_of = ROOT }
+					is_claimed_by = ROOT
 				}
 				remove_claim_by = ROOT
 				add_core_of = ROOT
@@ -7017,7 +7010,7 @@ country_event = { # Anarchists
 		every_owned_state = {
 			limit = {
 				is_core_of = POL
-				NOT = { state = 97 }
+				NOT = { state = 1329 }
 			}
 			transfer_state_to = POL
 		}
@@ -7048,7 +7041,7 @@ country_event = { # Anarchists
 					create_country_leader = {
 						name = "Rewolucyjna Rada Polski"
 						picture = "gfx/leaders/WHR/Portrait_WHR_Revolutionary_Council_of_Belarus.png"
-						expire = "1965.1.1"
+						expire = "1.1.1"
 						ideology = [OVERLORD_IDEOLOGY]
 					}
 				}
@@ -7062,7 +7055,7 @@ country_event = { # Anarchists
 					create_country_leader = {
 						name = "Lietuvos Revoliucinė Taryba"
 						picture = "gfx/leaders/WHR/Portrait_WHR_Revolutionary_Council_of_Belarus.png"
-						expire = "1965.1.1"
+						expire = "1.1.1"
 						ideology = [OVERLORD_IDEOLOGY]
 					}
 				}
@@ -7076,7 +7069,7 @@ country_event = { # Anarchists
 					create_country_leader = {
 						name = "Revoliutsiina Rada Ukraini"
 						picture = "gfx/leaders/WHR/Portrait_WHR_Revolutionary_Council_of_Belarus.png"
-						expire = "1965.1.1"
+						expire = "1.1.1"
 						ideology = [OVERLORD_IDEOLOGY]
 					}
 				}
@@ -7088,7 +7081,7 @@ country_event = { # Anarchists
 				OR = {
 					tag = POL
 					tag = LIT
-					tag = UKR
+					original_tag = UKR
 				}
 			}
 			set_party_name = {
@@ -7121,10 +7114,45 @@ country_event = { # Anarchists
 	}	
 }
 
+country_event = { # Anarchists
+	id = whrpol.108
+	immediate = { log = "[GetDateText]: [Root.GetName]: event whrpol.108" }
+	title = whrpol.108.t
+	desc = whrpol.108.d
+	picture = GFX_report_event_WHR_anarchists
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Fine
+		name = whrpol.108.a
+		add_manpower = -47
+		add_stability = 0.02
+		add_popularity = { ideology = radical_socialist popularity = -0.03 }
+	}
+	option = { # Fine
+		name = whrpol.108.b
+		add_stability = -0.03
+		add_popularity = { ideology = radical_socialist popularity = 0.02 }
+	}
+	option = { # Fine
+		name = whrpol.108.c
+		add_war_support = 0.01
+		set_country_leader_ideology = illegalism_subtype 
+	}
+	option = { # Fine
+		name = whrpol.108.e
+		add_popularity = { ideology = syndicalist popularity = 0.01 }
+		set_country_leader_ideology = radsoc_anarcho_syndicalist_subtype 
+	}			
+}
+
 country_event = { #Peace with Belarus?
 	id = whrpol.114
 	immediate = { log = "[GetDateText]: [Root.GetName]: event whrpol.114 FROM = [From.GetName]" }
 	title = whrpol.114.t
+	picture = GFX_report_event_WHR_peace_germany
 
 	desc = {
 		text = whrpol.114.d.stalemate
@@ -7192,6 +7220,7 @@ country_event = { #Germany Offers Peace
 	immediate = { log = "[GetDateText]: [Root.GetName]: event whrpol.115 FROM = [From.GetName]" }
 	title = whrpol.115.t
 	desc = whrpol.115.d
+	picture = GFX_report_event_WHR_peace_germany
 
 	trigger = {
 		has_war_with = FROM
@@ -7217,8 +7246,8 @@ country_event = { #Germany Offers Peace
 			}
 		}
 		if = {
-			limit = { controls_state = 97 }
-			97 = {
+			limit = { controls_state = 1329 }
+			1329 = {
 				transfer_state_to = ROOT
 				add_claim_by = ROOT
 			}
@@ -7260,6 +7289,7 @@ country_event = { #Belarus Refuses Peace
 	immediate = { log = "[GetDateText]: [Root.GetName]: event whrpol.116 FROM = [From.GetName]" }
 	title = whrpol.116.t
 	desc = whrpol.116.d
+	picture = GFX_report_event_WHR_peace_germany
 
 	trigger = {
 		has_war_with = FROM
@@ -7278,6 +7308,7 @@ country_event = { #Germany Refuses Peace
 	immediate = { log = "[GetDateText]: [Root.GetName]: event whrpol.117 FROM = [From.GetName]" }
 	title = whrpol.117.t
 	desc = whrpol.117.d
+	picture = GFX_report_event_WHR_peace_germany
 
 	trigger = {
 		has_war_with = FROM
@@ -8017,3 +8048,83 @@ country_event = { # Accident Above Svecha
 	}
 }
 
+country_event = { # Socialist Protestants
+	id = whrmisc.24
+	immediate = { log = "[GetDateText]: [Root.GetName]: event whrmisc.24 FROM = [From.GetName]" }
+	title = whrmisc.24.t
+	desc = whrmisc.24.d
+	picture = GFX_report_event_IRE_church
+
+	is_triggered_only = yes
+	
+	option = {
+		name = whrmisc.24.a
+		add_political_power = 10
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.01
+		}
+	}
+}
+
+country_event = { # Fixing broken peace result in case of Revolt
+	id = whrmisc.25
+	immediate = { log = "[GetDateText]: [Root.GetName]: event whrmisc.25 FROM = [From.GetName]" }
+	title = whrmisc.25.t
+	desc = whrmisc.25.d
+	picture = GFX_report_event_IRE_church
+    hidden = yes
+	trigger = {
+        tag = WHR
+		WHR = {
+			is_subject = no
+			NOT = { has_war_with = GER }
+		}
+		207 = { is_owned_by = WHR }
+		1295 = { is_owned_by = WHR }
+		206 = { is_owned_by = GER }
+	}
+	fire_only_once = yes
+	option = {
+		name = whrmisc.25.a
+		GER = {
+		annex_country = {
+			target = WHR
+		}
+	    }
+	}
+}
+
+country_event = { # Fixing being in 3I if not socialist
+	id = whrmisc.26
+	immediate = { log = "[GetDateText]: [Root.GetName]: event whrmisc.25 FROM = [From.GetName]" }
+	title = whrmisc.26.t
+	desc = whrmisc.26.d
+	picture = GFX_report_event_IRE_church
+    hidden = yes
+	trigger = {
+        tag = WHR
+		WHR = {
+			has_socialist_government = no
+			is_in_faction_with = INT
+		}
+	}
+	fire_only_once = yes
+	option = {
+		name = whrmisc.26.a
+		if = {
+			limit = {
+				is_in_faction = yes
+			}
+			leave_faction = yes
+		}
+	}
+}

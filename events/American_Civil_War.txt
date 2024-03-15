@@ -147,7 +147,20 @@ country_event = { # Jack Reed declares revolution against MacArthur
 country_event = { # Old Democrats Breakoff
 	id = amcivwar.1001
 	title = amcivwar.1001.t
-	desc = amcivwar.1001.d
+	desc = {
+		text = amcivwar.1001.d
+		trigger = {
+			NOT = {
+			has_global_flag = USA_deadlocked
+			}
+		}
+	}
+	desc = {
+		text = amcivwar.1001.deadlock.d
+		trigger = {
+			has_global_flag = USA_deadlocked
+		}
+	}
 	picture = GFX_USA_murray
 
 	fire_only_once = yes
@@ -232,7 +245,20 @@ country_event = { # Old Democrats Breakoff
 country_event = { # Huey Long declares Rebellion against MacArthur
 	id = amcivwar.2
 	title = amcivwar.2.t
-	desc = amcivwar.2.d
+	desc = {
+		text = amcivwar.2.d
+		trigger = {
+			NOT = {
+			has_global_flag = USA_deadlocked
+			}
+		}
+	}
+	desc = {
+		text = amcivwar.2.deadlock.d
+		trigger = {
+			has_global_flag = USA_deadlocked
+		}
+	}
 	picture = GFX_report_event_USA_Long_Rally
 
 	fire_only_once = yes
@@ -292,7 +318,20 @@ country_event = { # Huey Long declares Rebellion against MacArthur
 country_event = { # Pacific States declares revolution against MacArthur
 	id = amcivwar.3
 	title = amcivwar.3.t
-	desc = amcivwar.3.d
+	desc = {
+		text = amcivwar.3.d
+		trigger = {
+			NOT = {
+			has_global_flag = USA_deadlocked
+			}
+		}
+	}
+	desc = {
+		text = amcivwar.3.deadlock.d
+		trigger = {
+			has_global_flag = USA_deadlocked
+		}
+	}
 	picture = GFX_report_event_CAL_golden_gate_crowd
 
 	fire_only_once = yes
@@ -729,6 +768,9 @@ country_event = { # Demand BBR stand down
 		COR = {
 			exists = no
 		}
+		CAL = {
+			exists = no
+		}
 		}
 
 		AND = {
@@ -783,10 +825,6 @@ country_event = { # Demand BBR stand down
 		}
 		}
 	}
-	}
-	
-	mean_time_to_happen = {
-	days = 1
 	}
 	
 	fire_only_once = yes
@@ -2242,6 +2280,11 @@ country_event = { #CAR treaty
 		add_political_power = -20
 		set_country_flag = CAR_USA_TREATY
 		hidden_effect = {
+		activate_mission = ACW_USA_COR_ceasefire
+		COR = {
+		activate_mission = ACW_USA_COR_ceasefire
+		set_country_flag = CAR_USA_TREATY
+		}
 		COR = {
 		country_event = {
 		id = amcivwar.4019 days = 1
@@ -2839,7 +2882,7 @@ country_event = { # PSA offers peace
 	id = amcivwar.5002
 	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.5002"}
 	title = amcivwar.5002.t
-	picture = GFX_report_event_USA_Long_Rally
+	picture = GFX_report_event_CAN_lon_vote
 
 	is_triggered_only = yes
 		
@@ -2855,7 +2898,7 @@ country_event = { # PSA offers peace
 	desc = { ###ALL FACTIONS PEACE (for CSA)###
 		text = amcivwar.5002.d.AUSPSACSA
 		trigger = {
-			tag = TEX
+			tag = CSA
 			has_global_flag = PSA_AUS_TREATY
 			has_global_flag = PSA_CSA_TREATY
 			TEX = {
@@ -3014,7 +3057,7 @@ country_event = { ### Long Accepts ###
 	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.5003"}
 	title = amcivwar.5003.t
 	desc = amcivwar.5003.d
-	picture = GFX_report_event_USA_Long_Rally
+	picture = GFX_report_event_CAN_lon_vote
 
 	is_triggered_only = yes
 
@@ -3039,7 +3082,7 @@ country_event = { ### CSA Accepts ###
 	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.5004"}
 	title = amcivwar.5004.t
 	desc = amcivwar.5004.d
-	picture = GFX_report_event_USA_Long_Rally
+	picture = GFX_report_event_CAN_lon_vote
 
 	is_triggered_only = yes
 
@@ -3064,7 +3107,7 @@ country_event = { ### Voting Begins ###
 	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.5005"}
 	title = amcivwar.5005.t
 	desc = amcivwar.5005.d
-	picture = GFX_report_event_USA_Long_Rally
+	picture = GFX_report_event_NZL_elections
 
 	is_triggered_only = yes
 	
@@ -3089,7 +3132,7 @@ country_event = { # Results are in
 	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.5006"}
 	title = amcivwar.5006.t
 	desc = amcivwar.5006.d
-	picture = GFX_report_event_USA_Long_Rally
+	picture = GFX_report_event_ALB_Election
 
 	trigger = {
 	has_country_flag = ACW_voting_starts
@@ -3687,7 +3730,20 @@ country_event = { # Jack Reed declares revolution against MacArthur
 	id = amcivwar.7
 	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.7"}
 	title = amcivwar.7.t
-	desc = amcivwar.7.d
+	desc = {
+		text = amcivwar.7.d
+		trigger = {
+			NOT = {
+			has_global_flag = USA_deadlocked
+			}
+		}
+	}
+	desc = {
+		text = amcivwar.7.deadlock.d
+		trigger = {
+			has_global_flag = USA_deadlocked
+		}
+	}
 	picture = GFX_report_event_USA_reed
 
 	is_triggered_only = yes
@@ -3842,10 +3898,6 @@ country_event = { # Reach out to the Victor
 	TEX = {
 	exists = yes
 		}
-	}
-	
-	mean_time_to_happen = {
-	days = 1
 	}
 	
 	fire_only_once = yes
@@ -4344,7 +4396,7 @@ country_event = { # Old Democrats Revolt
 
 	option = {
 		name = amcivwar.1018.a
-		ai_chance {
+		ai_chance = {
 		factor = 50
 			modifier = {
 				factor = 0
@@ -4382,7 +4434,7 @@ country_event = { # Old Democrats Revolt
 	}
 	option = {
 		name = amcivwar.1018.b
-		ai_chance {
+		ai_chance = {
 		factor = 20
 			modifier = {
 				factor = 0
@@ -4456,7 +4508,7 @@ country_event = { # Old Democrats Revolt
 	}
 	option = {
 		name = amcivwar.1018.c
-		ai_chance {
+		ai_chance = {
 		factor = 30
 			modifier = {
 				factor = 0
@@ -4518,10 +4570,11 @@ country_event = { # Old Democrats Revolt
 				name = "Richard Russell Jr."
 				desc = "POLITICS_RICHARD_RUSSEL_DESC"
 				picture = "gfx/leaders/COR/COR_Richard_Russel.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = dixiecrat_subtype
 				traits = { USA_jim_crows_champion }
 			}
+			remove_all_ministers = yes
 			add_ideas = {
 				COR_Richard_Russell_Jr_hog_sco
 				COR_James_Francis_Byrnes_for_sco
@@ -4542,7 +4595,7 @@ country_event = { # Old Democrats Revolt
 		COR = {
 		country_event = {
 			  id = constate.6776
-			  days = 1461
+			  days = 730
 				}
 		country_event = {
 		id = constate.601
@@ -4566,8 +4619,7 @@ country_event = { # New Party Head
 
 	option = {
 		name = amcivwar.1019.a
-		ai_chance {
-		factor = 33
+		ai_chance = {
 		factor = 33
 			modifier = {
 				factor = 0
@@ -4616,7 +4668,7 @@ country_event = { # New Party Head
 			}
 		}
 		add_political_power = 40
-		add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
+		add_popularity = { ideology = paternal_autocrat popularity = 0.2 }
 		hidden_effect = {
 		country_event = {
 			id = constate.6
@@ -4625,7 +4677,7 @@ country_event = { # New Party Head
 		}
 	}
 	option = {
-		ai_chance {
+		ai_chance = {
 		factor = 33
 			modifier = {
 				factor = 0
@@ -4663,7 +4715,7 @@ country_event = { # New Party Head
 		}
 		name = amcivwar.1019.b
 		set_country_flag = COR_simmons_takeover
-		add_popularity = { ideology = national_populist popularity = 0.03 }
+		add_popularity = { ideology = national_populist popularity = 0.3 }
 		hidden_effect = {
 		country_event = {
 			id = constate.1000
@@ -4673,7 +4725,7 @@ country_event = { # New Party Head
 	}
 	option = {
 		name = amcivwar.1019.c
-		ai_chance {
+		ai_chance = {
 		factor = 33
 			modifier = {
 				factor = 0
@@ -4701,16 +4753,20 @@ country_event = { # New Party Head
 				}
 			}
 		}
-		add_popularity = { ideology = authoritarian_democrat popularity = 0.03 }
+		add_popularity = { ideology = authoritarian_democrat popularity = 0.3 }
 		hidden_effect = {
 			create_country_leader = {
 				name = "George Patton"
 				desc = "POLITICS_GEORGE_PATTON_DESC"
 				picture = "gfx/leaders/COR/Portrait_COR_George_Patton.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = authdem_junta_subtype
 				traits = { blood_and_guts }
 			}
+			remove_all_ministers = yes
+			add_ideas = COR_William_Bell_Riley_for_pau
+			add_ideas = COR_John_Geraerdt_Crommelin_Jr_eco_npo
+			add_ideas = COR_Theophilus_Eugene_Connor_sec_pau
 		}
 		set_politics = {
 			ruling_party = authoritarian_democrat
@@ -5310,7 +5366,7 @@ country_event = {
 			name = "John Nance Garner"
 			desc = "POLITICS_JOHN_NANCE_GARNER_DESC"
 			picture = "gfx/leaders/CAL/Portrait_CAL_John_Nance_Garner.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = social_conservative_subtype
 			traits = { cactus_jack }
 			}
@@ -5328,8 +5384,8 @@ country_event = {
 				name = "Alf Landon"
 				desc = "POLITICS_ALF_LANDON_DESC"
 				picture = "gfx/leaders/USA/Portrait_USA_Alf_Landon_KR.png"
-				expire = "1965.1.1"
-				ideology = centrist_subtype
+				expire = "1.1.1"
+				ideology = soclib_humanistic_capitalism_subtype
 				traits = { USA_the_sunflower }
 			}
 			set_politics = {
@@ -5346,8 +5402,8 @@ country_event = {
 				name = "Charles Curtis"
 				desc = "POLITICS_CHARLES_CURTIS_DESC"
 				picture = "gfx/leaders/USA/Portrait_USA_Charles_Curtis_Hat.png"
-				expire = "1965.1.1"
-				ideology = liberal_conservative_subtype
+				expire = "1.1.1"
+				ideology = marlib_classical_liberalism_subtype
 				traits = { the_great_compromiser }
 			}
 		set_politics = {
@@ -5892,6 +5948,15 @@ country_event = { # CSA wins the civil war
 			country_exists = COR
 			country_exists = WCC
 		}
+		NOT = {
+			any_other_country = {
+				is_acw_minor = yes
+				exists = yes
+				ACW_minor_claimed_america = yes
+				is_ally_of_ROOT = no
+				is_ai = no
+			}
+		}
 		OR = {
 			has_global_flag = PSA_rockies_ceasefire
 			has_global_flag = CAL_not_participating_in_acw
@@ -5988,6 +6053,15 @@ country_event = { # AUS wins the civil war
 			country_exists = WCC
 			has_country_flag = ACW_has_deal_with_devil
 		}
+		NOT = {
+			any_other_country = {
+				is_acw_minor = yes
+				exists = yes
+				ACW_minor_claimed_america = yes
+				is_ally_of_ROOT = no
+				is_ai = no
+			}
+		}
 		OR = {
 			has_global_flag = CAL_not_participating_in_acw
 			has_global_flag = PSA_rockies_ceasefire
@@ -6075,6 +6149,15 @@ country_event = { # USA wins the civil war
 			country_exists = CSA
 			country_exists = WCC
 			country_exists = COR
+		}
+		NOT = {
+			any_other_country = {
+				is_acw_minor = yes
+				exists = yes
+				ACW_minor_claimed_america = yes
+				is_ally_of_ROOT = no
+				is_ai = no
+			}
 		}
 		OR = {
 			has_global_flag = CAL_not_participating_in_acw
@@ -6193,10 +6276,18 @@ country_event = { # WCC wins the civil war
 			country_exists = COR
 			country_exists = USA
 		}
+		NOT = {
+			any_other_country = {
+				is_acw_minor = yes
+				exists = yes
+				ACW_minor_claimed_america = yes
+				is_ally_of_ROOT = no
+				is_ai = no
+			}
+		}
 		OR = {
 			has_global_flag = CAL_not_participating_in_acw
 			has_global_flag = PSA_rockies_ceasefire
-			has_global_flag = CAL_seperatist_claim
 			NOT = {
 				country_exists = CAL
 			}
@@ -6305,10 +6396,18 @@ country_event = { # COR wins the civil war
 			country_exists = WCC
 			country_exists = USA
 		}
+		NOT = {
+			any_other_country = {
+				is_acw_minor = yes
+				exists = yes
+				ACW_minor_claimed_america = yes
+				is_ally_of_ROOT = no
+				is_ai = no
+			}
+		}
 		OR = {
 			has_global_flag = CAL_not_participating_in_acw
 			has_global_flag = PSA_rockies_ceasefire
-			has_global_flag = CAL_seperatist_claim
 			NOT = {
 				country_exists = CAL
 			}
@@ -6404,7 +6503,17 @@ country_event = { # PSA wins the civil war
 			has_war_with = BBR
 			has_country_flag = ACW_has_deal_with_devil
 		}
+		NOT = {
+			any_other_country = {
+				is_acw_minor = yes
+				exists = yes
+				ACW_minor_claimed_america = yes
+				is_ally_of_ROOT = no
+				is_ai = no
+			}
+		}
 		OR = {
+			CAL = { owns_state = 361 }
 			has_global_flag = PSA_rockies_ceasefire
 			NOT = {
 				country_exists = USA
@@ -6538,7 +6647,7 @@ country_event = { # Nobody won the civil war
 		}
 	}
 	desc = {
-		text = amcivwar.27.d.can
+		text = amcivwar.28.d.can
 		trigger = {
 			tag = CAN
 		}
@@ -6808,6 +6917,10 @@ country_event = { # Internal Conflicts
 						rule = CSA_post_civil_war
 						option = CSA_POST_CIVIL_WAR_BURNHAM
 					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_LOVESTONE
+					}
 				}
 			}
 		}
@@ -6921,7 +7034,7 @@ country_event = { # Social Patriot Demands
 			factor = 25
 		}
 		name = amcivwar.36001.b
-		add_war_support = 0.05
+		add_stability = 0.05
 		add_popularity = {
 			ideology = social_democrat
 			popularity = 0.03
@@ -7070,6 +7183,10 @@ country_event = { # Social Patriots Unity Legislation
 						rule = CSA_post_civil_war
 						option = CSA_POST_CIVIL_WAR_BURNHAM
 					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_LOVESTONE
+					}
 				}
 			}
 		}
@@ -7127,6 +7244,10 @@ country_event = { # TUUL Ultimatum
 					}
 					has_game_rule = {
 						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_LOVESTONE
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
 						option = CSA_POST_CIVIL_WAR_TOTALIST_CAPONE
 					}
 				}
@@ -7172,6 +7293,10 @@ country_event = { # TUUL Ultimatum
 					has_game_rule = {
 						rule = CSA_post_civil_war
 						option = CSA_POST_CIVIL_WAR_BURNHAM
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_LOVESTONE
 					}
 					has_game_rule = {
 						rule = CSA_post_civil_war
@@ -7222,6 +7347,10 @@ country_event = { # TUUL Ultimatum
 					has_game_rule = {
 						rule = CSA_post_civil_war
 						option = CSA_POST_CIVIL_WAR_BURNHAM
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_LOVESTONE
 					}
 					has_game_rule = {
 						rule = CSA_post_civil_war
@@ -7352,7 +7481,7 @@ country_event = { # Radicals Crushed
 			}
 		country_event = { id = amcivwar.3606 days = 7 }
 		}
-		if = {
+		else_if = {
 		limit = {
 		has_country_flag = csa_union_army
 			}
@@ -7400,6 +7529,10 @@ country_event = { # Military Demands Amnesty
 					has_game_rule = {
 						rule = CSA_post_civil_war
 						option = CSA_POST_CIVIL_WAR_BURNHAM
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_LOVESTONE
 					}
 				}
 			}
@@ -7454,8 +7587,8 @@ country_event = { # Fosterite Coup
 			create_country_leader = {
 				name = "William Z. Foster"
 				desc = "POLITICS_WILLIAM_FOSTER_DESC"
-				picture = "gfx/leaders/CSA/Portrait_CSA_William_Z_Foster.png"
-				expire = "1965.1.1"
+				picture = "gfx/leaders/CSA/Portrait_CSA_William_Z_Foster_Hat.png"
+				expire = "1.1.1"
 				ideology = william_foster_thought_subtype
 				traits = { CSA_vanguard_of_the_new_america }
 			}
@@ -7471,6 +7604,11 @@ country_event = { # Fosterite Coup
 		country_event = { id = amcivwar.36003 days = 5 }
 		set_country_flag = CSA_Foster_coup
 			}
+			remove_all_ministers = yes
+			add_ideas = CSA_Jay_Fox_hog_tot
+			add_ideas = CSA_Sam_Darcy_for_tot
+			add_ideas = CSA_John_J_Ballam_eco_tot
+			add_ideas = CSA_Jack_Shulman_sec_tot
 		}
 	}
 }
@@ -7521,6 +7659,10 @@ country_event = { # Military Demands IWW Support
 					has_game_rule = {
 						rule = CSA_post_civil_war
 						option = CSA_POST_CIVIL_WAR_BURNHAM
+					}
+					has_game_rule = {
+						rule = CSA_post_civil_war
+						option = CSA_POST_CIVIL_WAR_LOVESTONE
 					}
 				}
 			}
@@ -7616,7 +7758,7 @@ country_event = { # Social Patriots Cement Power
 				name = "Socialist American Congress"
 				desc = "CSA_CENTRAL_COMITTEE_DESC"
 				picture = "gfx/leaders/CSA/Portrait_CSA_committee.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = syndie_social_democrat_subtype
 				traits = {}
 		}
@@ -7624,15 +7766,15 @@ country_event = { # Social Patriots Cement Power
 				name = "Socialist American Congress"
 				desc = "CSA_CENTRAL_COMITTEE_DESC"
 				picture = "gfx/leaders/CSA/Portrait_CSA_committee.png"
-				expire = "1965.1.1"
-				ideology = radical_socialist_subtype
+				expire = "1.1.1"
+				ideology = bellamyism_subtype
 				traits = { our_right_to_survive }
 			}
 		create_country_leader = {
 				name = "Socialist American Congress"
 				desc = "CSA_CENTRAL_COMITTEE_DESC"
 				picture = "gfx/leaders/CSA/Portrait_CSA_committee.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = syndicalist_subtype
 				traits = { our_right_to_survive }
 			}
@@ -7640,10 +7782,15 @@ country_event = { # Social Patriots Cement Power
 				name = "Socialist American Congress"
 				desc = "CSA_CENTRAL_COMITTEE_DESC"
 				picture = "gfx/leaders/CSA/Portrait_CSA_committee.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = totalist_subtype
 				traits = { our_right_to_survive }
 			}
+			remove_all_ministers = yes
+			add_ideas = CSA_Norman_Thomas_hog_rso
+			add_ideas = CSA_Asa_P_Randolph_for_rso
+			add_ideas = CSA_Daniel_Hoan_eco_rso
+			add_ideas = CSA_John_Dewey_sec_rso
 		}
 		set_politics = {
 			ruling_party = social_democrat
@@ -7668,7 +7815,7 @@ country_event = { # Capone Storms Congress
 			name = "Alphonse Capone"
 			desc = "POLITICS_CAPONE_DESC"
 			picture = "gfx/leaders/CSA/Portrait_CSA_Alphonse_Capone.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = caponism_subtype
 			traits = { sec_prince_of_terror scarface }
 		}
@@ -9841,6 +9988,11 @@ country_event = { # Canadian Intervention
 					country_event = { id = pri.5 days = 30 random = 30 }
 				}
 			}
+			country_event = {
+				id = canada.2290
+				days = 130
+				random_days = 130
+			}
 		}
 	}
 	option = { # Activate Defence Plan Two
@@ -9865,7 +10017,10 @@ country_event = { # Canadian Intervention
 		}
 		if = { # occupy Alaska
 			limit = {
-				has_global_flag = ALA_chance
+				OR = {
+					has_global_flag = ALA_chance
+					has_global_flag = USA_deadlocked
+				}
 				463 = {
 					is_owned_by = USA
 				}
@@ -9894,14 +10049,31 @@ country_event = { # Alaska is Occupied(Canada)
 	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.151"}
 	title = amcivwar.151.t
 	desc = amcivwar.151.d
-	picture = GFX_report_event_USA_soldiers_running
+	picture = GFX_report_event_ALA_map
 
 	is_triggered_only = yes
+	
+	trigger = {
+		NOT = {
+			country_exists = ALA
+		}
+	}
 
-	option = {
+	option = { # Move in
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = ALA_INDEPENDENCE
+					option = ALA_INDEPENDENCE_PSA
+				}
+			}
+		}
 		name = amcivwar.151.a
 		CAN = {
 			transfer_state = 463
+			transfer_state = 1273
 			country_event = {
 				id = amcivwar.153
 				days = 60
@@ -9924,6 +10096,75 @@ country_event = { # Alaska is Occupied(Canada)
 			}
 		}
 	}
+	option = { # On their own
+		name = amcivwar.151.b
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = ALA_INDEPENDENCE
+						option = ALA_INDEPENDENCE_CANADA
+					}
+					has_game_rule = {
+						rule = ALA_INDEPENDENCE
+						option = ALA_INDEPENDENCE_PSA
+					}
+				}
+			}
+		}
+		add_political_power = 25
+		hidden_effect = {
+			ALA = {
+				add_state_core = 463
+				transfer_state = 463
+				transfer_state = 1273
+				add_state_core = 1273
+			}
+			COR = {
+				random_unit_leader = {
+					limit = { has_id = 141 }			
+					remove_unit_leader = yes
+				}
+			}
+			ALA = { get_current_government_type = yes }
+			CAN = {
+				set_autonomy = {
+					target = ALA
+					autonomy_state = kr_nominal_puppet
+				}
+			}
+			ALA = { restore_previous_government_type = yes }
+			news_event = {
+				id = Alaska.209
+				days = 1
+			}
+		}
+	}
+	option = { # PSA
+		name = amcivwar.151.c
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = ALA_INDEPENDENCE
+					option = ALA_INDEPENDENCE_CANADA
+				}
+			}
+		}
+		CAN = {
+			transfer_state = 463
+			transfer_state = 1273
+		}
+		CAL = {
+			country_event = {
+				id = Alaska.301
+				days = 1
+			}
+		}
+	}
 }
 
 country_event = { # Alaska is Occupied
@@ -9931,7 +10172,7 @@ country_event = { # Alaska is Occupied
 	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.152"}
 	title = amcivwar.152.t
 	desc = amcivwar.152.d
-	picture = GFX_report_event_USA_soldiers_running
+	picture = GFX_report_event_ALA_map
 
 	is_triggered_only = yes
 
@@ -9949,7 +10190,7 @@ country_event = { # Alaska is Occupied
 	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.153"}
 	title = amcivwar.153.t
 	desc = amcivwar.153.d
-	picture = GFX_report_event_USA_soldiers_running
+	picture = GFX_report_event_ALA_map
 
 	trigger = {
 		owns_state = 463
@@ -9967,6 +10208,8 @@ country_event = { # Alaska is Occupied
 		ALA = {
 			add_state_core = 463
 			transfer_state = 463
+			add_state_core = 1273
+			transfer_state = 1273
 		}
 		CAN = {
 			puppet = ALA
@@ -10033,6 +10276,7 @@ country_event = { # Alaska is Occupied
 			factor = 75
 		}
 		add_political_power = -50
+		set_country_flag = CAN_kept_alaska
 	}
 }
 
@@ -10477,7 +10721,10 @@ country_event = {
 			NEE = {
 				exists = yes
 				is_ai = yes
+				OR = {
 				is_subject_of = CAN
+				is_in_faction_with = CAN
+				}
 				}
 			controls_state = 360
 			}
@@ -10759,6 +11006,7 @@ country_event = {
 				
 				else_if	= {
 					limit = { 
+						NOT = { ALA = { is_subject_of = CAN } }
 						has_war_with = CAN 
 						has_country_flag = USA_asked_CAN_for_peace_plus
 						}
@@ -10767,6 +11015,20 @@ country_event = {
 				transfer_state = 473 #British Columbia
 				transfer_state = 471 #Yukon
 				transfer_state = 740 #Vancouver
+					}
+				}
+				else_if	= {
+					limit = { 
+						has_war_with = CAN 
+						has_country_flag = USA_asked_CAN_for_peace_plus
+						ALA = { is_subject_of = CAN }
+						}
+				white_peace_with_ROOT = yes
+				USA = {
+				transfer_state = 473 #British Columbia
+				transfer_state = 471 #Yukon
+				transfer_state = 740 #Vancouver
+				annex_country =  { target = ALA }
 					}
 				}
 			}
@@ -10782,6 +11044,7 @@ country_event = {
 				
 				else_if	= {
 					limit = { 
+						NOT = { ALA = { is_subject_of = CAN } }
 						has_war_with = CAN 
 						has_country_flag = USA_asked_CAN_for_peace_plus
 						}
@@ -10790,6 +11053,20 @@ country_event = {
 				transfer_state = 473 #British Columbia
 				transfer_state = 471 #Yukon
 				transfer_state = 740 #Vancouver
+					}
+				}
+				else_if	= {
+					limit = { 
+						has_war_with = CAN 
+						has_country_flag = USA_asked_CAN_for_peace_plus
+						ALA = { is_subject_of = CAN }
+						}
+				white_peace_with_ROOT = yes
+				CSA = {
+				transfer_state = 473 #British Columbia
+				transfer_state = 471 #Yukon
+				transfer_state = 740 #Vancouver
+				annex_country =  { target = ALA }
 					}
 				}
 			}
@@ -10805,6 +11082,7 @@ country_event = {
 				
 				else_if	= {
 					limit = { 
+						NOT = { ALA = { is_subject_of = CAN } }
 						has_war_with = CAN 
 						has_country_flag = USA_asked_CAN_for_peace_plus
 						}
@@ -10813,6 +11091,20 @@ country_event = {
 				transfer_state = 473 #British Columbia
 				transfer_state = 471 #Yukon
 				transfer_state = 740 #Vancouver
+					}
+				}
+				else_if	= {
+					limit = { 
+						has_war_with = CAN 
+						has_country_flag = USA_asked_CAN_for_peace_plus
+						ALA = { is_subject_of = CAN }
+						}
+				white_peace_with_ROOT = yes
+				TEX = {
+				transfer_state = 473 #British Columbia
+				transfer_state = 471 #Yukon
+				transfer_state = 740 #Vancouver
+				annex_country =  { target = ALA }
 					}
 				}
 			}
@@ -10828,14 +11120,31 @@ country_event = {
 				
 				else_if	= {
 					limit = { 
+						NOT = { ALA = { is_subject_of = CAN } }
 						has_war_with = CAN 
 						has_country_flag = USA_asked_CAN_for_peace_plus
 						}
 				white_peace_with_ROOT = yes
 				CAL = {
+				transfer_state = 470 #Alberta
 				transfer_state = 473 #British Columbia
 				transfer_state = 471 #Yukon
 				transfer_state = 740 #Vancouver
+					}
+				}
+				else_if	= {
+					limit = { 
+						has_war_with = CAN 
+						has_country_flag = USA_asked_CAN_for_peace_plus
+						ALA = { is_subject_of = CAN }
+						}
+				white_peace_with_ROOT = yes
+				CAL = {
+				transfer_state = 470 #Alberta
+				transfer_state = 473 #British Columbia
+				transfer_state = 471 #Yukon
+				transfer_state = 740 #Vancouver
+				annex_country =  { target = ALA }
 					}
 				}
 			}
@@ -10851,6 +11160,7 @@ country_event = {
 				
 				else_if	= {
 					limit = { 
+						NOT = { ALA = { is_subject_of = CAN } }
 						has_war_with = CAN 
 						has_country_flag = USA_asked_CAN_for_peace_plus
 						}
@@ -10859,6 +11169,20 @@ country_event = {
 				transfer_state = 473 #British Columbia
 				transfer_state = 471 #Yukon
 				transfer_state = 740 #Vancouver
+					}
+				}
+				else_if	= {
+					limit = { 
+						has_war_with = CAN 
+						has_country_flag = USA_asked_CAN_for_peace_plus
+						ALA = { is_subject_of = CAN }
+						}
+				white_peace_with_ROOT = yes
+				COR = {
+				transfer_state = 473 #British Columbia
+				transfer_state = 471 #Yukon
+				transfer_state = 740 #Vancouver
+				annex_country =  { target = ALA }
 					}
 				}
 			}
@@ -10874,6 +11198,7 @@ country_event = {
 				
 				else_if	= {
 					limit = { 
+						NOT = { ALA = { is_subject_of = CAN } }
 						has_war_with = CAN 
 						has_country_flag = USA_asked_CAN_for_peace_plus
 						}
@@ -10882,6 +11207,20 @@ country_event = {
 				transfer_state = 473 #British Columbia
 				transfer_state = 471 #Yukon
 				transfer_state = 740 #Vancouver
+					}
+				}
+				else_if	= {
+					limit = { 
+						has_war_with = CAN 
+						has_country_flag = USA_asked_CAN_for_peace_plus
+						ALA = { is_subject_of = CAN }
+						}
+				white_peace_with_ROOT = yes
+				HAW = {
+				transfer_state = 473 #British Columbia
+				transfer_state = 471 #Yukon
+				transfer_state = 740 #Vancouver
+				annex_country =  { target = ALA }
 					}
 				}
 			}
@@ -10897,6 +11236,7 @@ country_event = {
 				
 				else_if	= {
 					limit = { 
+						NOT = { ALA = { is_subject_of = CAN } }
 						has_war_with = CAN 
 						has_country_flag = USA_asked_CAN_for_peace_plus
 						}
@@ -10905,6 +11245,20 @@ country_event = {
 				transfer_state = 473 #British Columbia
 				transfer_state = 471 #Yukon
 				transfer_state = 740 #Vancouver
+					}
+				}
+				else_if	= {
+					limit = { 
+						has_war_with = CAN 
+						has_country_flag = USA_asked_CAN_for_peace_plus
+						ALA = { is_subject_of = CAN }
+						}
+				white_peace_with_ROOT = yes
+				NEE = {
+				transfer_state = 473 #British Columbia
+				transfer_state = 471 #Yukon
+				transfer_state = 740 #Vancouver
+				annex_country =  { target = ALA }
 					}
 				}
 			}
@@ -10920,6 +11274,7 @@ country_event = {
 				
 				else_if	= {
 					limit = { 
+						NOT = { ALA = { is_subject_of = CAN } }
 						has_war_with = CAN 
 						has_country_flag = USA_asked_CAN_for_peace_plus
 						}
@@ -10928,6 +11283,20 @@ country_event = {
 				transfer_state = 473 #British Columbia
 				transfer_state = 471 #Yukon
 				transfer_state = 740 #Vancouver
+					}
+				}
+				else_if	= {
+					limit = { 
+						has_war_with = CAN 
+						has_country_flag = USA_asked_CAN_for_peace_plus
+						ALA = { is_subject_of = CAN }
+						}
+				white_peace_with_ROOT = yes
+				BBR = {
+				transfer_state = 473 #British Columbia
+				transfer_state = 471 #Yukon
+				transfer_state = 740 #Vancouver
+				annex_country =  { target = ALA }
 					}
 				}
 			}
@@ -10943,6 +11312,7 @@ country_event = {
 				
 				else_if	= {
 					limit = { 
+						NOT = { ALA = { is_subject_of = CAN } }
 						has_war_with = CAN 
 						has_country_flag = USA_asked_CAN_for_peace_plus
 						}
@@ -10951,6 +11321,20 @@ country_event = {
 				transfer_state = 473 #British Columbia
 				transfer_state = 471 #Yukon
 				transfer_state = 740 #Vancouver
+					}
+				}
+				else_if	= {
+					limit = { 
+						has_war_with = CAN 
+						has_country_flag = USA_asked_CAN_for_peace_plus
+						ALA = { is_subject_of = CAN }
+						}
+				white_peace_with_ROOT = yes
+				WCC = {
+				transfer_state = 473 #British Columbia
+				transfer_state = 471 #Yukon
+				transfer_state = 740 #Vancouver
+				annex_country =  { target = ALA }
 					}
 				}
 			}
@@ -10989,6 +11373,7 @@ country_event = {
 				
 				else_if	= {
 					limit = { 
+						NOT = { ALA = { is_subject_of = CAN } }
 						has_war_with = CAN 
 						has_country_flag = USA_asked_CAN_for_peace_plus
 						}
@@ -10997,6 +11382,20 @@ country_event = {
 				transfer_state = 473 #British Columbia
 				transfer_state = 471 #Yukon
 				transfer_state = 740 #Vancouver
+					}
+				}
+				else_if	= {
+					limit = { 
+						has_war_with = CAN 
+						has_country_flag = USA_asked_CAN_for_peace_plus
+						ALA = { is_subject_of = CAN }
+						}
+				white_peace_with_ROOT = yes
+				TXS = {
+				transfer_state = 473 #British Columbia
+				transfer_state = 471 #Yukon
+				transfer_state = 740 #Vancouver
+				annex_country =  { target = ALA }
 					}
 				}
 			}
@@ -11610,6 +12009,14 @@ country_event = {
 				NOT = {
 					country_exists = COR
 				}
+				NOT = {
+					any_other_country = {
+						is_acw_minor = yes
+						exists = yes
+						ACW_minor_claimed_america = yes
+						is_ally_of_ROOT = no
+					}
+				}
 			}
 			AND = {
 				tag = CSA
@@ -11621,6 +12028,14 @@ country_event = {
 				}
 				NOT = {
 					country_exists = COR
+				}
+				NOT = {
+					any_other_country = {
+						is_acw_minor = yes
+						exists = yes
+						ACW_minor_claimed_america = yes
+						is_ally_of_ROOT = no
+					}
 				}
 			}
 			AND = {
@@ -11634,11 +12049,43 @@ country_event = {
 				NOT = {
 					country_exists = COR
 				}
+				NOT = {
+					any_other_country = {
+						is_acw_minor = yes
+						exists = yes
+						ACW_minor_claimed_america = yes
+						is_ally_of_ROOT = no
+					}
+				}
 			}
 			AND = {
 				tag = COR
 				NOT = {
 					country_exists = USA
+				}
+				NOT = {
+					country_exists = CSA
+				}
+				NOT = {
+					country_exists = TEX
+				}
+				NOT = {
+					any_other_country = {
+						is_acw_minor = yes
+						exists = yes
+						ACW_minor_claimed_america = yes
+						is_ally_of_ROOT = no
+					}
+				}
+			}
+			AND = {
+				is_acw_minor = yes
+				ACW_minor_claimed_america = yes
+				NOT = {
+					country_exists = USA
+				}
+				NOT = {
+					country_exists = COR
 				}
 				NOT = {
 					country_exists = CSA
@@ -13605,6 +14052,12 @@ country_event = { # Deadline Running Out
 
 	option = {
 		name = amcivwar.312.a
+		hidden_effect = {
+			country_event = {
+				id = amcivwar.315
+				days = 8
+			}
+		}
 	}
 }
 
@@ -13789,6 +14242,51 @@ country_event = {
 		event_target:restored_core = {
 			remove_claim_by = ROOT
 			add_core_of = ROOT
+		}
+	}
+}
+
+country_event = { # Early tanks and vehicles
+	id = amcivwar.315
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.315"}
+	title = amcivwar.315.t
+	desc = amcivwar.315.d
+	picture = GFX_event_USA_christie_tank
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = amcivwar.315.a
+		if = {
+			limit = {
+				NOT = { has_dlc = "No Step Back" }
+			}
+			add_equipment_to_stockpile = {
+			type = light_tank_equipment_1
+			amount = 50
+			producer = USA
+			}
+		}
+		if = {
+			limit = {
+				has_dlc = "No Step Back"
+			}
+			add_equipment_to_stockpile = {
+			type = light_tank_chassis
+			amount = 50
+			producer = USA
+			}
+		}
+		add_equipment_to_stockpile = {
+			type = armored_car_equipment
+			amount = 200
+			producer = USA
+		}
+		add_equipment_to_stockpile = {
+			type = motorized_equipment
+			amount = 500
+			producer = USA
 		}
 	}
 }
@@ -17840,7 +18338,6 @@ country_event = { # Black Nationalist Crushed
 			has_idea = ACW_black_nationalist_resistance_2
 			}
 		}
-		
 	mean_time_to_happen = {
 	days = 9
 	}
@@ -17860,6 +18357,38 @@ country_event = { # Black Nationalist Crushed
 		}
 	}
 }
+
+country_event = {
+	id = amcivwar.678
+	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.678"}
+	title = amcivwar.678.t
+	desc = amcivwar.678.d
+
+	trigger = {
+		tag = USA
+		NOT = {
+			country_exists = CSA
+			country_exists = COR
+			country_exists = TEX
+			country_exists = CAL
+		}
+		WCC = {
+			has_capitulated = yes
+			has_war_with = USA
+		}
+	}
+	fire_only_once = yes
+	hidden = yes
+
+	option = {
+		name = amcivwar.678.a
+		annex_country = {
+			target = WCC
+			transfer_troops = no	   
+			}
+	}
+}
+
 country_event = { # Panama Garrison
 	id = amcivwar.1312
 	immediate = {log = "[GetDateText]: [Root.GetName]: event amcivwar.1312"}
@@ -18086,5 +18615,93 @@ country_event = { # navajo player event for ease of access
 				add_ideas = ARZ_Extremism_In_The_Defense_of_Liberty_MEX
 			}
 		}
+	}
+}
+
+country_event = {
+	id = amcivwar.10000
+	immediate = { log = "[GetDateText]: [Root.GetName]: event amcivwar.10000" }
+	title = amcivwar.10000.t
+	desc = amcivwar.10000.d
+	picture = GFX_report_event_KSV_helicopters
+
+	trigger = {
+		OR = {
+			tag = CAL
+			tag = USA
+			tag = TEX
+			tag = CSA
+			tag = COR
+			tag = ARZ
+			tag = BBR
+			tag = NYC
+			tag = ALA
+			tag = HAW
+			tag = NEE
+			tag = PRI
+			tag = PAN
+			tag = TXS
+			tag = NVN
+			}
+		has_global_flag = heli_time_worldwide
+	}
+	
+	fire_only_once = yes	
+
+	option = {
+		name = amcivwar.10000.a
+		set_technology = {
+			helicopter = 1
+		}
+		add_equipment_to_stockpile = { type = helicopter_1 amount = 100 }
+		hidden_effect = { set_country_flag = americaners_heli_stop_repeat }
+		hidden_effect = {
+			every_country = {
+				limit = {
+				    OR = {
+						is_in_faction_with = CAL
+						is_in_faction_with = TEX
+						is_in_faction_with = USA
+						is_in_faction_with = CSA
+						is_in_faction_with = COR
+						is_in_faction_with = ARZ
+						is_in_faction_with = BBR
+						is_in_faction_with = NYC
+						is_in_faction_with = ALA
+						is_in_faction_with = HAW
+						is_in_faction_with = NEE
+						is_in_faction_with = PRI
+						is_in_faction_with = PAN
+						is_in_faction_with = TXS
+						is_in_faction_with = NVN
+					}					
+				}	
+			}
+			country_event = {
+				id = amcivwar.10001
+				days = 15
+			}
+		}
+	}
+}
+
+country_event = {
+	id = amcivwar.10001
+	immediate = { log = "[GetDateText]: [Root.GetName]: event amcivwar.10001" }
+	title = amcivwar.10001.t
+	desc = amcivwar.10001.d
+	picture = GFX_report_event_KSV_helicopters
+
+	trigger = { NOT = { has_country_flag = americaners_heli_stop_repeat } }
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = amcivwar.10001.a
+		set_technology = {
+			helicopter = 1
+		}
+		add_equipment_to_stockpile = { type = helicopter_1 amount = 25 }
 	}
 }

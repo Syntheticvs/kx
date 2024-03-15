@@ -11,8 +11,6 @@ focus_tree = {
 	default = no
 	continuous_focus_position = { x = 2300 y = 700 }
 
-	### Mediterranean Bloc tree restored by the Lord of the Arctic, KRdevs GTFO ###
-
 
 	### Politics ###
 	focus = {# Restauración
@@ -57,18 +55,6 @@ focus_tree = {
 					remove_idea = CAR_black_monday
 					add_idea = CAR_recovering_economy
 				}
-			}
-			if = {
-				limit = { has_idea = SPR_social_breakdown }
-				remove_ideas = SPR_social_breakdown
-			}
-			else_if = {
-				limit = { has_idea = SPR_social_breakdown_2 }
-				remove_ideas = SPR_social_breakdown_2
-			}
-			else_if = {
-				limit = { has_idea = SPR_social_breakdown_3 }
-				remove_ideas = SPR_social_breakdown_3
 			}
 			custom_effect_tooltip = CAR_remove_cores_SPR
 			custom_effect_tooltip = CAR_remove_cores_CNT
@@ -234,6 +220,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAR_rey"
 			add_ideas = CAR_royal_idea
 			add_political_power = 50
+			add_country_leader_trait = SPR_rey_leader_trait
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -976,7 +963,7 @@ focus_tree = {
 ### Army Policy ###
 	focus = {# Legión Española
 		id = CAR_legion_espanola
-		icon = GFX_focus_spa_supremacy_of_the_communion
+		icon = GFX_goal_SPA_Army
 		available = { has_country_flag = CAR_carlist_restoration }
 		cost = 7.00
 		x = 24
@@ -1016,7 +1003,7 @@ focus_tree = {
 	name = land_doc_bonus
 	cost_reduction = 0.5
 	uses = 1
-	category = cat_superior_firepower
+	category = land_doctrine
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1174,7 +1161,7 @@ focus_tree = {
 	name = land_doc_bonus
 	cost_reduction = 0.5
 	uses = 1
-	category = cat_mobile_warfare
+	category = land_doctrine
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1267,13 +1254,14 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
+			add_research_slot = 1
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
 	}
 ### Navy ###
 	focus = {# Armada Española
 		id = CAR_armada_espanola
-		icon = GFX_goal_FIU_build_up_armada
+		icon = GFX_goal_SPA_Navy
 		available = { has_country_flag = CAR_carlist_restoration }
 		cost = 7.00
 		x = 32
@@ -1378,7 +1366,7 @@ focus_tree = {
 				name = naval_doc_bonus
 				cost_reduction = 0.5
 				uses = 2
-				category = cat_fleet_in_being
+				category = naval_doctrine
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1460,7 +1448,7 @@ focus_tree = {
 				name = naval_doc_bonus
 				cost_reduction = 0.5
 				uses = 2
-				category = cat_trade_interdiction
+				category = naval_doctrine
 			}
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_RESEARCH }
@@ -1553,7 +1541,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			699 = {
+			1318 = {
 				add_building_construction = {
 					type = bunker
 					level = 2
@@ -1597,7 +1585,7 @@ focus_tree = {
 ### Air Force
 	focus = {# Aviación Legionaria
 		id = CAR_aviacion_legionaria
-		icon = GFX_goal_new_airforce
+		icon = GFX_goal_SPA_Airforce
 		available = { has_country_flag = CAR_carlist_restoration }
 		cost = 7.00
 		x = 39
@@ -1718,7 +1706,7 @@ focus_tree = {
 				name = air_doc_bonus
 				cost_reduction = 0.5
 				uses = 2
-				category = cat_strategic_destruction
+				category = air_doctrine
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1769,7 +1757,7 @@ focus_tree = {
 				name = air_doc_bonus
 				cost_reduction = 0.5
 				uses = 2
-				category = cat_battlefield_support
+				category = air_doctrine
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1883,6 +1871,19 @@ focus_tree = {
 					}
 				}
 			}
+			1318 = {
+				if = {
+					limit = {
+						is_owned_by = CAR
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
 			297 = {
 				if = {
 					limit = { is_owned_by = CAR	}
@@ -1932,7 +1933,7 @@ focus = {
 	cost = 5
 	available = { is_subject = no
 	has_country_flag = CAR_carlist_restoration
-	owns_state = 41
+	is_in_faction = no
 	}
 	ai_will_do = {
 		factor = 50
@@ -1969,27 +1970,24 @@ focus = {
 
 focus = {
 	id = CAR_invite_italy
-	icon = GFX_ITA_united
+	icon = GFX_SIC_confederation
 	bypass = {
 		NOT = {
-			country_exists = ITA
+			country_exists = SRD
 			country_exists = SIC
 		}
 	}
 	available = {
-		OR = {
 			country_exists = SIC
-			ITA = {
+			SIC = {
 				exists = yes
 				has_war = no
 				is_subject = no
-				NOT = { has_government = radical_socialist }
-			}
-			SRI = {
-				exists = yes
-				has_war = no
-				is_subject = no
-				has_country_flag = SRI_catholicisis
+				NOT = {
+				OR = {
+				has_completed_focus = SIC_ride_the_tiger
+				has_completed_focus = SIC_mafia_takeover
+				}
 			}
 		}
 	}
@@ -2001,14 +1999,7 @@ focus = {
 		factor = 25
 	}
 	completion_reward = {
-		if = {
-			limit = { NOT = { country_exists = SIC } }
-			country_event = { id = carfor.409 }
-		}
-		if = {
-			limit = { country_exists = SIC }
-			country_event = { id = carfor.509 }
-		}
+	country_event = { id = carfor.509 }
 	}
 }
 
@@ -2192,10 +2183,10 @@ focus = {
 	y = 2
 	cost = 5
 	ai_will_do = {
-		factor = 10
+		factor = 0
 		modifier = {
-			factor = 2
-			is_in_faction_with = NFA
+			factor = 10
+			has_global_flag = second_weltkrieg_has_started
 		}
 	}
 	completion_reward = {
@@ -2254,6 +2245,11 @@ focus = {
 			}
 		}
 	}
+	bypass = {
+		NOT = {
+			country_exists = PAP
+		}
+	}
 	prerequisite = { 
 		focus = CAR_french_restoration
 	}
@@ -2271,15 +2267,6 @@ focus = {
 		if = {
 			limit = { country_exists = PAP }
 			PAP = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_1
-					amount = 5000
-					producer = CAR
-				}
-			}
-		}
-		else = {
-			ITA = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_1
 					amount = 5000
@@ -2464,6 +2451,7 @@ focus = {
 					}
 				}
 			686 = { add_claim_by = CAR }
+			1312 = { add_claim_by = CAR }
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
@@ -2519,6 +2507,7 @@ focus = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAR_new_reconquista"
 			319 = { add_core_of = CAR }
 			686 = { add_core_of = CAR }
+			1312 = { add_core_of = CAR }
 			318 = { add_core_of = CAR }
 			set_cosmetic_tag = CAR_empire
 			add_political_power = 200
@@ -2678,7 +2667,7 @@ focus = {
 				limit = { 
 					OR = {
 					is_core_of = VEN 
-				    is_claimed_by = VEN
+					is_claimed_by = VEN
 					}
 				}	
 				add_claim_by = CAR
@@ -2766,7 +2755,7 @@ focus = {
 				limit = { 
 					OR = {
 					is_core_of = BOL 
-				    is_claimed_by = BOL
+					is_claimed_by = BOL
 					}
 				}
 				add_claim_by = CAR

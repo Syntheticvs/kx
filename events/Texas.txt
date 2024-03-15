@@ -370,8 +370,8 @@ country_event = { # AFP Dominates Texas
 		}
 		add_stability = 0.15
 		add_political_power = 20
-		custom_effect_tooltip = AFP_TEXAS
 		remove_ideas = USA_bleeding_texas
+		custom_effect_tooltip = AFP_TEXAS
 	}
 }			
 
@@ -1341,6 +1341,10 @@ country_event = { # Texas Leaves!
 	immediate = {
 		log = "[GetDateText]: [Root.GetName]: event TXS.0"
 		hidden_effect = {
+			news_event = {
+				id = TXS.131
+				days = 1
+			}
 			TXS = {
 				country_event = {
 					id = TXS.42
@@ -2274,7 +2278,7 @@ country_event = { # New Syndicalist Government
 			name = "Union Council"
 			desc = "POLITICS_SYNDIE_COUNCIL_DESC"
 			picture = "gfx/leaders/TXS/Portrait_TXS_council.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = centralized_syndicalism_subtype
 			traits = { makescift_commitee }
 		}
@@ -2623,7 +2627,7 @@ country_event = { # Natpop or PatAut
 				name = "Chamber of Executives"
 				desc = "POLITICS_CHAMBER_DESC"
 				picture = "gfx/leaders/TXS/Portrait_TXS_chamber.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = corporatocracy_subtype
 				traits = { bought_and_paid_for }
 			}
@@ -3497,7 +3501,18 @@ country_event = { # America is reunited
 		OR = {
 			tag = TXS
 			tag = ALA
-			has_completed_focus = PAN_restoring_the_union
+			tag = PRI
+			tag = AML
+			tag = AFT
+			tag = ATD
+			tag = IKE
+			tag = UOT
+			tag = DSR
+			tag = CGL
+			tag = ENC
+			tag = FSA
+			has_country_flag = ARZ_GREATER_ARIZONA
+			has_country_flag = PAN_US_PRESIDENT
 		}
 		owns_state = 361 #Maryland
 		owns_state = 371 #Louisiana
@@ -3533,7 +3548,6 @@ country_event = { # America is reunited
 				has_country_flag = TXS_kingdom_founded
 				AND = {
 					OR = {
-						has_completed_focus = PAN_restoring_the_union
 						tag = TXS
 					}
 					NOT = { has_country_flag = TXS_Remove_Texaco }
@@ -3549,7 +3563,112 @@ country_event = { # America is reunited
 			}
 		}
 		set_country_flag = TXS_UNITED_AMERICA
+		if = {
+		limit = {
+		tag = TXS
+		NOT = {
+		has_country_flag = ARZ_GREATER_ARIZONA
+		has_country_flag = PAN_US_PRESIDENT
+			}
+		}
+		set_cosmetic_tag = TXS_america
+		}
+		if = {
+		limit = {
+		has_country_flag = PAN_US_PRESIDENT
+			}
 		set_cosmetic_tag = NEE_america
+		}
+		if = {
+		limit = {
+		has_country_flag = ARZ_GREATER_ARIZONA
+		}
+		set_cosmetic_tag = ARZ_USA
+		}
+		if = {
+		limit = {
+		tag = CGL
+			}
+		set_cosmetic_tag = CGL_USA
+		}
+		if = {
+		limit = {
+		tag = AML
+		}
+		set_cosmetic_tag = AML_USA
+		}
+		if = {
+		limit = {
+		tag = AFT
+		}
+		set_cosmetic_tag = AML_USA
+		}
+		if = {
+		limit = {
+		tag = ATD
+		}
+		set_cosmetic_tag = AML_USA
+		}
+		if = {
+		limit = {
+		tag = IKE
+		}
+		set_cosmetic_tag = AML_USA
+		}
+		if = {
+		limit = {
+		tag = UOT
+		}
+		set_cosmetic_tag = AML_USA
+		}
+		if = {
+		limit = {
+		tag = ENC
+			}
+		country_event = enclave.1
+		}
+		if = {
+		limit = {
+		tag = DSR
+			}
+		country_event = utah.42
+		}
+		if = {
+		limit = {
+		tag = PRI
+			}
+		set_cosmetic_tag = NEE_america
+		}
+		if = {
+			limit = {
+				tag = ALA
+			}
+			set_cosmetic_tag = NEE_america
+			hidden_effect = {
+				country_event = {
+					id = Alaska.146
+					days = 12
+				}
+			}
+		}
+		if = {
+		limit = {
+		tag = FSA
+			}
+		country_event = fsa.1
+		}
+		if = {
+			limit = {
+				has_country_leader = {
+					name = "Alisa Rosenbaum"
+					ruling_only = yes
+				}
+			}
+			country_event = {
+				id = Alaska.522
+				days = 5
+			}
+		}
 		if = {
 			limit = {
 				CAL = {
@@ -3566,10 +3685,23 @@ country_event = { # America is reunited
 				}
 			}
 		}
-		every_owned_state = {
-			FROM.OWNER = { 
-				add_state_core = PREV
+		if = {
+			limit = {
+				has_cosmetic_tag = ALA_RUS
 			}
+			set_cosmetic_tag = ALA_RUS_USA
+		}
+		if = {
+			limit = {
+				has_cosmetic_tag = ALA_JAP
+			}
+			set_cosmetic_tag = CAL_JAP_USA
+		}
+		every_state = {
+                limit = {
+					is_united_states = yes
+				}
+			add_core_of = ROOT
 		}
 	}
 	option = { # at long last we are reunited
@@ -3602,10 +3734,11 @@ country_event = { # America is reunited
 				}
 			}
 		}
-		every_owned_state = {
-			FROM.OWNER = { 
-				add_state_core = PREV
-			}
+		every_state = {
+                limit = {
+					is_united_states = yes
+				}
+			add_core_of = ROOT
 		}
 		set_country_flag = TXS_UNITED_AMERICA
 	}
@@ -3627,20 +3760,27 @@ country_event = { # America is reunited
 				}
 			}
 		}
-		every_owned_state = {
-			FROM.OWNER = { 
-				add_state_core = PREV
-			}
+		every_state = {
+                limit = {
+					is_united_states = yes
+				}
+			add_core_of = ROOT
 		}
 		set_country_flag = TXS_UNITED_AMERICA
 	}
 	option = { # at long last we are reunited
 		name = TXS.30.c
 		trigger = {
-			has_cosmetic_tag = ALA_JEW
+			has_cosmetic_tag = ALA_ZION
 		}
 		
-		set_cosmetic_tag = ALA_JEW_USA
+		set_cosmetic_tag = ALA_ZION_USA
+		every_state = {
+                limit = {
+					is_united_states = yes
+				}
+			add_core_of = ROOT
+			}
 		if = {
 			limit = {
 				CAL = {
@@ -3661,7 +3801,6 @@ country_event = { # America is reunited
 		name = TXS.30.e
 		trigger = {
 			NOT = {
-				has_completed_focus = PAN_restoring_the_union
 				AND = {
 					tag = TXS
 					NOT = { has_country_flag = TXS_Remove_Texaco }
@@ -3694,10 +3833,11 @@ country_event = { # America is reunited
 				}
 			}
 		}
-		every_owned_state = {
-			FROM.OWNER = { 
-				add_state_core = PREV
-			}
+		every_state = {
+                limit = {
+					is_united_states = yes
+				}
+			add_core_of = ROOT
 		}
 	}
 	
@@ -3716,44 +3856,71 @@ country_event = { # America is reunited
 				}
 			}
 		}
-		every_owned_state = {
-			FROM.OWNER = { 
-				add_state_core = PREV
-			}
+		every_state = {
+                limit = {
+					is_united_states = yes
+				}
+			add_core_of = ROOT
 		}
 		set_country_flag = TXS_UNITED_AMERICA
 		set_cosmetic_tag = USA_GER
 	}
-
+	
 	option = { # at long last we are reunited
-		name = TXS.30.a
+		name = TXS.30.g
 		trigger = {
-			tag = PAN
+			tag = TXS
+				has_country_leader = {
+					ruling_only = yes
+					name = "Maximilian I"
+			}
+		}
+		every_state = {
+                limit = {
+					is_united_states = yes
+				}
+			add_core_of = ROOT
 		}
 		set_country_flag = TXS_UNITED_AMERICA
-		
-		if = {
-			limit = {
-				CAL = {
-					is_in_faction = yes
-					exists = yes
-				}
-				has_global_flag = CAL_seperatist_claim
-			}
-			CAL = {
-				every_owned_state = {
-					FROM.OWNER = { 
-						add_state_core = ROOT
-					}
-				}
+		set_cosmetic_tag = TXS_CZE_USA_LOB
+	}
+	
+	option = { # at long last we are reunited
+		name = TXS.30.g
+		trigger = {
+			tag = TXS
+			has_country_leader = {
+					ruling_only = yes
+					name = "Adolph I"
 			}
 		}
-		every_owned_state = {
-			FROM.OWNER = { 
-				add_state_core = PREV
+		every_state = {
+                limit = {
+					is_united_states = yes
+				}
+			add_core_of = ROOT
+		}
+		set_country_flag = TXS_UNITED_AMERICA
+		set_cosmetic_tag = TXS_CZE_USA_SCH
+	}
+	
+	option = { # at long last we are reunited
+		name = TXS.30.g
+		trigger = {
+			tag = TXS
+			has_country_leader = {
+					ruling_only = yes
+					name = "Stanley I"
 			}
 		}
-		set_cosmetic_tag = NEE_america
+		every_state = {
+                limit = {
+					is_united_states = yes
+				}
+			add_core_of = ROOT
+		}
+		set_country_flag = TXS_UNITED_AMERICA
+		set_cosmetic_tag = TXS_USA_BRIT
 	}
 	
 	option = { # at long last we are reunited
@@ -3773,6 +3940,18 @@ country_event = { # America is reunited
 				has_country_leader = {
 					ruling_only = yes
 					name = "Wilhelm III"
+				}
+				has_country_leader = {
+					ruling_only = yes
+					name = "Stanley I"
+				}
+				has_country_leader = {
+					ruling_only = yes
+					name = "Maximilian I"
+				}
+				has_country_leader = {
+					ruling_only = yes
+					name = "Adolph I"
 				}
 			}
 		}
@@ -4510,7 +4689,7 @@ country_event = { # Post War Elections
 				name = "Homer Brooks"
 				desc = "POLITICS_HOMER_ROSS_DESC"
 				picture = "gfx/leaders/TXS/Portrait_Texas_Homer_Ross.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = centralized_syndicalism_subtype
 				traits = { }
 			}
@@ -4541,6 +4720,13 @@ country_event = { # Post War Elections
 			ruling_party = syndicalist
 			elections_allowed = yes
 		}
+		remove_all_ministers = yes
+		add_ideas = {
+			TXS_Homer_Brooks_hog_syn
+			TXS_Manuela_Solis_Sager_for_syn
+			TXS_Francisca_Reyes_Esparza_eco_syn
+			TXS_Emma_Tenayuca_sec_syn
+		}
 		set_cosmetic_tag = TXS
 	}
 	option = {
@@ -4558,6 +4744,13 @@ country_event = { # Post War Elections
 		set_politics = {
 			ruling_party = radical_socialist
 			elections_allowed = yes
+		}
+		remove_all_ministers = yes
+		add_ideas = {
+			TXS_Woodie_Guthrie_hog_rso
+			TXS_Pete_Seeger_for_rso
+			TXS_Cisco_Houston_eco_rso
+			TXS_Will_Geer_sec_rso
 		}
 		set_cosmetic_tag = TXS
 	}
@@ -4615,7 +4808,7 @@ country_event = { # 1941 Election
 			name = "Martin Dies Jr."
 			desc = "POLITICS_MARTIN_DIES_DESC"
 			picture = "gfx/leaders/TXS/Portrait_Texas_Martin_Dies_Jr.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = longism_subtype
 			traits = {  }
 		}
@@ -4628,7 +4821,7 @@ country_event = { # 1941 Election
 			name = "Frank Hamer"
 			desc = "POLITICS_FRANK_HAMER_DESC"
 			picture = "gfx/leaders/TXS/Portrait_Texas_Frank_Hamer.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = longism_subtype
 			traits = {  }
 		}
@@ -4641,7 +4834,7 @@ country_event = { # 1941 Election
 			name = "Andrew Jackson Houston"
 			desc = "POLITICS_ANDREW_JACKSON_HOUSTON_DESC"
 			picture = "gfx/leaders/TXS/Portrait_texas_Andrew_Jackson_Houston_civ.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = longism_subtype
 			traits = {  }
 		}
@@ -4675,7 +4868,7 @@ country_event = { # 1941 Election
 					name = "Coke R. Stevenson"
 					desc = "POLITICS_COKE_R_STEVENSON_DESC"
 					picture = "gfx/leaders/TXS/Portrait_Texas_Coke_Stevenson.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = liberal_conservative_subtype
 					traits = {  }
 				}
@@ -4683,7 +4876,7 @@ country_event = { # 1941 Election
 					name = "Coke R. Stevenson"
 					desc = "POLITICS_COKE_R_STEVENSON_DESC"
 					picture = "gfx/leaders/TXS/Portrait_Texas_Coke_Stevenson.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = social_conservative_subtype
 					traits = {  }
 				}
@@ -4694,7 +4887,7 @@ country_event = { # 1941 Election
 					name = "H.L. Hunt"
 					desc = "POLITICS_HL_HUNT_DESC"
 					picture = "gfx/leaders/TXS/Portrait_TXS_Haroldson_Lafayette_Hunt.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = liberal_conservative_subtype
 					traits = {  }
 				}
@@ -4702,7 +4895,7 @@ country_event = { # 1941 Election
 					name = "H.L. Hunt"
 					desc = "POLITICS_HL_HUNT_DESC"
 					picture = "gfx/leaders/TXS/Portrait_TXS_Haroldson_Lafayette_Hunt.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = social_conservative_subtype
 					traits = {  }
 				}
@@ -4713,7 +4906,7 @@ country_event = { # 1941 Election
 					name = "Wilbert Lee O'Daniel"
 					desc = "POLITICS_WL_ODANIEL_DESC"
 					picture = "gfx/leaders/TXS/Portrait_TXS_WL_Odaniel.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = liberal_conservative_subtype
 					traits = {}
 				}
@@ -4721,7 +4914,7 @@ country_event = { # 1941 Election
 					name = "Wilbert Lee O'Daniel"
 					desc = "POLITICS_WL_ODANIEL_DESC"
 					picture = "gfx/leaders/TXS/Portrait_TXS_WL_Odaniel.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = christian_democracy_subtype
 					traits = {}
 				}
@@ -4732,7 +4925,7 @@ country_event = { # 1941 Election
 					name = "Daniel James Moody"
 					desc = "POLITICS_COKE_R_STEVENSON_DESC"
 					picture = "gfx/leaders/TXS/Portrait_Texas_Dan_Moody.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = centrist_subtype
 					traits = {  }
 				}
@@ -4743,7 +4936,7 @@ country_event = { # 1941 Election
 					name = "James V Allred"
 					desc = "POLITICS_JAMES_ALLRED_DESC"
 					picture = "gfx/leaders/TXS/Portrait_Texas_James_V_Allred_Cigar.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = centrist_subtype
 					traits = {}
 				}
@@ -4874,7 +5067,7 @@ country_event = { # 1946 Election
 					name = "Allan Shivers"
 					desc = "POLITICS_ALLAN_SHIVERS_DESC"
 					picture = "gfx/leaders/TXS/Portrait_Texas_Allan_Shivers.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = liberal_conservative_subtype
 					traits = {  }
 				}
@@ -4882,7 +5075,7 @@ country_event = { # 1946 Election
 					name = "Allan Shivers"
 					desc = "POLITICS_ALLAN_SHIVERS_DESC"
 					picture = "gfx/leaders/TXS/Portrait_Texas_Allan_Shivers.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = social_conservative_subtype
 					traits = {  }
 				}
@@ -4893,7 +5086,7 @@ country_event = { # 1946 Election
 					name = "Tom Connally"
 					desc = "POLITICS_TOM_CONNALY_DESC"
 					picture = "gfx/leaders/TXS/Portrait_TXS_Tom_Connally.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = liberal_conservative_subtype
 					traits = {  }
 				}
@@ -4901,7 +5094,7 @@ country_event = { # 1946 Election
 					name = "Tom Connally"
 					desc = "POLITICS_TOM_CONNALY_DESC"
 					picture = "gfx/leaders/TXS/Portrait_TXS_Tom_Connally.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = social_conservative_subtype
 					traits = {  }
 				}
@@ -4912,7 +5105,7 @@ country_event = { # 1946 Election
 					name = "Lyndon B. Johnson"
 					desc = "POLITICS_LBJ_DESC"
 					picture = "gfx/leaders/TXS/Portrait_Texas_Lyndon_Baines_Johnson_2.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = social_democrat_subtype
 					traits = {}
 				}
@@ -4923,7 +5116,7 @@ country_event = { # 1946 Election
 					name = "Ralph Yarborough"
 					desc = "POLITICS_RALPH_DESC"
 					picture = "gfx/leaders/TXS/Portrait_Texas_Ralph_Yarborough.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = social_democrat_subtype
 					traits = {}
 				}
@@ -4934,7 +5127,7 @@ country_event = { # 1946 Election
 					name = "Daniel James Moody"
 					desc = "POLITICS_COKE_R_STEVENSON_DESC"
 					picture = "gfx/leaders/TXS/Portrait_Texas_Dan_Moody.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = centrist_subtype
 					traits = {  }
 				}
@@ -5053,7 +5246,7 @@ country_event = { #
 					name = "Allan Shivers"
 					desc = "POLITICS_ALLAN_SHIVERS_DESC"
 					picture = "gfx/leaders/TXS/Portrait_Texas_Allan_Shivers.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = liberal_conservative_subtype
 					traits = {  }
 				}
@@ -5061,7 +5254,7 @@ country_event = { #
 					name = "Allan Shivers"
 					desc = "POLITICS_ALLAN_SHIVERS_DESC"
 					picture = "gfx/leaders/TXS/Portrait_Texas_Allan_Shivers.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = social_conservative_subtype
 					traits = {  }
 				}
@@ -5072,7 +5265,7 @@ country_event = { #
 					name = "Tom Connally"
 					desc = "POLITICS_TOM_CONNALY_DESC"
 					picture = "gfx/leaders/TXS/Portrait_TXS_Tom_Connally.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = liberal_conservative_subtype
 					traits = {  }
 				}
@@ -5080,7 +5273,7 @@ country_event = { #
 					name = "Tom Connally"
 					desc = "POLITICS_TOM_CONNALY_DESC"
 					picture = "gfx/leaders/TXS/Portrait_TXS_Tom_Connally.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = social_conservative_subtype
 					traits = {  }
 				}
@@ -5091,7 +5284,7 @@ country_event = { #
 					name = "Lyndon B. Johnson"
 					desc = "POLITICS_LBJ_DESC"
 					picture = "gfx/leaders/TXS/Portrait_Texas_Lyndon_Baines_Johnson_2.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = social_democrat_subtype
 					traits = {}
 				}
@@ -5102,7 +5295,7 @@ country_event = { #
 					name = "Ralph Yarborough"
 					desc = "POLITICS_RALPH_DESC"
 					picture = "gfx/leaders/TXS/Portrait_Texas_Ralph_Yarborough.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = social_democrat_subtype
 					traits = {}
 				}
@@ -5113,7 +5306,7 @@ country_event = { #
 					name = "Daniel James Moody"
 					desc = "POLITICS_COKE_R_STEVENSON_DESC"
 					picture = "gfx/leaders/TXS/Portrait_Texas_Dan_Moody.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = centrist_subtype
 					traits = {  }
 				}
@@ -5124,7 +5317,7 @@ country_event = { #
 					name = "Dwight D. Eisenhower"
 					desc = "POLITICS_DWIGHT_EISENHOWER_DESC"
 					picture = "gfx/leaders/USA/Portrait_USA_Dwight_Eisenhower.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = centrist_subtype
 					traits = {}
 				}
@@ -5230,7 +5423,7 @@ country_event = { # 1951 Election
 					name = "Price Daniel"
 					desc = "POLITICS_PRICE_DANIEL_DESC"
 					picture = "gfx/leaders/TXS/Portrait_Texas_Price_Daniel.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = liberal_conservative_subtype
 					traits = {  }
 				}
@@ -5238,7 +5431,7 @@ country_event = { # 1951 Election
 					name = "Price Daniel"
 					desc = "POLITICS_PRICE_DANIEL_DESC"
 					picture = "gfx/leaders/TXS/Portrait_Texas_Price_Daniel.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = social_conservative_subtype
 					traits = {  }
 				}
@@ -5249,7 +5442,7 @@ country_event = { # 1951 Election
 					name = "Tom Connally"
 					desc = "POLITICS_TOM_CONNALY_DESC"
 					picture = "gfx/leaders/TXS/Portrait_TXS_Tom_Connally.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = liberal_conservative_subtype
 					traits = {  }
 				}
@@ -5257,7 +5450,7 @@ country_event = { # 1951 Election
 					name = "Tom Connally"
 					desc = "POLITICS_TOM_CONNALY_DESC"
 					picture = "gfx/leaders/TXS/Portrait_TXS_Tom_Connally.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = social_conservative_subtype
 					traits = {  }
 				}
@@ -5268,7 +5461,7 @@ country_event = { # 1951 Election
 					name = "Lyndon B. Johnson"
 					desc = "POLITICS_LBJ_DESC"
 					picture = "gfx/leaders/TXS/Portrait_Texas_Lyndon_Baines_Johnson_2.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = social_democrat_subtype
 					traits = {}
 				}
@@ -5285,7 +5478,7 @@ country_event = { # 1951 Election
 					name = "Ralph Yarborough"
 					desc = "POLITICS_RALPH_DESC"
 					picture = "gfx/leaders/TXS/Portrait_Texas_Ralph_Yarborough.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = social_democrat_subtype
 					traits = {}
 				}
@@ -5296,7 +5489,7 @@ country_event = { # 1951 Election
 					name = "Daniel James Moody"
 					desc = "POLITICS_COKE_R_STEVENSON_DESC"
 					picture = "gfx/leaders/TXS/Portrait_Texas_Dan_Moody.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = centrist_subtype
 					traits = {  }
 				}
@@ -5307,7 +5500,7 @@ country_event = { # 1951 Election
 					name = "Dwight D. Eisenhower"
 					desc = "POLITICS_DWIGHT_EISENHOWER_DESC"
 					picture = "gfx/leaders/USA/Portrait_USA_Dwight_Eisenhower.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = centrist_subtype
 					traits = {}
 				}
@@ -5512,7 +5705,7 @@ country_event = { # Soc Other Elections
 					name = "Homer Brooks"
 					desc = "POLITICS_HOMER_ROSS_DESC"
 					picture = "gfx/leaders/TXS/Portrait_Texas_Homer_Ross.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = syndicalist_subtype
 					traits = { }
 				}
@@ -5523,7 +5716,7 @@ country_event = { # Soc Other Elections
 					name = "Emma B. Tenayuca"
 					desc = "POLITICS_TENAYUCA_DESC"
 					picture = "gfx/leaders/TXS/Portrait_TXS_Emma_Tenayuca.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = syndicalist_subtype
 					traits = {}
 				}
@@ -5789,7 +5982,7 @@ country_event = { # Puppet President
 			name = "Ira C. Eaker"
 			desc = "POLITICS_EAKER_DESC"
 			picture = "gfx/leaders/TXS/Portrait_Texas_Ira_C_Eaker.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = corporatocracy_subtype
 			traits = { hog_old_air_marshal }
 		}
@@ -5824,7 +6017,7 @@ country_event = { # Puppet President
 				name = "Chester W. Nimitz"
 				desc = "POLITICS_NIMITZ_DESC"
 				picture = "gfx/leaders/TXS/Portrait_Texas_Chester_W_Nimitz.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = corporatocracy_subtype
 				traits = { hog_old_admiral }
 		}
@@ -5861,7 +6054,7 @@ country_event = { # Puppet President
 			name = "Dwight D. Eisenhower"
 			desc = "POLITICS_DWIGHT_EISENHOWER_DESC"
 			picture = "gfx/leaders/TXS/Portrait_TXS_gen_Dwight_Eisenhower.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = corporatocracy_subtype
 			traits = { hog_old_general }
 		}
@@ -5901,7 +6094,7 @@ country_event = { # Puppet President
 			name = "Andrew Jackson Houston"
 			desc = "POLITICS_ANDREW_JACKSON_HOUSTON_DESC"
 			picture = "gfx/leaders/TXS/Portrait_texas_Andrew_Jackson_Houston_civ.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = corporatocracy_subtype
 			traits = {  }
 		}
@@ -5985,7 +6178,7 @@ country_event = { # New Junta
 			name = "Wilbert Lee O'Daniel"
 			desc = "POLITICS_WL_ODANIEL_DESC"
 			picture = "gfx/leaders/TXS/Portrait_TXS_WL_Odaniel.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = corporatocracy_subtype
 			traits = {}
 		}
@@ -6200,7 +6393,7 @@ country_event = { # Post-Junta Elections
 					name = "Coke R. Stevenson"
 					desc = "POLITICS_COKE_R_STEVENSON_DESC"
 					picture = "gfx/leaders/TXS/Portrait_Texas_Coke_Stevenson.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = liberal_conservative_subtype
 					traits = {  }
 				}
@@ -6208,7 +6401,7 @@ country_event = { # Post-Junta Elections
 					name = "Coke R. Stevenson"
 					desc = "POLITICS_COKE_R_STEVENSON_DESC"
 					picture = "gfx/leaders/TXS/Portrait_Texas_Coke_Stevenson.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = social_conservative_subtype
 					traits = {  }
 				}
@@ -6219,7 +6412,7 @@ country_event = { # Post-Junta Elections
 					name = "H.L. Hunt"
 					desc = "POLITICS_HL_HUNT_DESC"
 					picture = "gfx/leaders/TXS/Portrait_TXS_Haroldson_Lafayette_Hunt.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = liberal_conservative_subtype
 					traits = {  }
 				}
@@ -6227,7 +6420,7 @@ country_event = { # Post-Junta Elections
 					name = "H.L. Hunt"
 					desc = "POLITICS_HL_HUNT_DESC"
 					picture = "gfx/leaders/TXS/Portrait_TXS_Haroldson_Lafayette_Hunt.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = social_conservative_subtype
 					traits = {  }
 				}
@@ -6238,7 +6431,7 @@ country_event = { # Post-Junta Elections
 					name = "Wilbert Lee O'Daniel"
 					desc = "POLITICS_WL_ODANIEL_DESC"
 					picture = "gfx/leaders/TXS/Portrait_TXS_WL_Odaniel.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = liberal_conservative_subtype
 					traits = {}
 				}
@@ -6246,7 +6439,7 @@ country_event = { # Post-Junta Elections
 					name = "Wilbert Lee O'Daniel"
 					desc = "POLITICS_WL_ODANIEL_DESC"
 					picture = "gfx/leaders/TXS/Portrait_TXS_WL_Odaniel.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = christian_democracy_subtype 
 					traits = {}
 				}
@@ -6255,7 +6448,7 @@ country_event = { # Post-Junta Elections
 				name = "Daniel James Moody"
 				desc = "POLITICS_COKE_R_STEVENSON_DESC"
 				picture = "gfx/leaders/TXS/Portrait_Texas_Dan_Moody.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = centrist_subtype
 				traits = {  }
 			}
@@ -6327,7 +6520,10 @@ country_event = { # Congrats, You made it to 2019
 
 	fire_only_once = yes
 	
-	trigger = { date > 2019.1.1 }
+	trigger = { 
+		tag = TXS
+		date > 2019.1.1 
+	}
 	option = {
 		name = TXS.69.a
 		add_political_power = 100
@@ -6345,7 +6541,7 @@ country_event = { # Congrats, You made it to 2019
 				name = "Chuck Norris I"
 				desc = "POLITICS_CHUCK_NORRIS_DESC"
 				picture = "gfx/leaders/TXS/Portrait_Texas_Chuck_Norris.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = paternal_autocrat_subtype
 				traits = { }
 			}
@@ -6353,7 +6549,7 @@ country_event = { # Congrats, You made it to 2019
 				name = "Chuck Norris I"
 				desc = "POLITICS_CHUCK_NORRIS_DESC"
 				picture = "gfx/leaders/TXS/Portrait_Texas_Chuck_Norris.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = authoritarian_democrat_subtype
 				traits = { }
 			}
@@ -6361,7 +6557,7 @@ country_event = { # Congrats, You made it to 2019
 				name = "Chuck Norris I"
 				desc = "POLITICS_CHUCK_NORRIS_DESC"
 				picture = "gfx/leaders/TXS/Portrait_Texas_Chuck_Norris.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = social_conservative_subtype
 				traits = { }
 			}
@@ -6369,7 +6565,7 @@ country_event = { # Congrats, You made it to 2019
 				name = "Chuck Norris I"
 				desc = "POLITICS_CHUCK_NORRIS_DESC"
 				picture = "gfx/leaders/TXS/Portrait_Texas_Chuck_Norris.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = liberal_conservative_subtype
 				traits = { }
 			}
@@ -6377,7 +6573,7 @@ country_event = { # Congrats, You made it to 2019
 				name = "Chuck Norris I"
 				desc = "POLITICS_CHUCK_NORRIS_DESC"
 				picture = "gfx/leaders/TXS/Portrait_Texas_Chuck_Norris.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = centrist_subtype
 				traits = { }
 			}
@@ -6385,7 +6581,7 @@ country_event = { # Congrats, You made it to 2019
 				name = "Chuck Norris I"
 				desc = "POLITICS_CHUCK_NORRIS_DESC"
 				picture = "gfx/leaders/TXS/Portrait_Texas_Chuck_Norris.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = social_democrat_subtype
 				traits = { }
 			}
@@ -6393,7 +6589,7 @@ country_event = { # Congrats, You made it to 2019
 				name = "Beto O'Rourke"
 				desc = "POLITICS_BETO_DESC"
 				picture = "gfx/leaders/TXS/Portrait_Texas_Beto_O'Rourke.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = totalist_subtype
 				traits = { }
 			}
@@ -6430,7 +6626,7 @@ country_event = { # Authdem or PatAut
 				name = "Chester W. Nimitz"
 				desc = "POLITICS_NIMITZ_DESC"
 				picture = "gfx/leaders/TXS/Portrait_Texas_Chester_W_Nimitz.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = authdem_junta_subtype
 				traits = { hog_old_admiral }
 		}
@@ -6625,8 +6821,8 @@ country_event = { # LBJ Speech
 			name = "Woodie Guthrie"
 			desc = "POLITICS_WOODIE_GURTHIE_DESC"
 			picture = "gfx/leaders/TXS/Portrait_Texas_woodie.png"
-			expire = "1965.1.1"
-			ideology = radical_progressivism_subtype
+			expire = "1.1.1"
+			ideology = cowboy_communalism_subtype
 			traits = { cowboy }
 		}
 		hidden_effect = {
@@ -6763,7 +6959,7 @@ country_event = { # Military Removes Texaco
 			name = "Ira C. Eaker"
 			desc = "POLITICS_EAKER_DESC"
 			picture = "gfx/leaders/TXS/Portrait_Texas_Ira_C_Eaker.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = junta_subtype
 			traits = { hog_old_air_marshal }
 		}
@@ -6794,7 +6990,7 @@ country_event = { # Military Removes Texaco
 				name = "Chester W. Nimitz"
 				desc = "POLITICS_NIMITZ_DESC"
 				picture = "gfx/leaders/TXS/Portrait_Texas_Chester_W_Nimitz.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = junta_subtype
 				traits = { hog_old_admiral }
 		}
@@ -6826,7 +7022,7 @@ country_event = { # Military Removes Texaco
 			name = "Dwight D. Eisenhower"
 			desc = "POLITICS_DWIGHT_EISENHOWER_DESC"
 			picture = "gfx/leaders/TXS/Portrait_TXS_gen_Dwight_Eisenhower.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = junta_subtype
 			traits = { hog_old_general }
 		}
@@ -6861,7 +7057,7 @@ country_event = { # Military Removes Texaco
 			name = "Andrew Jackson Houston"
 			desc = "POLITICS_ANDREW_JACKSON_HOUSTON_DESC"
 			picture = "gfx/leaders/TXS/Portrait_texas_Andrew_Jackson_Houston_civ.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = junta_subtype
 			traits = {  }
 		}
@@ -7062,7 +7258,7 @@ country_event = { #Red Rose of Texas by Woodie Guthrie
 	fire_only_once = yes
 	 
 	option = {
-		name = TXS.91.a
+		name = TXS.95.a
 	}
 }
 
@@ -7076,6 +7272,9 @@ country_event = { #Democratic Primary
 	is_triggered_only = yes
 	
 	fire_only_once = yes
+	trigger = {
+		has_democratic_government = yes
+	}
 	 
 	option = { #O'Daniel
 		name = TXS.96.a
@@ -7104,6 +7303,9 @@ country_event = { #Independence Primary
 	is_triggered_only = yes
 	
 	fire_only_once = yes
+	trigger = {
+		has_democratic_government = yes
+	}
 	 
 	option = { #Moody
 		name = TXS.97.a
@@ -7125,6 +7327,9 @@ country_event = { #Progressive Primary
 	is_triggered_only = yes
 	
 	fire_only_once = yes
+	trigger = {
+		has_democratic_government = yes
+	}
 	 
 	option = { #Johnson
 		name = TXS.98.a
@@ -7141,6 +7346,9 @@ country_event = { #Independence Primary - 1946
 	is_triggered_only = yes
 	
 	fire_only_once = yes
+	trigger = {
+		has_democratic_government = yes
+	}
 	 
 	option = { #Dan Moody
 		name = TXS.99.a
@@ -7170,6 +7378,9 @@ country_event = { #Progressive Primary - 1946
 	is_triggered_only = yes
 	
 	fire_only_once = yes
+	trigger = {
+		has_democratic_government = yes
+	}
 	 
 	option = { #Johnson
 		name = TXS.100.a
@@ -7191,6 +7402,9 @@ country_event = { #Democratic Primary - 1946
 	is_triggered_only = yes
 	
 	fire_only_once = yes
+	trigger = {
+		has_democratic_government = yes
+	}
 	 
 	option = { #Tom Connaly
 		name = TXS.101.a
@@ -7231,6 +7445,9 @@ country_event = { #Independence Primary - 1951
 	is_triggered_only = yes
 	
 	fire_only_once = yes
+	trigger = {
+		has_democratic_government = yes
+	}
 	 
 	option = { #Dan Moody
 		name = TXS.102.a
@@ -7266,6 +7483,9 @@ country_event = { #Progressive Primary - 1951
 	is_triggered_only = yes
 	
 	fire_only_once = yes
+	trigger = {
+		has_democratic_government = yes
+	}
 	 
 	option = { #Johnson
 		name = TXS.103.a
@@ -7287,6 +7507,9 @@ country_event = { #Democratic Primary - 1951
 	is_triggered_only = yes
 	
 	fire_only_once = yes
+	trigger = {
+		has_democratic_government = yes
+	}
 	 
 	option = { #Tom Connaly
 		name = TXS.104.a
@@ -7343,6 +7566,9 @@ country_event = { #Democratic Primary - 1957
 	is_triggered_only = yes
 	
 	fire_only_once = yes
+	trigger = {
+		has_democratic_government = yes
+	}
 	 
 	option = { #Tom Connaly
 		name = TXS.105.a
@@ -7399,6 +7625,9 @@ country_event = { #Independence Primary - 1957
 	is_triggered_only = yes
 	
 	fire_only_once = yes
+	trigger = {
+		has_democratic_government = yes
+	}
 	 
 	option = { #Dan Moody
 		name = TXS.106.a
@@ -7440,6 +7669,9 @@ country_event = { #Progressive Primary - 1957
 	is_triggered_only = yes
 	
 	fire_only_once = yes
+	trigger = {
+		has_democratic_government = yes
+	}
 	 
 	option = { #Johnson
 		name = TXS.107.a
@@ -7459,8 +7691,7 @@ country_event = { #SPTX Primary - 1946
 	picture = TXS_Capitol
 
 	is_triggered_only = yes
-	
-	 
+
 	option = { #Tenayuca
 		name = TXS.1071.a
 		set_country_flag = TXS_socialist_primary_tenayuca
@@ -7631,7 +7862,7 @@ country_event = { #Dem Primary
 			name = "John Nance Garner"
 			desc = "POLITICS_JOHN_GARNER_DESC"
 			picture = "gfx/leaders/TXS/Portrait_TXS_Garner.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = national_conservative_subtype
 			traits = { cactus_jack }
 		}
@@ -7639,7 +7870,7 @@ country_event = { #Dem Primary
 			name = "John Nance Garner"
 			desc = "POLITICS_JOHN_GARNER_DESC"
 			picture = "gfx/leaders/TXS/Portrait_TXS_Garner.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = liberal_conservative_subtype
 			traits = { cactus_jack }
 		}
@@ -7716,7 +7947,7 @@ country_event = { #Fate of Texas
 		add_political_power = -50
 	}
 	option = { #Keep Things
-		name = TXS.115.a
+		name = TXS.115.b
 		add_political_power = 50
 	}
 }
@@ -7971,6 +8202,74 @@ country_event = { # Socialist Flag
 	}
 }
 
+country_event = { # Mexican Ministers
+	id = TXS.125
+	immediate = {log = "[GetDateText]: [Root.GetName]: event TXS.125"}
+	title = TXS.125.t
+	desc = TXS.125.d
+	picture = GFX_arz_rangers
+	
+	trigger = { ARZ = { has_socialist_government = no } }
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Support
+		name = TXS.125.a
+		increase_ruling_party_popularity_by_2 = yes
+		add_political_power = 40
+	}
+	
+	option = { #Ministers
+		name = TXS.125.b
+		increase_ruling_party_popularity_by_2 = yes
+		remove_ideas_with_trait = foreign_minister
+		remove_ideas_with_trait = economy_minister
+		add_ideas = TXS_Rosendo_Dorame_for_rso
+		add_ideas = TXS_Cisco_Houston_eco_rso
+	}
+}
+
+country_event = { # Lomax
+	id = TXS.126
+	immediate = {log = "[GetDateText]: [Root.GetName]: event TXS.126"}
+	title = TXS.126.t
+	desc = TXS.126.d
+	picture = GFX_report_event_TXS_lomax
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Cool
+		name = TXS.126.a
+		increase_ruling_party_popularity_by_2 = yes
+		add_war_support = 0.02
+	}
+	
+}
+
+country_event = { # Pocket Sand
+	id = TXS.127
+	immediate = {log = "[GetDateText]: [Root.GetName]: event TXS.127"}
+	title = TXS.127.t
+	desc = TXS.127.d
+	picture = GFX_report_event_TXS_pocket_sand
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #SH-SH-SHA!
+		name = TXS.127.a
+		add_tech_bonus = {
+			name = TXS_pocket_sand
+			bonus = 0.03
+			uses = 1
+			category = support_tech
+		}
+	}
+	
+}
+
 news_event = {
 	id = TXS.83 #-Garner being Elected President
 	immediate = {log = "[GetDateText]: [Root.GetName]: event TXS.83"}
@@ -8139,6 +8438,188 @@ news_event = {
 	}
 }
 
+country_event = {# Fredonia (Texas Edition)
+	id = TXS.89
+	immediate = { log = "[GetDateText]: [Root.GetName]: event TXS.89" }
+	title = newenglandmilflavor.1004.t
+	desc = newenglandmilflavor.1004.d
+	picture = GFX_NEE_fredonia
+
+	trigger = {
+	tag = TXS
+	TXS = { has_cosmetic_tag = TXS_america }
+	}
+	fire_only_once = yes
+	
+	option = {#Nope
+		name = newenglandmilflavor.1004.a
+		add_political_power = 20
+	}
+	
+	option = {#Fredonia
+		name = newenglandmilflavor.1004.e
+		set_cosmetic_tag = NEE_fredonia
+	}
+}
+
+country_event = {#
+	id = TXS.128
+	immediate = { log = "[GetDateText]: [Root.GetName]: event TXS.128" }
+	title = TXS.128.t
+	desc = TXS.128.d
+	picture = TXS_rio_grande
+
+	trigger = {
+	tag = TXS
+	TXS = {
+	    OR = {
+		owns_state = 479
+		owns_state = 480
+		owns_state = 482
+		controls_state = 479
+		controls_state = 480
+		controls_state = 482
+		}
+	}
+	}
+	fire_only_once = yes
+	
+	option = {#
+		name = TXS.128.a
+		add_political_power = 75
+		add_stability = 0.075
+	}
+	
+	option = {#
+		name = TXS.128.b
+		trigger = { is_ai = no }
+		if = {
+		limit = { 
+			OR = {
+			NOT = { has_cosmetic_tag = TXS_texaco } 
+			NOT = { 
+				OR = {
+				has_completed_focus = TXS_houston_kingdom 
+				has_completed_focus = TXS_anglo_puppeting
+				has_completed_focus = TXS_german_exile_government 
+				has_completed_focus = TXS_german_puppeting 
+				}
+			}
+			}
+		}
+		set_cosmetic_tag = TXS_MEX
+		country_event = TXS.130
+		}
+		else_if = {
+		limit = { has_cosmetic_tag = TXS_texaco }
+		set_cosmetic_tag = TXS_MEX_TEXACO
+		}
+		add_state_core = 479
+		add_state_core = 480
+		add_state_core = 482
+	}
+}
+
+country_event = {#
+	id = TXS.129
+	immediate = { log = "[GetDateText]: [Root.GetName]: event TXS.128" }
+	title = TXS.129.t
+	desc = TXS.129.d
+	picture = TXS_rio_grande
+
+	trigger = {
+	tag = TXS
+	TXS = {
+		OR = {
+		has_cosmetic_tag = TXS_MEX
+		has_cosmetic_tag = TXS_MEX_2
+		has_cosmetic_tag = TXS_MEX_3
+		has_cosmetic_tag = TXS_MEX_4
+		has_cosmetic_tag = TXS_MEX_TEXACO
+		}
+		owns_state = 479
+		owns_state = 480
+		owns_state = 482
+		}
+	}
+	fire_only_once = yes
+	
+	option = {#
+		name = TXS.129.a
+	}
+	option = {#
+		name = TXS.129.b
+		set_capital = { state = 833 }
+		set_victory_points = {
+			province = 5061
+			value = 15
+			}
+	}
+	option = {#
+		name = TXS.129.c
+		set_capital = { state = 1166 }
+	}
+	option = {#
+		name = TXS.129.e
+		set_capital = { state = 482 }
+	}
+	option = {#
+		name = TXS.129.f
+		set_capital = { state = 833 }
+	}
+	option = {#
+		name = TXS.129.g
+		set_capital = { state = 480 }
+	}
+}
+
+country_event = {#
+	id = TXS.130
+	immediate = { log = "[GetDateText]: [Root.GetName]: event TXS.130" }
+	title = TXS.130.t
+	desc = TXS.130.d
+	picture = TXS_laredo_flag
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {#
+		name = TXS.130.a
+		set_cosmetic_tag = TXS_MEX
+	}
+	option = {#
+		name = TXS.130.b
+		set_cosmetic_tag = TXS_MEX_2
+	}
+	option = {#
+		name = TXS.130.c
+		set_cosmetic_tag = TXS_MEX_3
+	}
+	option = {#
+		name = TXS.130.e
+		set_cosmetic_tag = TXS_MEX_4
+	}
+}
+
+news_event = { #Texas breaks free
+	id = TXS.131
+	immediate = {log = "[GetDateText]: [Root.GetName]: event TXS.131"}
+	title = TXS.131.t
+	desc = TXS.131.d
+	picture = GFX_news_event_TXS_independence
+
+	major = yes
+	is_triggered_only = yes
+
+	trigger = {
+		wants_world_news = yes
+	}
+
+	option = {
+		name = TXS.131.a
+	}
+}
+
 country_event = { #PSA went Norton, kingdom, or go away?
 	id = TXSKING.1
 	immediate = {log = "[GetDateText]: [Root.GetName]: event TXSKING.1"}
@@ -8252,10 +8733,12 @@ country_event = { #PSA went Norton, kingdom, or go away?
 		name = TXSKING.1.c #KING HOUSTON KING HOUSTON
 		ai_chance = { factor = 20 }
 		add_stability = -0.10
+		TXS = {
 		country_event = {
 			id = TXSKING.2
 			days = 7
 		}
+	    }
 	}
 }
 
@@ -8275,7 +8758,7 @@ country_event = {
 			name = "Andrew I"
 			desc = "POLITICS_ANDREW_JACKSON_HOUSTON_DESC"
 			picture = "gfx/leaders/TXS/Portrait_texas_Andrew_Jackson_Houston.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = longism_subtype
 			traits = {  }
 		}
@@ -8378,10 +8861,12 @@ country_event = { #elections or king?
 				}
 			}
 		}
+		TXS = {
 		country_event = {
 			id = TXSKING.4
 			days = 7
 		}
+     	}
 	}
 }
 
@@ -8401,7 +8886,7 @@ country_event = {
 			name = "Andrew I"
 			desc = "POLITICS_ANDREW_JACKSON_HOUSTON_DESC"
 			picture = "gfx/leaders/TXS/Portrait_texas_Andrew_Jackson_Houston.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = longism_subtype
 			traits = {  }
 		}
@@ -8509,10 +8994,12 @@ country_event = { #drive
 		name = TXSKING.9.a
 		add_stability = -0.15
 		hidden_effect = {
+			TXS = {
 			country_event = {
 				id = TXSKING.10
 				days = 1
 			}
+		    }
 		}
 	}
 }
@@ -8543,14 +9030,16 @@ country_event = { #DOKTAH!
 			create_country_leader = {
 				name = "Texas Regency"
 				picture = "gfx/leaders/TXS/Portrait_TXS_NCOS.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = oligarchy_subtype
 				traits = {  }
 			}
+			TXS = {
 			country_event = {
 				id = TXSKING.11
 				days = 7
 			}
+		    }
 		}
 	}
 	option = { #I live!
@@ -8625,10 +9114,12 @@ country_event = { #Regency
 		}
 		add_stability = -0.15
 		hidden_effect = {
+			TXS = {
 			country_event = {
 				id = TXSKING.12
 				days = 3
 			}
+		    }
 		}
 	}
 	option = { #ABOOB DEINED
@@ -8646,10 +9137,12 @@ country_event = { #Regency
 		add_political_power = -100
 		add_stability = 0.05
 		hidden_effect = {
+			TXS = {
 			country_event = {
 				id = TXSKING.13
 				days = 3
 			}
+		    }
 		}
 	}
 }
@@ -8670,7 +9163,7 @@ country_event = { #AWOOGA
 			create_country_leader = {
 				name = "Ariadne I"
 				picture = "gfx/leaders/TXS/Portrait_Texas_Ariadne_T_Houston_except_its_actually_Antoinette_Power_Houston_Bringhurst.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = longism_subtype
 				traits = {  }
 			}
@@ -8717,10 +9210,14 @@ country_event = { #Regency
 			}
 		}
 		add_stability = -0.15
-		hidden_effect = { country_event = {
+		hidden_effect = { 
+			TXS = {
+			country_event = {
 			id = TXSKING.14
 			days = 15
-		} }
+		    } 
+		    }
+	    }
 	}
 	option = { #Kaiser
 		name = TXSKING.13.b
@@ -8754,10 +9251,12 @@ country_event = { #Regency
 			}
 		}
 		hidden_effect = {
+			TXS = {
 			country_event = {
 				id = TXSKING.16
 				days = 3
 			}
+		    }
 		}
 	}
 	option = { #King
@@ -8792,10 +9291,12 @@ country_event = { #Regency
 			}
 		}
 		hidden_effect = {
+			TXS = {
 			country_event = {
 				id = TXSKING.17
 				days = 3
 			}
+		    }
 		}
 	}
 }
@@ -8812,10 +9313,12 @@ country_event = { #Czechs!
 		trigger = { NOT = { CZE = { has_country_flag = CZE_lobkowicz } } }
 		set_country_flag = TXS_lobkowicz
 		hidden_effect = {
+			TXS = {
 			country_event = {
 				id = TXSKING.15
 				days = 3
 			}
+		    }
 		}
 	}
 	option = { #Lobkowicz
@@ -8823,10 +9326,12 @@ country_event = { #Czechs!
 		trigger = { NOT = { CZE = { has_country_flag = CZE_schwarzenberg } } }
 		set_country_flag = TXS_schwarzenberg
 		hidden_effect = {
+			TXS = {
 			country_event = {
 				id = TXSKING.15
 				days = 3
 			}
+		    }
 		}
 	}
 }
@@ -8857,7 +9362,7 @@ country_event = { #Czechs!
 				name = "Maximilian I"
 				desc = "POLITICS_MAX_LOBKOWICZ_DESC"
 				picture = "gfx/leaders/CZE/CZE_Max_Lobkowicz.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = prussian_constitutionalism_subtype
 			}
 		}
@@ -8873,7 +9378,7 @@ country_event = { #Czechs!
 			create_country_leader = {
 				name = "Adolph I"
 				picture = "gfx/leaders/CZE/CZE_Adolph_Schwarzenberg.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = prussian_constitutionalism_subtype
 				traits = {}
 			}
@@ -8904,7 +9409,7 @@ country_event = { #UHH BASED
 					name = "Wilhelm III"
 					desc = "POLITICS_WILLY_3_DESC"
 					picture = "gfx/leaders/KTX/Portrait_Germany_Wilhelm_III.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = prussian_constitutionalism_subtype
 					traits = {}
 				}
@@ -8912,7 +9417,7 @@ country_event = { #UHH BASED
 					name = "Wilhelm III"
 					desc = "POLITICS_WILLY_3_DESC"
 					picture = "gfx/leaders/KTX/Portrait_Germany_Wilhelm_III.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = absolute_monarchy_subtype
 				}
 				else = {
@@ -8920,7 +9425,7 @@ country_event = { #UHH BASED
 						name = "Wilhelm II"
 						desc = "POLITICS_WILHELM_II_DESC"
 						picture = "gfx/leaders/KTX/Portrait_Germany_Wilhelm_II.png"
-						expire = "1965.1.1"
+						expire = "1.1.1"
 						ideology = prussian_constitutionalism_subtype
 						traits = {}
 					}
@@ -8928,7 +9433,7 @@ country_event = { #UHH BASED
 						name = "Wilhelm II"
 						desc = "POLITICS_WILHELM_II_DESC"
 						picture = "gfx/leaders/KTX/Portrait_Germany_Wilhelm_II.png"
-						expire = "1965.1.1"
+						expire = "1.1.1"
 						ideology = absolute_monarchy_subtype
 					}
 				}
@@ -8956,7 +9461,7 @@ country_event = { #ENGLISH CHANNEL?, HAND OVER THE REMOTE
 			create_country_leader = {
 				name = "Stanley I"
 				picture = "gfx/leaders/TXS/Portrait_TXS_Stanley_Bruce.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = prussian_constitutionalism_subtype
 				traits = {}
 			}
@@ -8984,7 +9489,7 @@ country_event = { #ENGLISH CHANNEL?, HAND OVER THE REMOTE
 			create_country_leader = {
 				name = "Stanley I"
 				picture = "gfx/leaders/TXS/Portrait_TXS_Stanley_Bruce.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = prussian_constitutionalism_subtype
 				traits = {}
 			}
@@ -9016,7 +9521,7 @@ country_event = { #German Puppeting
 					name = "Wilhelm III"
 					desc = "POLITICS_WILLY_3_DESC"
 					picture = "gfx/leaders/KTX/Portrait_Germany_Wilhelm_III.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = prussian_constitutionalism_subtype
 					traits = {}
 				}
@@ -9024,7 +9529,7 @@ country_event = { #German Puppeting
 					name = "Wilhelm III"
 					desc = "POLITICS_WILLY_3_DESC"
 					picture = "gfx/leaders/KTX/Portrait_Germany_Wilhelm_III.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = absolute_monarchy_subtype
 				}
 				else = {
@@ -9032,7 +9537,7 @@ country_event = { #German Puppeting
 						name = "Wilhelm II"
 						desc = "POLITICS_WILHELM_II_DESC"
 						picture = "gfx/leaders/KTX/Portrait_Germany_Wilhelm_II.png"
-						expire = "1965.1.1"
+						expire = "1.1.1"
 						ideology = prussian_constitutionalism_subtype
 						traits = {}
 					}
@@ -9040,7 +9545,7 @@ country_event = { #German Puppeting
 						name = "Wilhelm II"
 						desc = "POLITICS_WILHELM_II_DESC"
 						picture = "gfx/leaders/KTX/Portrait_Germany_Wilhelm_II.png"
-						expire = "1965.1.1"
+						expire = "1.1.1"
 						ideology = absolute_monarchy_subtype
 					}
 				}
@@ -9076,5 +9581,19 @@ country_event = { #Moravian Church
 		name = TXSKING.32.a
 		add_stability = 0.03
 		add_political_power = -5
+	}
+}
+
+country_event = { #Red Cowboi
+	id = TXSKING.33
+	immediate = {log = "[GetDateText]: [Root.GetName]: event TXSKING.32"}
+	title = TXSKING.33.t
+	desc = TXSKING.33.d
+	picture = GFX_arz_redboy
+	is_triggered_only = yes
+
+	option = { #BRUCE
+		name = TXSKING.33.a
+		increase_ruling_party_popularity_by_2 = yes
 	}
 }

@@ -54,17 +54,6 @@ uses_american_medals = {
 		tag = ENC
 	}
 }
-is_acw_tag = {
-	OR = {
-		tag = USA
-		tag = CSA
-		tag = TEX
-		tag = CAL
-		tag = NEE
-		tag = COR
-		tag = WCC
-	}
-}
 is_arab_tag = {
 	custom_trigger_tooltip = {
 		tooltip = is_arab_tag
@@ -164,6 +153,16 @@ is_chinese_tag = {
 		}
 	}
 }
+is_tag_in_china_area = {
+	OR = {
+		is_chinese_tag = yes
+		original_tag = MON
+		original_tag = KUM
+		original_tag = TIB
+		original_tag = ETS
+		original_tag = LEC
+	}
+}
 is_dutch_tag = {
 	custom_trigger_tooltip = {
 		tooltip = is_dutch_tag
@@ -215,6 +214,7 @@ is_british_tag = {
 			tag = ENG
 			tag = GBR
 			tag = GBP
+			tag = ULS
 		}
 	}
 }
@@ -288,6 +288,7 @@ is_french_africa_tag = {
 			tag = BFA
 			tag = WAD
 			tag = GAB
+			tag = MAG
 		}
 	}
 }
@@ -311,20 +312,25 @@ is_german_tag = {
 			tag = AUS
 			tag = GRU
 			tag = WGR
+			original_tag = EPR
 			tag = NGF
 			tag = DDR
 			tag = BAY
 			tag = GEX
-				AND = {
-					original_tag = BAT
-					has_socialist_government = no
-				}
-				AND = {
-					original_tag = SWI
-					has_global_flag = SWI_germanization
-				}
 			tag = MAF
 			tag = GEA
+			AND = {
+				original_tag = BAT
+				has_socialist_government = no
+			}
+			AND = {
+				original_tag = SWI
+				has_global_flag = SWI_germanization
+			}
+			AND = {
+				original_tag = DKB
+				has_country_flag = DKB_germanization
+			}
 		}
 	}
 }
@@ -339,6 +345,7 @@ is_germany_or_splinter_tag = {
 			tag = BAY
 			tag = NGF
 			tag = DDR
+			original_tag = EPR
 		}
 	}
 }
@@ -437,7 +444,7 @@ is_russian_tag_that_can_integrate = {
 		AND = {
 			tag = MON
 			OR = {
-				has_global_flag = MON_Sternberg_russian_empire
+				has_country_flag = MON_Sternberg_russian_empire
 				owns_state = 219
 			}
 		}
@@ -499,7 +506,7 @@ is_oghuz_turkic_tag = {
 	custom_trigger_tooltip = {
 		tooltip = is_oghuz_turkic_tag
 		OR = {
-			tag = TUR
+			is_turkish_tag = yes
 			tag = AZE
 			tag = UZB
 		}
@@ -509,7 +516,10 @@ is_kipchak_turkic_tag = {
 	custom_trigger_tooltip = {
 		tooltip = is_kipchak_turkic_tag
 		OR = {
-			tag = ALO
+			AND = {
+				tag = ALO
+				NOT = { has_country_flag = ALO_speaks_russian }
+			}
 			AND = {
 				tag = CRM
 				NOT = { has_government = radical_socialist }
@@ -517,7 +527,7 @@ is_kipchak_turkic_tag = {
 			}
 			tag = MTR
 			tag = TTR
-			tag = BKN 
+			tag = BKN
 		}
 	}
 }
@@ -531,6 +541,36 @@ is_uighur_tag = {
 				tag = TAN
 				NOT = { has_cosmetic_tag = TAN_HAM }
 				NOT = { has_cosmetic_tag = TAN_zhongying }
+			}
+		}
+	}
+}
+
+is_finnish_tag = {
+	OR = {
+		tag = FIN
+		tag = KAR
+	}
+}
+
+is_japanese_tag = {
+	OR = {
+		tag = JAP
+		AND = {
+			tag = TRM
+			has_country_flag = TRM_uses_japanese
+		}
+	}
+}
+
+is_mongolian_tag = {
+	OR = {
+		original_tag = MON
+		AND = {
+			tag = BRY
+			NOT = {
+				has_government = totalist
+				has_government = paternal_autocrat
 			}
 		}
 	}
@@ -593,6 +633,19 @@ is_spanish_south_american_tag = {
 		}
 	}
 }
+is_quechua_speaking_tag = {
+	custom_trigger_tooltip = {
+		tooltip = is_quechua_speaking_tag
+		OR = {
+			has_cosmetic_tag = PRU_quechua
+			has_completed_focus = PRU_indigenous_restoration
+			AND = {
+				original_tag = ECU
+				has_government = totalist
+			}
+		}
+	}
+}
 is_indian_unifier_tag = {
 	OR = {
 		tag = DEH
@@ -622,7 +675,7 @@ is_yiddish_tag = { #has a large yiddish population
 		tag = LAT
 		tag = BAT
 		tag = WHR
-		tag = UKR
+		original_tag = UKR
 		tag = GAL
 		tag = HUN
 		tag = CZE
@@ -741,6 +794,7 @@ is_romanian_tag = {
 			tag = TRS
 			tag = RRM
 			tag = BAN
+			tag = MOL
 		}
 	}
 }
@@ -795,6 +849,29 @@ is_greek_tag = {
 			original_tag = GRR
 			original_tag = CRE
 			original_tag = CYP
+		}
+	}
+}
+
+is_celtic_tag = {
+	custom_trigger_tooltip = {
+		tooltip = is_celtic_tag
+		OR = {
+			tag = IRE
+			tag = WAL
+			tag = SCT
+			tag = BRI
+			tag = GLC
+		}
+	}
+}
+
+is_maori_tag = {
+	custom_trigger_tooltip = {
+		tooltip = is_maori_tag
+		OR = {
+			tag = NZL
+			tag= AST
 		}
 	}
 }

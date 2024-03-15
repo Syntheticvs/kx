@@ -546,7 +546,7 @@ country_event = { #night to remember trigger 1
 			name = "Sabit Damulla Abdulbaki"
 			desc = "POLITICS_SABIT_DAMULLA_ABDULBAKI_DESC"
 			picture = "gfx/leaders/ETS/Portrait_ETS_Sabit_Damulla_Abdulbaki.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_junta_subtype
 			traits = {
 				tenacious_negotiator
@@ -617,6 +617,12 @@ country_event = { #night to remember
 		}
 
 		complete_national_focus = ETS_timur_win
+		hidden_effect = {
+			country_event = ets.201
+			delete_unit_template_and_units = {
+				division_template = "Bughra's Militia"
+			}
+		}
 		every_country = {
 			limit = {
 				exists = yes
@@ -641,16 +647,7 @@ country_event = { #night to remember
 				}
 			}
 			add_opinion_modifier = { target = ETS modifier = KR_ETS_peaceful_night }
-			hidden_effect = {
-				country_event = ets.200
-				delete_unit_template_and_units = {
-					division_template = "Bughra's Militia"
-				}
-				set_division_template_lock = {
-					division_template = "Timur's Militia"
-					is_locked = no
-				}
-			}
+			country_event = ets.200
 		}
 		set_country_flag = Muhammad_Amin_Bughra_dead
 		set_country_flag = Abdullah_Bughra_dead
@@ -675,6 +672,12 @@ country_event = { #night to remember
 		}
 
 		complete_national_focus = ETS_bughra_win
+		hidden_effect = {
+			country_event = ets.202
+			delete_unit_template_and_units = {
+				division_template = "Timur's Militia"
+			}
+		}
 		every_country = {
 			limit = {
 				exists = yes
@@ -699,16 +702,7 @@ country_event = { #night to remember
 				}
 			}
 			add_opinion_modifier = { target = ETS modifier = KR_ETS_violent_night }
-			hidden_effect = {
-				country_event = ets.200
-				delete_unit_template_and_units = {
-					division_template = "Timur's Militia"
-				}
-				set_division_template_lock = {
-					division_template = "Bughra's Militia"
-					is_locked = no
-				}
-			}
+			country_event = ets.200
 		}
 	}
 }
@@ -772,7 +766,7 @@ country_event = { #timur
 		create_country_leader = {
 			name = "Timur Beg"
 			picture = "gfx/leaders/ETS/Portrait_ETS_Timur_Beg.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = oligarchy_subtype
 			traits = {
 				warrior_prince
@@ -781,8 +775,8 @@ country_event = { #timur
 		create_country_leader = {
 			name = "Abdullah Bughra"
 			picture = "gfx/leaders/ETS/Portrait_ETS_Abdullah_Bughra.png"
-			expire = "1965.1.1"
-			ideology = fundementalism_subtype
+			expire = "1.1.1"
+			ideology = natpop_islamism_subtype
 			traits = {
 				cornered_fox
 			}
@@ -830,7 +824,7 @@ country_event = { #Bughra
 		create_country_leader = {
 			name = "Masud Sabri"
 			picture = "gfx/leaders/ETS/Portrait_ETS_Masud_Sabri.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_junta_subtype
 			traits = {
 				great_survivor
@@ -920,7 +914,7 @@ country_event = { #masud attacks parade
 		create_country_leader = {
 			name = "Masud Sabri"
 			picture = "gfx/leaders/ETS/Portrait_ETS_Masud_Sabri.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = authdem_junta_subtype
 			traits = {
 				great_survivor
@@ -1152,7 +1146,7 @@ country_event = { #Timur Shah
 		create_country_leader = {
 			name = "Timur Shah"
 			picture = "gfx/leaders/ETS/Portrait_ETS_Timur_Beg.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = oligarchy_subtype
 			traits = {
 				warrior_prince
@@ -2275,11 +2269,7 @@ country_event = { #we ate china what do
 		every_state = {
 			limit = {
 				OR = {
-					is_core_of = QIE
-					is_claimed_by = QIE
-					is_core_of = FNG
-					is_claimed_by = FNG
-					is_core_of = MON
+					is_claims_china = yes
 					is_core_of = TRK
 					is_core_of = ALO
 					is_core_of = KYR
@@ -2288,10 +2278,34 @@ country_event = { #we ate china what do
 					is_core_of = AFG
 					is_core_of = PER
 					is_core_of = AZE
-					is_core_of = TUR
+					is_core_of = KUR
 				}
 			}
 			add_core_of = ETS
+		}
+		hidden_effect = {
+			add_state_core = 341
+			add_state_core = 1225
+			add_state_core = 773
+			add_state_core = 340
+			add_state_core = 339
+			add_state_core = 342
+			add_state_core = 356
+			add_state_core = 49
+			add_state_core = 343
+			add_state_core = 346
+			add_state_core = 345
+			add_state_core = 355
+			add_state_core = 344
+			add_state_core = 354
+			add_state_core = 1001
+			add_state_core = 1213
+			add_state_core = 1000
+			add_state_core = 354
+			add_state_core = 811
+			add_state_core = 1293
+			add_state_core = 654
+			add_state_core = 1208
 		}
 		set_cosmetic_tag = ETS_uyghur
 
@@ -2301,11 +2315,7 @@ country_event = { #we ate china what do
 		every_state = {
 			limit = {
 				OR = {
-					is_core_of = QIE
-					is_claimed_by = QIE
-					is_core_of = FNG
-					is_claimed_by = FNG
-					is_core_of = MON
+					is_claims_china = yes
 					is_core_of = TRK
 					is_core_of = ALO
 					is_core_of = KYR
@@ -2314,10 +2324,33 @@ country_event = { #we ate china what do
 					is_core_of = AFG
 					is_core_of = PER
 					is_core_of = AZE
-					is_core_of = TUR
+					is_core_of = KUR
 				}
 			}
 			add_core_of = ETS
+		}
+		hidden_effect = {
+			add_state_core = 341
+			add_state_core = 1225
+			add_state_core = 773
+			add_state_core = 340
+			add_state_core = 339
+			add_state_core = 342
+			add_state_core = 356
+			add_state_core = 49
+			add_state_core = 343
+			add_state_core = 346
+			add_state_core = 345
+			add_state_core = 355
+			add_state_core = 344
+			add_state_core = 354
+			add_state_core = 1001
+			add_state_core = 1213
+			add_state_core = 1000
+			add_state_core = 811
+			add_state_core = 1293
+			add_state_core = 654
+			add_state_core = 1208
 		}
 		set_cosmetic_tag = ETS_dung
 
@@ -2327,11 +2360,7 @@ country_event = { #we ate china what do
 		every_state = {
 			limit = {
 				OR = {
-					is_core_of = QIE
-					is_claimed_by = QIE
-					is_core_of = FNG
-					is_claimed_by = FNG
-					is_core_of = MON
+					is_claims_china = yes
 					is_core_of = TRK
 					is_core_of = ALO
 					is_core_of = KYR
@@ -2340,10 +2369,33 @@ country_event = { #we ate china what do
 					is_core_of = AFG
 					is_core_of = PER
 					is_core_of = AZE
-					is_core_of = TUR
+					is_core_of = KUR
 				}
 			}
 			add_core_of = ETS
+		}
+		hidden_effect = {
+			add_state_core = 341
+			add_state_core = 1225
+			add_state_core = 773
+			add_state_core = 340
+			add_state_core = 339
+			add_state_core = 342
+			add_state_core = 356
+			add_state_core = 49
+			add_state_core = 343
+			add_state_core = 346
+			add_state_core = 345
+			add_state_core = 355
+			add_state_core = 344
+			add_state_core = 354
+			add_state_core = 1001
+			add_state_core = 1213
+			add_state_core = 1000
+			add_state_core = 811
+			add_state_core = 1293
+			add_state_core = 654
+			add_state_core = 1208
 		}
 		set_cosmetic_tag = ETS_turkestan
 
@@ -2353,11 +2405,7 @@ country_event = { #we ate china what do
 		every_state = {
 			limit = {
 				OR = {
-					is_core_of = QIE
-					is_claimed_by = QIE
-					is_core_of = FNG
-					is_claimed_by = FNG
-					is_core_of = MON
+					is_claims_china = yes
 					is_core_of = TRK
 					is_core_of = ALO
 					is_core_of = KYR
@@ -2366,10 +2414,33 @@ country_event = { #we ate china what do
 					is_core_of = AFG
 					is_core_of = PER
 					is_core_of = AZE
-					is_core_of = TUR
+					is_core_of = KUR
 				}
 			}
 			add_core_of = ETS
+		}
+		hidden_effect = {
+			add_state_core = 341
+			add_state_core = 1225
+			add_state_core = 773
+			add_state_core = 340
+			add_state_core = 339
+			add_state_core = 342
+			add_state_core = 356
+			add_state_core = 49
+			add_state_core = 343
+			add_state_core = 346
+			add_state_core = 345
+			add_state_core = 355
+			add_state_core = 344
+			add_state_core = 354
+			add_state_core = 1001
+			add_state_core = 1213
+			add_state_core = 1000
+			add_state_core = 811
+			add_state_core = 1293
+			add_state_core = 654
+			add_state_core = 1208
 		}
 		set_cosmetic_tag = ETS_timur_rep
 
@@ -2379,11 +2450,7 @@ country_event = { #we ate china what do
 		every_state = {
 			limit = {
 				OR = {
-					is_core_of = QIE
-					is_claimed_by = QIE
-					is_core_of = FNG
-					is_claimed_by = FNG
-					is_core_of = MON
+					is_claims_china = yes
 					is_core_of = TRK
 					is_core_of = ALO
 					is_core_of = KYR
@@ -2392,10 +2459,33 @@ country_event = { #we ate china what do
 					is_core_of = AFG
 					is_core_of = PER
 					is_core_of = AZE
-					is_core_of = TUR
+					is_core_of = KUR
 				}
 			}
 			add_core_of = ETS
+		}
+		hidden_effect = {
+			add_state_core = 341
+			add_state_core = 1225
+			add_state_core = 773
+			add_state_core = 340
+			add_state_core = 339
+			add_state_core = 342
+			add_state_core = 356
+			add_state_core = 49
+			add_state_core = 343
+			add_state_core = 346
+			add_state_core = 345
+			add_state_core = 355
+			add_state_core = 344
+			add_state_core = 354
+			add_state_core = 1001
+			add_state_core = 1213
+			add_state_core = 1000
+			add_state_core = 811
+			add_state_core = 1293
+			add_state_core = 654
+			add_state_core = 1208
 		}
 		set_cosmetic_tag = ETS_gurkani
 
@@ -2405,11 +2495,7 @@ country_event = { #we ate china what do
 		every_state = {
 			limit = {
 				OR = {
-					is_core_of = QIE
-					is_claimed_by = QIE
-					is_core_of = FNG
-					is_claimed_by = FNG
-					is_core_of = MON
+					is_claims_china = yes
 					is_core_of = TRK
 					is_core_of = ALO
 					is_core_of = KYR
@@ -2418,12 +2504,80 @@ country_event = { #we ate china what do
 					is_core_of = AFG
 					is_core_of = PER
 					is_core_of = AZE
-					is_core_of = TUR
+					is_core_of = KUR
 				}
 			}
 			add_core_of = ETS
 		}
+		hidden_effect = {
+			add_state_core = 341
+			add_state_core = 1225
+			add_state_core = 773
+			add_state_core = 340
+			add_state_core = 339
+			add_state_core = 342
+			add_state_core = 356
+			add_state_core = 49
+			add_state_core = 343
+			add_state_core = 346
+			add_state_core = 345
+			add_state_core = 355
+			add_state_core = 344
+			add_state_core = 354
+			add_state_core = 1001
+			add_state_core = 1213
+			add_state_core = 1000
+			add_state_core = 811
+			add_state_core = 1293
+			add_state_core = 654
+			add_state_core = 1208
+		}
 		set_cosmetic_tag = ETS_gokturk
+
+	}
+	option = {
+		name = ets.102.h
+		every_state = {
+			limit = {
+				OR = {
+					is_claims_china = yes
+					is_core_of = TRK
+					is_core_of = ALO
+					is_core_of = KYR
+					is_core_of = UZB
+					is_core_of = MTR
+					is_core_of = AFG
+					is_core_of = PER
+					is_core_of = AZE
+					is_core_of = KUR
+				}
+			}
+			add_core_of = ETS
+		}
+		hidden_effect = {
+			add_state_core = 341
+			add_state_core = 1225
+			add_state_core = 773
+			add_state_core = 340
+			add_state_core = 339
+			add_state_core = 342
+			add_state_core = 356
+			add_state_core = 49
+			add_state_core = 343
+			add_state_core = 346
+			add_state_core = 345
+			add_state_core = 355
+			add_state_core = 344
+			add_state_core = 354
+			add_state_core = 1001
+			add_state_core = 1213
+			add_state_core = 1000
+			add_state_core = 811
+			add_state_core = 1293
+			add_state_core = 654
+			add_state_core = 1208
+		}
+		set_cosmetic_tag = ETS_turuk
 
 	}
 }

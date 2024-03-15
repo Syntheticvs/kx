@@ -126,6 +126,18 @@ spriteTypes = {
 		name = "GFX_report_event_KIV_lumumba"
 		texturefile = "gfx/event_pictures/Africa/Congo/report_event_KIV_lumumba.png"
 	}
+	spriteType = {
+		name = "GFX_report_event_KIV_congolese_32"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_KIV_congolese_32.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_KIV_mpoyi"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_KIV_mpoyi.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_KIV_football"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_KIV_football.png"
+	}
 	##UMHK##
 	spriteType = {
 		name = "GFX_report_event_UMN_mwami_chief"
@@ -213,6 +225,46 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_COG_rohm"
 		texturefile = "gfx/event_pictures/Africa/Congo/report_event_COG_rohm.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_COG_snake"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_COG_snake.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_COG_bobozos_pride"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_COG_bobozos_pride.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_COG_division_speciale"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_COG_division_speciale.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_COG_gecamines"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_COG_gecamines.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_COG_mixed_aristocracy"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_COG_mixed_aristocracy.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_COG_frank"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_COG_frank.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_COG_friendship_university"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_COG_friendship_university.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_COG_lecho_de_katange"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_COG_lecho_de_katange.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_COG_advertisement"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_COG_advertisement.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_COG_la_sape"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_COG_la_sape.png"
 	}
 	
 	##Leopoldville##
@@ -325,6 +377,14 @@ spriteTypes = {
 		name = "GFX_report_event_KSV_nest"
 		texturefile = "gfx/event_pictures/Africa/Congo/report_event_KSV_NM.png"
 	}
+	spriteType = {
+		name = "GFX_report_event_KSV_massau_flag"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_KSV_massau_flag.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_KSV_rosen_flag"
+		texturefile = "gfx/event_pictures/Africa/Congo/report_event_KSV_rosen_flag.png"
+	}
 	
 	##Gabon##
 	spriteType = {
@@ -370,6 +430,34 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_GAB_sousatte"
 		texturefile = "gfx/event_pictures/Africa/Gabon/report_event_GAB_sousatte.png"
+	}	
+	spriteType = {
+		name = "GFX_report_event_GAB_schomburgk"
+		texturefile = "gfx/event_pictures/Africa/Gabon/report_event_GAB_schomburgk.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_GAB_expedition"
+		texturefile = "gfx/event_pictures/Africa/Gabon/report_event_GAB_expedition.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_GAB_sketch"
+		texturefile = "gfx/event_pictures/Africa/Gabon/report_event_GAB_sketch.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_GAB_lake_bangweulu"
+		texturefile = "gfx/event_pictures/Africa/Gabon/report_event_GAB_lake_bangweulu.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_GAB_mokele_mbembe"
+		texturefile = "gfx/event_pictures/Africa/Gabon/report_event_GAB_mokele_mbembe.png"
+	}	
+	spriteType = {
+		name = "GFX_report_event_GAB_sketchy_past_spirituality"
+		texturefile = "gfx/event_pictures/Africa/Gabon/report_event_GAB_sketchy_past_spirituality.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_GAB_epigenesis_allies"
+		texturefile = "gfx/event_pictures/Africa/Gabon/report_event_GAB_epigenesis_allies.png"
 	}	
 	
 	## Central Africa ##
@@ -467,6 +555,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_CEA_bokassa_smoking"
 		texturefile = "gfx/event_pictures/Africa/Central_Africa/report_event_CEA_bokassa_smoking.png"
+	}	
+	
+	spriteType = {
+		name = "GFX_report_event_CEA_bokassa_uniform"
+		texturefile = "gfx/event_pictures/Africa/Central_Africa/report_event_CEA_bokassa_uniform.png"
 	}	
 	
 	spriteType = {
@@ -703,6 +796,11 @@ spriteTypes = {
 		name = "GFX_report_event_CEA_sultanate_flag"
 		texturefile = "gfx/event_pictures/Africa/Central_Africa/report_event_CEA_sultanate_flag.png"
 	}	
+
+	spriteType = {
+		name = "GFX_report_event_CEA_vialle"
+		texturefile = "gfx/event_pictures/Africa/Central_Africa/report_event_CEA_vialle.png"
+	}
 	
 	##Mittelafrika##
 	spriteType = {
@@ -732,6 +830,21 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_MAF_sabac"
 		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_sabac.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_MAF_zanzibar"
+		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_zanzibar.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_MAF_ritter"
+		texturefile = "gfx/event_pictures/Africa/Mittelafrika/report_event_MAF_ritter.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_MAF_kolbe"
+		texturefile = "gfx/event_pictures/Africa/Mittelafrika/report_event_MAF_kolbe.png"
 	}
 		
 	###Liberia###
@@ -784,6 +897,14 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_KIK_maumau_4"
 		texturefile = "gfx/event_pictures/Africa/Mau_Mau/report_event_KIK_maumau_4.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_maasai"
+		texturefile = "gfx/event_pictures/Africa/Mau_Mau/report_event_maasai.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_african_diaspora"
+		texturefile = "gfx/event_pictures/Africa/Mau_Mau/report_event_african_diaspora.png"
 	}
 	
 	###Westafrika###
@@ -842,6 +963,16 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/Africa/Westafrika/report_event_CIV_dadjo.png"
 	}
 	
+	spriteType = {
+		name = "GFX_report_event_CIV_dadjo_comic"
+		texturefile = "gfx/event_pictures/Africa/Westafrika/report_event_CIV_dadjo_comic.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_CIV_grunitzky"
+		texturefile = "gfx/event_pictures/Africa/Westafrika/report_event_CIV_grunitzky.png"
+	}
+	
 	###Madagascar###
 	spriteType = {
 		name = "GFX_report_event_MAG_Emil_Maurice_eventpic"
@@ -894,6 +1025,30 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_MAF_goering_castle_eventpic"
 		texturefile = "gfx/event_pictures/Africa/Goeringia/MAF_goering_castle_eventpic.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_TZN_werner"
+		texturefile = "gfx/event_pictures/Africa/Goeringia/report_event_TZN_werner.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_TZN_schmitt"
+		texturefile = "gfx/event_pictures/Africa/Goeringia/report_event_TZN_schmitt.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_TZN_goering_plane"
+		texturefile = "gfx/event_pictures/Africa/Goeringia/report_event_TZN_goering_plane.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_TZN_reichsjagermeister"
+		texturefile = "gfx/event_pictures/Africa/Goeringia/report_event_TZN_reichsjagermeister.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_TZN_olympic_stadium"
+		texturefile = "gfx/event_pictures/Africa/Goeringia/report_event_TZN_olympic_stadium.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_TZN_reemtsma"
+		texturefile = "gfx/event_pictures/Africa/Goeringia/report_event_TZN_reemtsma.png"
 	}
 	
 	###Kenya-Uganda###

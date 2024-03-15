@@ -33,7 +33,7 @@ focus_tree = {
 	focus = {
 		id = ENG_always_watching
 		text = ENG_always_watching
-		icon = GFX_goal_ENG_always_watching
+		icon = GFX_goal_ENG_maximist_women
 		cost = 6.00
 		prerequisite = {
 			focus = ENG_revolution
@@ -48,19 +48,9 @@ focus_tree = {
 				}
 			completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus ENG_always_watching"
-					custom_effect_tooltip = ENG_1984
-					add_tech_bonus = {
-						bonus = 0.5
-						uses = 1
-						category = encryption_tech
-					} 
-					add_tech_bonus = {
-						bonus = 0.5
-						uses = 1
-						category = decryption_tech
-					} 
-					add_stability = 0.15
-					add_political_power = 50
+					add_command_power = 12
+					add_manpower = 14000
+					add_stability = 0.02
 				}
 	}
 	focus = {
@@ -135,11 +125,13 @@ focus_tree = {
 			completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus ENG_lives"
 					set_cosmetic_tag = ENG_Mosley_totalist
+					country_event = { id = uob.1000 days = 30 }
 					swap_ideas = {
 							remove_idea = ENG_maximist_idea
 							add_idea = ENG_maximist_idea2
-						}
+							}
 				}
+		
 	}
 	focus = {
 		id = ENG_lawrence_of_britannia
@@ -189,7 +181,18 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_improve_army
-		icon = GFX_goal_ENG_army
+		icon = {
+			trigger = {
+				has_socialist_government = yes
+			}
+			value = GFX_goal_ENG_army
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_GBP_army
+		}
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_tuc
@@ -374,7 +377,18 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_revolutionary_admiralty
-		icon = GFX_goal_ENG_navy
+		icon = {
+			trigger = {
+				has_socialist_government = yes
+			}
+			value = GFX_goal_ENG_navy
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_GBP_navy
+		}
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_tuc
@@ -405,6 +419,7 @@ focus_tree = {
 				uses = 1
 				category = naval_doctrine
 			}
+			CAN = { add_to_variable = { ENG_naval_focuses_done = 1 } }
 		}
 	}
 	focus = {
@@ -449,6 +464,7 @@ focus_tree = {
 				uses = 1
 				category = naval_doctrine
 			}
+			CAN = { add_to_variable = { ENG_naval_focuses_done = 1 } }
 		}
 	}
 	focus = {
@@ -522,6 +538,7 @@ focus_tree = {
 					uses = 1
 					category = bb_tech
 				}
+				CAN = { add_to_variable = { ENG_naval_focuses_done = 1 } }
 			}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -1359,7 +1376,7 @@ focus_tree = {
 					name = "T.E. Lawrence"
 					desc = "POLITICS_TE_LAWRENCE_DESC"
 					picture = "gfx/leaders/ENG/Portrait_England_T_E_Lawrence_dictator.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = red_junta_subtype
 					traits = { dictator }
 				}
@@ -1899,8 +1916,8 @@ focus_tree = {
 					name = "Clem Attlee"
 					desc = "POLITICS_CLEM_ATTLEE_DESC"
 					picture = "gfx/leaders/ENG/Portrait_England_Clem_Attlee.png"
-					expire = "1965.1.1"
-					ideology = syndie_social_democrat_subtype
+					expire = "1.1.1"
+					ideology = liberal_socialism_subtype
 				}
 				set_country_flag = soc_dems_are_socialists
 				add_popularity = {
@@ -1975,7 +1992,14 @@ focus_tree = {
 				add_state_core = 136
 				add_state_core = 133
 				add_state_core = 121
-				set_cosmetic_tag = ENG
+				if = {
+					limit = { 
+						NOT = {
+							has_cosmetic_tag = ENG_cromwell
+						}
+					}
+					set_cosmetic_tag = ENG
+				}
 			}
 	}
 	focus = {
@@ -2967,6 +2991,7 @@ focus_tree = {
 						uses = 1
 						category = naval_doctrine
 						}
+						CAN = { add_to_variable = { ENG_naval_focuses_done = 1 } }
 				}
 
 	}
@@ -3021,6 +3046,7 @@ focus_tree = {
 						category = ss_tech
 					}
 				}
+				CAN = { add_to_variable = { ENG_naval_focuses_done = 1 } }
 			}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -3069,6 +3095,7 @@ focus_tree = {
 						category = dd_tech
 					}
 				}
+				CAN = { add_to_variable = { ENG_naval_focuses_done = 1 } }
 			}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -3108,6 +3135,7 @@ focus_tree = {
 			completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus ENG_anstice_plan"
 					navy_experience = 10
+					CAN = { add_to_variable = { ENG_naval_focuses_done = 1 } }
 					add_doctrine_cost_reduction = {
 				name = naval_doc_bonus
 				cost_reduction = 0.5
@@ -3144,6 +3172,7 @@ focus_tree = {
 			completion_reward = {
 				log = "[GetDateText]: [Root.GetName]: Focus ENG_carrier_efforts"
 				navy_experience = 20
+				CAN = { add_to_variable = { ENG_naval_focuses_done = 1 } }
 					add_tech_bonus = {
 						name = ENG_carrier_efforts
 						bonus = 1
@@ -3181,6 +3210,7 @@ focus_tree = {
 			completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus ENG_naval_aviation"
 					navy_experience = 20
+					CAN = { add_to_variable = { ENG_naval_focuses_done = 1 } }
 					add_tech_bonus = {
 							name = ENG_naval_aviation
 							bonus = 1
@@ -3218,6 +3248,7 @@ focus_tree = {
 			completion_reward = {
 				log = "[GetDateText]: [Root.GetName]: Focus ENG_battlecruisers"
 				navy_experience = 20
+				CAN = { add_to_variable = { ENG_naval_focuses_done = 1 } }
 				if = {
 					limit = { has_dlc = "Man the Guns" }
 					add_tech_bonus = {
@@ -3277,6 +3308,7 @@ focus_tree = {
 			}
 			completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus ENG_merchant_marine"
+					CAN = { add_to_variable = { ENG_naval_focuses_done = 1 } }
 					add_ideas = ENG_merchant_marine_idea
 				}
 
@@ -3313,6 +3345,7 @@ focus_tree = {
 			}
 			completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus ENG_expand_dockyards"
+					CAN = { add_to_variable = { ENG_naval_focuses_done = 1 } }
 					121 = {
 							add_extra_state_shared_building_slots = 2
 							add_building_construction = {
@@ -3372,6 +3405,7 @@ focus_tree = {
 			}
 			completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus ENG_republican_marines"
+					CAN = { add_to_variable = { ENG_naval_focuses_done = 1 } }
 					add_ideas = ENG_republican_marines_ideas
 					add_tech_bonus = {
 							name = ENG_republican_marines
@@ -3415,6 +3449,7 @@ focus_tree = {
 			}
 			completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus ENG_brittania_rules_the_waves"
+					CAN = { add_to_variable = { ENG_naval_focuses_done = 1 } }
 					swap_ideas = {
 						remove_idea = ENG_revolutionary_admiralty_idea
 						add_idea = ENG_revolutionary_navy_idea
@@ -3430,7 +3465,18 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_republican_air_force
-		icon = GFX_goal_ENG_airforce
+		icon = {
+			trigger = {
+				has_socialist_government = yes
+			}
+			value = GFX_goal_ENG_airforce
+		}
+		icon = {
+			trigger = {
+				has_socialist_government = no
+			}
+			value = GFX_goal_GBP_airforce
+		}
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_tuc
@@ -3817,7 +3863,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_show_of_force_dip
-		icon = GFX_goal_goal_IRE_gallant_allies
+		icon = GFX_goal_IRE_gallant_allies
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_show_of_force
@@ -3925,33 +3971,11 @@ focus_tree = {
 			factor = 50
 			modifier = {
 				factor = 0
-				enemies_strength_ratio > 0.5
+				ROOT_is_threatened = yes
 			}
 			modifier = {
 				factor = 0
-				surrender_progress > 0
-			}
-			modifier = {
-				factor = 0
-				strength_ratio = { tag = IRE ratio < 2 }
-			}
-			modifier = {
-				factor = 0
-				IRE = {
-					is_subject = yes
-					overlord = {
-						strength_ratio = { tag = ROOT ratio > 0.5 }
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				IRE = {
-					is_in_faction = yes
-					any_allied_country = {
-						strength_ratio = { tag = ROOT ratio > 0.5 }
-					}
-				}
+				IRE = { default_attack_AI_trigger_FROM = yes }
 			}
 			modifier = {
 				factor = 0.2
@@ -4484,6 +4508,12 @@ focus_tree = {
 			focus = BRG_death_to_revoltuion
 		}
 		completion_reward = {
+			hidden_effect = {
+				country_event = {
+					id = basedbrit.128
+					days = 15
+				}
+			}
 			swap_ideas = {
 				remove_idea= BRG_revolutionary_threat
 				add_idea= BRG_revolutionary_threat2
@@ -4576,34 +4606,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = basedbrit.2
-		random_owned_state = {
-			limit = {
-				is_core_of = ENG
-				is_controlled_by = ENG
-			}
-			add_manpower = 5000
-		}
-		random_owned_state = {
-			limit = {
-				is_core_of = ENG
-				is_controlled_by = ENG
-			}
-			add_manpower = 3000
-		}
-		random_owned_state = {
-			limit = {
-				is_core_of = ENG
-				is_controlled_by = ENG
-			}
-			add_manpower = 2000
-		}
-		random_owned_state = {
-			limit = {
-				is_core_of = ENG
-				is_controlled_by = ENG
-			}
-			add_manpower = 1000
-		}
 		}
 	}
 
@@ -4690,7 +4692,13 @@ focus_tree = {
 					remove_idea= BRG_Trad_Gov_3  
 				add_idea= BRG_Trad_Gov_4
 				}
-			unlock_decision_tooltip = BRG_rebuilding_empire_dummy
+			unlock_decision_category_tooltip = BRG_rebuilding_empire
+			hidden_effect = {
+			country_event = {
+				id = basedbrit.142
+				days = 40
+				}
+			}
 		}
 	}
 
@@ -4789,7 +4797,7 @@ focus_tree = {
 		completion_reward = {
 			country_event = basedbrit.12
   			add_ideas= BRG_Trad_Gov_1
-			unlock_decision_tooltip = BRG_factionering_dummy
+			  unlock_decision_category_tooltip = BRG_factionering
 			set_party_name = {
 				ideology = paternal_autocrat
 				long_name = BRG_CATHOLIC_paternal_autocrat_party_long
@@ -4906,7 +4914,7 @@ focus_tree = {
 	#Focus for Confront the Trojan Horse
 	focus = {
 		id = BRG_confront_the_trojan_horse
-		icon = GFX_goal_BRG_Trojan_Jew
+		icon = GFX_goal_BRG_Trojan_Horse
 		relative_position_id = BRG_the_ramsay_cabinet
 		x = -2
 		y = 1
@@ -5038,7 +5046,7 @@ focus_tree = {
 	#Focus for Expose World Jewry
 	focus = {
 		id = BRG_expose_world_jewry
-		icon = GFX_goal_BRG_jew_curtian
+		icon = GFX_goal_BRG_curtian
 		relative_position_id = BRG_legionary_triumph
 		x = -2
 		y = 1
@@ -5078,7 +5086,7 @@ focus_tree = {
 		completion_reward = {
 			country_event = basedbrit.24
   			add_ideas= BRG_leg_elite
-			unlock_decision_tooltip = BRG_factionering_dummy
+			unlock_decision_category_tooltip = BRG_factionering
 		}
 	}
 
@@ -5198,6 +5206,9 @@ focus_tree = {
 		y = 3
 		cost = 5
 		available_if_capitulated = yes
+		available = {
+			has_completed_focus = BRG_the_knightly_ideal
+		}
 		prerequisite = { 
 			focus = BRG_norman_identity 
 		}
@@ -5321,7 +5332,7 @@ focus_tree = {
 					remove_idea= BRG_leg_struggle_2  
 				add_idea= BRG_leg_struggle_3
 				}
-			unlock_decision_tooltip = BRG_rebuilding_empire_dummy
+			unlock_decision_category_tooltip = BRG_rebuilding_empire
 		}
 	}
 
@@ -5397,8 +5408,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = basedbrit.38
-			unlock_decision_tooltip = BRG_pick_a_king_dummy
-			unlock_decision_tooltip = BRG_factionering_dummy
+			unlock_decision_category_tooltip = BRG_pick_a_king
+			unlock_decision_category_tooltip = BRG_factionering
 		}
 	}
 	
@@ -5427,7 +5438,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = basedbrit.39
-			unlock_decision_tooltip = BRG_factionering_dummy
+			unlock_decision_category_tooltip = BRG_factionering
 			hidden_effect = {
 				country_event = {
 					id = basedbrit.114
@@ -5854,7 +5865,7 @@ focus_tree = {
 					remove_idea= BRG_mil_state_4  
 				add_idea= BRG_mil_state_5
 				}
-			unlock_decision_tooltip = BRG_rebuilding_empire_dummy
+			unlock_decision_category_tooltip = BRG_rebuilding_empire
 		}
 	}
 
@@ -5991,7 +6002,7 @@ focus_tree = {
 		completion_reward = {
 			increase_ruling_party_popularity_by_5 = yes
 			country_event = basedbrit.47
-			unlock_decision_tooltip = BRG_factionering_dummy
+			unlock_decision_category_tooltip = BRG_factionering
 		}
 	}
 	focus = {
@@ -6204,7 +6215,15 @@ focus_tree = {
 		completion_reward = {
 			increase_ruling_party_popularity_by_10 = yes
 			country_event = basedbrit.55
-			unlock_decision_tooltip = BRG_rebuilding_empire_dummy
+			hidden_effect = {
+				ENG = {
+					country_event = {
+						id = basedbrit.129
+						days = 30
+					}
+				}
+			}
+			unlock_decision_category_tooltip = BRG_rebuilding_empire
 		}
 	}
 }

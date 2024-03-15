@@ -58,7 +58,7 @@ focus_tree = {
 		relative_position_id = POL_the_great_debate
 		x = -5
 		y = 1
-		cost = 6
+		cost = 2.9
 		ai_will_do = {
 			factor = 1500
 		}
@@ -102,7 +102,6 @@ focus_tree = {
 		icon = GFX_goal_POL_union
 		available = {
 			has_war = no
-			is_subject = no
 			AUS = { has_war = no }
 			if = {
 				limit = { 91 = { owner = { tag = GAL } } }
@@ -115,7 +114,7 @@ focus_tree = {
 		relative_position_id = POL_von_habsburg
 		x = 0
 		y = 1
-		cost = 8
+		cost = 6
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POL_return_galicia"
@@ -129,6 +128,8 @@ focus_tree = {
 			add_state_core = 1140
 			add_state_core = 80
 			add_state_core = 713
+			add_state_core = 1314
+			add_state_core = 1319
 			AUS = { country_event = poland.131 }
 		}
 	}
@@ -140,7 +141,7 @@ focus_tree = {
 		relative_position_id = POL_return_galicia
 		x = 0
 		y = 1
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
@@ -169,7 +170,7 @@ focus_tree = {
 		relative_position_id = POL_von_habsburg
 		x = -1
 		y = 3
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 100
 		}
@@ -207,7 +208,7 @@ focus_tree = {
 		relative_position_id = POL_the_great_debate
 		x = -3
 		y = 1
-		cost = 6
+		cost = 2.9
 		ai_will_do = {
 			factor = 1500
 		}
@@ -252,7 +253,7 @@ focus_tree = {
 		relative_position_id = POL_polish_king
 		x = 0
 		y = 1
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
@@ -270,7 +271,7 @@ focus_tree = {
 		relative_position_id = POL_a_new_constitution
 		x = -1
 		y = 2
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
@@ -288,7 +289,7 @@ focus_tree = {
 		relative_position_id = POL_a_new_constitution
 		x = 0
 		y = 1
-		cost = 8
+		cost = 6
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POL_the_peoples_king"
@@ -314,7 +315,7 @@ focus_tree = {
 		relative_position_id = POL_the_great_debate
 		x = -1
 		y = 2
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
@@ -334,7 +335,7 @@ focus_tree = {
 		relative_position_id = POL_the_great_debate
 		x = -1
 		y = 3
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
@@ -356,7 +357,7 @@ focus_tree = {
 		relative_position_id = POL_the_great_debate
 		x = -1
 		y = 4
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
@@ -370,6 +371,15 @@ focus_tree = {
 			set_politics = {
 				ruling_party = paternal_autocrat
 				elections_allowed = no
+			}
+			hidden_effect = {
+				remove_all_ministers = yes
+				add_ideas = {
+					POL_Wladyslaw_Studnicki_hog_pau
+					POL_Eustachy_Sapiecha_for_pau
+					POL_Henryk_Grohman_eco_pau
+					POL_Aleksander_Kakowski_sec_pau
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -390,7 +400,7 @@ focus_tree = {
 		relative_position_id = POL_the_great_debate
 		x = 1
 		y = 2
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
@@ -409,7 +419,7 @@ focus_tree = {
 		relative_position_id = POL_the_great_debate
 		x = 1
 		y = 3
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
@@ -429,7 +439,7 @@ focus_tree = {
 		relative_position_id = POL_the_great_debate
 		x = 1
 		y = 4
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
@@ -465,7 +475,7 @@ focus_tree = {
 		relative_position_id = POL_the_great_debate
 		x = 3
 		y = 1
-		cost = 6
+		cost = 2.9
 		ai_will_do = {
 			factor = 1500
 		}
@@ -513,7 +523,7 @@ focus_tree = {
 		relative_position_id = POL_the_great_debate
 		x = 3
 		y = 2
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
@@ -545,7 +555,7 @@ focus_tree = {
 		relative_position_id = POL_the_great_debate
 		x = 3
 		y = 3
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
@@ -571,7 +581,7 @@ focus_tree = {
 		relative_position_id = POL_the_great_debate
 		x = 3
 		y = 4
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
@@ -602,7 +612,7 @@ focus_tree = {
 		relative_position_id = POL_the_great_debate
 		x = 5
 		y = 1
-		cost = 6
+		cost = 2.9
 		ai_will_do = { factor = 1500 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POL_von_hohenzollern"
@@ -654,7 +664,7 @@ focus_tree = {
 		relative_position_id = POL_von_hohenzollern
 		x = 0
 		y = 1
-		cost = 8
+		cost = 6
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POL_german_advisors"
@@ -674,7 +684,7 @@ focus_tree = {
 		relative_position_id = POL_german_advisors
 		x = 0
 		y = 2
-		cost = 8
+		cost = 6
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POL_war_games"
@@ -700,7 +710,7 @@ focus_tree = {
 		relative_position_id = POL_von_hohenzollern
 		x = 1
 		y = 2
-		cost = 8
+		cost = 6
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POL_join_economic_bloc"
@@ -733,7 +743,7 @@ focus_tree = {
 		}
 		x = 0
 		y = 0
-		cost = 6
+		cost = 2.9
 		ai_will_do = {
 			factor = 1500
 		}
@@ -791,7 +801,7 @@ focus_tree = {
 		relative_position_id = POL_victory_of_the_people
 		x = -1
 		y = 1
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 30
 		}
@@ -814,13 +824,12 @@ focus_tree = {
 		relative_position_id = POL_victory_of_the_people
 		x = 1
 		y = 1
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POL_empower_gminy"
-			add_political_power = 40
 			division_template = {
 				name = "Gminy Militia"
 				division_names_group = POL_MIL_01
@@ -904,7 +913,8 @@ focus_tree = {
 			has_war = no
 			is_subject = no
 			is_in_faction = no
-			UKR = {
+			var:202.owner = {
+				is_ukrainian_tag = yes
 				has_socialist_government = yes
 				exists = yes
 				has_war = no
@@ -918,13 +928,26 @@ focus_tree = {
 		relative_position_id = POL_victory_of_the_people
 		x = -3
 		y = 3
-		cost = 3
+		cost = 6
 		ai_will_do = {
 			factor = 50
+			modifier = {
+				factor = 0
+				OR ={
+					has_game_rule = {
+						rule = POL_foreign_policy
+						option = POL_FOREIGN_POLICY_INTERNATIONALE
+					}
+					has_game_rule = {
+						rule = POL_foreign_policy
+						option = POL_FOREIGN_POLICY_NEUTRALITY
+					}
+				}
+			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POL_ukranian_alliance"
-			UKR = { country_event = poland.55 }
+			var:202.owner = { country_event = poland.55 }
 		}
 	}
 	focus = {
@@ -949,7 +972,7 @@ focus_tree = {
 		relative_position_id = POL_victory_of_the_people
 		x = -2
 		y = 2
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 30
 		}
@@ -976,7 +999,7 @@ focus_tree = {
 		relative_position_id = POL_victory_of_the_people
 		x = -2
 		y = 4
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
@@ -991,7 +1014,7 @@ focus_tree = {
 	focus = {
 		id = POL_radek_policy
 		icon = GFX_goal_POL_Economic_Solidarity
-		cost = 8
+		cost = 6
 		prerequisite = {
 			focus = POL_all_under_one
 		}
@@ -1020,7 +1043,7 @@ focus_tree = {
 		relative_position_id = POL_victory_of_the_people
 		x = 0
 		y = 5
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
@@ -1048,7 +1071,7 @@ focus_tree = {
 		relative_position_id = POL_victory_of_the_people
 		x = 0
 		y = 2
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 30
 		}
@@ -1075,7 +1098,7 @@ focus_tree = {
 		relative_position_id = POL_victory_of_the_people
 		x = -1
 		y = 3
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
@@ -1141,7 +1164,7 @@ focus_tree = {
 		relative_position_id = POL_victory_of_the_people
 		x = 1
 		y = 3
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 30
 		}
@@ -1163,7 +1186,7 @@ focus_tree = {
 		relative_position_id = POL_victory_of_the_people
 		x = 0
 		y = 4
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
@@ -1198,7 +1221,7 @@ focus_tree = {
 		relative_position_id = POL_victory_of_the_people
 		x = 2
 		y = 2
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 30
 		}
@@ -1225,7 +1248,7 @@ focus_tree = {
 		relative_position_id = POL_victory_of_the_people
 		x = 2
 		y = 4
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
@@ -1247,7 +1270,7 @@ focus_tree = {
 		relative_position_id = POL_victory_of_the_people
 		x = 4
 		y = 3
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
@@ -1269,7 +1292,7 @@ focus_tree = {
 		relative_position_id = POL_victory_of_the_people
 		x = 4
 		y = 4
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
@@ -1296,12 +1319,13 @@ focus_tree = {
 		relative_position_id = POL_victory_of_the_people
 		x = 3
 		y = 1
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POL_not_yet_lost"
+			add_ideas = POL_till_we_live_idea
 			add_war_support = 0.10
 			add_manpower = 20000
 		}
@@ -1319,7 +1343,7 @@ focus_tree = {
 		relative_position_id = POL_not_yet_lost
 		x = 2
 		y = 0
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 50
 		}
@@ -1338,7 +1362,7 @@ focus_tree = {
 		relative_position_id = POL_not_yet_lost
 		x = 1
 		y = 1
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
@@ -1353,7 +1377,6 @@ focus_tree = {
 		icon = GFX_goal_POL_New_Polish_Republic
 		allow_branch = { NOT = { has_country_leader = { name = "Heck Gandersoński" ruling_only = yes } } }
 		available = {
-			NOT = { has_country_flag = POL_Pawel_Salwator }
 			NOT = { has_country_flag = POL_christian_takeover }
 			POL_has_republican_government = yes
 			has_elected_government = yes
@@ -1372,7 +1395,7 @@ focus_tree = {
 		relative_position_id = POL_victory_of_the_people
 		x = 8
 		y = 0
-		cost = 6
+		cost = 2.9
 		ai_will_do = {
 			factor = 1500
 		}
@@ -1404,12 +1427,12 @@ focus_tree = {
 		id = POL_free_elections
 		icon = GFX_goal_POL_Hold_Free_Elections
 		prerequisite = { focus = POL_a_new_poland }
-		available = { has_elected_government = yes }
+		available = { has_democratic_government = yes }
 		bypass = { date > 1937.2.1 }
 		relative_position_id = POL_a_new_poland
 		x = 0
 		y = 1
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 80
 		}
@@ -1422,12 +1445,12 @@ focus_tree = {
 	focus = {
 		id = POL_economic_reform
 		icon = GFX_goal_POL_International_Trade_Reform
-		available = { has_elected_government = yes }
+		available = { has_democratic_government = yes }
 		prerequisite = { focus = POL_free_elections }
 		relative_position_id = POL_free_elections
 		x = -2
 		y = 1
-		cost = 8
+		cost = 6
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POL_economic_reform"
@@ -1438,12 +1461,12 @@ focus_tree = {
 	focus = {
 		id = POL_attract_investments
 		icon = GFX_goal_POL_Investors_Paradise
-		available = { has_elected_government = yes }
+		available = { has_democratic_government = yes }
 		prerequisite = { focus = POL_economic_reform }
 		relative_position_id = POL_economic_reform
 		x = 0
 		y = 2
-		cost = 8
+		cost = 6
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POL_economic_reform"
@@ -1490,7 +1513,7 @@ focus_tree = {
 		id = POL_suffrage
 		icon = GFX_goal_POL_Polish_Culture
 		available = {
-			has_elected_government = yes
+			has_democratic_government = yes
 		}
 		prerequisite = {
 			focus = POL_free_elections
@@ -1498,7 +1521,7 @@ focus_tree = {
 		relative_position_id = POL_a_new_poland
 		x = 0
 		y = 2
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
@@ -1511,13 +1534,13 @@ focus_tree = {
 	focus = {
 		id = POL_new_universities
 		icon = GFX_goal_POL_Fund_Schools_Mathematics
-		available = { has_elected_government = yes }
+		available = { has_democratic_government = yes }
 		prerequisite = { focus = POL_economic_reform }
 		prerequisite = { focus = POL_suffrage }
 		relative_position_id = POL_a_new_poland
 		x = -1
 		y = 3
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
@@ -1530,13 +1553,13 @@ focus_tree = {
 	focus = {
 		id = POL_golden_liberty
 		icon = GFX_goal_POL_Golden_Liberty
-		available = { has_elected_government = yes }
+		available = { has_democratic_government = yes }
 		prerequisite = { focus = POL_suffrage }
 		prerequisite = { focus = POL_attract_investments }
 		relative_position_id = POL_suffrage
 		x = 0
 		y = 3
-		cost = 8
+		cost = 6
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POL_golden_liberty"
@@ -1559,7 +1582,7 @@ focus_tree = {
 		relative_position_id = POL_victory_of_the_people
 		x = 10
 		y = 2
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 30
 		}
@@ -1612,7 +1635,7 @@ focus_tree = {
 		relative_position_id = POL_a_new_poland
 		x = 5
 		y = 0
-		cost = 6
+		cost = 2.9
 		ai_will_do = {
 			factor = 1500
 		}
@@ -1680,7 +1703,7 @@ focus_tree = {
 		relative_position_id = POL_a_firm_hand
 		x = 0
 		y = 1
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 50
 		}
@@ -1702,7 +1725,7 @@ focus_tree = {
 		relative_position_id = POL_a_firm_hand
 		x = -2
 		y = 1
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
@@ -1728,7 +1751,7 @@ focus_tree = {
 		relative_position_id = POL_a_firm_hand
 		x = 2
 		y = 1
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
@@ -1843,8 +1866,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POL_imprison_politicians"
+			swap_ideas = {
+				remove_idea = POL_new_administration
+				add_idea = POL_dogmatic_administration
+			}
 			add_political_power = 150
-			add_stability = -0.08
+			add_stability = -0.02
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -1857,7 +1884,7 @@ focus_tree = {
 		relative_position_id = POL_dismantle_gov
 		x = 1
 		y = 1
-		cost = 8
+		cost = 6
 		ai_will_do = {
 			factor = 50
 		}
@@ -1918,7 +1945,7 @@ focus_tree = {
 		}
 		x = 21
 		y = 0
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 50
 		}
@@ -1968,7 +1995,7 @@ focus_tree = {
 		relative_position_id = POL_centralize_infrastructure
 		x = -3
 		y = 1
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -2030,7 +2057,7 @@ focus_tree = {
 		relative_position_id = POL_centralize_infrastructure
 		x = -3
 		y = 2
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -2053,7 +2080,7 @@ focus_tree = {
 		relative_position_id = POL_centralize_infrastructure
 		x = -1
 		y = 1
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 50
 		}
@@ -2075,7 +2102,7 @@ focus_tree = {
 		relative_position_id = POL_centralize_infrastructure
 		x = -1
 		y = 2
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 50
 		}
@@ -2096,7 +2123,7 @@ focus_tree = {
 		relative_position_id = POL_centralize_infrastructure
 		x = -2
 		y = 3
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
@@ -2115,7 +2142,7 @@ focus_tree = {
 		relative_position_id = POL_centralize_infrastructure
 		x = 1
 		y = 1
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 20
 		}
@@ -2139,7 +2166,7 @@ focus_tree = {
 		relative_position_id = POL_centralize_infrastructure
 		x = 3
 		y = 1
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 30
 		}
@@ -2192,7 +2219,7 @@ focus_tree = {
 		relative_position_id = POL_centralize_infrastructure
 		x = 1
 		y = 2
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 30
 		}
@@ -2226,7 +2253,7 @@ focus_tree = {
 		relative_position_id = POL_centralize_infrastructure
 		x = 3
 		y = 3
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -2260,7 +2287,7 @@ focus_tree = {
 		relative_position_id = POL_centralize_infrastructure
 		x = 1
 		y = 3
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 20
 		}
@@ -2284,7 +2311,7 @@ focus_tree = {
 		relative_position_id = POL_centralize_infrastructure
 		x = 2
 		y = 4
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 20
 		}
@@ -2337,7 +2364,7 @@ focus_tree = {
 		relative_position_id = POL_centralize_infrastructure
 		x = 3
 		y = 5
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 20
 		}
@@ -2356,7 +2383,7 @@ focus_tree = {
 		relative_position_id = POL_centralize_infrastructure
 		x = 0
 		y = 4
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 20
 		}
@@ -2392,7 +2419,7 @@ focus_tree = {
 		relative_position_id = POL_centralize_infrastructure
 		x = 4
 		y = 2
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -2461,7 +2488,7 @@ focus_tree = {
 		relative_position_id = POL_centralize_infrastructure
 		x = 5
 		y = 3
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -2481,7 +2508,7 @@ focus_tree = {
 		}
 		x = 31
 		y = 0
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -2505,7 +2532,7 @@ focus_tree = {
 		relative_position_id = POL_army_reform
 		x = -2
 		y = 1
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -2530,7 +2557,7 @@ focus_tree = {
 		relative_position_id = POL_army_reform
 		x = -3
 		y = 2
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -2552,7 +2579,7 @@ focus_tree = {
 		relative_position_id = POL_army_reform
 		x = -3
 		y = 3
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -2571,7 +2598,7 @@ focus_tree = {
 		relative_position_id = POL_army_reform
 		x = 0
 		y = 1
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -2596,7 +2623,7 @@ focus_tree = {
 		relative_position_id = POL_army_reform
 		x = -1
 		y = 2
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -2620,7 +2647,7 @@ focus_tree = {
 		relative_position_id = POL_army_reform
 		x = -1
 		y = 3
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -2641,7 +2668,7 @@ focus_tree = {
 		relative_position_id = POL_army_reform
 		x = 2
 		y = 1
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 15
 		}
@@ -2665,7 +2692,7 @@ focus_tree = {
 		relative_position_id = POL_army_reform
 		x = 2
 		y = 2
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 15
 		}
@@ -2693,7 +2720,7 @@ focus_tree = {
 		relative_position_id = POL_army_reform
 		x = 1
 		y = 3
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 15
 		}
@@ -2713,7 +2740,7 @@ focus_tree = {
 		relative_position_id = POL_army_reform
 		x = -2
 		y = 4
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -2740,7 +2767,7 @@ focus_tree = {
 		relative_position_id = POL_army_reform
 		x = 2
 		y = 4
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
@@ -2766,7 +2793,7 @@ focus_tree = {
 		relative_position_id = POL_army_reform
 		x = 0
 		y = 4
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
@@ -2792,7 +2819,7 @@ focus_tree = {
 		relative_position_id = POL_integrate_wermacht
 		x = -1
 		y = 1
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
@@ -2815,7 +2842,7 @@ focus_tree = {
 		relative_position_id = POL_integrate_wermacht
 		x = 1
 		y = 1
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
@@ -2835,7 +2862,7 @@ focus_tree = {
 		}
 		x = 17
 		y = 4
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 5
 		}
@@ -2860,7 +2887,7 @@ focus_tree = {
 		relative_position_id = POL_new_airforce
 		x = -3
 		y = 1
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -2884,7 +2911,7 @@ focus_tree = {
 		relative_position_id = POL_new_airforce
 		x = -4
 		y = 2
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 5
 		}
@@ -2903,7 +2930,7 @@ focus_tree = {
 		relative_position_id = POL_new_airforce
 		x = -2
 		y = 2
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 5
 		}
@@ -2930,7 +2957,7 @@ focus_tree = {
 		relative_position_id = POL_new_airforce
 		x = -3
 		y = 3
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -2968,7 +2995,7 @@ focus_tree = {
 		relative_position_id = POL_new_airforce
 		x = -1
 		y = 1
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 5
 		}
@@ -2992,7 +3019,7 @@ focus_tree = {
 		relative_position_id = POL_new_airforce
 		x = 2
 		y = 1
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 5
 		}
@@ -3018,7 +3045,7 @@ focus_tree = {
 		relative_position_id = POL_new_airforce
 		x = 0
 		y = 2
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 5
 		}
@@ -3043,7 +3070,7 @@ focus_tree = {
 		relative_position_id = POL_new_airforce
 		x = 2
 		y = 2
-		cost = 8
+		cost = 5
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POL_close_combat"
@@ -3065,7 +3092,7 @@ focus_tree = {
 		available = { any_owned_state = { is_coastal = yes } }
 		x = 35
 		y = 6
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -3114,7 +3141,7 @@ focus_tree = {
 		relative_position_id = POL_kickstart_navy
 		x = -4
 		y = 1
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -3149,7 +3176,7 @@ focus_tree = {
 		relative_position_id = POL_kickstart_navy
 		x = -4
 		y = 2
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -3167,7 +3194,7 @@ focus_tree = {
 		relative_position_id = POL_kickstart_navy
 		x = -2
 		y = 1
-		cost = 8
+		cost = 5
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POL_naval_interdiction"
@@ -3189,7 +3216,7 @@ focus_tree = {
 		relative_position_id = POL_kickstart_navy
 		x = -2
 		y = 2
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -3212,7 +3239,7 @@ focus_tree = {
 		relative_position_id = POL_kickstart_navy
 		x = 0
 		y = 1
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -3222,7 +3249,7 @@ focus_tree = {
 				name = naval_doc_bonus
 				cost_reduction = 0.5
 				uses = 2
-				category = cat_trade_interdiction
+				category = naval_doctrine
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -3234,7 +3261,7 @@ focus_tree = {
 		relative_position_id = POL_kickstart_navy
 		x = 0
 		y = 2
-		cost = 8
+		cost = 5
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POL_pride_of_the_baltic"
@@ -3257,7 +3284,7 @@ focus_tree = {
 		relative_position_id = POL_kickstart_navy
 		x = 2
 		y = 2
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -3285,7 +3312,7 @@ focus_tree = {
 		relative_position_id = POL_kickstart_navy
 		x = 2
 		y = 1
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -3348,7 +3375,6 @@ focus_tree = {
 				}
 			}
 			is_in_faction = no
-			POL_has_republican_government = yes
 			INT = {
 				is_subject = no
 				exists = yes
@@ -3399,12 +3425,13 @@ focus_tree = {
 		icon = GFX_goal_poland
 		available = {
 			is_subject = no
-			is_in_faction = no
-			NOT = {
-				POL_king_mendog = yes
-				POL_king_fryderyk = yes
-				POL_king_karol = yes
+			OR = {
+				is_faction_leader = yes
+				is_in_faction = no
 			}
+			POL_king_mendog = no
+			POL_king_fryderyk = no
+			POL_king_karol = no
 		}
 		prerequisite = { focus = POL_join_international_community }
 		mutually_exclusive = {
@@ -3483,7 +3510,7 @@ focus_tree = {
 		relative_position_id = POL_poland_alone
 		x = 0
 		y = 2
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 10 
 			modifier = {
@@ -3528,6 +3555,7 @@ focus_tree = {
 				owner = {
 					is_subject = no
 					is_russian_tag = yes
+					is_faction_leader = yes
 					NOT = {
 						is_in_faction_with = AUS
 						is_in_faction_with = GER
@@ -3535,15 +3563,16 @@ focus_tree = {
 					exists = yes
 					OR = {
 						has_socialist_government = no
-						ROOT = { has_socialist_government = yes }
+						AND = {
+						has_socialist_government = yes
+						POL = { has_socialist_government = yes }
+						}
 					}
 				}
 			}
-			NOT = {
-				POL_king_mendog = yes
-				POL_king_fryderyk = yes
-				POL_king_karol = yes
-			}
+			POL_king_mendog = no
+			POL_king_fryderyk = no
+			POL_king_karol = no
 		}
 		prerequisite = { focus = POL_join_international_community }
 		mutually_exclusive = {
@@ -3606,7 +3635,7 @@ focus_tree = {
 		relative_position_id = POL_ally_russia
 		x = 0
 		y = 1
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -3628,7 +3657,7 @@ focus_tree = {
 		relative_position_id = POL_join_international_community
 		x = -1
 		y = 2
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 50
 		}
@@ -3664,10 +3693,10 @@ focus_tree = {
 			has_socialist_government = no
 			OR = {
 				AND = {
-					POL_has_republican_government = yes
-					has_elected_government = yes
+					has_cosmetic_tag = POL_REPUBLIC
+					POL_nationalists_power = no
 				}
-				has_country_flag = POL_Pawel_Salwator
+				POL_king_salvator = yes
 				POL_king_augustyn = yes
 				POL_king_mendog = yes
 				POL_king_fryderyk = yes
@@ -3734,7 +3763,7 @@ focus_tree = {
 		relative_position_id = POL_stay_with_germany
 		x = 0
 		y = 2
-		cost = 8
+		cost = 5
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POL_German_Armour_Designs"
@@ -3748,28 +3777,24 @@ focus_tree = {
 			has_war = no
 			is_in_faction_with = GER
 			94 = { owner = { is_in_faction_with = POL } }
+			1329 = { owner = { is_in_faction_with = POL } }
 			792 = { owner = { is_in_faction_with = POL } }
 			95 = { owner = { is_in_faction_with = POL } }
+			OR = {
 			219 = { owner = { is_in_faction_with = POL } }
-			242 = {
-				owner = {
-					is_in_faction_with = POL
-					OR = {
-						is_subject = yes
-						NOT = { tag = RUS }
-					}
-				}
+			has_global_flag = vilnius_accords_active
 			}
 		}
 		prerequisite = { focus = POL_stay_with_germany }
 		relative_position_id = POL_stay_with_germany
 		x = -1
 		y = 1
-		cost = 8
+		cost = 5
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POL_ask_for_kresy_just_one_state_miss"
 			add_state_claim = 94
+			add_state_claim = 1329
 			add_state_claim = 93
 			add_state_claim = 997
 			add_state_claim = 204
@@ -3810,7 +3835,7 @@ focus_tree = {
 		relative_position_id = POL_stay_with_germany
 		x = 1
 		y = 1
-		cost = 8
+		cost = 5
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POL_claim_east"
@@ -3840,7 +3865,7 @@ focus_tree = {
 		relative_position_id = POL_stay_with_germany
 		x = 2
 		y = 2
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -3870,11 +3895,8 @@ focus_tree = {
 			}
 			has_socialist_government = no
 			OR = {
-				AND = {
-					POL_has_republican_government = yes
-					has_elected_government = yes
-				}
-				has_country_flag = POL_Pawel_Salwator
+				has_cosmetic_tag = POL_REPUBLIC
+				POL_king_salvator = yes
 				POL_king_augustyn = yes
 				POL_king_karol = yes
 			}
@@ -3943,7 +3965,7 @@ focus_tree = {
 		relative_position_id = POL_go_with_austria
 		x = 0
 		y = 1
-		cost = 8
+		cost = 5
 		ai_will_do = { factor = 10 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POL_austrian_tech_sharing"
@@ -3956,12 +3978,11 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
-	#### I'm Sorry ###
+
 	focus = {
 		id = POL_Reborn_Through_Faith
 		icon = GFX_goal_POL_Reborn_Through_Faith
 		allow_branch = { 
-			NOT = { has_country_flag = POL_Temporal_Rift }
 			NOT = { has_country_leader = { name = "Heck Gandersoński" ruling_only = yes } }
 		} 		
 		available = {
@@ -4371,7 +4392,7 @@ focus_tree = {
 		relative_position_id = POL_Prepare_Great_Ritual
 		x = 0
 		y = 1
-		cost = 10
+		cost = 7
 		ai_will_do = {
 			factor = 50
 		}
@@ -4381,6 +4402,44 @@ focus_tree = {
 			country_event = {
 				id = poland.308
 				days = 1
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = POL_Reunite_Blood_Lechia
+		icon = GFX_goal_POL_Reunite_Blood_Lechia
+		available = {
+			has_government = national_populist
+		}
+		prerequisite = {
+			focus = POL_Second_Coming
+		}
+		relative_position_id = POL_Second_Coming
+		x = 4
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus POL_Reunite_Blood_Lechia"
+			every_state = {
+				limit = { is_on_continent = europe }
+				add_core_of = POL
+			}
+			every_state = {
+				limit = { is_on_continent = middle_east }
+				add_core_of = POL
+			}
+			every_state = {
+				limit = { is_on_continent = asia }
+				add_core_of = POL
+			}
+			every_state = {
+				limit = { is_on_continent = india }
+				add_core_of = POL
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4536,6 +4595,8 @@ focus_tree = {
 			add_state_core = 1127
 			add_state_core = 1126
 			add_state_core = 1140
+			add_state_core = 1314
+			add_state_core = 1319
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -4599,7 +4660,7 @@ focus_tree = {
 		relative_position_id = POL_Land_Stanislaus
 		x = 0
 		y = 1
-		cost = 10
+		cost = 7
 		ai_will_do = {
 			factor = 50
 		}
@@ -4612,6 +4673,37 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
+
+	focus = {
+		id = POL_Drive_Heathens_Out_Once_More
+		icon = GFX_goal_POL_Drive_Heathens_Out_Once_More
+		prerequisite = {
+			focus = POL_Enthrone_Rightous_King
+		}
+		relative_position_id = POL_Enthrone_Rightous_King
+		x = 0
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus POL_Drive_Heathens_Out_Once_More" 
+			every_state = {
+				limit = { is_on_continent = europe }
+				add_core_of = POL
+			}
+			every_state = {
+				limit = { is_on_continent = middle_east }
+				add_core_of = POL
+			}
+			every_state = {
+				limit = { is_on_continent = africa }
+				add_core_of = POL
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
   
 	focus = {
 		id = POL_Land_Youth
@@ -4619,12 +4711,6 @@ focus_tree = {
 		prerequisite = {
 			focus = POL_KJCh_Win
 			focus = POL_KSB_Win
-		}
-		available = {
-			OR = {
-				has_completed_focus = POL_KJCh_Win
-				has_completed_focus = POL_Implement_Towianism
-			}
 		}
 		relative_position_id = POL_New_Knightly_Orders
 		x = 2
@@ -4671,10 +4757,7 @@ focus_tree = {
 		icon = GFX_goal_POL_Lithuania_My_Homeland
 		prerequisite = {
 			focus = POL_KSB_Win
-		}
-		available = {
-			has_completed_focus = POL_Implement_Towianism
-		}			
+		}	
 		relative_position_id = POL_KSB_Win
 		x = -2
 		y = 1
@@ -4685,6 +4768,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: POL_Lithuania_Homeland"
 			add_state_core = 189
+			add_state_core = 1329
 			add_state_core = 655
 			add_state_core = 11
 			add_state_core = 96
@@ -4721,6 +4805,15 @@ focus_tree = {
 				transfer_state = 207
 				transfer_state = 1228
 				transfer_state = 199
+				transfer_state= 1295
+				transfer_state = 206
+				transfer_state = 1294
+				transfer_state = 1087
+				transfer_state = 194
+				transfer_state = 1244
+				transfer_state = 201
+				transfer_state = 198
+				transfer_state = 1245
 				add_state_core = 93
 				add_state_core = 997
 				add_state_core = 95
@@ -4729,6 +4822,15 @@ focus_tree = {
 				add_state_core = 207
 				add_state_core = 1228
 				add_state_core = 199
+				add_state_core = 1295
+				add_state_core = 206
+				add_state_core = 1294
+				add_state_core = 1087
+				add_state_core = 194
+				add_state_core = 1244
+				add_state_core = 201
+				add_state_core = 198
+				add_state_core = 1245
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4740,25 +4842,20 @@ focus_tree = {
 		prerequisite = {
 			focus = POL_KSB_Win
 		}
-		available = { NOT = { has_country_flag = POL_Temporal_Rift } }
 		relative_position_id = POL_KSB_Win
 		x = 0
 		y = 1
 		cost = 5
-		select_effect = {
-			hidden_effect = {
-				country_event = {
-					id = poland.313
-					days = 2
-				}
-			}
-		}
 		ai_will_do = {
 			factor = 50
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus POL_Implement_Towianism"
 			add_ideas = POL_legacy_towianski_idea
+			country_event = {
+				id = poland.313
+				days = 10
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -4792,9 +4889,6 @@ focus_tree = {
 		prerequisite = {
 			focus = POL_KSB_Win
 		}
-		available = {
-			has_completed_focus = POL_Implement_Towianism
-		}  
 		relative_position_id = POL_KSB_Win
 		x = 2
 		y = 1
@@ -4847,7 +4941,7 @@ focus_tree = {
 		relative_position_id = POL_National_Socialists
 		x = 0
 		y = 1
-		cost = 10
+		cost = 7
 		ai_will_do = {
 			factor = 50
 		}
@@ -4862,14 +4956,49 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POL_Demons_Abaddon
-		icon = GFX_goal_POL_Cast_Demons_Back_To_Abaddon
-			prerequisite = {
-			focus = POL_Second_Coming
-			focus = POL_Enthrone_Rightous_King
+		id = POL_Savior_Europe
+		icon = GFX_goal_POL_Savior_Europe
+		prerequisite = {
 			focus = POL_Messiah_Rises
 		}
-		relative_position_id = POL_Enthrone_Rightous_King
+		relative_position_id = POL_Messiah_Rises
+		x = -4
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus POL_Savior_Europe" 
+			every_state = {
+				limit = { is_on_continent = europe }
+				add_core_of = POL
+			}
+			every_state = {
+				limit = { is_on_continent = middle_east }
+				add_core_of = POL
+			}
+			every_state = {
+				limit = { is_on_continent = north_america }
+				add_core_of = POL
+			}
+			every_state = {
+				limit = { is_on_continent = central_america }
+				add_core_of = POL
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = POL_Demons_Abaddon
+		icon = GFX_goal_POL_Cast_Demons_Back_To_Abaddon
+		prerequisite = {
+			focus = POL_Reunite_Blood_Lechia
+			focus = POL_Drive_Heathens_Out_Once_More
+			focus = POL_Savior_Europe
+		}
+		relative_position_id = POL_Drive_Heathens_Out_Once_More
 		x = 0
 		y = 1
 		cost = 2
@@ -4877,10 +5006,11 @@ focus_tree = {
 			factor = 50
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus POL_Demons_Abaddon" 
-			create_wargoal = {
-				type = annex_everything
+			log = "[GetDateText]: [Root.GetName]: Focus POL_Demons_Abaddon"
+			add_ideas = POL_obliterate_demons_idea 
+			declare_war_on = {
 				target = GER
+				type = annex_everything
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4908,7 +5038,7 @@ focus_tree = {
 		relative_position_id = POL_the_great_debate
 		x = 0
 		y = 1
-		cost = 6
+		cost = 2.9
 		ai_will_do = {
 			factor = 1500
 		}
@@ -4948,7 +5078,6 @@ focus_tree = {
 		id = POL_Undivine_Comedy
 		icon = GFX_goal_POL_Undivine_Comedy
 		allow_branch = { 
-			NOT = { has_country_flag = POL_Temporal_Rift }
 			NOT = { has_country_leader = { name = "Heck Gandersoński" ruling_only = yes } }
 		}
 		available = {
@@ -5124,273 +5253,6 @@ focus_tree = {
 				target = PREV
 			}
 			}
-			}
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = POL_Many_Years_Domination
-		icon = GFX_goal_POL_Many_Years_Domination
-		allow_branch = { has_country_flag = POL_Temporal_Rift }
-		available = {
-			has_country_flag = POL_Temporal_Rift
-		}
-		x = 5
-		y = 6
-		cost = 6
-		ai_will_do = {
-			factor = 1500
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus POL_Many_Years_Domination"
-			remove_ideas = POL_zealous_patriots_idea
-			remove_ideas = POL_chadecja_support_idea
-			remove_ideas = POL_spirit_of_jagiello_idea
-			add_ideas = POL_Eternal_Circus_idea
-			add_ideas = POL_Polski_Lad_idea
-			add_ideas = POL_Eus_Impotent_Rage_idea
-			add_ideas = POL_When_Vistula_Run_Red_idea
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = POL_Never_Interrupt_Your_Enemy
-		icon = GFX_goal_POL_Never_Interrupt_Your_Enemy
-		prerequisite = {
-			focus = POL_Many_Years_Domination
-		}
-		relative_position_id = POL_Many_Years_Domination
-		x = -5
-		y = 1
-		cost = 4
-		ai_will_do = {
-			factor = 50
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus POL_Never_Interrupt_Your_Enemy"
-			swap_ideas = {
-				remove_idea = POL_Eus_Impotent_Rage_idea
-				add_idea = POL_Eus_Impotent_Rage_2_idea
-			} 
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = POL_Ensuring_Stable_Voting_Majority
-		icon = GFX_goal_POL_Ensuring_Stable_Voting_Majority
-		prerequisite = {
-			focus = POL_Many_Years_Domination
-		}
-		relative_position_id = POL_Many_Years_Domination
-		x = -3
-		y = 1
-		cost = 3.3
-		ai_will_do = {
-			factor = 50
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus POL_Ensuring_Stable_Voting_Majority"
-			increase_ruling_party_popularity_by_5 = yes
-			add_political_power = -300
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = POL_Lex_TVN_Secundus
-		icon = GFX_goal_POL_Lex_TVN_Secundus
-		prerequisite = {
-			focus = POL_Never_Interrupt_Your_Enemy
-		}
-		prerequisite = {
-			focus = POL_Ensuring_Stable_Voting_Majority
-		}
-		relative_position_id = POL_Never_Interrupt_Your_Enemy
-		x = 1
-		y = 1
-		cost = 5
-		ai_will_do = {
-			factor = 50
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus POL_Lex_TVN_Secundus"
-			add_ideas = CAL_media_blackout_idea
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = POL_Every_Order_Needs_Agents
-		icon = GFX_goal_POL_Every_Order_Needs_Agents
-		prerequisite = {
-			focus = POL_Many_Years_Domination
-		}
-		relative_position_id = POL_Many_Years_Domination
-		x = -1
-		y = 1
-		cost = 6.4
-		ai_will_do = {
-			factor = 50
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus POL_Every_Order_Needs_Agents"
-			swap_ideas = {
-				remove_idea = POL_Polski_Lad_idea
-				add_idea = POL_Polski_Lad_2_idea
-			}
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = POL_Use_Presidents_Memeability
-		icon = GFX_goal_POL_Use_Presidents_Memeability
-		prerequisite = {
-			focus = POL_Many_Years_Domination
-		}
-		relative_position_id = POL_Many_Years_Domination
-		x = 1
-		y = 1
-		cost = 4
-		ai_will_do = {
-			factor = 50
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus POL_Use_Presidents_Memeability"
-			swap_ideas = {
-				remove_idea = POL_Eternal_Circus_idea
-				add_idea = POL_Eternal_Circus_2_idea
-			}
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = POL_Naczelniks_Anointed_Diadochos
-		icon = GFX_goal_POL_Naczelniks_Anointed_Diadochos
-		prerequisite = {
-			focus = POL_Every_Order_Needs_Agents
-		}
-		prerequisite = {
-			focus = POL_Use_Presidents_Memeability
-		}
-		relative_position_id = POL_Every_Order_Needs_Agents
-		x = 1
-		y = 1
-		cost = 2.8
-		ai_will_do = {
-			factor = 50
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus POL_Never_Interrupt_Your_Enemy"
-			add_political_power = 140
-			add_popularity = {
-				ideology = authoritarian_democrat
-				popularity = 0.03
-			}
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = POL_Show_Them_True_Fear
-		icon = GFX_goal_POL_Show_Them_True_Fear
-		prerequisite = {
-			focus = POL_Many_Years_Domination
-		}
-		relative_position_id = POL_Many_Years_Domination
-		x = 3
-		y = 1
-		cost = 5.9
-		ai_will_do = {
-			factor = 50
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus POL_Show_Them_True_Fear" 
-			add_ideas = COR_culture_parasites_idea
-			add_popularity = {
-				ideology = syndicalist
-				popularity = -0.04
-			}
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = POL_Fiat_Voluntas_Tua
-		icon = GFX_goal_POL_Fiat_Voluntas_Tua
-		prerequisite = {
-			focus = POL_Many_Years_Domination
-		}
-		relative_position_id = POL_Many_Years_Domination
-		x = 5
-		y = 1
-		cost = 6
-		ai_will_do = {
-			factor = 50
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus POL_Fiat_Voluntas_Tua"
-			add_ideas = SRI_fash_christ_idea
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = POL_Calls_Vistulan_Retribution
-		icon = GFX_goal_POL_Calls_Vistulan_Retribution
-		prerequisite = {
-			focus = POL_Show_Them_True_Fear
-		}
-		prerequisite = {
-			focus = POL_Fiat_Voluntas_Tua
-		}
-		relative_position_id = POL_Show_Them_True_Fear
-		x = 1
-		y = 1
-		cost = 1.7
-		ai_will_do = {
-			factor = 50
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus POL_Calls_Vistulan_Retribution" 
-						country_event = {
-				id = poland.315
-				days = 4
-			} 
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
-
-	focus = {
-		id = POL_Concerto_Midnight_Sun
-		icon = GFX_goal_POL_Concerto_Midnight_Sun
-		prerequisite = {
-			focus = POL_Lex_TVN_Secundus
-		}
-		prerequisite = {
-			focus = POL_Naczelniks_Anointed_Diadochos
-		}
-		prerequisite = {
-			focus = POL_Calls_Vistulan_Retribution
-		}
-		relative_position_id = POL_Many_Years_Domination
-		x = 0
-		y = 3
-		cost = 2
-		ai_will_do = {
-			factor = 50
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus POL_Concerto_Midnight_Sun" 
-			create_country_leader = {
-				name = "Mateusz Morawiecki"
-				picture = "gfx/leaders/POL/Portrait_POL_Mateusz_Morawiecki.png"
-				expire = "1965.1.1"
-				ideology = authoritarian_democrat_subtype
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }

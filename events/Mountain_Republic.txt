@@ -242,14 +242,14 @@ country_event = { #Socialists in the government
 		ai_chance = {
 			factor = 80
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_SHAMKHAL
 				}
 			}
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_IMAMATE
@@ -309,14 +309,14 @@ country_event = { #Socialists in the government
 		ai_chance = {
 			factor = 70
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_SHAMKHAL
 				}
 			}
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_IMAMATE
@@ -437,17 +437,7 @@ country_event = { #Socialists in the government
 			MTR_Alibek_A_Takhogodi_sec_rso
 		}
 		clr_country_flag = MTR_socialists_in_government
-		add_stability = -0.2
-		create_corps_commander = {
-			name = "Issa Pliyev"
-			portrait_path = "gfx/leaders/SOV/Issa_Pliyev.png"
-			traits = { cavalry_officer  }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-		}
+		add_stability = -0.2		
 		hidden_effect = {
 			country_event = {
 				id = mtrcw.1
@@ -472,14 +462,14 @@ country_event = { #Majlis Quotas
 		ai_chance = {
 			factor = 70
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_SHAMKHAL
 				}
 			}
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_IMAMATE
@@ -842,18 +832,7 @@ country_event = { #Socialist Victory
 		subtract_from_variable = { 
 			var = MTR_nogai_support   
 			value = 0.25
-		}
-		create_corps_commander = {
-			name = "Issa Pliyev"
-			portrait_path = "gfx/leaders/SOV/Issa_Pliyev.png"
-			traits = { cavalry_officer  }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-		}
-		
+		}		
 		hidden_effect = {
 			country_event = {
 				id = mtr.22
@@ -986,7 +965,7 @@ country_event = { #Reichspact
 			factor = 20
 			modifier = {
 				add = 10
-				KUB = { has_government = social_conservative }
+				KUB = { has_government = authoritarian_democrat }
 			}
 			modifier = {
 				add = -10
@@ -1294,33 +1273,11 @@ country_event = { #SOV - request from MTR
 
 	option = {
 		name = mtr.60.a
-		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 5
-				has_government = totalist
-			}	
-		}	
+		ai_chance = { base = 0 }	
 		add_political_power = -25
 		FROM = {
 			country_event = {
 				id = mtr.61
-				days = 2
-			}
-		}
-	}
-	option = {
-		name = mtr.60.b
-		ai_chance = {
-			factor = 40
-			modifier = {
-				factor = 0.5
-				has_government = totalist
-			}	
-		}
-		FROM = {
-			country_event = {
-				id = mtr.62
 				days = 2
 			}
 		}
@@ -1334,7 +1291,13 @@ country_event = { #SOV - request from MTR
 				has_government = totalist
 			}	
 		}
-		add_to_faction = FROM
+		if = {
+			limit = { has_country_flag = soviet_russia_restored }
+			SOV_puppet_FROM_effect = yes
+		}
+		else = {
+			add_to_faction = FROM
+		}		
 	}
 }
 country_event = { #Refused
@@ -1475,28 +1438,28 @@ country_event = { #Oil Treaty
 		ai_chance = {
 			factor = 70
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_SHAMKHAL
 				}
 			}	
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_IMAMATE
 				}
 			}
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_CONF
 				}
 			}	
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_OKSP
@@ -1516,7 +1479,7 @@ country_event = { #Oil Treaty
 		ai_chance = {
 			factor = 30
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_CHECH
@@ -1659,28 +1622,28 @@ country_event = { #Protests
 		ai_chance = {
 			factor = 60
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_SHAMKHAL
 				}
 			}	
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_IMAMATE
 				}
 			}
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_CONF
 				}
 			}	
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_OKSP
@@ -1833,7 +1796,7 @@ country_event = { #Abkhazia
 				days = 3
 			}
 		}
-	}
+	}	
 	option = {
 		name = mtr.201.c
 		ai_chance = {
@@ -2069,9 +2032,9 @@ country_event = { #Abkhazia
 				has_war_with = MTR
 			}
 		}
-			1080 = {
-				is_fully_controlled_by = 1080.owner
-			}
+		1080 = {
+			is_fully_controlled_by = 1080.owner
+		}
 	}
 	is_triggered_only = yes
 	option = {
@@ -2529,9 +2492,9 @@ country_event = { #New party created
 		add_ideas = MTR_Ibragim_I_Gaidarov_eco_ade
 		setup_majlis_mechanic_socdem = yes
 		create_country_leader = {
-			name = "Vassan-Girey Dzhabagiyev"
-			picture = "gfx/leaders/MTR/Portrait_MTR_Vassan_Girey.png"
-			expire = "1965.1.1"
+			name = "Muhamad Said Shamil"
+			picture = "gfx/leaders/MTR/Portait_MTR_Muhammad_Said_Shamil.png"
+			expire = "1.1.1"
 			ideology = soclib_islamism_subtype
 		}
 	}
@@ -2551,7 +2514,7 @@ country_event = { #Campaign starts
 		ai_chance = {
 			factor = 10
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_OKSP
@@ -2566,7 +2529,7 @@ country_event = { #Campaign starts
 		ai_chance = {
 			factor = 50
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_CONF
@@ -2581,7 +2544,7 @@ country_event = { #Campaign starts
 		ai_chance = {
 			factor = 30
 			modifier = {
-			factor = 10000
+			factor = 1000
 				has_game_rule = {
 					rule = MTR_path
 					option = MTR_PATH_CHECH

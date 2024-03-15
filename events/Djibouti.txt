@@ -71,9 +71,39 @@ country_event = { #What do?
 			name = "Semyon Krasnov"
 			desc = "POLITICS_SEMEN_KRASNOV_DESC"
 			picture = "gfx/leaders/DKB/Portrait_DKB_Semyon_Krasnov.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = autocratic_colonial_govt_subtype
 			traits = {}
+		}
+		if = {
+		limit = {
+		is_ai = no
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = ETH
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = SOM
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = ERI
+		}
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = ETH
+					is_claimed_by = ETH
+					is_core_of = SOM
+					is_claimed_by = SOM
+					is_core_of = ERI
+					is_claimed_by = ERI
+				}
+			}
+			add_core_of = DJI
+			}
 		}
 		set_country_flag = DJI_SAGALLO_FORMED
 		set_cosmetic_tag = DJI_RUS
@@ -172,7 +202,7 @@ country_event = { #Tsar guy?
 			name = "Boris I"
 			desc = "POLITICS_BORIS_SKOSSYREFF_DESC"
 			picture = "gfx/leaders/DJI/Portrait_Djbouti_Boris_Skossyreff.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = marlib_colonial_govt_subtype
 			traits = {}
 		}

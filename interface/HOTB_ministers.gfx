@@ -1420,6 +1420,10 @@ spriteTypes = {
 		name = "GFX_idea_TEX_Joe_Shannon_hog_pau"
 		texturefile = "gfx/interface/ministers/TEX/TEX_Joe_Shannon.png"
 	}
+	spriteType = {
+		name = "GFX_idea_TEX_Edna_Anne_Ballard_hog_sco"
+		texturefile = "gfx/interface/ministers/TEX/TEX_Edna_Anne_Ballard.png"
+	}
 
 
 	### Person of Influence
@@ -1515,6 +1519,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_TEX_Casimir_Welch_for_pau"
 		texturefile = "gfx/interface/ministers/TEX/TEX_Casimir_Welch.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TEX_Paul_Foster_Case_for_sco"
+		texturefile = "gfx/interface/ministers/TEX/TEX_Paul_Foster_Case.png"
 	}
 
 	# Economy Minister
@@ -1618,6 +1626,10 @@ spriteTypes = {
 		name = "GFX_idea_TEX_Henry_McElroy_eco_pau"
 		texturefile = "gfx/interface/ministers/TEX/TEX_Henry_McElroy.png"
 	}
+	spriteType = {
+		name = "GFX_idea_TEX_Harvey_Spencer_Lewis_eco_ade"
+		texturefile = "gfx/interface/ministers/TEX/TEX_Harvey_Spencer_Lewis.png"
+	}
 
 	# Security Minister
 	spriteType = {
@@ -1720,6 +1732,10 @@ spriteTypes = {
 		name = "GFX_idea_TEX_John_Lazia_sec_pau"
 		texturefile = "gfx/interface/ministers/TEX/TEX_John_Lazia.png"
 	}
+	spriteType = {
+		name = "GFX_idea_TEX_Wilbur_Glenn_Voliva_sec_pau"
+		texturefile = "gfx/interface/ministers/TEX/TEX_Wilbur_Glenn_Voliva.png"
+	}
 
 	### Chief of Staff
 	spriteType = {
@@ -1815,6 +1831,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/CAL/CAL_Glen_H_Taylor.png"
 	}
 	spriteType = {
+		name = "GFX_idea_CAL_Helen_Gahagan_Douglas_hog_sde"
+		texturefile = "gfx/interface/ministers/CAL/CAL_Helen_Gahagan_Douglas.png"
+	}
+	spriteType = {
 		name = "GFX_idea_CAL_Henry_Wallace_hog_sde"
 		texturefile = "gfx/interface/ministers/CAL/CAL_Henry_Wallace.png"
 	}
@@ -1857,6 +1877,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_CAL_Clarence_D_Martin_hog_sli"
 		texturefile = "gfx/interface/ministers/CAL/CAL_Clarence_D_Martin.png"
+	}
+	spriteType = {
+		name = "GFX_idea_CAL_Warren_Magnuson_hog_sli"
+		texturefile = "gfx/interface/ministers/CAL/CAL_Warren_Magnuson.png"
 	}
 	spriteType = {
 		name = "GFX_idea_CAL_Clyde_Tingley_hog_sli"
@@ -2474,6 +2498,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/NEE/NEE_Herbert_H_Lehman.png"
 	}
 	spriteType = {
+		name = "GFX_idea_NEE_Charles_F_Hurley_hog_sli"
+		texturefile = "gfx/interface/ministers/NEE/NEE_Charles_F_Hurley.png"
+	}
+	spriteType = {
 		name = "GFX_idea_NEE_John_Gilbert_Winant_hog_sli"
 		texturefile = "gfx/interface/ministers/NEE/NEE_John_Gilbert_Winant.png"
 	}
@@ -2484,6 +2512,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_NEE_Paul_A_Dever_hog_sli"
 		texturefile = "gfx/interface/ministers/NEE/NEE_Paul_A_Dever.png"
+	}
+	spriteType = {
+		name = "GFX_idea_NEE_Chester_B_Bowles_hog_sli"
+		texturefile = "gfx/interface/ministers/NEE/NEE_Chester_B_Bowles.png"
 	}
 	spriteType = {
 		name = "GFX_idea_NEE_Peter_G_Gerry_hog_sli"
@@ -2526,6 +2558,14 @@ spriteTypes = {
 		name = "GFX_idea_NEE_Prescott_Bush_hog_mli"
 		texturefile = "gfx/interface/ministers/NEE/NEE_Prescott_Bush.png"
 	}
+	spriteType = {
+		name = "GFX_idea_NEE_Hiram_Bingham_III_hog_mli"
+		texturefile = "gfx/interface/ministers/NEE/NEE_Hiram_Bingham_III.png"
+	}
+	spriteType = {
+		name = "GFX_idea_NEE_Lewis_O_Barrows_hog_mli"
+		texturefile = "gfx/interface/ministers/NEE/NEE_Lewis_O_Barrows.png"
+	}
 
 	spriteType = {
 		name = "GFX_idea_NEE_Fred_Trump_hog_mli"
@@ -2535,6 +2575,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_NEE_John_Coolidge_hog_mli"
 		texturefile = "gfx/interface/ministers/NEE/NEE_John_Coolidge.png"
+	}
+	spriteType = {
+		name = "GFX_idea_NEE_Raymond_Baldwin_hog_mli"
+		texturefile = "gfx/interface/ministers/NEE/NEE_Raymond_Baldwin.png"
 	}
 	spriteType = {
 		name = "GFX_idea_NEE_Christian_Herter_hog_mli"
@@ -2903,6 +2947,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/USA/USA_James_Francis_Byrnes.png"
 	}
 	spriteType = {
+		name = "GFX_idea_COR_Walker_Percy_hog_mli"
+		texturefile = "gfx/interface/ministers/COR/COR_Walker_Percy.png"
+	}
+	spriteType = {
 		name = "GFX_idea_COR_Rush_Limbaugh_Sr_hog_sde"
 		texturefile = "gfx/interface/ministers/TEX/TEX_Rush_Limbaugh_sr.png"
 	}
@@ -2978,6 +3026,30 @@ spriteTypes = {
 		name = "GFX_idea_COR_James_Francis_Byrnes_hog_sco"
 		texturefile = "gfx/interface/ministers/COR/COR_James_Francis_Byrnes.png"
 	}
+	spriteType = {
+		name = "GFX_idea_COR_Harry_F_Byrd_hog_sco"
+		texturefile = "gfx/interface/ministers/COR/COR_Harry_F_Byrd.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_Strom_Thurmond_hog_mli"
+		texturefile = "gfx/interface/ministers/COR/COR_Strom_Thurmond.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_Joseph_McCarthy_hog_sli"
+		texturefile = "gfx/interface/ministers/COR/COR_Joseph_McCarthy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_James_Francis_Byrnes_hog_sde"
+		texturefile = "gfx/interface/ministers/COR/COR_James_Francis_Byrnes.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_George_Wallace_hog_sde"
+		texturefile = "gfx/interface/ministers/COR/COR_George_Wallace.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_Lurleen_Wallace_hog_sde"
+		texturefile = "gfx/interface/ministers/COR/COR_Lurleen_Wallace.png"
+	}
 	### Foreign Minister
 	spriteType = {
 		name = "GFX_idea_COR_James_Francis_Byrnes_for_sco"
@@ -2986,6 +3058,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_COR_Herbert_Bigelow_for_sde"
 		texturefile = "gfx/interface/ministers/COR/COR_Herbert_Bigelow.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_William_Faulkner_for_mli"
+		texturefile = "gfx/interface/ministers/COR/COR_William_Faulkner.png"
 	}
 	spriteType = {
 		name = "GFX_idea_COR_Gordon_Weaver_Browning_for_ade"
@@ -3026,6 +3102,18 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_COR_Douglas_Chandler_for_npo"
 		texturefile = "gfx/interface/ministers/COR/COR_Douglas_Chandler.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_Harry_F_Byrd_Jr_for_sco"
+		texturefile = "gfx/interface/ministers/COR/COR_Harry_F_Byrd_Jr.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_John_C_Stennis_for_mli"
+		texturefile = "gfx/interface/ministers/COR/COR_John_C_Stennis.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_Lurleen_Wallace_for_sde"
+		texturefile = "gfx/interface/ministers/COR/COR_Lurleen_Wallace.png"
 	}
 	### Economy Minister
 	spriteType = {
@@ -3077,10 +3165,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/COR/COR_Arthur_Kent_White.png"
 	}
 	spriteType = {
-		name = "GFX_idea_COR_George_W_Christians_eco_npo"
-		texturefile = "gfx/interface/ministers/COR/COR_George_W_Christians.png"
-	}
-	spriteType = {
 		name = "GFX_idea_COR_Gerald_Burton_Winrod_eco_npo"
 		texturefile = "gfx/interface/ministers/COR/COR_Gerald_Burton_Winrod.png"
 	}
@@ -3109,8 +3193,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/COR/COR_Frederic_Howe.png"
 	}
 	spriteType = {
-		name = "GFX_idea_COR_George_Lincoln_Rockwell_sec_sli"
-		texturefile = "gfx/interface/ministers/COR/COR_George_Lincoln_Rockwell.png"
+		name = "GFX_idea_COR_Thomas_B_Stanley_eco_sco"
+		texturefile = "gfx/interface/ministers/COR/COR_Thomas_B_Stanley.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_William_E_Jenner_eco_sli"
+		texturefile = "gfx/interface/ministers/COR/COR_William_E_Jenner.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_Burnet_R_Maybank_eco_sde"
+		texturefile = "gfx/interface/ministers/COR/COR_Burnet_R_Maybank.png"
 	}
 	### Security Minister
 	spriteType = {
@@ -3124,6 +3216,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_COR_Clare_Eugene_Hoffman_sec_pau"
 		texturefile = "gfx/interface/ministers/COR/COR_Clare_Eugene_Hoffman.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_Lawrence_Dennis_sec_pau"
+		texturefile = "gfx/interface/ministers/CSA/CSA_Lawrence_Dennis.png"
 	}
 	spriteType = {
 		name = "GFX_idea_COR_D_W_Griffith_sec_pau"
@@ -3200,6 +3296,22 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_COR_J_B_Stoner_sec_npo"
 		texturefile = "gfx/interface/ministers/COR/COR_J_B_Stoner.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_George_Lincoln_Rockwell_sec_sli"
+		texturefile = "gfx/interface/ministers/COR/COR_George_Lincoln_Rockwell.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_Robert_Young_Button_sec_sco"
+		texturefile = "gfx/interface/ministers/COR/COR_Robert_Young_Button.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_James_Eastland_sec_mli"
+		texturefile = "gfx/interface/ministers/COR/COR_James_Eastland.png"
+	}
+	spriteType = {
+		name = "GFX_idea_COR_George_Wallace_sec_sde"
+		texturefile = "gfx/interface/ministers/COR/COR_George_Wallace.png"
 	}
 	
 	### Intel Minister
@@ -3279,8 +3391,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/BBR/BBR_Dusé_Mohamed_Ali.png"
 	}
 	spriteType = {
+		name = "GFX_idea_BBR_George_Parker_hog_tot"
+		texturefile = "gfx/interface/ministers/BBR/BBR_George_Parker.png"
+	}
+	spriteType = {
 		name = "GFX_idea_BBR_Harry_Haywood_hog_tot"
 		texturefile = "gfx/interface/ministers/BBR/BBR_Harry_Haywood.png"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_James_Langston_Hughes_hog_tot"
+		texturefile = "gfx/interface/ministers/BBR/BBR_James_Langston_Hughes.png"
 	}
 	spriteType = {
 		name = "GFX_idea_BBR_James_W_Ford_hog_tot"
@@ -3333,6 +3453,30 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_BBR_Elijah_Muhammad_hog_npo"
 		texturefile = "gfx/interface/ministers/BBR/BBR_Elijah_Muhammad.png"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Clara_Muhammad_hog_npo"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Clara_Muhammad.png"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Malcolm_X_hog_npo"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Malcolm_X.png"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Clarence_13_X_hog_npo"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Clarence_13_X.png"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Charles_Kirkman_hog_npo"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Charles_Kirkman.png"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Wallace_Fard_Muhammad_hog_npo"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Wallace_Fard_Muhammad.png"
+	}
+	spriteType = {
+		name = "GFX_idea_BBR_Mittie_Gordon_hog_npo"
+		texturefile = "gfx/interface/ministers/BBR/BBR_Mittie_Gordon.png"
 	}
 	
   ### Foreign Minister

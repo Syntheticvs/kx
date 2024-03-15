@@ -4,8 +4,8 @@ LPD = {
   color_ui = rgb { 255 255 155}
 }
 KIK = {
-	color = rgb { 15 0 15 }
-	color_ui = rgb { 15 0 15 }
+	color = rgb { 71 0 0 }
+	color_ui = rgb { 71 0 0 }
 }
 MSF = {
 	color = rgb { 3 115 252 }
@@ -15,17 +15,14 @@ UMN = {
 	color = rgb { 255 108 0 }
 	color_ui = rgb { 218 92 0 }
 }
-KIK = {
-	color = rgb { 15 0 15 }
-	color_ui = rgb { 15 0 15 }
-}
+
 CHR = {
 	color = rgb { 51 181 68 }
 	color_ui = rgb { 51 181 68 }
 }
 KUB = {
-	color = rgb { 221 19 123 }
-	color_ui = rgb { 221 19 123 }
+	color = rgb { 220 20 90 }
+	color_ui = rgb { 220 20 90 }
 }
 BKN = {
 	color = rgb { 150 215 211 }
@@ -367,6 +364,10 @@ ERI = {
 	color = rgb { 146 213 90 }
 	color_ui = rgb { 146 213 90 }
 }
+EPR = {
+	color = rgb { 31 102 132 }
+	color_ui = rgb { 31 102 132 }
+}
 EST = {
 	color = rgb { 50 135 175 }
 	color_ui = rgb { 99 204 254 }
@@ -551,10 +552,6 @@ HEJ = {
 	color = rgb { 212 188 155 }
 	color_ui = rgb { 212 188 155 }
 }
-JOR = {
-	color = rgb { 105 32 128 }
-	color_ui = rgb { 105 32 128 }
-}
 KAC = {
 	color = rgb { 153 0 153 }
 	color_ui = rgb { 153 0 153 }
@@ -674,6 +671,10 @@ MNT = {
 MON = {
 	color = rgb { 92 92 92 }
 	color_ui = rgb { 92 92 92 }
+}
+MOL = {
+	color = rgb { 255 153 153 }
+	color_ui = rgb { 255 153 153 }
 }
 MOR = {
 	color = rgb { 191 110 62 }
@@ -1081,8 +1082,8 @@ UGA = {
 	color_ui = rgb { 21 21 227 }
 }
 UKR = {
-	color = rgb { 153 61 0 }
-	color_ui = rgb { 153 61 0 }
+	color = rgb { 60 116 178 }
+	color_ui = rgb { 60 116 178 }
 }
 CRM = {
 	color = rgb { 65 105 225 }
@@ -1200,8 +1201,8 @@ BAN = {
 }
 
 PGI = {
-	color = rgb { 252 82 3 }
-	color_ui = rgb { 252 82 3 }
+	color = rgb { 48 127 105 }
+	color_ui = rgb { 48 127 105 }
 }
 
 WSU = {
@@ -1243,10 +1244,6 @@ LPD = {
   color = rgb { 2  10  222 }
   color_ui = rgb { 255 255 155}
 }
-KIK = {
-	color = rgb { 15 0 15 }
-	color_ui = rgb { 15 0 15 }
-}
 MSF = {
 	color = rgb { 3 115 252 }
 	color_ui = rgb { 3 115 252 }
@@ -1254,10 +1251,6 @@ MSF = {
 UMN = {
 	color = rgb { 255 108 0 }
 	color_ui = rgb { 218 92 0 }
-}
-KIK = {
-	color = rgb { 15 0 15 }
-	color_ui = rgb { 15 0 15 }
 }
 WAB = {
 	color = rgb { 59 148 65 }
@@ -1290,4 +1283,12 @@ SZK = {
 BUK = {
 	color = rgb { 150 200 75 }
 	color_ui = rgb { 150 200 75 }
+}
+NFL = {
+	color = rgb { 200 16 46 }
+	color_ui = rgb { 200 16 46 }
+}
+TAI = {
+	color = rgb { 215 59 53 }
+	color_ui = rgb { 215 59 53 }
 }

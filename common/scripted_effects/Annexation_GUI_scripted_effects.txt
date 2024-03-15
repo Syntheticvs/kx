@@ -60,10 +60,6 @@ check_potential_annexations = {
 
 check_possible_annexations_europe = {
 	if = {
-		limit = { can_release_abkhazia = yes }
-		ROOT = { activate_mission = annexation_ABK_CONQ }
-	}
-	else_if = {
 		limit = { can_release_albania = yes }
 		ROOT = { activate_mission = annexation_ALB_CONQ }
 	}
@@ -90,10 +86,6 @@ check_possible_annexations_europe = {
 	else_if = {
 		limit = { can_release_basque_country = yes }
 		ROOT = { activate_mission = annexation_BAS_CONQ }
-	}
-	else_if = {
-		limit = { can_release_batumi = yes }
-		ROOT = { activate_mission = annexation_BATUMI_CONQ }
 	}
 	else_if = {
 		limit = { can_release_bavaria = yes }
@@ -227,14 +219,6 @@ check_possible_annexations_europe = {
 		limit = { can_release_urda = yes }
 		ROOT = { activate_mission = annexation_URDA_CONQ }
 	}
-	else_if = {
-		limit = { can_release_astrakhan = yes }
-		ROOT = { activate_mission = annexation_ASTRAKHAN_CONQ }
-	}
-	else_if = {
-		limit = { can_release_north_kazakhstan = yes }
-		ROOT = { activate_mission = annexation_NORTH_KAZAKHSTAN_CONQ }
-	}
 	
 	else_if = {
 		limit = { can_release_don = yes }
@@ -243,6 +227,10 @@ check_possible_annexations_europe = {
 	else_if = {
 		limit = { can_release_kuban = yes }
 		ROOT = { activate_mission = annexation_KUB_CONQ }
+	}
+	else_if = {
+		limit = { can_release_stavropol = yes }
+		ROOT = { activate_mission = annexation_STAVROPOL_CONQ }
 	}
 	else_if = {
 		limit = { can_release_kalmykia = yes }
@@ -325,6 +313,10 @@ check_possible_annexations_europe = {
 		ROOT = { activate_mission = annexation_ITA_CONQ }
 	}
 	else_if = {
+		limit = { can_release_northern_italy = yes }
+		ROOT = { activate_mission = annexation_NORTHERN_ITALY_CONQ }
+	}
+	else_if = {
 		limit = { can_release_karelia = yes }
 		ROOT = { activate_mission = annexation_KARELIA_CONQ }
 	}
@@ -339,6 +331,10 @@ check_possible_annexations_europe = {
 	else_if = {
 		limit = { can_release_kosovo = yes }
 		ROOT = { activate_mission = annexation_SER_KOSOVO_CONQ }
+	}
+	else_if = {
+		limit = { can_release_krakow = yes }
+		ROOT = { activate_mission = annexation_KRAKOW_CONQ }
 	}
 	else_if = {
 		limit = { can_release_latvia = yes }
@@ -371,6 +367,10 @@ check_possible_annexations_europe = {
 	else_if = {
 		limit = { can_release_montenegro = yes }
 		ROOT = { activate_mission = annexation_MNT_CONQ }
+	}
+	else_if = {
+		limit = { can_release_moldavia = yes }
+		ROOT = { activate_mission = annexation_MOL_CONQ }
 	}
 	else_if = {
 		limit = { can_release_netherlands = yes }
@@ -596,6 +596,10 @@ check_possible_annexations_north_america = {
 		ROOT = { activate_mission = annexation_CAN_CONQ }
 	}
 	else_if = {
+		limit = { can_release_newfoundland = yes }
+		ROOT = { activate_mission = annexation_NFL_CONQ }
+	}
+	else_if = {
 		limit = { can_release_hawaii = yes }
 		ROOT = { activate_mission = annexation_HAW_CONQ }
 	}
@@ -788,10 +792,6 @@ check_possible_annexations_asia = {
 		ROOT = { activate_mission = annexation_BRM_CONQ }
 	}
 	else_if = {
-		limit = { can_release_central_asia = yes }
-		ROOT = { activate_mission = annexation_CA_CONQ }
-	}
-	else_if = {
 		limit = { can_release_cambodia = yes }
 		ROOT = { activate_mission = annexation_CAM_CONQ }
 	}
@@ -818,6 +818,10 @@ check_possible_annexations_asia = {
 	else_if = {
 		limit = { can_release_kazakhstan = yes }
 		ROOT = { activate_mission = annexation_ALO_CONQ }
+	}	
+	else_if = {
+		limit = { can_release_north_kazakhstan = yes }
+		ROOT = { activate_mission = annexation_NORTH_KAZAKHSTAN_CONQ }
 	}
 	else_if = {
 		limit = { can_release_korea = yes }
@@ -846,10 +850,6 @@ check_possible_annexations_asia = {
 	else_if = {
 		limit = { can_release_manchuria = yes }
 		ROOT = { activate_mission = annexation_MAN_CONQ }
-	}
-	else_if = {
-		limit = { can_release_north_manchuria = yes }
-		ROOT = { activate_mission = annexation_NORTHERN_MANCHURIA_CONQ }
 	}
 	else_if = {
 		limit = { can_release_mongolia = yes }
@@ -900,10 +900,6 @@ check_possible_annexations_asia = {
 		ROOT = { activate_mission = annexation_TRM_CONQ }
 	}
 	else_if = {
-		limit = { can_release_turkestan = yes }
-		ROOT = { activate_mission = annexation_TURKESTAN_CONQ }
-	}
-	else_if = {
 		limit = { can_release_bukhara = yes }
 		ROOT = { activate_mission = annexation_TRK_CONQ }
 	}
@@ -946,10 +942,14 @@ check_possible_annexations_india = {
 
 check_possible_annexations_middle_east = {
 	if = {
+		limit = { can_release_abkhazia = yes }
+		ROOT = { activate_mission = annexation_ABK_CONQ }
+	}
+	else_if = {
 		limit = { can_release_aegean_coast = yes }
 		ROOT = { activate_mission = annexation_AEGEAN_CONQ }
 	}
-	if = {
+	else_if = {
 		limit = { can_release_arabia = yes }
 		ROOT = { activate_mission = annexation_ARA_CONQ }
 	}
@@ -964,6 +964,10 @@ check_possible_annexations_middle_east = {
 	else_if = {
 		limit = { can_release_azerbaijan = yes }
 		ROOT = { activate_mission = annexation_AZE_CONQ }
+	}
+	else_if = {
+		limit = { can_release_batumi = yes }
+		ROOT = { activate_mission = annexation_BATUMI_CONQ }
 	}
 	else_if = {
 		limit = { can_release_georgia = yes }
@@ -1070,7 +1074,7 @@ check_possible_annexations_africa = {
 	}
 	else_if = {
 		limit = { can_release_congo = yes }
-		ROOT = { activate_mission = annexation_KOG_CONQ }
+		ROOT = { activate_mission = annexation_CONGO_CONQ }
 	}
 	else_if = {
 		limit = { can_release_cyrenaica = yes }

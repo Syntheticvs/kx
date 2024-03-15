@@ -67,12 +67,13 @@ WHR_foreign_policy = {
 	WHR_reclaim_vilnya = {
 		icon = generic_nationalism
 
-		allowed = { tag = WHR }
+		allowed = { always = no }
 
 		visible = {
+			can_declare_war_on = FROM
 			OR = {
-				NOT = { is_in_faction_with = LIT }
-				NOT = { country_exists = LIT }
+				NOT = { is_in_faction_with = FROM }
+				NOT = { country_exists = FROM }
 			}
 		}
 		cost = 15
@@ -107,29 +108,61 @@ WHR_foreign_policy = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove WHR_reclaim_vilnya"
 			add_state_claim = 94 #Vawkavysk
 			add_state_claim = 96 #Vilnius
-			add_state_claim = 97 #Bialystok
+		}
+	}
+	WHR_reclaim_bialystok = {
+		icon = generic_nationalism
+
+		allowed = { always = no }
+
+		visible = {
+			OR = {
+				NOT = { is_in_faction_with = 1329.owner }
+				NOT = {
+					country_exists = POL
+					country_exists = LIT
+				}
+			}
+		}
+
+		cost = 15
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove WHR_reclaim_bialystok"
+			add_state_claim = 1329 #Bialystok
 		}
 	}
 	WHR_reclaim_homiel = {
 		icon = generic_nationalism
 
-		allowed = { tag = WHR }
+		allowed = { always = no }
 
-		visible = {
-			country_exists = UKR
-			can_declare_war_on = UKR
-			NOT = {
-				has_war_with = UKR
-				is_subject_of = UKR
-			}
-			UKR = {
+		available = {
+			FROM = {
 				NOT = {
 					is_in_faction_with = WHR
 					is_in_faction_with = GER
 					is_in_faction_with = RUS
 					is_in_faction_with = AUS
 					is_in_faction_with = FRA
+					has_non_aggression_pact_with = ROOT
+					has_guaranteed = ROOT
 				}
+			}		
+			NOT = { has_global_flag = UKR_WHR_treaty_flag }
+		}
+		
+		visible = {
+			country_exists = FROM
+			can_declare_war_on = FROM
+			NOT = {
+				has_war_with = FROM
+				is_subject_of = FROM
 			}
 		}
 		cost = 15
@@ -167,15 +200,30 @@ WHR_foreign_policy = {
 			add_state_claim = 997 #Polesia
 			if = {
 				limit = {
+					95 = { 
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				add_state_core = 95
+			}
+			if = {
+				limit = {
+					194 = { 
+						NOT = { is_core_of = ROOT }
+					}
+				}
+				add_state_core = 194
+			}
+			if = {
+				limit = {
 					is_in_faction_with = GER
-					UKR = {
+					FROM = {
 						NOT = {
 							is_in_faction_with = WHR
 							is_in_faction_with = GER
 							is_in_faction_with = RUS
 							is_in_faction_with = AUS
 							is_in_faction_with = FRA
-							is_in_faction_with = SOV
 						}
 					}
 					has_socialist_government = no					
@@ -190,19 +238,18 @@ WHR_foreign_policy = {
 			else_if = {
 				limit = {
 					is_in_faction_with = RUS
-					UKR = {
+					FROM = {
 						NOT = {
 							is_in_faction_with = WHR
 							is_in_faction_with = GER
 							is_in_faction_with = RUS
 							is_in_faction_with = AUS
 							is_in_faction_with = FRA
-							is_in_faction_with = SOV
 						}
 					}
 					RUS = {
 						NOT = { is_in_faction_with = GER }
-						NOT = { has_war_with = UKR }
+						NOT = { has_war_with = FROM }
 					}	
 				}
 				RUS = {
@@ -214,16 +261,18 @@ WHR_foreign_policy = {
 			}
 			else_if = {
 				limit = { 
-					country_exists = UKR 
-					UKR = {
+					country_exists = FROM 
+					FROM = {
 						OR = {
 							controls_state = 93
 							controls_state = 241
 							controls_state = 997
+							controls_state = 95
+							controls_state = 194
 						}
 					}
 				}
-				UKR = {
+				FROM = {
 					country_event = {
 						days = 2
 						id = whiteruthenia.68
@@ -235,24 +284,15 @@ WHR_foreign_policy = {
 	WHR_reclaim_smolensk = {
 		icon = generic_nationalism
 
-		allowed = { tag = WHR }
+		allowed = { always = no }
 
 		visible = {
-			NOT = {
-				is_ally_with = RUS
-			}
-			OR = {
-				has_completed_focus = WHR_Revive_BVZR
-				has_completed_focus = WHR_Create_BKA
-			}
-			can_declare_war_on = 219.owner
-			NOT = { is_ally_with = 219.owner }
-			219 = {
-				owner = {
-					OR = {
-						is_in_faction = no
-						is_faction_leader = yes
-					}
+			can_declare_war_on = FROM
+			NOT = { is_ally_with = FROM }
+			FROM = {
+				OR = {
+					is_in_faction = no
+					is_faction_leader = yes
 				}
 			}
 		}
@@ -267,7 +307,7 @@ WHR_foreign_policy = {
 		ai_will_do = {
 			factor = 50
 			modifier = {
-				add = 100
+				add = 1000
 				russian_civil_war = yes
 			}
 			modifier = {
@@ -295,23 +335,18 @@ WHR_foreign_policy = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove WHR_reclaim_homiel"
-			1287 = {
-				add_claim_by = WHR
-			}
-			1292 = {
-				add_claim_by = WHR
-			}
-			243 = {
-				add_claim_by = WHR
-			}
-			755 = {
-				add_claim_by = WHR
-			}
-			242 = { #Kaluga
-				add_claim_by = WHR
-			}
-			1293 = { #Kaluga
-				add_claim_by = WHR
+			every_state = {
+				limit = {
+					NOT = { is_owned_by = ROOT }
+					is_claim_or_core_of_ROOT = no
+					OR = {
+						state = 1287
+						state = 243
+						state = 755
+						state = 242
+					}
+				}
+				add_claim_by = ROOT
 			}
 			if = {
 				limit = {
@@ -320,37 +355,14 @@ WHR_foreign_policy = {
 				205 = { #Kaluga
 					add_claim_by = WHR
 				}
-			}
-			if = {
-				limit = {
-					NOT = { has_country_flag = WHR_anarchists }
-					OR = {
-						has_socialist_government = yes
-						has_government = social_democrat
-						has_country_leader = {
-							name = "Stanisłaŭ Bułak-Bałachowič"
-							ruling_only = yes
-						}
-						has_government = national_populist
-					}
-					russian_civil_war = yes
+				1230 = { #Kaluga
+					add_claim_by = WHR
 				}
-				country_event = rcw.27
 			}
-			else_if = {
-				limit = {
-					russian_civil_war = yes
-				}
-				country_event = whiteruthenia.63
-			}
-			else = {
-				219 = {
-					owner = {
-						country_event = {
-							days = 2
-							id = whiteruthenia.57
-						}
-					}
+			FROM = {
+				country_event = {
+					days = 2
+					id = whiteruthenia.57
 				}
 			}
 		}
@@ -383,7 +395,7 @@ WHR_foreign_policy = {
 		cancel_if_not_visible = yes
 
 		state_target = yes
-		targets = { 94 241 755 1292 }
+		targets = { 94 241 755 }
 		target_trigger = {
 			FROM = {
 				is_controlled_by = ROOT
@@ -434,7 +446,7 @@ WHR_foreign_policy = {
 		cancel_if_not_visible = yes
 
 		state_target = yes
-		targets = { 96 97 997 1287 243 }
+		targets = { 96 1329 997 1287 243 }
 		target_trigger = {
 			FROM = {
 				is_controlled_by = ROOT
@@ -485,7 +497,7 @@ WHR_foreign_policy = {
 		cancel_if_not_visible = yes
 
 		state_target = yes
-		targets = { 93 242 1293 205 880 210 }
+		targets = { 93 242 205 880 210 }
 		target_trigger = {
 			FROM = {
 				is_controlled_by = ROOT
@@ -540,7 +552,7 @@ WHR_foreign_policy = {
 		}
 
 		state_target = yes
-		targets = { 93 96 97 241 242 1287 1292 1293 243 755 997 }
+		targets = { 93 96 1329 241 242 1287 243 755 997 }
 		target_root_trigger = {
 			OR = {
 				has_completed_focus = WHR_National_Awakening
@@ -623,7 +635,7 @@ WHR_foreign_policy = {
 		cancel_if_not_visible = yes
 
 		state_target = yes
-		targets = { 93 96 97 241 242 243 1287 1292 1293 755 997 }
+		targets = { 93 96 1329 241 242 243 1287 755 997 }
 		target_trigger = {
 			FROM = {
 				is_controlled_by = ROOT
@@ -678,6 +690,7 @@ WHR_foreign_policy = {
 			owns_state = 11 #Kaunas
 			owns_state = 189 #Samogitia
 			owns_state = 655 #Sudovia
+			NOT = { has_country_flag = WHR_anarchists }
 		}
 
 		cost = 100
@@ -720,17 +733,17 @@ WHR_foreign_policy = {
 					set_compliance = 40
 				}
 			}
-			#655 = { #Sudovia
-			#	hidden_effect = {
-			#		add_dynamic_modifier = { modifier = WHR_lithuanian_autonomy }
-			#	}
-			#	if = {
-			#		limit = {
-			#			compliance < 40
-			#		}
-			#		set_compliance = 40
-			#	}
-			#}
+			655 = { #Sudovia
+				hidden_effect = {
+					add_dynamic_modifier = { modifier = WHR_lithuanian_autonomy }
+				}
+				if = {
+					limit = {
+						compliance < 40
+					}
+					set_compliance = 40
+				}
+			}
 		}
 	}
 	WHR_form_litbel = {
@@ -746,6 +759,7 @@ WHR_foreign_policy = {
 		visible = {
 			owns_state = 11 #Kaunas
 			owns_state = 189 #Samogitia
+			owns_state = 655 #Sudovia
 		}
 
 		cost = 50
@@ -761,67 +775,19 @@ WHR_foreign_policy = {
 			hidden_effect = { news_event = worldnews.463 }
 		}
 	}
-	WHR_limit_exports = {
+	WHR_equal_RP_membership = {
 		icon = eng_trade_unions_support
 
 		allowed = { always = no }
 
 		visible = {
-			is_subject_of = GER
-		}
-		available = {
-			is_subject_of = GER
-			NOT = { has_autonomy_state = kr_autonomous_puppet }
-			custom_trigger_tooltip = {
-				tooltip = "Political Situation is stable"
-				OR = {
-					WHR_bkhd_in_power = yes
-					WHR_bnp_in_power = yes
-					WHR_bcr_in_power = yes
-					has_government = national_populist
-					WHR_bsdp_in_power = yes 
-				}
-			}
-		}
-		
-		cost = 15
-		fire_only_once = yes
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove WHR_limit_exports"
-			FROM = { country_event = whiteruthenia.100 }
-			set_country_flag = can_access_foreign_policy
-		}
-	}
-	WHR_equal_RP_membership = {
-		icon = eng_trade_unions_support
-
-		allowed = { tag = WHR }
-
-		visible = {
-			is_subject_of = GER
-		}
-		available = {
-			has_war = no
-			OR = {
-				has_completed_focus = WHR_Belarus_Proud_and_Free
-				has_completed_focus = WHR_White_Ruthenia_New_Loyal
-				has_completed_focus = WHR_Belarus_Moral_Fair
-				has_completed_focus = WHR_Belarus_Pure_And_True
-			}
-		}
-		targets = { GER }
-		target_root_trigger = {
-			has_country_flag = can_access_foreign_policy
-		}
-		target_trigger = {
+			is_subject_of = FROM
 			FROM = { is_faction_leader = yes }
 		}
-
+		available = {
+			has_war = no			
+		}
+		
 		cost = 15
 		fire_only_once = yes
 
@@ -843,6 +809,9 @@ WHR_foreign_policy = {
 		available = {
 			at_peace_or_same_enemies_as_FROM = yes
 			NOT = { has_country_flag = WHR_allies }
+			NOT = { has_global_flag = UKR_WHR_TREATY_NEUTRALITY }
+			RUS = { is_faction_leader = yes }
+			WHR = { has_socialist_government = yes }
 		}
 
 		targets = { INT }
@@ -868,12 +837,36 @@ WHR_foreign_policy = {
 					NOT = { is_in_faction_with = INT }
 				}
 			}
+			modifier = {
+				add = 100
+				has_game_rule = {
+					rule = WHR_foreign_policy
+					option = WHR_FOREIGN_POLICY_INTERNATIONALE
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = WHR_foreign_policy
+						option = WHR_FOREIGN_POLICY_UKRAINE
+					}
+					has_game_rule = {
+						rule = WHR_foreign_policy
+						option = WHR_FOREIGN_POLICY_RUSSIA
+					}
+					has_game_rule = {
+						rule = WHR_foreign_policy
+						option = WHR_FOREIGN_POLICY_NEUTRALITY
+					}
+				}
+			}
 		}
 		
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove WHR_internationale"
 			set_country_flag = { flag = WHR_allies days = 10 value = 1 }
-			FROM = { country_event = whiteruthenia.48 }
+			FROM = { country_event = whrpol.41 }
 		}
 	}
 	WHR_intermarium = {
@@ -886,7 +879,10 @@ WHR_foreign_policy = {
 			at_peace_or_same_enemies_as_FROM = yes
 			NOT = { has_country_flag = WHR_allies }
 			POL = { has_socialist_government = yes }
-			UKR = { has_socialist_government = yes }
+			var:202.owner = { 
+				is_ukrainian_tag = yes
+				has_socialist_government = yes 
+			}
 		}
 		targets = { POL }
 		target_root_trigger = {
@@ -907,6 +903,27 @@ WHR_foreign_policy = {
 
 		ai_will_do = {
 			factor = 100
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = WHR_foreign_policy
+						option = WHR_FOREIGN_POLICY_INTERNATIONALE
+					}
+					has_game_rule = {
+						rule = WHR_foreign_policy
+						option = WHR_FOREIGN_POLICY_UKRAINE
+					}
+					has_game_rule = {
+						rule = WHR_foreign_policy
+						option = WHR_FOREIGN_POLICY_RUSSIA
+					}
+					has_game_rule = {
+						rule = WHR_foreign_policy
+						option = WHR_FOREIGN_POLICY_NEUTRALITY
+					}
+				}
+			}
 		}
 
 		remove_effect = {
@@ -922,15 +939,24 @@ WHR_foreign_policy = {
 		visible = { is_subject = no }
 
 		available = {
-			soviets_exist = yes
-			russian_civil_war = no
+			if = {
+				limit = { FROM = { has_country_flag = soviet_russia_restored } }
+				russian_civil_war = no
+			}
 			at_peace_or_same_enemies_as_FROM = yes
-			NOT = { has_country_flag = WHR_allies }
+			NOT = { 
+				has_country_flag = WHR_allies
+				has_global_flag = UKR_WHR_TREATY_NEUTRALITY 
+			}
+			FROM = { both_socialist_or_both_not_socialist = yes }
 		}
 
 		targets = { RUS }
 		target_root_trigger = {
-			has_socialist_government = yes
+			OR = {
+				has_socialist_government = yes
+				has_completed_focus = WHR_secede_from_RP
+			}
 			is_in_faction = no
 			is_subject = no
 		}
@@ -944,12 +970,38 @@ WHR_foreign_policy = {
 
 		ai_will_do = {
 			factor = 100
+			modifier = {
+				factor = 0
+				has_government = social_liberal
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = WHR_foreign_policy
+						option = WHR_FOREIGN_POLICY_INTERNATIONALE
+					}
+					has_game_rule = {
+						rule = WHR_foreign_policy
+						option = WHR_FOREIGN_POLICY_UKRAINE
+					}
+					has_game_rule = {
+						rule = WHR_foreign_policy
+						option = WHR_FOREIGN_POLICY_NEUTRALITY
+					}
+				}
+			}
 		}
 		
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove WHR_russian_alliance"
-			set_country_flag = { flag = WHR_allies days = 10 value = 1 }
+			set_country_flag = { flag = WHR_allies days = 20 value = 1 }
 			FROM = { country_event = whiteruthenia.48 }
+			if = {
+				limit = { FROM = { has_country_flag = soviet_russia_restored } }
+				custom_effect_tooltip = if_FROM_agrees
+				effect_tooltip = { FROM = { SOV_puppet_ROOT_effect = yes } }
+			}
 		}
 	}
 	WHR_fate_of_conquered_lands = {

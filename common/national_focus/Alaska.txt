@@ -109,7 +109,6 @@ focus_tree = {
 		icon = GFX_ALA_internal_elections
 		cost = 5.00
 		available = {
-			date > 1937.8.05
 			is_subject = no
 		}
 		relative_position_id = ALA_first_trial
@@ -132,7 +131,7 @@ focus_tree = {
 	
 	focus = {
 		id = ALA_democrat_victory
-		icon = GFX_goal_goal_ALA_democrat
+		icon = GFX_goal_ALA_democrat
 		cost = 5.00
 		available = {
 			has_government = social_democrat
@@ -361,7 +360,7 @@ focus_tree = {
 	
 	focus = {
 		id = ALA_liberal_victory
-		icon = GFX_goal_goal_ALA_AKIP
+		icon = GFX_goal_ALA_AKIP
 		cost = 5.00
 		available = {
 			has_government = market_liberal
@@ -575,6 +574,14 @@ focus_tree = {
 		available = {
 			has_government = market_liberal
 		}
+		allow_branch = {
+			NOT = {
+				has_country_leader = {
+					name = "Alisa Rosenbaum"
+					ruling_only = yes
+				}
+			}
+		}
 		relative_position_id = ALA_internal_elections
 		x = 4
 		y = 6
@@ -599,6 +606,42 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = ALA_objectivist_alaska
+		icon = GFX_goal_ALA_objectivist_alaska
+		cost = 5.00
+		available = {
+			has_government = market_liberal
+		}
+		allow_branch = {
+			has_country_leader = {
+				name = "Alisa Rosenbaum"
+				ruling_only = yes
+			}
+		}
+		relative_position_id = ALA_internal_elections
+		x = 4
+		y = 6
+		prerequisite = { focus = ALA_no_minimum_wage }
+		prerequisite = { focus = ALA_private_healthcare }
+		ai_will_do = {
+			factor = 5
+		}
+
+		available_if_capitulated = yes
+		cancel_if_invalid = yes
+
+		completion_reward = {
+			463 = { add_extra_state_shared_building_slots = 2 }
+			463 = { add_building_construction = { type = industrial_complex level = 2 instant_build = yes } }
+			remove_ideas = ALA_baron_consession
+			remove_ideas = ALA_deregulation_idea
+			remove_ideas = ALA_free_market_idea
+			remove_ideas = ALA_private_healthcare
+			add_ideas = ALA_objectivist_alaska
+		}
+	}
+	
+	focus = {
 		id = ALA_join_entente
 		icon = GFX_goal_USA_reconcile_canada
 		cost = 5.00
@@ -608,6 +651,7 @@ focus_tree = {
 			}
 			has_war = no
 			has_democratic_government = yes
+			is_subject = no
 		}
 		relative_position_id = ALA_internal_elections
 		x = 2
@@ -617,6 +661,7 @@ focus_tree = {
 		}
 		prerequisite = { 
 			focus = ALA_private_alaska 
+			focus = ALA_objectivist_alaska 
 			focus = ALA_free_alaska 
 		}
 		ai_will_do = {
@@ -628,7 +673,10 @@ focus_tree = {
 
 		completion_reward = {
 			CAN = {
-				add_to_faction = ALA
+				country_event = {
+					id = Alaska.138
+					days = 1
+				}
 			}
 		}
 	}
@@ -648,7 +696,9 @@ focus_tree = {
 					has_war_with = COR
 				}
 			}
+			has_war = no
 			has_democratic_government = yes
+			is_subject = no
 		}
 		relative_position_id = ALA_internal_elections
 		x = -2
@@ -687,7 +737,7 @@ focus_tree = {
 	
 	focus = {
 		id = ALA_conservative_victory
-		icon = GFX_goal_goal_ALA_republicans
+		icon = GFX_goal_ALA_republicans
 		cost = 5.00
 		available = {
 			has_government = social_conservative
@@ -1012,7 +1062,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ALA_seek_assistance
-		icon = GFX_goals_Bolshevik_boys
+		icon = GFX_goal_SKM_Links_Our_Bolshevik_Allies
 		cost = 5.00
 		available = {
 			has_socialist_government = yes
@@ -1041,7 +1091,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = ALA_increase_establishment_1
 			if = {
-				limit = { NOT = { soviets_exist = yes } }
+				limit = { NOT = { has_country_flag = soviet_russia_restored } }
 				create_field_marshal = {
 					name = "Dmitry Karbyshev"
 					portrait_path = "gfx/leaders/SOV/Portrait_SOV_Dimitry_Karbaskyev.png"
@@ -1053,7 +1103,7 @@ focus_tree = {
 					logistics_skill = 2
 				}
 				create_corps_commander = {
-					name = "Lev Sedov"
+					name = "Lev Sedov "
 					portrait_path = "gfx/leaders/SOV/Portrait_SOV_Lev_Sedov.png"
 					traits = { politically_connected }
 					skill = 1
@@ -1061,6 +1111,7 @@ focus_tree = {
 					defense_skill = 1
 					planning_skill = 1
 					logistics_skill = 1
+					id = 15153
 				}
 				
 			}
@@ -1121,7 +1172,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			remove_ideas = ALA_syndicate_resistance
+			remove_ideas = ALA_syndicate_resistance2
 			custom_effect_tooltip = ALA_barons_gone
 		}
 	}
@@ -1251,12 +1302,9 @@ focus_tree = {
 	
 	focus = {
 		id = ALA_americanist_victory
-		icon = GFX_goal_goal_ALA_americanists
+		icon = GFX_goal_ALA_americanists
 		cost = 5.00
 		available = {
-			has_government = totalist
-		}
-		bypass = {
 			has_government = totalist
 		}
 		mutually_exclusive = { 
@@ -1313,13 +1361,10 @@ focus_tree = {
 	
 	focus = {
 		id = ALA_syndicalist_victory
-		icon = GFX_goal_goal_ALA_syndicalism
+		icon = GFX_goal_ALA_syndicalism
 		cost = 5.00
 		relative_position_id = ALA_red_congress
 		available = {
-		has_government = syndicalist
-		}
-		bypass = {
 		has_government = syndicalist
 		}
 		mutually_exclusive = { 
@@ -1374,13 +1419,10 @@ focus_tree = {
 	
 	focus = {
 		id = ALA_radsoc
-		icon = GFX_goal_goal_ALA_beach
+		icon = GFX_goal_ALA_beach
 		cost = 5.00
 		relative_position_id = ALA_red_congress
 		available = {
-		has_government = radical_socialist
-		}
-		bypass = {
 		has_government = radical_socialist
 		}
 		mutually_exclusive = { 
@@ -1510,6 +1552,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 		}
+		available = {
+			has_war = no
+		}
 
 		available_if_capitulated = yes
 		cancel_if_invalid = yes
@@ -1579,7 +1624,7 @@ focus_tree = {
 		bypass = {
 			hidden_trigger = {
 				AND = {
-					has_cosmetic_tag = ALA_JEW
+					has_cosmetic_tag = ALA_ZION
 					NOT = {
 						has_government = paternal_autocrat
 					}
@@ -1617,7 +1662,7 @@ focus_tree = {
 		bypass = {
 			hidden_trigger = {
 				AND = {
-					has_cosmetic_tag = ALA_JEW
+					has_cosmetic_tag = ALA_ZION
 					NOT = {
 						has_government = paternal_autocrat
 					}
@@ -1657,7 +1702,7 @@ focus_tree = {
 		bypass = {
 			hidden_trigger = {
 				AND = {
-					has_cosmetic_tag = ALA_JEW
+					has_cosmetic_tag = ALA_ZION
 					NOT = {
 						has_government = paternal_autocrat
 					}
@@ -1701,7 +1746,7 @@ focus_tree = {
 		bypass = {
 			hidden_trigger = {
 				AND = {
-					has_cosmetic_tag = ALA_JEW
+					has_cosmetic_tag = ALA_ZION
 					NOT = {
 						has_government = paternal_autocrat
 					}
@@ -1742,7 +1787,7 @@ focus_tree = {
 		bypass = {
 			hidden_trigger = {
 				AND = {
-					has_cosmetic_tag = ALA_JEW
+					has_cosmetic_tag = ALA_ZION
 					NOT = {
 						has_government = paternal_autocrat
 					}
@@ -1778,7 +1823,7 @@ focus_tree = {
 		bypass = {
 			hidden_trigger = {
 				AND = {
-					has_cosmetic_tag = ALA_JEW
+					has_cosmetic_tag = ALA_ZION
 					NOT = {
 						has_government = paternal_autocrat
 					}
@@ -1817,7 +1862,7 @@ focus_tree = {
 		bypass = {
 			hidden_trigger = {
 				AND = {
-					has_cosmetic_tag = ALA_JEW
+					has_cosmetic_tag = ALA_ZION
 					NOT = {
 						has_government = paternal_autocrat
 					}
@@ -1844,7 +1889,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 
 		completion_reward = {
-			
+			add_research_slot = 1
 			add_ideas = ALA_buisness_hub
 		}
 	}
@@ -1854,11 +1899,15 @@ focus_tree = {
 		cost = 5.00
 		available = {
 			has_government = paternal_autocrat
+			hidden_trigger = {
+			is_subject = no
+			NOT = { has_country_flag = ALA_purchase_liechtenstein }
+			}
 		}
 		bypass = {
 			hidden_trigger = {
 				AND = {
-					has_cosmetic_tag = ALA_JEW
+					has_cosmetic_tag = ALA_ZION
 					NOT = {
 						has_government = paternal_autocrat
 					}
@@ -1899,11 +1948,15 @@ focus_tree = {
 		cost = 5.00
 		available = {
 			has_government = paternal_autocrat
+			hidden_trigger = {
+			is_subject = no
+			NOT = { has_country_flag = ALA_purchase_liechtenstein }
+			}
 		}
 		bypass = {
 			hidden_trigger = {
 				AND = {
-					has_cosmetic_tag = ALA_JEW
+					has_cosmetic_tag = ALA_ZION
 					NOT = {
 						has_government = paternal_autocrat
 					}
@@ -1948,6 +2001,10 @@ focus_tree = {
 		cost = 5.00
 		available = {
 			has_government = paternal_autocrat
+			hidden_trigger = {
+			is_subject = no
+			NOT = { has_country_flag = ALA_purchase_liechtenstein }
+			}
 		}
 		mutually_exclusive = {
 			focus = ALA_war_profit
@@ -1956,7 +2013,7 @@ focus_tree = {
 		bypass = {
 			hidden_trigger = {
 				AND = {
-					has_cosmetic_tag = ALA_JEW
+					has_cosmetic_tag = ALA_ZION
 					NOT = {
 						has_government = paternal_autocrat
 					}
@@ -1995,11 +2052,15 @@ focus_tree = {
 		cost = 5.00
 		available = {
 			has_government = paternal_autocrat
+			hidden_trigger = {
+			is_subject = no
+			NOT = { has_country_flag = ALA_purchase_liechtenstein }
+			}
 		}
 		bypass = {
 			hidden_trigger = {
 				AND = {
-					has_cosmetic_tag = ALA_JEW
+					has_cosmetic_tag = ALA_ZION
 					NOT = {
 						has_government = paternal_autocrat
 					}
@@ -2033,11 +2094,15 @@ focus_tree = {
 		cost = 5.00
 		available = {
 			has_government = paternal_autocrat
+			hidden_trigger = {
+			is_subject = no
+			NOT = { has_country_flag = ALA_purchase_liechtenstein }
+			}
 		}
 		bypass = {
 			hidden_trigger = {
 				AND = {
-					has_cosmetic_tag = ALA_JEW
+					has_cosmetic_tag = ALA_ZION
 					NOT = {
 						has_government = paternal_autocrat
 					}
@@ -2074,11 +2139,15 @@ focus_tree = {
 		cost = 5.00
 		available = {
 			has_government = paternal_autocrat
+			hidden_trigger = {
+			is_subject = no
+			NOT = { has_country_flag = ALA_purchase_liechtenstein }
+			}
 		}
 		bypass = {
 			hidden_trigger = {
 				AND = {
-					has_cosmetic_tag = ALA_JEW
+					has_cosmetic_tag = ALA_ZION
 					NOT = {
 						has_government = paternal_autocrat
 					}
@@ -2112,11 +2181,15 @@ focus_tree = {
 		cost = 5.00
 		available = {
 			has_government = paternal_autocrat
+			hidden_trigger = {
+			is_subject = no
+			NOT = { has_country_flag = ALA_purchase_liechtenstein }
+			}
 		}
 		bypass = {
 			hidden_trigger = {
 				AND = {
-					has_cosmetic_tag = ALA_JEW
+					has_cosmetic_tag = ALA_ZION
 					NOT = {
 						has_government = paternal_autocrat
 					}
@@ -2153,11 +2226,15 @@ focus_tree = {
 		cost = 5.00
 		available = {
 			has_government = paternal_autocrat
+			hidden_trigger = {
+			is_subject = no
+			NOT = { has_country_flag = ALA_purchase_liechtenstein }
+			}
 		}
 		bypass = {
 			hidden_trigger = {
 				AND = {
-					has_cosmetic_tag = ALA_JEW
+					has_cosmetic_tag = ALA_ZION
 					NOT = {
 						has_government = paternal_autocrat
 					}
@@ -2183,30 +2260,13 @@ focus_tree = {
 				remove_idea = ALA_buisness_hub
 				add_idea = ALA_buisness_hub_no_syndies
 			}
-			CSA = {
-				reverse_add_opinion_modifier = {
-					target = ALA
-					modifier = embargo
+			every_possible_country = {
+				limit = {
+					has_socialist_government = yes
+					is_dynamic_country = no
 				}
-			}
-			SRI = {
-				reverse_add_opinion_modifier = {
-					target = ALA
-					modifier = embargo
-				}
-			}
-			FRA = {
-				reverse_add_opinion_modifier = {
-					target = ALA
-					modifier = embargo
-				}
-			}
-			ENG = {
-				reverse_add_opinion_modifier = {
-					target = ALA
-					modifier = embargo
-				}
-			}
+				embargo_ROOT = yes
+			}		
 		}
 	}
 	focus = {
@@ -2215,11 +2275,15 @@ focus_tree = {
 		cost = 5.00
 		available = {
 			has_government = paternal_autocrat
+			hidden_trigger = {
+			is_subject = no
+			NOT = { has_country_flag = ALA_purchase_liechtenstein }
+			}
 		}
 		bypass = {
 			hidden_trigger = {
 				AND = {
-					has_cosmetic_tag = ALA_JEW
+					has_cosmetic_tag = ALA_ZION
 					NOT = {
 						has_government = paternal_autocrat
 					}
@@ -2252,11 +2316,16 @@ focus_tree = {
 		cost = 5.00
 		available = {
 			has_government = paternal_autocrat
+			has_war = no
+			hidden_trigger = {
+			is_subject = no
+			NOT = { has_country_flag = ALA_purchase_liechtenstein }
+			}
 		}
 		bypass = {
 			hidden_trigger = {
 				AND = {
-					has_cosmetic_tag = ALA_JEW
+					has_cosmetic_tag = ALA_ZION
 					NOT = {
 						has_government = paternal_autocrat
 					}
@@ -2265,7 +2334,7 @@ focus_tree = {
 		}
 		allow_branch = {
 			NOT = {
-				has_cosmetic_tag = ALA_JEW
+				has_cosmetic_tag = ALA_ZION
 			}
 		}
 		relative_position_id = ALA_buisness_hub
@@ -2304,13 +2373,13 @@ focus_tree = {
 	
 	focus = {
 		id = ALA_jewish_administration
-		icon = GFX_goal_ALA_JEW
+		icon = GFX_goal_ALA_Zion
 		
 		available = {
-			has_cosmetic_tag = ALA_JEW
+			has_cosmetic_tag = ALA_ZION
 		}
 		allow_branch = {
-			has_cosmetic_tag = ALA_JEW
+			has_cosmetic_tag = ALA_ZION
 		}
 		cost = 5.00
 	
@@ -2335,10 +2404,10 @@ focus_tree = {
 	}
 	focus = {
 		id = ALA_jewish_investments
-		icon = GFX_goal_ALA_jewmoney
+		icon = GFX_goal_ALA_jewish_investments
 		cost = 5.00
 		available = {
-			has_cosmetic_tag = ALA_JEW
+			has_cosmetic_tag = ALA_ZION
 			OR = {
 				has_government = paternal_autocrat
 				has_government = market_liberal
@@ -2370,7 +2439,7 @@ focus_tree = {
 		icon = GFX_goal_ALA_hebrew_development
 		cost = 5.00
 		available = {
-			has_cosmetic_tag = ALA_JEW
+			has_cosmetic_tag = ALA_ZION
 			NOT = {
 				OR = {
 					has_government = paternal_autocrat
@@ -2407,7 +2476,7 @@ focus_tree = {
 		icon = GFX_goal_ALA_new_zion
 		cost = 5.00
 		available = {
-			has_cosmetic_tag = ALA_JEW
+			has_cosmetic_tag = ALA_ZION
 		}
 		prerequisite = {
 			focus = ALA_jewish_investments
@@ -2452,6 +2521,10 @@ focus_tree = {
 			463 = { add_extra_state_shared_building_slots = 1 }
 			463 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
 			hidden_effect = {
+				country_event = {
+					id = Alaska.145
+					days = 11
+				}
 				country_event = {
 					id = Alaska.115
 					days = 42
@@ -2633,7 +2706,7 @@ focus_tree = {
 		completion_reward = {
 			
 			add_tech_bonus = {
-				name = ALA_cable.
+				name = ALA_cable
 				bonus = 1
 				uses = 2
 				category = electronics
@@ -2670,6 +2743,7 @@ focus_tree = {
 			add_resource = { type = tungsten amount = 2 state = 463 }
 			add_resource = { type = steel amount = 2 state = 463 }
 			#add_resource = { type = chromium amount = 2 state = 463 }
+			add_offsite_building = { type = arms_factory level = 1 }
 		}
 	}
 	focus = {
@@ -2819,7 +2893,7 @@ focus_tree = {
 			x = 2
 			y = 1
 			trigger = {
-				has_cosmetic_tag = ALA_JEW
+				has_cosmetic_tag = ALA_ZION
 			}
 		}
 		ai_will_do = {
@@ -3585,7 +3659,7 @@ focus_tree = {
 	
 			add_doctrine_cost_reduction = {
 				name = ALA_FAB
-				cost_reduction = 0.7
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -4297,7 +4371,10 @@ focus_tree = {
 			is_subject = yes
 		}
 		bypass = {
+			OR = {
 			is_subject = yes
+			has_country_flag = ALA_purchase_liechtenstein
+			}
 		}
 		cost = 5.00
 		x = 32
@@ -4455,6 +4532,14 @@ focus_tree = {
 				}
 			}
 			add_ideas = ALA_American_Concessions_USA
+			hidden_effect = {
+			overlord = {
+			set_autonomy = {
+				target = ALA
+				autonomous_state = kx_colored_puppet
+					}
+				}
+			}
 		}
 	}
 	
@@ -4529,7 +4614,7 @@ focus_tree = {
 			army_experience = 50
 			add_doctrine_cost_reduction = {
 				name = ALA_FAB
-				cost_reduction = 0.02
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -4749,7 +4834,7 @@ focus_tree = {
 			focus = ALA_foreign_rule
 		}
 		available = {
-			is_subject_of = AUS
+			has_country_flag = ALA_purchase_liechtenstein
 		}
 		x = 4
 		y = 1
@@ -4762,8 +4847,8 @@ focus_tree = {
 
 		completion_reward = {
 			if = {
-				limit = { is_subject = yes }
-				overlord = {
+				limit = { has_country_flag = ALA_purchase_liechtenstein }
+				AUS = {
 					add_ideas = ALA_Lichtenstein_Concessions_ALA
 				}
 			}
@@ -4778,7 +4863,7 @@ focus_tree = {
 			focus = ALA_lichtenstein_administration
 		}
 		available = {
-			is_subject_of = AUS
+			has_country_flag = ALA_purchase_liechtenstein
 		}
 		x = 4
 		y = 2
@@ -4801,7 +4886,7 @@ focus_tree = {
 			focus = ALA_buy_vorarlberg
 		}
 		available = {
-			is_subject_of = AUS
+			has_country_flag = ALA_purchase_liechtenstein
 		}
 		x = 4
 		y = 3
@@ -4905,7 +4990,7 @@ focus_tree = {
 		relative_position_id = ALA_rands_folly
 		x = -3
 		y = 3
-		cost = 10
+		cost = 6
 		available = {
 			has_government = national_populist
 		}
@@ -4971,7 +5056,7 @@ focus_tree = {
 		relative_position_id = ALA_rands_folly
 		x = 3
 		y = 3
-		cost = 10
+		cost = 6
 		available = {
 			has_government = national_populist
 		}
@@ -5278,12 +5363,55 @@ focus_tree = {
 	}
 
 	#Towner Focuses
+	
+	focus = {
+		id = Alaska_true_red_braves
+		icon = GFX_ALA_red_braves
+		x = 47
+		y = 11
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			has_country_flag= ALA_based_thing
+		}
+		allow_branch = {
+			NOT = {
+				has_country_flag = ALA_hide_dixon_tree
+			}
+		}
+		
+		completion_reward = {
+			country_event = REDAlaska.2
+			set_party_name = {
+				ideology = totalist
+				long_name = ALA_REDMANWARRIOR_totalist_party_long
+				name = ALA_REDMANWARRIOR_totalist_party
+			}
+			hidden_effect = {
+				create_country_leader = {
+					name = "Thomas Dixon"
+					desc = "POLITICS_TDIXON_DESC"
+					picture = "gfx/leaders/AIF/Portrait_AIF_Thomas_Dixon.png"
+					expire = "1.1.1"
+					ideology = totalist_subtype
+					traits = {  }
+				}
+			}
+		}
+	}
 
 	#Focus for Red Man's Internationale
 	focus = {
 		id = Alaska_red_mans_internationale
 		icon = GFX_ALA_red_internationale
-		x = 50
+		relative_position_id = Alaska_true_red_braves
+		prerequisite = {
+			focus = Alaska_true_red_braves
+		}
+		x = 0
 		y = 1
 		cost = 5
 		available_if_capitulated = yes
@@ -5299,7 +5427,8 @@ focus_tree = {
 	focus = {
 		id = Alaska_roaming_bands_of_warriors
 		icon = GFX_ALA_roaming_warriors
-		x = 48
+		relative_position_id = Alaska_true_red_braves
+		x = -2
 		y = 1
 		cost = 8
 		available_if_capitulated = yes
@@ -5311,47 +5440,12 @@ focus_tree = {
 			country_event = REDAlaska.3
 		}
 	}
-	
-	focus = {
-		id = Alaska_true_red_braves
-		icon = GFX_ALA_red_braves
-		x = 50
-		y = 0
-		cost = 1
-		available_if_capitulated = yes
-		ai_will_do = {
-			factor = 100
-		}
-		available = {
-			has_country_flag= ALA_based_thing
-		}
-		allow_branch = {
-			has_country_flag= ALA_based_thing
-		}
-		completion_reward = {
-			country_event = REDAlaska.2
-			set_party_name = {
-				ideology = totalist
-				long_name = ALA_REDMANWARRIOR_totalist_party_long
-				name = ALA_REDMANWARRIOR_totalist_party
-			}
-			hidden_effect = {
-				create_country_leader = {
-					name = "Thomas Dixon"
-					desc = "POLITICS_TDIXON_DESC"
-					picture = "gfx/leaders/AIF/Portrait_AIF_Thomas_Dixon.png"
-					expire = "1965.1.1"
-					ideology = totalist_subtype
-					traits = {  }
-				}
-			}
-		}
-	}
 
 	focus = {
 		id = Alaska_an_old_idea_made_anew
 		icon = GFX_ALA_new_idea
-		x = 52
+		relative_position_id = Alaska_true_red_braves
+		x = 2
 		y = 1
 		cost = 8
 		available_if_capitulated = yes
@@ -5367,7 +5461,8 @@ focus_tree = {
 	focus = {
 		id = Alaska_to_the_killing_fields
 		icon = GFX_ALA_killing_fields
-		x = 49
+		relative_position_id = Alaska_true_red_braves
+		x = -1
 		y = 2
 		cost = 8
 		available_if_capitulated = yes
@@ -5388,7 +5483,8 @@ focus_tree = {
 	focus = {
 		id = Alaska_scalp_them_all
 		icon = GFX_ALA_scalping_whites
-		x = 51
+		relative_position_id = Alaska_true_red_braves
+		x = 1
 		y = 2
 		cost = 8
 		available_if_capitulated = yes
@@ -5409,7 +5505,8 @@ focus_tree = {
 	focus = {
 		id = Alaska_the_great_raids
 		icon = GFX_ALA_great_raids
-		x = 50
+		relative_position_id = Alaska_true_red_braves
+		x = 0
 		y = 3
 		cost = 8
 		available_if_capitulated = yes
@@ -5430,17 +5527,19 @@ focus_tree = {
 	focus = {
 		id = Alaska_99_million_avenged
 		icon = GFX_ALA_99_million
-		x = 50
+		relative_position_id = Alaska_true_red_braves
+		x = 0
 		y = 4
 		cost = 15
 
 		available_if_capitulated = yes
+		available = { CAN = { exists = no } }
 		prerequisite = { focus = Alaska_the_great_raids }
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
-			country_event = REDAlaska.8
+			add_ideas = ALA_even_crazyer_buff_then_the_last
 		}
 	}
 #End of focuses 

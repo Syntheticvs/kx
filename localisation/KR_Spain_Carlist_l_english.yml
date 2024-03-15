@@ -24,6 +24,9 @@ CAR_paternal_autocrat_party_long:0 "Comunión Tradicionalista de Javier"
 CAR_national_populist_party:0 "Carloctavistas"
 CAR_national_populist_party_long:0 "Comunión Tradicionalista de Carlos"
 
+### Traits ###
+SPR_rey_leader_trait: "By the Grace of God, King of Castile, of León, of Aragon, of Navarre, of Granada, of Toledo, of Valencia, of Galicia, of Mallorca, of Seville, of Cordóba, of Murcia, of Jaen, of Algeciras, of the Canary Islands, Lord of Biscay and of Molina, etc."
+
 ### Ideas ###
 CAR_rally_carlists_idea:0 "Rally the Carlists!"
 CAR_rally_carlists_idea_desc:0 "The civil war has broken out in Spain. If the Carlists are to emerge victorious, all must be united in mind and in purpose. Viva España!"
@@ -354,6 +357,10 @@ CAR_KINGDOM_GUATEMALA:0 "Captaincy General of Guatemala"
 CAR_KINGDOM_GUATEMALA_ADJ:0 "Guatemalan"
 CAR_KINGDOM_GUATEMALA_DEF:0 "the Captaincy General of Guatemala"
 
+CAR_KINGDOM_NICARAGUA:0 "Kingdom of Nicaragua"
+CAR_KINGDOM_NICARAGUA_ADJ:0 "Nicaraguan"
+CAR_KINGDOM_NICARAGUA_DEF:0 "the Kingdom of Nicaragua"
+
 CAR_AUDENCIA_PANAMA:0 "Royal Audience of Panama"
 CAR_AUDENCIA_PANAMA_ADJ:0 "Panamanian"
 CAR_AUDENCIA_PANAMA_DEF:0 "the Royal Audience of Panama"
@@ -384,7 +391,7 @@ CAR_iberian_union:0 "The Iberian Reunion"
 CAR_foreign_focus:0 "Ratify the Latin Union"
 CAR_foreign_focus_desc:0 "Ideas of a union of Latin nations have been tossed around for years, at least since after the Weltkrieg. With our government stabilized, we can finally form a alliance of our own, and restore Spain's honorable position in Continental affairs."
 CAR_invite_italy:0 "The Italian Question"
-CAR_invite_italy_desc:0 "The Italian Peninsula has been divided since the end of the Weltkrieg, with the Papacy in the north, and socialists in the south, it is time we take a side in the Italian Conflict."
+CAR_invite_italy_desc:0 "The Italian Peninsula has been divided since the end of the Weltkrieg, with the socialists in the north, and the restored Two Sicilies in the south, it is time we take a side in the Italian Conflict."
 CAR_invite_croatia:0 "Support Illyrian Claims"
 CAR_invite_croatia_desc:0 "After Centuries of Austro-Hungarian Rule, Croatia has been freed, as another strong Mediterranean nation, and a majority Catholic one at that, it is no wonder why many people want them in our alliance."
 CAR_invite_austria:0 "Support the Austrians"
@@ -437,25 +444,29 @@ carfor.509.b:0 "The Savoyards united Italy once, and shall again!"
 ###two sicilies#
 
 carfor.410.t:0 "The Latin Union: [ITA.GetNameDEF]."
-carfor.410.d:0 "Javier has indicated that [ITA.GetNameDEF] is the rightful Italian government, and that we should propose an alliance to help unify their rightful lands."
+carfor.410.d:0 "[CAR.GetLeader] has indicated that [ITA.GetNameDEF] is the rightful Italian government, and that we should propose an alliance to help unify their rightful lands."
 carfor.410.a:0 "We await their response."
 
+carfor.444.t:0 "The Latin Union: [SRD.GetNameDEF]."
+carfor.444.d:0 "[CAR.GetLeader] has indicated that [SRD.GetNameDEF] is the rightful Italian government, and that we should propose an alliance to help unify their rightful lands."
+carfor.444.a:0 "We await their response."
+
 carfor.510.t:0 "The Latin Union: [SIC.GetNameDEF]."
-carfor.510.d:0 "Javier has indicated that [SIC.GetNameDEF] is the rightful Italian government, and that we should propose an alliance to help unify their rightful lands."
+carfor.510.d:0 "[CAR.GetLeader] has indicated that [SIC.GetNameDEF] is the rightful Italian government, and that we should propose an alliance to help unify their rightful lands."
 carfor.510.a:0 "We await their response."
 
 carfor.414.t:0 "The Latin Union: The Neosanfedisti."
-carfor.414.d:0 "Javier has indicated that the Neosanfedisti regime is the rightful Italian government, and that we should propose an alliance to help unify their rightful lands."
+carfor.414.d:0 "[CAR.GetLeader] has indicated that the Neosanfedisti regime is the rightful Italian government, and that we should propose an alliance to help unify their rightful lands."
 carfor.414.a:0 "We await their response."
 
 carfor.415.t:0 "The Latin Union: The Neosanfedisti."
-carfor.415.d:0 "Javier has indicated that the Neosanfedisti regime is the rightful Italian government, and that we should propose an alliance to help unify their rightful lands."
+carfor.415.d:0 "[CAR.GetLeader] has indicated that the Neosanfedisti regime is the rightful Italian government, and that we should propose an alliance to help unify their rightful lands."
 carfor.415.a:0 "We await their response."
 
 carfor.411.t:0 "Invitation to the Latin Union."
 carfor.411.d:0 "The Carlist Kingdom of Spain has recently recognized us as the legitimate government of Italy, and has proposed an economic and military alliance among faithful countries of Latin Heritage, will we join them?"
-carfor.411.a:0 "We shall join our Catholic Brothers."
-carfor.411.b:0 "Why Bother."
+carfor.411.a:0 "We shall join our Catholic Brothers!"
+carfor.411.b:0 "Why bother?"
 
 carfor.412.t:0 "[ITA.GetNameDEF] joins the Latin Union!"
 carfor.412.d:0 "[ITA.GetNameDEF] has voted to join our Alliance, and the Papal State has decided to follow them, with the Pope on our side, it is only a matter of time before the Syndicalists are defeated!"
@@ -637,6 +648,19 @@ carfor.471.a:0 "We respect the claims of our Iberian brothers as decreed by Pope
 carfor.471.b:0 "The Treaty of Tordesillas shall be avenged!"
 carfor.471.c:0 "The treaties of Tordesillas and Zaragoza are dead. All of the Portuguese Empire is ours!"
 carfor.471.e:0 "We care not for the Portuguese lands."
+
+### Extra ###
+
+carfor.472.t:0 "A New ‘Nobility’ Emerges in El Centro"
+carfor.472.d:0 "Once thought impossible by any stretch of the imagination, the former bickering states of Central America now once again lie under the rightful and moral governance of the Spanish crown. As the liberal demagogues and socialist devils are driven into the jungles, a new social class has emerged from El Centro’s former military brass. Swapping their army uniforms and oversized caps for regalia and crowns, these dictators have begun to promote their own form of monarchism while building their influence in the restored colonial government. These ‘nobles’ have begun to fill roles within the local administration with the most powerful figures being Anastasio Somoza Garcia in Nicaragua and Guatemala’s own ‘Little Napoleon’, Jorge Ubico. Many within our government back home are hesitant to support these ‘bastardized monarchs’, much preferring to grant government positions and land grants to native Spaniards. Others believe that empowering the new nobility could help create loyal allies in the New World. Weighing both options, the final decision rests on the King alone."
+carfor.472.a:0 "Let them have their fun, grant these ‘nobles’ official titles."
+carfor.472.b:0 "We will not repeat the mistakes of the past!"
+
+carfor.473.t:0 "A Clandestine Meeting with Count Somoza"
+carfor.473.d:0 "With our decision to legitimize the noble dictators of El Centro, we have received a curious audience with the new ‘Count of Nicaragua’, Anastasio Somoza Garcia. Meeting with Spanish officials in the colonial capital, Somoza has proposed that the Captaincy-General should be dissolved in favor of a centralized government under the noble Somoza family. Even stranger, Somoza had requested that we make his oldest child and only daughter, Lillian, the queen of the would-be ‘Kingdom of Nicaragua’. The general has already appointed his daughter the frivolous title of ‘Queen of the Army’ while also spending lavishly on jewelry and ceremonies for Nicaragua’s own ‘princess’. In exchange, Somoza has offered military equipment, men, and financial support to aid in our crusade in the New World. This decision would clearly be seen as playing favorites in the colony, provoking the ire of Juan Vaides, who appointed himself as Captain General (at gunpoint) during the re-establishment of the colony."
+carfor.473.a:0 "We accept the Count’s deal, God save the Queen!"
+carfor.473.b:0 "Are you serious? That girl has never worked for a thing in her life!"
+
 
 #Cosmetic Tags
 

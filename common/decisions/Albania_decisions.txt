@@ -6,7 +6,7 @@
 
 ALB_foreign_policy_decisions = {
 	ALB_liberate_the_albanians_in_macedonia = {
-		
+		allowed = { tag = ALB }
 		available = {
 			is_in_faction = no
 		}
@@ -39,41 +39,10 @@ ALB_foreign_policy_decisions = {
 			factor = 1
 			modifier = {
 				factor = 0
-				has_war = yes
-			}
-			modifier = {
-				factor = 0
-				is_in_faction = yes
-			}
-			modifier = {
-				factor = 0
-				FROM = { enemies_strength_ratio < 0.5 }
-				strength_ratio = { tag = FROM ratio < 1.0 }
-			}
-			modifier = {
-				factor = 0
-				FROM = {
-					is_subject = yes
-					overlord = {
-						surrender_progress < 0.1
-						OR = {
-							is_actual_major = yes
-							strength_ratio = { tag = ROOT ratio > 0.8 }
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				FROM = {
-					is_in_faction = yes
-					var:faction_leader = {
-						surrender_progress < 0.1
-						OR = {
-							is_actual_major = yes
-							strength_ratio = { tag = ROOT ratio > 0.8 }
-						}
-					}
+				OR = {
+					ROOT_is_threatened_cautious = yes
+					FROM = { dont_start_major_faction_wars = yes }
+					FROM = { default_attack_AI_trigger_FROM = yes }
 				}
 			}
 		}
@@ -96,7 +65,7 @@ ALB_foreign_policy_decisions = {
 
 	ALB_conquer_chameria = {
 		icon = generic_prepare_civil_war
-		
+		allowed = { tag = ALB }
 		available = {
 			is_in_faction = no
 		}
@@ -186,7 +155,7 @@ ALB_foreign_policy_decisions = {
 
 	ALB_the_fight_for_kosovo = {
 		icon = generic_prepare_civil_war
-
+		allowed = { tag = ALB }
 		available = {
 			is_in_faction = no
 		}
@@ -275,7 +244,7 @@ ALB_foreign_policy_decisions = {
 
 	ALB_foster_relations_with_bulgaria = {
 		icon = generic_political_discourse
-
+		allowed = { tag = ALB }
 		visible = {
 			is_subject = no
 			is_in_faction = no
@@ -324,7 +293,7 @@ ALB_foreign_policy_decisions = {
 
 	ALB_the_tosk_albanians = {
 		icon = generic_political_discourse
-
+		allowed = { tag = ALB }
 		visible = {
 			FROM = {
 				exists = yes
@@ -361,7 +330,7 @@ ALB_foreign_policy_decisions = {
 
 	ALB_reignite_romanian_friendship = {
 		icon = generic_political_discourse
-
+		allowed = { tag = ALB }
 		visible = {
 			is_subject = no
 			is_in_faction = no
@@ -410,7 +379,7 @@ ALB_foreign_policy_decisions = {
 
 	ALB_cultivate_egyptian_ties = {
 		icon = generic_political_discourse
-
+		allowed = { tag = ALB }
 		visible = {
 			FROM = {
 				exists = yes
@@ -447,7 +416,7 @@ ALB_foreign_policy_decisions = {
 	
 	ALB_join_soviet_faction = {
 		icon = generic_political_discourse
-
+		allowed = { tag = ALB }
 		visible = {
 			RUS = {
 				has_country_flag = soviet_russia_restored
@@ -472,7 +441,7 @@ ALB_foreign_policy_decisions = {
 	
 	ALB_union_with_illyria = {
 		icon = generic_political_discourse
-
+		allowed = { tag = ALB }
 		visible = {
 			CRO = {
 				has_socialist_government = yes
@@ -497,7 +466,7 @@ ALB_foreign_policy_decisions = {
 	
 	ALB_join_entente = {
 		icon = generic_political_discourse
-
+		allowed = { tag = ALB }
 		visible = {
 			has_completed_focus = ALB_Western_Diplomatic_Approach
 			NOT = {
@@ -522,7 +491,7 @@ ALB_foreign_policy_decisions = {
 	
 	ALB_stay_with_3rd_int = {
 		icon = generic_political_discourse
-
+		allowed = { tag = ALB }
 		visible = {
 			has_completed_focus = ALB_Western_Diplomatic_Approach
 			is_in_faction_with = INT
@@ -545,7 +514,7 @@ ALB_foreign_policy_decisions = {
 	
 	ALB_join_russia = {
 		icon = generic_political_discourse
-
+		allowed = { tag = ALB }
 		visible = {
 			has_completed_focus = ALB_Moderate_Men_Treaty
 			is_in_faction = no
@@ -572,7 +541,7 @@ ALB_foreign_policy_decisions = {
 	
 	ALB_join_austria = {
 		icon = generic_political_discourse
-
+		allowed = { tag = ALB }
 		visible = {
 			has_completed_focus = ALB_Moderate_Men_Treaty
 			is_in_faction = no
@@ -599,6 +568,7 @@ ALB_foreign_policy_decisions = {
 	
 	ALB_intervene_balkan_war = { #HERE COMES HOXHA WITH THE STEEL CHAIR
 		icon = GFX_decision_generic_nationalism
+		allowed = { tag = ALB }
 		fire_only_once = yes
 		visible = {
 			tag = ALB
@@ -627,6 +597,7 @@ ALB_foreign_policy_decisions = {
 	
 	ALB_intervene_balkan_peace = { #HERE COMES HOXHA WITH THE PEACE DEAL
 		icon = GFX_decision_generic_nationalism
+		allowed = { tag = ALB }
 		fire_only_once = yes
 		visible = {
 			tag = ALB
@@ -662,7 +633,7 @@ ALB_foreign_policy_decisions = {
 	ALB_integrate_ilirida = {
 			icon = infiltrate_state
 			highlight_states = { highlight_state_targets = { state = 1271 } }
-
+			allowed = { tag = ALB }
 			available = {
 				owns_state = 1271
 			}
@@ -694,6 +665,7 @@ ALB_foreign_policy_decisions = {
 	ALB_albanian_america = { #RED AND BLACK AND WHITE AND BLUE
 		icon = GFX_decision_generic_nationalism
 		fire_only_once = yes
+		allowed = { tag = ALB }
 		visible = {
 			tag = ALB
 			USA = {
@@ -706,6 +678,12 @@ ALB_foreign_policy_decisions = {
 			factor = 10
 			}
 		complete_effect = {
+			ALB = {
+			set_autonomy = {
+				target = USA
+				autonomous_state = kx_colored_puppet
+				}
+			}
 			USA = {
 			if = {
 			limit = {
@@ -717,61 +695,61 @@ ALB_foreign_policy_decisions = {
 			create_country_leader = {
 				name = "Victor H. Schiro"
 				picture = "gfx/leaders/ALB/Portrait_ALB_Victor_Schiro.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = totalist_subtype
 			}
 			create_country_leader = {
 				name = "Victor H. Schiro"
 				picture = "gfx/leaders/ALB/Portrait_ALB_Victor_Schiro.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = syndicalist_subtype
 			}
 			create_country_leader = {
 				name = "Victor H. Schiro"
 				picture = "gfx/leaders/ALB/Portrait_ALB_Victor_Schiro.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = radical_socialist_subtype
 			}
 			create_country_leader = {
 				name = "Victor H. Schiro"
 				picture = "gfx/leaders/ALB/Portrait_ALB_Victor_Schiro.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = social_democrat_subtype
 			}
 			create_country_leader = {
 				name = "Victor H. Schiro"
 				picture = "gfx/leaders/ALB/Portrait_ALB_Victor_Schiro.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = social_liberal_subtype
 			}
 			create_country_leader = {
 				name = "Victor H. Schiro"
 				picture = "gfx/leaders/ALB/Portrait_ALB_Victor_Schiro.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = market_liberal_subtype
 			}
 			create_country_leader = {
 				name = "Victor H. Schiro"
 				picture = "gfx/leaders/ALB/Portrait_ALB_Victor_Schiro.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = social_conservative_subtype
 			}
 			create_country_leader = {
 				name = "Victor H. Schiro"
 				picture = "gfx/leaders/ALB/Portrait_ALB_Victor_Schiro.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = authoritarian_democrat_subtype
 			}
 			create_country_leader = {
 				name = "Victor H. Schiro"
 				picture = "gfx/leaders/ALB/Portrait_ALB_Victor_Schiro.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = paternal_autocrat_subtype
 			}
 			create_country_leader = {
 				name = "Victor H. Schiro"
 				picture = "gfx/leaders/ALB/Portrait_ALB_Victor_Schiro.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = national_populist_subtype
 				}
 			}
@@ -781,7 +759,7 @@ ALB_foreign_policy_decisions = {
 ALB_economic_policy_decisions = {
 	ALB_hydroelectricity = {
 		icon = generic_industry
-
+		allowed = { tag = ALB }
 		available = {
 			OR = {
 				has_tech = advanced_machine_tools
@@ -824,7 +802,7 @@ ALB_economic_policy_decisions = {
 
 	ALB_fier_county_oil_drilling = {
 		icon = oil
-
+		allowed = { tag = ALB }
 		available = {
 			has_tech = excavation2
 			num_of_civilian_factories_available_for_projects > 1
@@ -858,7 +836,7 @@ ALB_economic_policy_decisions = {
 
 	ALB_emergency_food_aid = {
 		icon = generic_construction
-
+		
 		allowed = { always = no } #manually activated
 
 		modifier = {

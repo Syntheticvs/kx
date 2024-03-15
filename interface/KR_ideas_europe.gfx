@@ -149,6 +149,18 @@ spriteTypes = {
 		name = "GFX_idea_ENG_anti_german_planning"
 		texturefile = "gfx/interface/ideas/ideas/ENG_anti_german_planning.png"
 	}
+	spriteType = {
+		name = "GFX_idea_ENG_naval_devotion"
+		texturefile = "gfx/interface/ideas/ideas/ENG_naval_devotion.png"
+	}
+	spriteType = {
+		name = "GFX_idea_ENG_blackshirts"
+		texturefile = "gfx/interface/ideas/ideas/ENG_blackshirts.png"
+	}
+		spriteType = {
+		name = "GFX_idea_newcastle_arms"
+		texturefile = "/gfx/interface/ideas/ENG/companies/newcastle_arms.png"
+	}
 
 	### EST ###
 	spriteType = {
@@ -175,6 +187,22 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_fin_red_cross"
 		texturefile = "gfx/interface/ideas/ideas/FIN_idea_red_cross.png"
+	}
+	spriteType = {
+		name = "GFX_idea_FIN_mannerheim_plan_spirit"
+		texturefile = "gfx/interface/ideas/ideas/FIN_mannerheim_plan_spirit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_FIN_malmberg_plan_spirit"
+		texturefile = "gfx/interface/ideas/ideas/FIN_malmberg_plan_spirit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_FIN_sihvo_plan_spirit"
+		texturefile = "gfx/interface/ideas/ideas/FIN_sihvo_plan_spirit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_FIN_mounting_dissent_idea"
+		texturefile = "gfx/interface/ideas/ideas/FIN_mounting_dissent_idea.png"
 	}
 	
 	### GAL ###
@@ -226,16 +254,24 @@ spriteTypes = {
 		name = "GFX_idea_GBR_admiralty"
 		texturefile = "gfx/interface/ideas/ideas/GBR_admiralty.png"
 	}
+	spriteType = {
+		name = "GFX_idea_GBR_support_uk"
+		texturefile = "gfx/interface/ideas/ideas/GBR_support_uk.png"
+	}
 
 	### GER ###
 
+	spriteType = {
+		name = "GFX_idea_attack_idea_icon_GER"
+		texturefile = "gfx/interface/ideas/ideas/attack_idea_icon_GER.png"
+	}
 	spriteType = {
 		name = "GFX_idea_GER_europamark_idea"
 		texturefile = "gfx/interface/ideas/ideas/GER_europamark_idea.png"
 	}
 	spriteType = {
-		name = "GFX_idea_GER_imperial_pride"
-		texturefile = "gfx/interface/ideas/ideas/GER_imperial_pride.png"
+		name = "GFX_idea_GER_imperial_pride_guns"
+		texturefile = "gfx/interface/ideas/ideas/GER_imperial_pride_guns.png"
 	}
 	spriteType = {
 		name = "GFX_idea_GER_colonial_government"
@@ -295,6 +331,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_GRE_austrian_sanctions"
 		texturefile = "gfx/interface/ideas/ideas/GRE_austrian_sanctions.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRE_palaiokommatismos"
+		texturefile = "gfx/interface/ideas/ideas/GRE_palaiokommatismos.png"
 	}
 
 	### GER ###
@@ -440,10 +480,65 @@ spriteTypes = {
 		name = "GFX_idea_IRE_taxation"
 		texturefile = "gfx/interface/ideas/ideas/IRE_taxation.png"
 	}
-	
 	spriteType = {
 		name = "GFX_idea_IRE_loyalist_assertiveness"
 		texturefile = "gfx/interface/ideas/ideas/IRE_loyalist_assertiveness.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_IRE_SE_idea"
+		texturefile = "gfx/interface/ideas/ideas/IRE_SE_idea.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_IRE_ISP_idea"
+		texturefile = "gfx/interface/ideas/ideas/IRE_ISP_idea.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_IRE_PLP_idea"
+		texturefile = "gfx/interface/ideas/ideas/IRE_PLP_idea.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_IRE_Labour_idea"
+		texturefile = "gfx/interface/ideas/ideas/IRE_Labour_idea.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_IRE_CnaT_idea"
+		texturefile = "gfx/interface/ideas/ideas/IRE_CnaT_idea.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_IRE_NDP_idea"
+		texturefile = "gfx/interface/ideas/ideas/IRE_NDP_idea.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_IRE_SC_idea"
+		texturefile = "gfx/interface/ideas/ideas/IRE_SC_idea.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_IRE_SF_idea"
+		texturefile = "gfx/interface/ideas/ideas/IRE_SF_idea.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_IRE_AN_idea"
+		texturefile = "gfx/interface/ideas/ideas/IRE_AN_idea.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_IRE_SC_AN_Coalition_idea"
+		texturefile = "gfx/interface/ideas/ideas/IRE_SC_AN_Coalition.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_IRE_SC_NDP_Coalition_idea"
+		texturefile = "gfx/interface/ideas/ideas/IRE_SC_NDP_Coalition.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_IRE_Labour_CnaT_NDP_coalition_idea"
+		texturefile = "gfx/interface/ideas/ideas/IRE_Labour_CnaT_NDP_coalition.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_IRE_Labour_CnaT_PLP_coalition_idea"
+		texturefile = "gfx/interface/ideas/ideas/IRE_Labour_CnaT_PLP_coalition.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_IRE_military_regime"
+		texturefile = "gfx/interface/ideas/ideas/IRE_military_regime.png"
 	}
 
 	### ITA ###
@@ -463,6 +558,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_ITA_federation"
 		texturefile = "gfx/interface/ideas/ideas/ITA_federation.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LOM_lombard_flag_idea"
+		texturefile = "gfx/interface/ideas/ideas/LOM_lombard_flag_idea.png"
 	}
 
 	#### LIT ####
@@ -571,6 +670,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_PAP_holy_see"
 		texturefile = "gfx/interface/ideas/ideas/PAP_holy_see.png"
+	}
+	spriteType = {
+		name = "GFX_idea_PAP_roman_state"
+		texturefile = "gfx/interface/ideas/ideas/PAP_roman_state.png"
 	}
 	spriteType = {
 		name = "GFX_idea_PAP_tenth_crusade"
@@ -716,6 +819,14 @@ spriteTypes = {
 		name = "GFX_idea_TUR_Ahmed_Nihad"
 		texturefile = "gfx/interface/ideas/ideas/TUR_Ahmed_Nihad.png"
 	}
+	spriteType = {
+		name = "GFX_idea_TUR_golden_age_of_islam"
+		texturefile = "gfx/interface/ideas/ideas/TUR_golden_age_of_islam.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TUR_ottoman_hegemony"
+		texturefile = "gfx/interface/ideas/ideas/TUR_ottoman_hegemony.png"
+	}
 
 	### POL ###
 	spriteType = {
@@ -827,6 +938,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/ideas/SCW_CNT_fervor.png"
 	}
 
+	spriteType = {
+		name = "GFX_idea_SCW_SPR_fervor"
+		texturefile = "gfx/interface/ideas/ideas/SCW_SPR_fervor.png"
+	}
+
 	### SWE ###
 
 	spriteType = {
@@ -928,6 +1044,18 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_UKR_ukraine_flag_idea"
 		texturefile = "gfx/interface/ideas/ideas/UKR_ukraine_flag_idea.png"
+	}
+	spriteType = {
+		name = "GFX_idea_UKR_immortal_will_of_the_ukrainian_nation_spirit"
+		texturefile = "gfx/interface/ideas/ideas/UKR_immortal_will_of_the_ukrainian_nation_spirit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_UKR_crimean_autonomy"
+		texturefile = "gfx/interface/ideas/ideas/UKR_crimean_autonomy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_UKR_mace"
+		texturefile = "gfx/interface/ideas/ideas/UKR_mace.png"
 	}
 	
 	### CZE ###

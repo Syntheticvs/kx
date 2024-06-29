@@ -530,7 +530,7 @@ guiTypes = {
 		iconType = { 
 			name = "Council_of_Europe"
 			position = { x = 8 y = 10 }
-			spriteType = "GFX_Portrait_GER_Pan_Euro_Council"
+			spriteType = "GFX_Portrait_Germany_Pan_Euro_Council"
 		}
 		
 		### Aussies
@@ -661,6 +661,12 @@ guiTypes = {
 			name = "Eruera_Tirikatene"
 			position = { x = 8 y = 10 }
 			spriteType = "GFX_Portrait_NZL_Eruera_Tirikatene"
+		}
+
+		iconType = {
+			name = "Robert_Tutaki"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_NZL_Robert_Tutaki"
 		}
 
 		iconType = {
@@ -1286,7 +1292,7 @@ guiTypes = {
 		iconType = { #
 			name = "Jack_Reed"
 			position = { x = 8 y = 10 }
-			spriteType = "GFX_Portrait_Jack_Reed"
+			spriteType = "GFX_Portrait_USA_Jack_Reed"
 		}
 		
 		iconType = { #
@@ -1478,7 +1484,7 @@ guiTypes = {
 		iconType = { #
 			name = "Sam_Rayburn"
 			position = { x = 8 y = 10 }
-			spriteType = "GFX_Portrait_sam_rayburn"
+			spriteType = "GFX_Portrait_USA_Sam_Rayburn"
 		}
 		
 		iconType = { #
@@ -1932,6 +1938,18 @@ guiTypes = {
 		}
 		
 		iconType = { #
+			name = "Michael_Donnellan"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Ireland_Michael_Donnellan"
+		}
+		
+		iconType = { #
+			name = "Michael_Collins"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Ireland_Michael_Collins"
+		}
+		
+		iconType = { #
 			name = "Richard_Mulcahy"
 			position = { x = 8 y = 10 }
 			spriteType = "GFX_Portrait_Ireland_Richard_Mulcahy_Civilian"
@@ -2010,6 +2028,12 @@ guiTypes = {
 		}
 		
 		iconType = { #
+			name = "John_J_O_Kelly"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Ireland_John_J_OKelly"
+		}
+		
+		iconType = { #
 			name = "William_Butler_Yeats"
 			position = { x = 8 y = 10 }
 			spriteType = "GFX_Portrait_Ireland_William_Butler_Yeats"
@@ -2028,9 +2052,27 @@ guiTypes = {
 		}
 
 		iconType = { #
+			name = "James_Larkin"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Ireland_Jim_Larkin"
+		}
+
+		iconType = { #
 			name = "James_Joyce"
 			position = { x = 8 y = 10 }
 			spriteType = "GFX_Portrait_Ireland_James_Joyce"
+		}
+		
+		iconType = { #
+			name = "Owen_Sheehy_Skeffington"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Ireland_Owen_Sheehy_Skeffington"
+		}
+		
+		iconType = { #
+			name = "Basil_Brooke"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Ulster_Basil_Brooke"
 		}
 		
 		### Danish PMs ###
@@ -2157,6 +2199,56 @@ guiTypes = {
 			name = "Achille_Van_Acker"
 			position = { x = 8 y = 10 }
 			spriteType = "GFX_Portrait_Belgium_Achille_Van_Acker"
+		}
+		
+		### Wallonia PMs ###
+		
+		iconType = { #
+			name = "Leon_Degrelle"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Belgium_Leon_Degrelle"
+		}
+		
+		iconType = { #
+			name = "Georges_Prosper_Remi"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Belgium_Georges_Prosper_Remi"
+		}
+		
+		iconType = { #
+			name = "Fernand_Dehousse"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Belgium_Fernand_Dehousse"
+		}
+		
+		iconType = { #
+			name = "Georges_Truffaut"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Belgium_Georges_Truffaut"
+		}
+		
+		iconType = { #
+			name = "Auguste_Buisseret"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Belgium_Auguste_Buisseret"
+		}
+		
+		iconType = { #
+			name = "Georges_Deffontaine"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Belgium_Georges_Deffontaine"
+		}
+		
+		iconType = { #
+			name = "Victor_Matthys"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Belgium_Victor_Matthys"
+		}
+		
+		iconType = { #
+			name = "Jose_Streel"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Belgium_Jose_Streel"
 		}
 		
 		### Swedish PMs ###
@@ -3445,6 +3537,12 @@ guiTypes = {
 			spriteType = "GFX_Portrait_Vietnam_Duong_Van_Duong"
 		}
 		
+		iconType = { #
+			name = "Huynh_Phu_So"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_Vietnam_Huynh_Phu_So"
+		}
+		
 		### Bulgarian PMs ###
 
 		iconType = { #
@@ -4142,6 +4240,11 @@ guiTypes = {
 			position = { x = 8 y = 10 }
 			spriteType = "GFX_Portrait_POL_Norbert_Barlicki"
 		}
+		iconType = { #
+			name = "Wladyslaw_Grabski"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_POL_Wladyslaw_Grabski"
+		}
 		
 		### Baltics ###
 		
@@ -4280,18 +4383,6 @@ guiTypes = {
 		### Others
 			
 		iconType = { #
-			name = "Albert_I"
-			position = { x = 8 y = 10 }
-			spriteType = "GFX_Portrait_Belgium_King_Albert"
-		}
-			
-		iconType = { #
-			name = "Adalbert_I"
-			position = { x = 8 y = 10 }
-			spriteType = "GFX_Portrait_Belgium_Adalbert_I"
-		}
-			
-		iconType = { #
 			name = "Alexander_Kazembek"
 			position = { x = 8 y = 10 }
 			spriteType = "GFX_Portrait_TRM_Alexander_Kazembek_regent"
@@ -4380,6 +4471,12 @@ guiTypes = {
 			position = { x = 8 y = 10 }
 			spriteType = "GFX_Portrait_France_Leon_Blum"
 		}
+		
+		iconType = { #
+			name = "Nestor_Makhno"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_France_Nestor_Makhno"
+		}
 
 		iconType = { #
 			name = "Bonnie_Parker"
@@ -4421,6 +4518,12 @@ guiTypes = {
 			name = "Mohandas_Karamchand_Gandhi"
 			position = { x = 8 y = 10 }
 			spriteType = "GFX_Portrait_BHC_Mohandas_Karamchand_Gandhi"
+		}
+
+		iconType = { #
+			name = "George_Edward_Deatherage"
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_Portrait_CGL_George_E_Deatherage"
 		}
 
 		# Add a new iconType (copy-paste) for every PM. Change its name and set the SpriteType to the PM, please give it an entry in the .gfx file

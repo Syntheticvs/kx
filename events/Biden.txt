@@ -457,7 +457,7 @@ country_event = {
 			add_ideas = APB_defense_of_earth
 				create_country_leader = {# 
 				name = "ABPSH Council"
-				picture = "gfx/leaders/AML/Military_Council.png"
+				picture = "gfx/leaders/AML/Portrait_AML_Military_Council.png"
 				expire = "1.1.1"
 				ideology = authoritarian_democrat_subtype
 			}
@@ -1265,6 +1265,7 @@ country_event = { #Ulster Left
 					long_name = "Democratic Unionist Party"
 					name = "DUP"
 				}
+				load_focus_tree = generic_focus
 				add_state_core = 119 #Ulster
 				transfer_state = 119
 				transfer_technology = yes

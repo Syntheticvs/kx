@@ -828,7 +828,7 @@ focus_tree = {
 			has_government = radical_socialist
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 30
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SRI_tascas_bukharinist_methods"
@@ -884,7 +884,7 @@ focus_tree = {
 			has_government = radical_socialist
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 30
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SRI_worker_councils_basis_revolution"
@@ -909,7 +909,7 @@ focus_tree = {
 			has_government = radical_socialist
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 30
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SRI_cultural_hegemonies_war_manoeuvre"
@@ -938,7 +938,7 @@ focus_tree = {
 			has_government = radical_socialist
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 30
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SRI_officialize_proletarian_defense_formations"
@@ -968,7 +968,7 @@ focus_tree = {
 			has_government = radical_socialist
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 30
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SRI_italian_road_socialism"
@@ -997,7 +997,7 @@ focus_tree = {
 			has_government = radical_socialist
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 30
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus SRI_enshrining_proletarian_constitution"
@@ -1570,8 +1570,8 @@ focus_tree = {
 			}
 			set_party_name = { 
 				ideology = social_democrat
-				long_name = "Partito d'Azione" 
-				name = "PA"
+				long_name = SRI_action_party_long
+				name = SRI_action_party
 			}
 			create_country_leader = {
 				name = "Carlo Rosselli"
@@ -2088,14 +2088,29 @@ focus_tree = {
 		has_country_leader = { ruling_only = yes name = "Amedeo I" }
 		}
 		AUS = { add_opinion_modifier = { target = SRI modifier = large_decrease } }
-		ITA = { add_opinion_modifier = { target = SRI modifier = large_decrease } }
-		create_wargoal = {
-			type = annex_everything
-			target = ITA
-		}
 		create_wargoal = {
 			type = annex_everything
 			target = AUS
+		}
+		if = {
+			limit = { ITA = { exists = yes }}
+			ITA = { add_opinion_modifier = { target = SRI modifier = large_decrease } }
+			create_wargoal = {
+				type = annex_everything
+				target = ITA
+			}
+		}
+		else = {
+			LOM = { add_opinion_modifier = { target = SRI modifier = large_decrease } }
+			VNC = { add_opinion_modifier = { target = SRI modifier = large_decrease } }
+			create_wargoal = {
+				type = annex_everything
+				target = LOM
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = VNC
+			}
 		}
 		swap_ideas = {
 		remove_idea = SRI_expedition_of_the_thousand_idea
@@ -2109,12 +2124,7 @@ focus_tree = {
 			}
 		}
 		AUS = { add_opinion_modifier = { target = SRI modifier = large_decrease } }
-		ITA = { add_opinion_modifier = { target = SRI modifier = large_decrease } }
 		SRD = { add_opinion_modifier = { target = SRI modifier = large_decrease } }
-		create_wargoal = {
-			type = annex_everything
-			target = ITA
-		}
 		create_wargoal = {
 			type = annex_everything
 			target = SRD
@@ -2122,6 +2132,26 @@ focus_tree = {
 		create_wargoal = {
 			type = annex_everything
 			target = AUS
+		}
+		if = {
+			limit = { ITA = { exists = yes }}
+			ITA = { add_opinion_modifier = { target = SRI modifier = large_decrease } }
+			create_wargoal = {
+				type = annex_everything
+				target = ITA
+			}
+		}
+		else = {
+			LOM = { add_opinion_modifier = { target = SRI modifier = large_decrease } }
+			VNC = { add_opinion_modifier = { target = SRI modifier = large_decrease } }
+			create_wargoal = {
+				type = annex_everything
+				target = LOM
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = VNC
+			}
 		}
 		swap_ideas = {
 		remove_idea = SRI_expedition_of_the_thousand_idea

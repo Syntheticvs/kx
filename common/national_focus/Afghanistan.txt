@@ -4087,9 +4087,6 @@ focus_tree = {
 						infantry = { x = 1 y = 0 }
 						infantry = { x = 1 y = 1 }
 						infantry = { x = 1 y = 2 }
-						infantry = { x = 2 y = 0 }
-						infantry = { x = 2 y = 1 }
-						infantry = { x = 2 y = 2 }
 					}
 					priority = 1
 				}
@@ -4753,12 +4750,10 @@ focus_tree = {
 					division_names_group = AFG_INF_01
 
 					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-						infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
+				militia = { x = 0 y = 0 }
+				militia = { x = 0 y = 1 }
+				militia = { x = 0 y = 2 }
+				militia = { x = 0 y = 3 }
 					}
 					priority = 1
 				}
@@ -9940,6 +9935,7 @@ focus = {
 			log = "[GetDateText]: [Root.GetName]: Focus AFG_ottoman_alliance"
 			activate_targeted_decision = { target = IRQ decision = AFG_attack_country }
 			activate_targeted_decision = { target = SYR decision = AFG_attack_country }
+			activate_targeted_decision = { target = LEB decision = AFG_attack_country }
 			activate_targeted_decision = { target = KYR decision = AFG_attack_country }
 			activate_targeted_decision = { target = JBS decision = AFG_attack_country }
 			activate_targeted_decision = { target = SAU decision = AFG_attack_country }
@@ -9949,14 +9945,17 @@ focus = {
 				add_state_core = 656
 				add_state_core = 679
 				add_state_core = 680
+				add_state_core = 553
 			}
 			every_state = {
 				limit = {
 					OR = {
 						is_core_of = IRQ
 						is_core_of = SYR
+						is_core_of = LEB
 						is_core_of = KUR
 						is_core_of = YEM
+						is_core_of = HEJ
 					}
 				}
 				add_core_of = AFG
@@ -10019,9 +10018,15 @@ focus = {
 			hidden_effect = {
 				activate_targeted_decision = { target = var:49.owner decision = AFG_attack_country }
 			}
+			hidden_effect = {
+				add_state_core = 341
+			}
 		every_state = {
 			limit = {
+			OR = {
 			is_core_of = OTT
+			region = 129
+			}
 			}
 			add_core_of = AFG
 		}
@@ -10138,6 +10143,7 @@ focus = {
 			is_core_of = LBA
 			is_core_of = ALG
 			is_core_of = TUN
+			region = 238
 				}
 			}
 			add_core_of = AFG
@@ -10186,6 +10192,7 @@ focus = {
 			is_core_of = BOS
 			is_core_of = HUN
 			is_core_of = ROM
+			is_core_of = TRS
 				}
 			}
 			add_core_of = AFG
@@ -11426,6 +11433,9 @@ focus = {
 		cost = 5
 		relative_position_id = AFG_bacha_khan
 		available_if_capitulated = yes
+		available = {
+			is_subject = no
+		}
 		prerequisite = { 
 			focus = AFG_awaken_the_pashtun
 		}

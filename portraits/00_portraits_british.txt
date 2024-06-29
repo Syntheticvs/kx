@@ -18,6 +18,10 @@ AST = {
 			"GFX_Portrait_Britain_Generic_land_12"
 			"GFX_Portrait_Britain_Generic_land_13"
 			"GFX_Portrait_Britain_Generic_land_14"
+			"GFX_Portrait_Britain_Generic_land_15"
+			"GFX_Portrait_Britain_Generic_land_16"
+			"GFX_Portrait_Britain_Generic_land_17"
+			"GFX_Portrait_Britain_Generic_land_18"
 		}
 	}
 
@@ -46,6 +50,10 @@ CAN = {
 			"GFX_Portrait_Britain_Generic_land_12"
 			"GFX_Portrait_Britain_Generic_land_13"
 			"GFX_Portrait_Britain_Generic_land_14"
+			"GFX_Portrait_Britain_Generic_land_15"
+			"GFX_Portrait_Britain_Generic_land_16"
+			"GFX_Portrait_Britain_Generic_land_17"
+			"GFX_Portrait_Britain_Generic_land_18"
 		}
 	}
 
@@ -74,6 +82,10 @@ NFL = {
 			"GFX_Portrait_Britain_Generic_land_12"
 			"GFX_Portrait_Britain_Generic_land_13"
 			"GFX_Portrait_Britain_Generic_land_14"
+			"GFX_Portrait_Britain_Generic_land_15"
+			"GFX_Portrait_Britain_Generic_land_16"
+			"GFX_Portrait_Britain_Generic_land_17"
+			"GFX_Portrait_Britain_Generic_land_18"
 		}
 	}
 
@@ -102,6 +114,10 @@ ENG = {
 			"GFX_Portrait_Britain_Generic_land_12"
 			"GFX_Portrait_Britain_Generic_land_13"
 			"GFX_Portrait_Britain_Generic_land_14"
+			"GFX_Portrait_Britain_Generic_land_15"
+			"GFX_Portrait_Britain_Generic_land_16"
+			"GFX_Portrait_Britain_Generic_land_17"
+			"GFX_Portrait_Britain_Generic_land_18"
 		}
 	}
 
@@ -130,6 +146,10 @@ GBP = {
 			"GFX_Portrait_Britain_Generic_land_12"
 			"GFX_Portrait_Britain_Generic_land_13"
 			"GFX_Portrait_Britain_Generic_land_14"
+			"GFX_Portrait_Britain_Generic_land_15"
+			"GFX_Portrait_Britain_Generic_land_16"
+			"GFX_Portrait_Britain_Generic_land_17"
+			"GFX_Portrait_Britain_Generic_land_18"
 		}
 	}
 
@@ -158,6 +178,10 @@ GBR = {
 			"GFX_Portrait_Britain_Generic_land_12"
 			"GFX_Portrait_Britain_Generic_land_13"
 			"GFX_Portrait_Britain_Generic_land_14"
+			"GFX_Portrait_Britain_Generic_land_15"
+			"GFX_Portrait_Britain_Generic_land_16"
+			"GFX_Portrait_Britain_Generic_land_17"
+			"GFX_Portrait_Britain_Generic_land_18"
 		}
 	}
 
@@ -187,6 +211,10 @@ NZL = {
 			"GFX_Portrait_Britain_Generic_land_12"
 			"GFX_Portrait_Britain_Generic_land_13"
 			"GFX_Portrait_Britain_Generic_land_14"
+			"GFX_Portrait_Britain_Generic_land_15"
+			"GFX_Portrait_Britain_Generic_land_16"
+			"GFX_Portrait_Britain_Generic_land_17"
+			"GFX_Portrait_Britain_Generic_land_18"
 		}
 	}
 
@@ -215,6 +243,10 @@ SAF = {
 			"GFX_Portrait_Britain_Generic_land_12"
 			"GFX_Portrait_Britain_Generic_land_13"
 			"GFX_Portrait_Britain_Generic_land_14"
+			"GFX_Portrait_Britain_Generic_land_15"
+			"GFX_Portrait_Britain_Generic_land_16"
+			"GFX_Portrait_Britain_Generic_land_17"
+			"GFX_Portrait_Britain_Generic_land_18"
 		}
 	}
 
@@ -316,6 +348,10 @@ SCT = {
 			"GFX_Portrait_Britain_Generic_land_12"
 			"GFX_Portrait_Britain_Generic_land_13"
 			"GFX_Portrait_Britain_Generic_land_14"
+			"GFX_Portrait_Britain_Generic_land_15"
+			"GFX_Portrait_Britain_Generic_land_16"
+			"GFX_Portrait_Britain_Generic_land_17"
+			"GFX_Portrait_Britain_Generic_land_18"
 		}
 	}
 
@@ -344,6 +380,10 @@ WAL = {
 			"GFX_Portrait_Britain_Generic_land_12"
 			"GFX_Portrait_Britain_Generic_land_13"
 			"GFX_Portrait_Britain_Generic_land_14"
+			"GFX_Portrait_Britain_Generic_land_15"
+			"GFX_Portrait_Britain_Generic_land_16"
+			"GFX_Portrait_Britain_Generic_land_17"
+			"GFX_Portrait_Britain_Generic_land_18"
 		}
 	}
 

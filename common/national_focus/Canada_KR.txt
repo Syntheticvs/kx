@@ -883,6 +883,7 @@ focus_tree = {
 						state = 469 #Saskatchewan
 						state = 470 #Alberta
 						state = 473 #British Columbia
+						state = 1332 #Haida Gwaii
 					}
 				}
 				add_building_construction = {
@@ -1154,6 +1155,7 @@ focus_tree = {
 						state = 469 #Saskatchewan
 						state = 470 #Alberta
 						state = 473 #British Columbia
+						state = 1332 #Haida Gwaii
 						state = 739 #Ottawa
 						state = 832 #Montreal
 					}
@@ -2583,7 +2585,19 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CAN_upgrade_fleet"
-			custom_effect_tooltip = unlock_yarrow_tt
+			if = {
+				limit = { has_dlc_aat = yes }
+				custom_effect_tooltip = tooltip_white_line
+				mio:CAN_yarrow_shipbuilders_organisation = {
+					add_mio_size = 1
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.1
+					add_mio_design_team_assign_cost = -0.2
+				}
+			}
+			else = {
+				custom_effect_tooltip = unlock_yarrow_tt
+			}
 			navy_experience = 50
 			swap_ideas = {
 				remove_idea = CAN_shipbuilding_plan_1
@@ -3717,6 +3731,7 @@ focus_tree = {
 			add_ideas = CAN_preparations_for_war
 			hidden_effect = {
 				country_event = { id = canada.39 days = 30 }
+				country_event = { id = canada.455 days = 160 random_days = 45 }
 			}
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY }
@@ -11141,7 +11156,20 @@ focus_tree = {
 		y = 1
 
 		available = {
-			
+		}
+		
+		bypass = {
+		NOT = {
+		country_exists = USA
+		country_exists = CAL
+		country_exists = COR
+		country_exists = TEX
+		country_exists = CSA
+		country_exists = WCC
+		country_exists = TXS
+		country_exists = NYC
+		country_exists = NEE
+			}
 		}
 
 		ai_will_do = {
@@ -11783,6 +11811,7 @@ focus_tree = {
 				}
 			}
 			CAN_remove_from_iedc = yes
+			remove_from_tech_sharing_group = entente_research
 			hidden_effect = {
 				news_event = canada.323
 			}

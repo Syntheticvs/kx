@@ -33,6 +33,7 @@ set_politics = {
 	election_frequency = 4
 	elections_allowed = no
 }
+add_soclib_to_coalition = yes
 add_ideas = {
 	war_economy
 	limited_exports
@@ -92,12 +93,19 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Edgar Sengier"
-	desc = "POLITICS_SENGIER_DESC"
-	picture = "gfx/leaders/COG/UMN_Edgar_Sengier.png"
+	name = "Albert Decoster"
+	desc = "POLITICS_DECOSTER_DESC"
+	picture = "gfx/leaders/COG/Portrait_COG_Albert_Decoster.png"
 	expire = "1.1.1"
-	ideology = socdem_humanistic_capitalism_subtype
+	ideology = socdem_euro_panafricanism_subtype 
 	traits = {}
+}
+
+create_country_leader = {
+	name = "Jules Cousin"
+	picture = "gfx/leaders/MAF/Portrait_Mittelafrika_Jules_Cousin.png"
+	expire = "1.1.1"
+	ideology = soclib_humanistic_capitalism_subtype
 }
 
 create_country_leader = {

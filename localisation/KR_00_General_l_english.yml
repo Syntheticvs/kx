@@ -14,10 +14,10 @@
 
 
 ### Main Menu Tooltips ###
-RECENT_CHANGES_TEXT:0 "§VCommissars§!, §WColonialism§! and §RCollective Bargaining§! Hotfix 4\n\n-§VAlbert Decoster Socialist Congo Tree§!\n-§RAmerican Federation of Labor Tree Rework for CSA§!\n-§GRussian Civil War Trees§!\n-§WTransamur Extensions§!\n-§VSocialist Afghanistan Tree§!"
+RECENT_CHANGES_TEXT:0 "§GLand of Egypt§!, §VHouse of Bondage§! Hotfix\n\n-§VSecond Southern Revolution Tree for CAR§!\n-§GEgyptian Election Tree§!\n-§CVarious Improvements for Texas§!\n-§RJames K. Vardaman Tree for CAR§!"
 COOP_MAIN_MENU_LINK:0 "Click here to go to r/kaiserredux"
 KR_MAIN_MENU_LINK:0 "Click here to go to the Kaiserredux Discord"
-LOGO_MAIN_MENU_LINK:0 "Kaiserredux Version: Commissars, Colonialism and Collective Bargaining"
+LOGO_MAIN_MENU_LINK:0 "Kaiserredux Version: Land of Egypt, House of Bondage"
 
 ### Diplomacy Tooltips ###
 REQUEST_EXP_FORCE_BLOCKED_TT:0 "§RThis country doesn't allow you to request their forces.§!"
@@ -35,6 +35,7 @@ RECALL_VOLUNTEERS_TOOLTIP_G:0 "§Y[This.GetNameWithFlag]§! must have any volunt
 RECALL_VOLUNTEERS_ACTION_ACCEPTED_DESC:0 "\n§Y$COUNTRY|U$§! has §Rrecalled§! their volunteers.\n\nOur war rages on."
 RECALL_VOLUNTEERS_ACTION_ACCEPTED_MESSAGE:0 "\n§Y$From.GetNameDef|U$§! has §Rrecalled§! their volunteers.\n\nOur war rages on."
 RECALL_VOLUNTEERS_ACCEPTED_MESSAGE:0 "\n§Y$COUNTRY|U$§! has §Rrecalled§! their volunteers.\n\nOur war rages on."
+volunteers_returning_flag:0 "Volunteers are already returning."
 
 ### Regular Tooltips ###
 general_minister_change_tt:0 "Their ministers will change according to our ideology."
@@ -82,7 +83,7 @@ INTELLIGENCE_AGENCY_BLOCK_TOOLTIP:0 "[!intelligence_agency_blocker_button_click_
 
 ### Splash Screen ###
 KR_SPLASH_TITLE:0 "Welcome to Kaiserredux"
-KR_SPLASH_CREDITS:0 "§YBrought to you by the KX Team and contributors, both past and present:§!\n00matthew2000, 404NameNotFound, abesneedsmeds, about10balloons, Alpha Simp, AmCath, AngryCatholic, Avalon, Alonch, Arvidus, Big Agnar, Bomber, bchevy, Brapiš, cemeh, Chaseair, Chiang Kai-SWAG, C. Kyle, ClothCoat, Eanred, eBoLa_hUnTeR, EmilianoZapata, Eric_Crazy, Fins_of_Finland, Flameshot19, Frelious, Galaxi, GamerDalaiLama66, GamerShah, Garry, gelurom, General Doge, Georgy, Ghost Willy, GoldenHat, Griff, guneric, HAKOPMNTE_DEDA, Hain_Z, Idlemancer, Indyclone77, Iranian Voodoo Doctor, JewishBastard, jocn, JoeBidenWhatAreYouHiding, Justyouraverage, kaan, Kakoopa, KaiserCharles, kerensky, LCPL Owen, Lenin, leol, Log from Blammo!, Logandp7, Lubos, Linus Tip Taps, Malidus, Mladenov, Mister R.K. Moskowien, Mossy, MrCuba, MrTomCruise, Murphy, Majo Max, Nickay, New England, Nyx, Nuclear IL-2, O-K-I, Oneven, One Eyed Dragon, Ozmandiaz, Pawlu, Pogge, Polskers, Providence, Rei, qubic, Shimilu, soclibdictator, Todd Howard, Tonitruant, tran, Umerzaidi, victims_of_, Victor van von volkvan, Vozhd, Vlastelinum, Waghlon, Yaaaay, Yaroslav007, and Zapinus\n\nAdditionally, all credit for the original Kaiserreich base and content ported from it goes to the §YKaiserreich Team!§!\n\nThanks to §GNeutrino§! for allowing us to integrate Player-Led Peace Conferences and for being an awesome guy in general!\n\nThanks to §GGlowingone§! for allowing us to integrate their Supply Overhaul submod.\n\nThanks to §CPapaHuts§! for allowing us to integrate their Nation Buffs submod.\n\nShoutout to the §COld World Blues Team§!, the §GEquestria at War Team§!, and the §RRoad to 56 Team§! for all being cool guys!"
+KR_SPLASH_CREDITS:0 "§YBrought to you by the KX Team and contributors, both past and present:§!\n00matthew2000, 404NameNotFound, abesneedsmeds, about10balloons, Alpha Simp, AmCath, AngryCatholic, Avalon, Alonch, Arvidus, Big Agnar, Bomber, bchevy, Brapiš, cemeh, Chaseair, Chiang Kai-SWAG, C. Kyle, ClothCoat, Eanred, eBoLa_hUnTeR, EmilianoZapata, Eric_Crazy, Fins_of_Finland, Flameshot19, Frelious, Galaxi, GamerDalaiLama66, GamerShah, Garry, gelurom, General Doge, Georgy, Ghost Willy, GoldenHat, Griff, guneric, HAKOPMNTE_DEDA, Hain_Z, Idlemancer, Indyclone77, Iranian Voodoo Doctor, JewishBastard, jocn, JoeBidenWhatAreYouHiding, Justyouraverage, kaan, Kail, KaiserCharles, Kakoopa, kerensky, LCPL Owen, Lenin, leol, Log from Blammo!, Logandp7, Lubos, Linus Tip Taps, Malidus, Mladenov, Mister R.K. Moskowien, Mossy, MrCuba, MrTomCruise, Murphy, Majo Max, Nickay, New England, Nyx, Nuclear IL-2, O-K-I, Oneven, One Eyed Dragon, Ozmandiaz, PapaHuts, Pawlu, Pogge, Polskers, Providence, Rei, qubic, Shimilu, soclibdictator, Todd Howard, Tonitruant, tran, Umerzaidi, victims_of_, Victor van von volkvan, Vozhd, Vlastelinum, Waghlon, Yaaaay, Yaroslav007, and Zapinus\n\nAdditionally, all credit for the original Kaiserreich base and content ported from it goes to the §YKaiserreich Team!§!\n\nThanks to §GNeutrino§! for allowing us to integrate Player-Led Peace Conferences and for being an awesome guy in general!\n\nThanks to §GGlowingone§! for allowing us to integrate their Supply Overhaul submod.\n\nShoutout to the §COld World Blues Team§!, the §GEquestria at War Team§!, and the §RRoad to 56 Team§! for all being cool guys!"
 kr_integrated_puppet:0 "Integrated Puppet"
 kr_occupied_puppet:0 "Occupied Puppet"
 kr_default_puppet:0 "Puppet"
@@ -105,6 +106,7 @@ kx_tripartite_administration:0 "Tripartite Administration"
 kx_franco_german_administration:0 "Admiralitätsgebiet"
 kx_tributary:0 "Tributary State"
 kr_military_district:0 "Military District"
+autonomous_territory: "Autonomous Territory"
 ### Autonomy Tooltips ###
 can_lower_autonomy_level:0 "Can lower autonomy level\n"
 can_raise_autonomy_level:0 "Can raise autonomy level\n"
@@ -268,7 +270,8 @@ kr.political.250.t:0 "Puppet [marked_country.GetNameDef]?"
  kr.political.250.d:0 "This will turn [marked_country.GetNameDef] into a subject of [to_be_overlord.GetNameDef], using the default Occupied Puppet autonomous state. If they're in a different faction, they will leave it, but this won't end any of the current wars they're in. If you want to do that, you should do it separately.\n\n§RNOTE: This may very well break Kaiserreich content! Use at your own risk!!§!"
  kr.political.250.a:0 "Do it"
  kr.political.250.b:0 "Do it, but let them keep their current government"
- kr.political.250.c:0 "On second thought..."
+ kr.political.250.c:0 "Create a colored puppet"
+ kr.political.250.e:0 "On second thought..."
 
  kr.political.251.t:0 "Free [marked_country.GetNameDef]?"
  kr.political.251.d:0 "This will make [marked_country.GetNameDef] completely independent. It will not change their current government (unless the mod has content to do so automatically), not remove [marked_country.GetNameDef] from their faction, if they're in one, nor take them out of any wars.\n\n§RNOTE: This may very well break Kaiserreich content! Use at your own risk!!§!"
@@ -493,6 +496,7 @@ minister_of_native_affairs:0 "Min. of Native Affairs"   # SAF, SFR
 national_philosopher:0 "National Philosopher"               # NFA
 faction_minister:0 "Internal Faction"                       # JBSs
 taoiseach:0 "Taoiseach"                       # IRE
+minister_for_ulster_affairs:0 "Min. for Ulster Affairs"                       # IRE
 vice_president:0 "Vice President"                       # USA
 chief_mouser:0 "Chief Mouser"                       # ENG
 
@@ -692,7 +696,7 @@ camel_corps_tech: "Camel Corps"
 camel_corps_tech_effect: "Enables §H$camel_corps_tech$§!\n§HCamelry\n    $desert$§!\n      $STAT_ADJUSTER_ATTACK$§G+15%§!\n      $STAT_ADJUSTER_DEFENCE$§G+5%§!\n      $STAT_ADJUSTER_MOVEMENT$§G+3%§!"
 
 cossack_corps_tech:0 "Cossack Corps"
-cossack_corps_tech_effect:0 "Enables §Y$cossack_corps_tech$§\n§H$irregular_cavalry$\n    Plains§!\n      $STAT_ADJUSTER_DEFENCE$: §G+5%§!"
+cossack_corps_tech_effect:0 "Enables §Y$cossack_corps_tech$§!\n §H$irregular_cavalry$\n    Plains§!\n      $STAT_ADJUSTER_DEFENCE$: §G+5%§!"
 
 irregular_cavalry_tech: "Irregular Cavalry"
 irregular_cavalry_tech_effect: "Enables §Y$irregular_cavalry$§! battalions"
@@ -1282,9 +1286,9 @@ steppe_desc: ""
 
 ### KR4 Porting tooltip shite ###
 ### Modifiers (for use as tooltips in variable effects) ###
+ consumer_goods_factor_tooltip: "$MODIFIER_CONSUMER_GOODS_FACTOR$: $RIGHT|Y=%1$"
  industrial_capacity_factory_tooltip: "$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: $RIGHT|+=%$"
  industrial_capacity_dockyard_tooltip: "$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: $RIGHT|+=%$"
-
  construction_speed_tooltip: "$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: $RIGHT|+=%$"
  infrastructure_construction_speed_tooltip: "$modifier_production_speed_infrastructure_factor$: $RIGHT|+=%$"
  arms_factory_construction_speed_tooltip: "$modifier_production_speed_arms_factory_factor$: $RIGHT|+=%$"

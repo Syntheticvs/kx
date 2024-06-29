@@ -1717,6 +1717,15 @@ country_event = {#Chen gunned down; which Chen becomes the new Big Chen?
 		}
 		add_political_power = -50
 		add_stability = -0.50
+		hidden_effect = {
+			create_country_leader = {
+				name = "Chen Lianbo"
+				desc = "POLITICS_GXC_CHEN_LIANBO_DESC"
+				picture = "gfx/leaders/GXC/Portrait_GXC_Chen_Lianbo.png"
+				expire = "1.1.1"
+				ideology = marlib_warlordism_subtype
+			}
+		}
 		set_politics = {
 			ruling_party = market_liberal
 		}
@@ -4038,3 +4047,48 @@ country_event = {  #change color of GXC KMT
 
 }
 
+# Hidden event to annex Sichuan to fix them forever stuck
+country_event = {
+	id = lng.1000
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lng.100" }
+	
+	fire_only_once = yes
+	trigger = {
+		tag = GXC
+		is_faction_leader = yes
+		owns_state = 608
+		is_in_faction_with = SZC
+	}
+	hidden = yes
+
+	option = {
+		name = lng.1000.a
+		annex_country = {
+			target = SZC
+			transfer_troops = no
+		}
+	}
+}
+
+# Hidden event to annex Hunan to fix them forever stuck
+country_event = {
+	id = lng.1001
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lng.101" }
+	
+	fire_only_once = yes
+	trigger = {
+		tag = GXC
+		is_faction_leader = yes
+		owns_state = 608
+		is_in_faction_with = HNN
+	}
+	hidden = yes
+
+	option = {
+		name = lng.1001.a
+		annex_country = {
+			target = HNN
+			transfer_troops = no
+		}
+	}
+}

@@ -1776,7 +1776,6 @@ focus_tree = {
 		}
 		available = {
 			UKR_upss_in_power = yes
-			UKR_vasyl_in_power = yes
 		}
 		ai_will_do = {
 			factor = 20
@@ -2479,7 +2478,10 @@ focus_tree = {
 		x = 4
 		y = 0
 		allow_branch = {
+			OR = {
 			UKR_ump_uskhd_in_power = yes
+			has_country_flag = UKR_open_2nd_term_trees
+			}
 		}
 		available = {
 			UKR_ump_uskhd_in_power = yes
@@ -15211,7 +15213,7 @@ focus_tree = {
 				limit = {
 					NOT = { is_in_faction_with = GER }
 				}
-				FROM = { country_event = sic.34 }
+				GER = { country_event = sic.34 }
 			}
 			add_ideas = UKR_Ties_Germany
 			add_stability = 0.03
@@ -22271,7 +22273,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus UKR_ostwall_focus"
 			add_tech_bonus = {
-				name = UKR_ostwall
+				name = UKR_ostwall_focus
 				bonus = 1
 				uses = 1
 				category = engineers_tech

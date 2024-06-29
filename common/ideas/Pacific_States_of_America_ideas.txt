@@ -416,6 +416,25 @@ ideas = {
 			}
 		}
 
+		CAL_weakness_is_crime = {#Weakness is a Crime!
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_weakness_is_crime"}
+			allowed = {	always = no }
+			available = { 
+			OR = {
+			has_government = paternal_autocrat 
+			has_government = national_populist
+				}
+			}
+			picture = CAL_macfadden_buff
+			modifier = { 
+				forced_surrender_limit = 0.14
+				mobilization_speed = 0.04
+				local_supplies = 0.04
+				army_attack_factor = 0.06
+				army_speed_factor = 0.08
+			}
+		}
+
 		### Hearst Ideas ###
 		CAL_nia = {#National Recovery Administration
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_nia"}
@@ -742,9 +761,12 @@ ideas = {
 		CAL_war_powers_act = {# War Powers Act
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_war_powers_act"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat 
+			available = { 
+			OR = {
+			has_government = authoritarian_democrat
 			has_government = paternal_autocrat
 			has_government = national_populist
+				}
 			}
 			removal_cost = -1
 			picture = presidential_war_powers
@@ -764,9 +786,12 @@ ideas = {
 		CAL_war_powers_act_2 = {# War Powers Act
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_war_powers_act_2"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat 
+			available = { 
+			OR = {
+			has_government = authoritarian_democrat
 			has_government = paternal_autocrat
 			has_government = national_populist
+				}
 			}
 			removal_cost = -1
 			picture = presidential_war_powers
@@ -786,9 +811,12 @@ ideas = {
 		CAL_military_lobby_idea = {#Military Lobby 
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_military_lobby_idea"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat 
+			available = { 
+			OR = {
+			has_government = authoritarian_democrat
 			has_government = paternal_autocrat
 			has_government = national_populist
+				}
 			}
 			removal_cost = -1
 			picture = generic_army
@@ -806,9 +834,12 @@ ideas = {
 		CAL_military_lobby_idea_2 = {#Military Lobby 
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_military_lobby_idea_2"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat 
+			available = { 
+			OR = {
+			has_government = authoritarian_democrat
 			has_government = paternal_autocrat
 			has_government = national_populist
+				}
 			}
 			removal_cost = -1
 			picture = generic_army
@@ -826,9 +857,12 @@ ideas = {
 		CAL_military_lobby_idea_3 = {#Military Lobby 
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_military_lobby_idea_3"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat 
+			available = { 
+			OR = {
+			has_government = authoritarian_democrat
 			has_government = paternal_autocrat
 			has_government = national_populist
+				}
 			}
 			removal_cost = -1
 			picture = generic_army
@@ -846,9 +880,12 @@ ideas = {
 		CAL_hearst_debt = {#Hearst Debt
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_hearst_debt"}
 			allowed = { always = no }
-			available = { has_government = authoritarian_democrat 
+			available = { 
+			OR = {
+			has_government = authoritarian_democrat
 			has_government = paternal_autocrat
 			has_government = national_populist
+				}
 			}
 			removal_cost = -1
 			picture = generic_army
@@ -2232,10 +2269,15 @@ ideas = {
 			allowed_civil_war = { always = yes }
 			picture = local_segregation
 			modifier = {
+				stability_factor = 0.08
+				party_popularity_stability_factor = 0.09
 				political_power_gain = 0.02
-				command_power_gain = 0.05
+				command_power_gain = 0.08
 				max_command_power = 10
 				encryption_factor = 0.03
+				consumer_goods_factor = -0.07
+				production_speed_buildings_factor = 0.04
+				industry_repair_factor = 0.2
 			}
 		}
 		
@@ -2268,6 +2310,19 @@ ideas = {
 				research_speed_factor = 0.08
 				decryption_factor = 0.03
 				production_lack_of_resource_penalty_factor = 0.03
+			}
+		}
+
+		CAL_integration_encouraged_idea = {#Integration Encouraged
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CAL_integration_encouraged_idea"}
+			allowed = {	always = no	}
+			allowed_civil_war = { always = yes }
+			picture = NYC_racial_progress_promoted
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.06
+				production_factory_max_efficiency_factor = 0.08
+				industrial_capacity_factory = 0.08
+				political_power_gain = -0.05
 			}
 		}
 		

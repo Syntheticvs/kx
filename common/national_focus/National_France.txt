@@ -803,6 +803,7 @@ focus_tree = {
 			long_name = NFA_pataut_junta_long
 			name = NFA_pataut_junta
 			}
+			add_authdem_to_coalition = yes
 		}
 	}
 
@@ -2051,6 +2052,14 @@ focus_tree = {
 			}
 			add_political_power = 20
 			remove_ideas = NFA_protests_2
+			hidden_effect = {
+				IRE = {
+					country_event = {
+						id = irelandflavour.362
+						days = 3
+					}
+				}
+			}
 		}
 	}	
 	
@@ -4558,6 +4567,10 @@ focus_tree = {
 				NFA = {
 					puppet = FAR
 				}
+				set_autonomy = {
+				target = FAR
+				autonomous_state = kx_colored_puppet
+				}
 				FAR = {
 					set_politics = {
 					ruling_party = paternal_autocrat
@@ -4644,6 +4657,10 @@ focus_tree = {
 				}
 				NFA = {
 					puppet = FAR
+				}
+				set_autonomy = {
+				target = FAR
+				autonomous_state = kx_colored_puppet
 				}
 				FAR = {
 					set_politics = {
@@ -4733,6 +4750,10 @@ focus_tree = {
 				NFA = {
 					puppet = FAR
 				}
+				set_autonomy = {
+				target = FAR
+				autonomous_state = kx_colored_puppet
+				}
 				FAR = {
 					set_politics = {
 					ruling_party = social_conservative
@@ -4751,14 +4772,11 @@ focus_tree = {
 							authoritarian_democrat = 8
 							paternal_autocrat = 27
 							national_populist = 2
+							}
 						}
 					}
 				}
-				}
-				
-				
-			}
-				
+			}	
 		}
 	}
 
@@ -5104,7 +5122,7 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = NFA_darlan_plan_1
 			add_doctrine_cost_reduction = {
-				name = GER_doctrine_great_war_2
+				name = NFA_darlan_plan_chosen
 				cost_reduction = 0.7
 				uses = 3
 				category = land_doctrine
@@ -15546,6 +15564,8 @@ focus_tree = {
 		683 = { add_claim_by = NFA }
 		318 = { add_claim_by = NFA }
 		464 = { add_claim_by = NFA }
+		1330 = { add_claim_by = NFA }
+		1331 = { add_claim_by = NFA }
 		331 = { add_claim_by = NFA }
 		332 = { add_claim_by = NFA }
 		470 = { add_claim_by = NFA }
@@ -15596,6 +15616,7 @@ focus_tree = {
 		available = {
 			owns_state = 371
 			owns_state = 466
+			has_government = national_populist
 		}
 				cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -15651,7 +15672,9 @@ focus_tree = {
 				transfer_state = 463
 				add_state_core = 463	
 				transfer_state = 473
+				transfer_state = 1332
 				add_state_core = 473
+				add_state_core = 1332
 				transfer_state = 740
 				add_state_core = 740
 				transfer_state = 471
@@ -15738,7 +15761,11 @@ focus_tree = {
 		elections_allowed = no
 		}
 			add_state_core = 464
-						add_state_core = 357
+			add_state_core = 357
+			transfer_state = 1330
+			transfer_state = 1331
+			add_state_core = 1330
+			add_state_core = 1331
 			add_state_core = 366
 			add_state_core = 1171
 			add_state_core = 1169

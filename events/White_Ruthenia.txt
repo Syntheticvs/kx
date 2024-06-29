@@ -3674,7 +3674,7 @@ country_event = { #future of monarchy?
 	is_triggered_only = yes
 
 	option = {
-		name = whiteruthenia.1001.a #Monbol
+		name = whiteruthenia.1001.a
 		ai_chance = {
 			base = 25
 			modifier = {
@@ -3755,7 +3755,7 @@ country_event = { #invite to faction
 	is_triggered_only = yes
 
 	option = {
-		name = whiteruthenia.1002.a #Monbol
+		name = whiteruthenia.1002.a 
 		if = {
 			limit = {
 				is_in_faction = yes
@@ -4592,6 +4592,29 @@ country_event = { # Astrouski forms anti-syndie government
 				expire = "1.1.1"
 				ideology = prussian_constitutionalism_subtype
 			}
+			hidden_effect = {
+				create_country_leader = {
+					name = "Žyhimont"
+					desc = "POLITICS_SIGISMUND_DESC"
+					picture = "gfx/leaders/WHR/Portrait_WHR_Zyhimont.png"
+					expire = "1.1.1"
+					ideology = paternal_socialism_subtype
+				}
+				create_country_leader = {
+					name = "Adam Stankievič"
+					desc = "POLITICS_ADAM_STANKIEVIC_DESC"
+					picture = "gfx/leaders/WHR/Portrait_WHR_Adam_Stankievic.png"
+					expire = "1.1.1"
+					ideology = marlib_agrarianism_subtype
+				}
+				create_country_leader = {
+					name = "Jazep Ljosik"
+					desc = "POLITICS_JAZEP_LJOSIK_DESC"
+					picture = "gfx/leaders/WHR/Portrait_WHR_Jazep_Ljosik.png"
+					expire = "1.1.1"
+					ideology = revisionist_marxism_subtype
+				}
+			}
 		}
 		remove_all_ministers = yes
 		add_soccon_to_coalition = yes
@@ -5198,7 +5221,7 @@ country_event = { # LIT asks for LitBel (GER's opinion)
 		}
 	}
 	option = { # that's dumb please leave
-		name = whrpol.33.a
+		name = whrpol.33.b
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -5873,6 +5896,7 @@ country_event = { # Anti-German Revolution
 			long_name = WHR_anarchist_party_long
 		}
 		set_country_flag = WHR_anarchists
+		set_country_flag = WHR_revolution_success
 		remove_all_ministers = yes
 		add_ideas = WHR_Juda_Grossman_hog_tot
 		add_ideas = WHR_Mark_Mratchny_for_rso
@@ -5891,7 +5915,6 @@ country_event = { # Anti-German Revolution
 			set_nationality = GER
 			demote_leader = yes
 		}
-		complete_national_focus = WHR_Black_Banner_Engulfs_Nation
 		add_ideas = WHR_anarchy_aftermath
 		set_country_flag = { flag = WHR_allies days = 30 value = 1 }
 		GER = {
@@ -6960,14 +6983,12 @@ country_event = { # Anarchists
 
 	option = { # Fine
 		name = whrpol.107.a
-		every_owned_state = {
-			if = {
-				limit = {
-					is_claimed_by = ROOT
-				}
-				remove_claim_by = ROOT
-				add_core_of = ROOT
+		every_state = {
+			limit = {
+				is_claimed_by = ROOT
 			}
+			remove_claim_by = ROOT
+			add_core_of = ROOT
 		}
 		every_state = {
 			limit = {
@@ -6984,14 +7005,12 @@ country_event = { # Anarchists
 	}
 	option = { # Fine
 		name = whrpol.107.b
-		every_owned_state = {
-			if = {
-				limit = {
-					is_claimed_by = ROOT
-				}
-				remove_claim_by = ROOT
-				add_core_of = ROOT
+		every_state = {
+			limit = {
+				is_claimed_by = ROOT
 			}
+			remove_claim_by = ROOT
+			add_core_of = ROOT
 		}
 		every_state = {
 			limit = {

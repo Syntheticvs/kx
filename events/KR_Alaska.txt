@@ -2890,7 +2890,7 @@ country_event = { # Masterplan
 			
 	option = { 
 		name = Alaska.44.a
-		load_oob = NATIVEBEASTS
+		hidden_effect = { load_oob = ALA_native }
 		set_province_name = { id = 13203 name = "Dzánti K'ihéeni"}
 		set_province_name = { id = 13091 name = "Dgheyay Kaq'"}
 		set_province_name = { id = 7884 name = "Sun'aq"}
@@ -3382,6 +3382,7 @@ country_event = { # Indianizing Canada
 		name = Alaska.57.a
 		ALA = {
 			add_state_core = 473
+			add_state_core = 1332
 			add_state_core = 470
 			add_state_core = 740
 			add_state_core = 469
@@ -3391,6 +3392,8 @@ country_event = { # Indianizing Canada
 			add_state_core = 331
 			add_state_core = 332
 			add_state_core = 464
+			add_state_core = 1330
+			add_state_core = 1331
 			add_state_core = 465
 			add_state_core = 683
 			add_state_core = 468
@@ -3424,6 +3427,7 @@ country_event = { # Indianizing Canada
 		set_province_name = { id = 373 name = "Wen'juikjikan Senpir-Miquelon"}
 		set_province_name = { id = 4720 name = "Putlavak"}
 		set_province_name = { id = 12582 name = "Baawitigong"}
+		set_province_name = { id = 1872 name = "Chuu Gaii Han"}
 	}
 }
 
@@ -4279,7 +4283,7 @@ country_event = { # yo should we just buy alaska
 	option = { #no 
 		name = Alaska.110.a
 		ai_chance = {
-			factor = 50
+			factor = 80
 			modifier = {
 				factor = 0
 				has_game_rule = {
@@ -4299,7 +4303,7 @@ country_event = { # yo should we just buy alaska
 			}
 		}
 		ai_chance = {
-			factor = 50
+			factor = 20
 			modifier = {
 				factor = 0
 				OR = {
@@ -4849,7 +4853,7 @@ country_event = { # Lathrop Dead
 			long_name = "Alaska Independence Party"
 			ideology = market_liberal
 		}
-		remove_ideas = ALA_Joseph_E_Vogler_hog_mli
+		remove_ideas = ALA_Austin_E_Lathrop_hog_mli
 		add_ideas = ALA_Joseph_E_Vogler_hog_mli
 	}
 }
@@ -4868,6 +4872,13 @@ country_event = { # Alaskan Identity
 	option = { # Get Fucked America
 		name = Alaska.132.a
 		add_political_power = 20
+		hidden_effect = {
+			country_event = {
+				id = Alaska.211
+				days = 45
+				random_days = 60
+			}
+		}
 	}
 }
 
@@ -5169,8 +5180,8 @@ country_event = { # Yisrael leader Picker
 			ideology = narodism_subtype
 		}
 		set_party_name = {
-			name = "Labor Zionists of Alaska"
-			long_name = "Labor Zionists of Alaska"
+			name = "Party of Left Socialist-Revolutionaries-Territorialists"
+			long_name = "Party of Left Socialist-Revolutionaries-Territorialists"
 			ideology = radical_socialist
 		}
 		set_politics = {
@@ -6352,6 +6363,7 @@ country_event = { # Alaskan Ambitions
 			factor = 0
 		}
 		add_state_core = 637
+		add_state_core = 1332
 		add_state_core = 473
 		add_state_core = 471
 		add_state_core = 472
@@ -6377,6 +6389,23 @@ country_event = { # Alaskan Ambitions
 		}
 		add_political_power = 60
 		add_stability = 0.06
+	}
+}
+
+country_event = {# Benny Benson
+	id = Alaska.211
+	immediate = {log = "[GetDateText]: [Root.GetName]: event Alaska.211"}
+	title = Alaska.211.t
+	desc = Alaska.211.d
+	picture = GFX_report_event_ALA_benny_benson
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #War
+		name = Alaska.211.a
+		add_stability = 0.02
 	}
 }
 
@@ -6558,19 +6587,23 @@ country_event = { #Red Man's Internationale
 	
 	picture = GFX_report_event_USA_indians
 
-	trigger = {
-		ALA = {
-			exists = yes
-		}
-	}
-
 	is_triggered_only = yes
 
 	option = { ###Kinda fail
-		name = REDAlaska.6.a
-		FRA = {
-			add_to_faction = ALA
+		name = REDAlaska.4.a
+		trigger = {
+			PRU = { has_socialist_government = yes }
 		}
+		ai_chance = { factor = 0 }
+		create_faction = "Amerindian Internationale"
+		ALA = {
+			add_to_faction = PRU
+		}
+	}
+	option = { ###Kinda fail
+		name = REDAlaska.4.b
+		ai_chance = { factor = 100 }
+		create_faction = "Amerindian Internationale"
 	}
 }
 
@@ -6637,7 +6670,7 @@ country_event = {
 	option = {
 		name = REDAlaska.9.a
 		add_political_power = 100
-		load_oob = INDIANWARRIORS
+		hidden_effect = { load_oob = ALA_warriors }
 		create_wargoal = {
 			type = annex_everything target = CAN
 		}
@@ -7038,6 +7071,8 @@ country_event = { # Indianizing America
 		set_province_name = { id = 12304 name = "Xaymaca"}
 		set_province_name = { id = 4598 name = "Maguá"}
 		set_province_name = { id = 4641 name = "Ha-yi-ti"}
+		set_province_name = { id = 1330 name = "Unamaꞌki"}
+		set_province_name = { id = 1331 name = "Epekwitk"}
 		set_province_name = { id = 7660 name = "Higüey"}
 		set_province_name = { id = 1440 name = "Borikén"}
 		set_province_name = { id = 3284 name = "Cumucurapo"}
@@ -7092,6 +7127,9 @@ country_event = { # Indianizing America
 		set_province_name = { id = 14619 name = "Akua Yala"}
 		set_province_name = { id = 14618 name = "Gaigirgordub"}
 		set_province_name = { id = 5205 name = "Hahatunwan"}
+		set_province_name = { id = 12341 name = "Nabasoto"}
+		set_province_name = { id = 11685 name = "O-wash-ta-nong"}
+		set_province_name = { id = 7420 name = "Kitchiwikwedongsing"}
 	}
 }
 
@@ -7107,6 +7145,7 @@ country_event = { #Baste Huwhite Reseravtions
 	trigger = {
 		tag = ALA
 		has_government = national_populist
+		has_country_flag = ALA_based_thing
 		owns_state = 932 #mass
 		owns_state = 739 #Ottowa
 	}
@@ -7387,14 +7426,17 @@ country_event = { #Puppet Event
 country_event = { #Iroquois 
 	id = REDAlaska.103
 	title = REDAlaska.103.t
-		desc = REDAlaska.103.d
+	desc = REDAlaska.103.d
 	picture = GFX_report_event_generic_trial_big
 
 	is_triggered_only = no
 	
 	trigger = {
 		tag = ALA
-		has_government = national_populist
+		has_country_leader = {
+			ruling_only = yes
+			name = "Elwood Towner"
+		}
 		owns_state = 932 #mass
 		owns_state = 739 #Ottowa
 	}
@@ -7449,14 +7491,17 @@ country_event = { #Iroquois
 country_event = { #Wabanakia and Iroquois 
 	id = REDAlaska.104
 	title = REDAlaska.104.t
-		desc = REDAlaska.104.d
+	desc = REDAlaska.104.d
 	picture = GFX_report_event_generic_trial_big
 
 	is_triggered_only = no
 	
 	trigger = {
 		tag = ALA
-		has_government = national_populist
+		has_country_leader = {
+			ruling_only = yes
+			name = "Elwood Towner"
+		}
 		owns_state = 932 #mass
 		owns_state = 739 #Ottowa
 	}
@@ -7480,7 +7525,10 @@ country_event = { #Wabanakia and Iroquois
 			transfer_state = 934
 			transfer_state = 468
 			transfer_state = 465
-			transfer_state = 464
+			transfer_state = 1330
+			transfer_state = 1331
+			add_state_core = 1330
+			add_state_core = 1331
 		}
 		set_country_flag = wab_independent
 		hidden_effect = {

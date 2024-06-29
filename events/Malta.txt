@@ -757,6 +757,10 @@ country_event = {
 				MLT_Angelo_Mojana_sec_pau
 			}
 		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
 		set_cosmetic_tag = MLT_LARP
 		set_country_flag = MLT_larp_knights
 		set_country_leader_ideology = neo_feudalism_subtype
@@ -1227,8 +1231,10 @@ country_event = { #killin knights
 	option = { #btfo
 		name = mlt.24.a
 		increase_ruling_party_popularity_by_10 = yes
-		random_unit_leader = { 
-			limit = { has_id = 73 }
+		every_unit_leader = {
+			limit = {
+				has_trait = MLT_order_commander
+			}
 			retire = yes
 		}
 		if = {

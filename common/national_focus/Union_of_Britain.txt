@@ -1013,7 +1013,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_home_rule
-		icon = GFX_goal_CSA_townhall_democarcy
+		icon = GFX_goal_ENG_home_rule
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_tuc
@@ -1328,6 +1328,9 @@ focus_tree = {
 		prerequisite = {
 			focus = ENG_tuc2_economy
 			focus = ENG_tuc2_internal
+		}
+		available = {
+			has_idea = ENG_silence_idea
 		}
 		x = 0
 		y = 6
@@ -1931,7 +1934,7 @@ focus_tree = {
 		icon = GFX_RUS_Encourage_Private_Property
 		cost = 5.00
 		prerequisite = {
-			focus = ENG_be_better_than_them
+			focus = ENG_moderate_british_socialism
 		}
 		x = -2
 		y = 2

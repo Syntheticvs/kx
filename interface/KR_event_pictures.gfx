@@ -422,6 +422,10 @@ spriteTypes = {
 		name = "GFX_report_event_ARM_etchmiadzin"
 		texturefile = "gfx/event_pictures/Europe/Armenia/report_event_ARM_etchmiadzin.png"
 	}
+	spriteType = {
+		name = "GFX_report_event_ARM_tigranes"
+		texturefile = "gfx/event_pictures/Europe/Armenia/report_event_ARM_tigranes.png"
+	}
 
 	## AST - Australasia
 	spriteType = {
@@ -3191,6 +3195,38 @@ spriteTypes = {
 		name = "GFX_report_event_EGY_shaykh_makhluf"
 		texturefile = "gfx/event_pictures/Africa/Egypt/report_event_EGY_shaykh_makhluf.png"
 	}
+	spriteType = {
+		name = "GFX_report_event_EGY_cairo_fire"
+		texturefile = "gfx/event_pictures/Africa/Egypt/report_event_EGY_cairo_fire.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_EGY_socdem_pm"
+		texturefile = "gfx/event_pictures/Africa/Egypt/report_event_EGY_socdem_pm.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_EGY_young_nasser"
+		texturefile = "gfx/event_pictures/Africa/Egypt/report_event_EGY_young_nasser.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_EGY_ibhraim_abdel_hady_pasha"
+		texturefile = "gfx/event_pictures/Africa/Egypt/report_event_EGY_ibhraim_abdel_hady_pasha.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_EGY_sayyid_qutb"
+		texturefile = "gfx/event_pictures/Africa/Egypt/report_event_EGY_sayyid_qutb.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_EGY_hassan_al_banna"
+		texturefile = "gfx/event_pictures/Africa/Egypt/report_event_EGY_hassan_al_banna.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_EGY_ladies"
+		texturefile = "gfx/event_pictures/Africa/Egypt/report_event_EGY_ladies.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_EGY_institute_coptic_studies"
+		texturefile = "gfx/event_pictures/Africa/Egypt/report_event_EGY_institute_coptic_studies.png"
+	}
 
 	## ELS - El Salvador
 	spriteType  = {
@@ -3254,7 +3290,19 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_ENG_crystal_palace"
 		texturefile = "gfx/event_pictures/Europe/Union_of_Britain/UoB_crystal_palace.png"
-	}	
+	}
+	spriteType = {
+		name = "GFX_report_event_ENG_cathedral"
+		texturefile = "gfx/event_pictures/Europe/Union_of_Britain/UK_cathedral.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_ENG_colwyn_castle"
+		texturefile = "gfx/event_pictures/Europe/Union_of_Britain/UK_colwin_castle.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_ENG_jacobite_crest"
+		texturefile = "gfx/event_pictures/Europe/Union_of_Britain/UK_jacobite_crest.png"
+	}
 
 	## ETS - East Turkestan
 	spriteType  = {
@@ -4739,6 +4787,358 @@ spriteTypes = {
 		name = "GFX_report_event_IRE_wolves"
 		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_wolves.png"
 	}
+	spriteType = {
+		name = "GFX_report_event_IRE_abandoned_farm"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_abandoned_farm.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_alufactory"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_alufactory.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_army_bayonet"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_army_bayonet.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_army_climbing"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_army_climbing.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_army_line"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_army_line.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_army_marching_square"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_army_marching_square.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_army_oconnell"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_army_oconnell.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_army_oconnell_2"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_army_oconnell_2.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_army_officers"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_army_officers.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_army_parade"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_army_parade.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_army_standing"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_army_standing.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_band"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_band.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_blueshirt_desk"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_blueshirt_desk.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_blueshirt_group"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_blueshirt_group.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_blueshirt_march"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_blueshirt_march.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_blueshirt_march_2"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_blueshirt_march_2.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_blueshirt_salute"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_blueshirt_salute.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_blueshirt_salute_town"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_blueshirt_salute_town.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_blueshirts_head"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_blueshirts_head.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_bonfire"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_bonfire.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_brian_boru"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_brian_boru.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_brooke"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_brooke.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_brooke_speech"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_brooke_speech.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_browne"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_browne.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_burn_big_house"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_burn_big_house.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_casement"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_casement.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_collins_balcony"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_collins_balcony.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_collins_speech"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_collins_speech.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_collins_uniform"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_collins_uniform.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_connolly"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_connolly.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_crowd"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_crowd.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_cu_chulainn"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_cu_chulainn.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_dail_chamber"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_dail_chamber.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_dame_st"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_dame_st.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_dev_cake"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_dev_cake.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_dev_group"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_dev_group.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_dev_phone"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_dev_phone.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_dev_walking"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_dev_walking.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_dublin_bus"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_dublin_bus.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_entente"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_entente.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_fahey"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_fahey.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_farmers"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_farmers.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_funeral"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_funeral.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_gaa"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_gaa.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_great_seal"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_great_seal.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_griffith"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_griffith.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_guinness"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_guinness.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_halloween"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_halloween.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_immigration"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_immigration.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_joyce"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_joyce.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_larkin"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_larkin.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_larkin_2"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_larkin_2.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_larkin_hat"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_larkin_hat.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_le_macha"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_le_macha.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_leinster_house"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_leinster_house.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_lemass"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_lemass.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_lewis"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_lewis.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_macrory"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_macrory.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_map"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_map.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_mulcahy"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_mulcahy.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_nelsons_pillar"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_nelsons_pillar.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_obrien"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_obrien.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_ocadhain"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_ocadhain.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_ocasey"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_ocasey.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_oduffy_beret"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_oduffy_beret.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_oduffy_blueshirt_speech"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_oduffy_blueshirt_speech.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_oduffy_blueshirt_speech_2"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_oduffy_blueshirt_speech_2.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_oduffy_lads"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_oduffy_lads.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_oduffy_suit_speech"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_oduffy_suit_speech.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_old_woman_voting"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_old_woman_voting.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_olympics"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_olympics.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_orange_order"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_orange_order.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_orange_order_2"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_orange_order_2.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_port"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_port.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_portuguese_ship"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_portuguese_ship.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_redmond"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_redmond.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_riot_aftermath"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_riot_aftermath.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_riot_aftermath_2"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_riot_aftermath_2.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_shaw"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_shaw.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_socialist_meeting"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_socialist_meeting.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_spindler"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_spindler.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_starry_plough"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_starry_plough.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_street"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_street.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_tailteann"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_tailteann.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_tricolour"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_tricolour.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_victory_rally"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_victory_rally.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_workers_happy"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_workers_happy.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_IRE_yeats"
+		texturefile = "gfx/event_pictures/Europe/Ireland/report_event_IRE_yeats.png"
+	}
 
 	## ITA - Italian Republic
 	spriteType = {
@@ -5110,120 +5510,6 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/Europe/Lithuania/vilnus_after_rain.png"
 	}
 
-	## MAF - Mittelafrika
-	spriteType = {
-		name = "GFX_report_event_MAF_goering"
-		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_goering.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_MAF_tanganyika"
-		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_tanganyika.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_MAF_askari"
-		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_askari.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_MAF_askari2"
-		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_askari2.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_MAF_officers"
-		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_officers.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_MAF_highlands"
-		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_highlands.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_MAF_ernstjunger"
-		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_ernstjunger.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_MAF_franzritter"
-		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_franzritter.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_MAF_fritzthyssen"
-		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_fritzthyssen.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_MAF_bockholt"
-		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_bockholt.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_MAF_georgkraut"
-		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_georgkraut.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_MAF_rudolfasmis"
-		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_rudolfasmis.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_MAF_albertgoering"
-		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_albertgoering.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_MAF_hansalbert"
-		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_hansalbert.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_MAF_hulda"
-		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_hulda.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_MAF_cologne"
-		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_cologne.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_MAF_forest"
-		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_forest.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_MAF_mahiwa"
-		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_mahiwa.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_MAF_dernburg"
-		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_dernburg.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_MAF_waruhiu"
-		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_waruhiu.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_MAF_delegation"
-		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_delegation.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_MAF_onstage"
-		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_onstage.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_MAF_return"
-		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_return.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_MAF_skull"
-		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_skull.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_MAF_tours"
-		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_tours.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_MAF_railroad"
-		texturefile = "gfx/event_pictures/Africa/Mittelafrika/maf_railroad.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_MAF_voelkerschau"
-		texturefile = "gfx/event_pictures/Africa/Mittelafrika/kolonialvoelkerschau.png"
-	}
-	spriteType = {
-		name = "GFX_report_event_MAF_boer_war"
-		texturefile = "gfx/event_pictures/Africa/Mittelafrika/boer_war.png"
-	}
-
 	## MON - Mongolia
 	spriteType  = {
 		name = "GFX_report_event_MON_maha_kalpa"
@@ -5422,6 +5708,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_NFA_event_Petain2"
 		texturefile = "gfx/event_pictures/Africa/National_France/Petain2.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_NFA_event_petain_indochina"
+		texturefile = "gfx/event_pictures/Africa/National_France/GFX_event_NFA_petain_indochina.png"
 	}
 	spriteType = {
 		name = "GFX_report_event_NFA_event_Parade"
@@ -5634,6 +5924,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_event_NFA_drunk_driving"
 		texturefile = "gfx/event_pictures/Africa/National_France/GFX_event_NFA_drunk_driving.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_NFA_event_indochina"
+		texturefile = "gfx/event_pictures/Africa/National_France/GFX_event_NFA_indochina.png"
 	}
 
 	## NOR - Norway
@@ -8490,8 +8784,8 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/North_America/United_States/USA_fireside_chats.png"
 	}
 	spriteType = {
-		name = "GFX_report_event_USA_floyd_olson"
-		texturefile = "gfx/event_pictures/North_America/United_States/USA_floyd_olson.png"
+		name = "GFX_report_event_USA_hiram_johnson"
+		texturefile = "gfx/event_pictures/North_America/United_States/USA_hiram_johnson.png"
 	}
 	spriteType = {
 		name = "GFX_report_event_USA_huey_long"

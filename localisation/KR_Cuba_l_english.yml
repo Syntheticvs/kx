@@ -1057,6 +1057,7 @@ CUB_support_centamer_decision:0 "Arm [From.GetNameDef]"
 CUB_support_centamer_decision_desc:0 "Central America has erupted in war and our ideological brethren in [From.GetNameDef] are under attack! We should send them whatever stockpiled weapons we can spare."
 CUB_radsoceconreplace_decision:0 "Modify Economic Direction"
 CUB_radsoceconreplace_decision_desc:0 "With the tyrants thrown out, we must now work to eliminate the institutional changes they made to our nation's economic apparatus. The type of economy they sought to affect cannot be allowed to come forth."
+CUB_socialist_removedis:0 "Pacify the Dissidents"
 CUB_USAcivilwar_decisions:0 "American Civil War Decisions"
 CUB_USAcivilwar_decisions_desc:0 "Decisions which relate to the American Civil War."
 CUB_waited_promotesoc_CSAdecision:0 "Send Materiel to the CSA"
@@ -2166,7 +2167,7 @@ cuba.2200.b:0 "Refuse to resign."
 ### Flavor
 
 cuba.221.t:0 "The Third International"
-cuba.221.d:0 "France has gone through with its designs to hold the First Congress of the Third International, and despite the recency of our revolution, we have received an invitation. Attending is certainly tempting, and it would undoubtedly afford a degree of legitimacy to our new regime, but with our political situation still unresolved sending important officials to such an event will likely contribute to further instability."
+cuba.221.d:0 "France has gone through with its designs to hold the Ninth Congress of the Third International, and despite the recency of our revolution, we have received an invitation. Attending is certainly tempting, and it would undoubtedly afford a degree of legitimacy to our new regime, but with our political situation still unresolved sending important officials to such an event will likely contribute to further instability."
 cuba.221.a:0 "Send for a plane."
 cuba.221.b:0 "Things are still too unstable here in Cuba..."
 

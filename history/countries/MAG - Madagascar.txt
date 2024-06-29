@@ -2,6 +2,7 @@
 OOB = "MAG"
 set_naval_oob= "MAG_naval"
 set_research_slots = 3
+set_convoys = 100
 
 add_ideas = {
 	MAG_Emil_Maurice_hog_sco
@@ -21,6 +22,7 @@ set_technology = {
 	motorised_infantry = 1
 	gw_artillery = 1
 	basic_train = 1
+	marines = 1
 }
 
 if = {
@@ -161,8 +163,8 @@ set_cosmetic_tag = MAG_GER
 
 create_country_leader = {
 	name = "Reinhard Heydrich"
-        desc = "POLITICS_HEYDRICH_MAG_DESC"
-	picture = "gfx/leaders/MAF/MAF_Reinhard_Heydrich2.png"
+	desc = "POLITICS_HEYDRICH_MAG_DESC"
+	picture = "gfx/leaders/MAF/Portrait_Mittelafrika_Reinhard_Heydrich.png"
 	expire = "1.1.1"
 	ideology = colonial_govt_subtype
 	traits = {}
@@ -196,8 +198,8 @@ create_country_leader = {
 }
 
 create_field_marshal = {
-	name = "Reinhard Heydrich "
-	portrait_path = "gfx/leaders/MAF/MAF_Reinhard_Heydrich2.png"
+	name = "Reinhard Heydrich"
+	portrait_path = "gfx/leaders/MAF/Portrait_Mittelafrika_Reinhard_Heydrich.png"
 	traits = {
 		politically_connected
 		naval_liason
@@ -213,7 +215,7 @@ create_field_marshal = {
 
 create_corps_commander = {
 	name = "Herbert Gille"
-	portrait_path = "gfx/leaders/MAF/Portrait_MAF_Herbert_Gille.png"
+	portrait_path = "gfx/leaders/MAF/Portrait_Mittelafrika_Herbert_Gille.png"
 	traits = {
 		politically_connected
 		war_hero

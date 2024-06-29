@@ -14566,15 +14566,15 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/EGY/EGY_Gamal_Abdel_Nasser.png"
 	}
 	spriteType = {
-		name = "GFX_idea_EGY_Ahmad_Mahir_hog_sli"
+		name = "GFX_idea_EGY_Ahmad_Mahir_hog_mli"
 		texturefile = "gfx/interface/ministers/EGY/EGY_Ahmad_Mahir.png"
 	}
 	spriteType = {
-		name = "GFX_idea_EGY_Ibrahim_Abdel_Hady_hog_sli"
+		name = "GFX_idea_EGY_Ibrahim_Abdel_Hady_hog_mli"
 		texturefile = "gfx/interface/ministers/EGY/EGY_Ibrahim_Abdel_Hady.png"
 	}
 	spriteType = {
-		name = "GFX_idea_EGY_Mohammed_Naguib_hog_sli"
+		name = "GFX_idea_EGY_Mohammed_Naguib_hog_sde"
 		texturefile = "gfx/interface/ministers/EGY/EGY_Mohammed_Naguib.png"
 	}
 	spriteType = {
@@ -14590,7 +14590,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/EGY/EGY_Makram_Ebeid.png"
 	}
 	spriteType = {
-		name = "GFX_idea_EGY_Mohamed_Mahmoud_hog_mli"
+		name = "GFX_idea_EGY_Mohamed_Mahmoud_hog_sli"
 		texturefile = "gfx/interface/ministers/EGY/EGY_Mohamed_Mahmoud.png"
 	}
 	spriteType = {
@@ -14606,11 +14606,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/EGY/EGY_Ahmed_Naguib_el_Hilaly.png"
 	}
 	spriteType = {
-		name = "GFX_idea_EGY_Aly_Maher_hog_sco"
+		name = "GFX_idea_EGY_Aly_Maher_hog_sli"
 		texturefile = "gfx/interface/ministers/EGY/EGY_Aly_Maher.png"
 	}
 	spriteType = {
-		name = "GFX_idea_EGY_Hassan_al_Hudaybi_hog_sco"
+		name = "GFX_idea_EGY_Hassan_al_Hudaybi_hog_ade"
 		texturefile = "gfx/interface/ministers/EGY/EGY_Hassan_al_Hudaybi.png"
 	}
 	spriteType = {
@@ -14622,7 +14622,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/EGY/EGY_Hassan_al_Banna.png"
 	}
 	spriteType = {
-		name = "GFX_idea_EGY_Mohamed_Tawfik_Naseem_hog_ade"
+		name = "GFX_idea_EGY_Mohamed_Tawfik_Naseem_hog_sco"
 		texturefile = "gfx/interface/ministers/EGY/EGY_Mohamed_Tawfik_Naseem.png"
 	}
 	spriteType = {
@@ -15369,6 +15369,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_ENG_Ishbel_MacDonald_for_sde"
 		texturefile = "gfx/interface/ministers/ENG/ENG_Ishbel_MacDonald.png"
+	}
+	spriteType = {
+		name = "GFX_idea_ENG_H_G_Wells_for_sde"
+		texturefile = "gfx/interface/ministers/ENG/ENG_H_G_Wells.png"
 	}
 	spriteType = {
 		name = "GFX_idea_ENG_Evelyn_Waugh_for_pau"
@@ -17585,8 +17589,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/FOP/FOP_Micaela_Feldman_de_Echebehere.png"
 	}
 	spriteType = {
-		name = "GFX_idea_FOP_Marc_Augier_cos_rso"
-		texturefile = "gfx/interface/ministers/FOP/FOP_Marc_Augier.png"
+		name = "GFX_idea_FRA_Marc_Augier_cos_rso"
+		texturefile = "gfx/interface/ministers/FRA/FRA_Marc_Augier.png"
 	}
 
 	### Chief of Army
@@ -17595,8 +17599,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/FOP/FOP_Candido_Testa.png"
 	}
 	spriteType = {
-		name = "GFX_idea_FOP_Marc_Augier_carm_rso"
-		texturefile = "gfx/interface/ministers/FOP/FOP_Marc_Augier.png"
+		name = "GFX_idea_FRA_Marc_Augier_carm_rso"
+		texturefile = "gfx/interface/ministers/FRA/FRA_Marc_Augier.png"
 	}
 
 	### Chief of Navy
@@ -17653,7 +17657,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/FRA/FRA_Comite_de_Salut_Public.png"
 	}
 	spriteType = {
-		name = "GFX_idea_FRA_Guy_Mollet_hog_syn"
+		name = "GFX_idea_FRA_Guy_Mollet_hog_sde"
 		texturefile = "gfx/interface/ministers/FRA/FRA_Guy_Mollet.png"
 	}
 	spriteType = {
@@ -17720,7 +17724,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/FRA/FRA_Charles_Rappoport.png"
 	}
 	spriteType = {
-		name = "GFX_idea_FRA_Joseph_Paul_Boncour_for_syn"
+		name = "GFX_idea_FRA_Joseph_Paul_Boncour_for_sde"
 		texturefile = "gfx/interface/ministers/FRA/FRA_Joseph_Paul_Boncour.png"
 	}
 	spriteType = {
@@ -25971,6 +25975,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/IRE/IRE_Irish_Congress_of_Trade_Unions.png"
 	}
 	spriteType = {
+		name = "GFX_idea_IRE_James_Larkin_hog_syn"
+		texturefile = "gfx/interface/ministers/IRE/IRE_James_Larkin.png"
+	}
+	spriteType = {
 		name = "GFX_idea_IRE_Peadar_O'Donnell_hog_rso"
 		texturefile = "gfx/interface/ministers/IRE/IRE_Peadar_O'Donnell.png"
 	}
@@ -26011,8 +26019,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/IRE/IRE_Frank_MacDermot.png"
 	}
 	spriteType = {
+		name = "GFX_idea_IRE_Michael_Donnellan_hog_sli"
+		texturefile = "gfx/interface/ministers/IRE/IRE_Michael_Donnellan.png"
+	}
+	spriteType = {
 		name = "GFX_idea_IRE_Richard_Mulcahy_hog_mli"
 		texturefile = "gfx/interface/ministers/IRE/IRE_Richard_Mulcahy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_IRE_Michael_Collins_hog_mli"
+		texturefile = "gfx/interface/ministers/IRE/IRE_Michael_Collins_Civ.png"
 	}
 	spriteType = {
 		name = "GFX_idea_IRE_William_T_Cosgrave_hog_mli"
@@ -26045,6 +26061,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_IRE_Ned_Cronin_hog_pau"
 		texturefile = "gfx/interface/ministers/IRE/IRE_Ned_Cronin.png"
+	}
+	spriteType = {
+		name = "GFX_idea_IRE_John_J_O_Kelly_hog_pau"
+		texturefile = "gfx/interface/ministers/IRE/IRE_John_J_O_Kelly.png"
 	}
 	spriteType = {
 		name = "GFX_idea_IRE_William_Butler_Yeats_hog_pau"
@@ -26226,6 +26246,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/IRE/IRE_Noel_Browne.png"
 	}
 	spriteType = {
+		name = "GFX_idea_IRE_Roddy_Connolly_sec_syn"
+		texturefile = "gfx/interface/ministers/IRE/IRE_Roddy_Connolly.png"
+	}
+	spriteType = {
 		name = "GFX_idea_IRE_George_Gilmore_sec_rso"
 		texturefile = "gfx/interface/ministers/IRE/IRE_George_Gilmore.png"
 	}
@@ -26278,6 +26302,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/IRE/IRE_Thomas_F_O'Higgins.png"
 	}
 	spriteType = {
+		name = "GFX_idea_IRE_Basil_Brooke_sec_pau"
+		texturefile = "gfx/interface/ministers/IRE/IRE_Basil_Brooke.png"
+	}
+	spriteType = {
 		name = "GFX_idea_IRE_Archbishop_John_Charles_McQuaid_sec_npo"
 		texturefile = "gfx/interface/ministers/IRE/IRE_Archbishop_John_Charles_McQuaid.png"
 	}
@@ -26300,6 +26328,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_IRE_Maurice_Twomey_hog_rso"
 		texturefile = "gfx/interface/ministers/IRE/IRE_Maurice_Twomey.png"
+	}
+	spriteType = {
+		name = "GFX_idea_IRE_Owen_Sheehy_Skeffington_hog_rso"
+		texturefile = "gfx/interface/ministers/IRE/IRE_Owen_Sheehy_Skeffington.png"
 	}
 	spriteType = {
 		name = "GFX_idea_IRE_Mairtin_O_Cadhain_for_rso"
@@ -32736,6 +32768,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/MON/MON_Altanochir.png"
 	}
 	spriteType = {
+		name = "GFX_idea_MON_Byambyn_Rinchen_hog_mli"
+		texturefile = "gfx/interface/ministers/MON/MON_Byambyn_Rinchen.png"
+	}
+	spriteType = {
 		name = "GFX_idea_MON_Uenenbayan_hog_sco"
 		texturefile = "gfx/interface/ministers/MON/MON_Uenenbayan.png"
 	}
@@ -37644,6 +37680,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/POL/POL_Janusz_Franciszek_Radziwill.png"
 	}
 	spriteType = {
+		name = "GFX_idea_POL_Wladyslaw_Grabski_hog_ade"
+		texturefile = "gfx/interface/ministers/POL/POL_Wladyslaw_Grabski.png"
+	}
+	spriteType = {
 		name = "GFX_idea_POL_Jozef_Beck_hog_ade"
 		texturefile = "gfx/interface/ministers/POL/POL_Jozef_Beck.png"
 	}
@@ -40071,400 +40111,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_ROM_Ermil_Gheorghiu_cair_pau"
 		texturefile = "gfx/interface/ministers/ROM/ROM_Ermil_Gheorghiu.png"
-	}
-
-  ################################################################################################################################################################################################
-  ### RRM
-  ################################################################################################################################################################################################
-
-	### Head of Government
-	spriteType = {
-		name = "GFX_idea_RRM_Gheorghe_Gheorghiu_Dej_hog_tot"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Gheorghe_Gheorghiu_Dej.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Petru_Groza_hog_tot"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Petru_Groza.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Iuliu_Maniu_hog_sde"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Iuliu_Maniu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Armand_Calinescu_hog_sli"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Armand_Calinescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Constantin_Argetoianu_hog_sli"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Constantin_Argetoianu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Gheorghe_Argeseanu_hog_sli"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Gheorghe_Argeseanu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Ion_Gigurtu_hog_sli"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Ion_Gigurtu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Octavian_Goga_hog_sli"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Octavian_Goga.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Constantin_Bratianu_hog_sco"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Constantin_Bratianu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Gheorghe_Tatarescu_hog_sco"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Gheorghe_Tatarescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Nicolae_Radescu_hog_sco"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Nicolae_Radescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Constantin_Sanatescu_hog_ade"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Constantin_Sanatescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Miron_Cristea_hog_ade"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Miron_Cristea.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Ion_Antonescu_hog_pau"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Ion_Antonescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Corneliu_Codreanu_hog_npo"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Corneliu_Codreanu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Horia_Sima_hog_npo"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Horia_Sima.png"
-	}
-
-	### Person of Influence
-	# Foreign Minister
-	spriteType = {
-		name = "GFX_idea_RRM_Ana_Pauker_for_tot"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Ana_Pauker.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Constantin_I_Parhon_for_tot"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Constantin_I_Parhon.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Simon_Bughici_for_tot"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Simon_Bughici.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Elena_Vararesco_for_sde"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Elena_Vararesco.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Georges_Oprescu_for_sde"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Georges_Oprescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Iuliu_Hossu_for_sde"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Iuliu_Hossu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Grigore_Gafencu_for_sli"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Grigore_Gafencu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Istrate_Micescu_for_sli"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Istrate_Micescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Mihail_Manoilescu_for_sli"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Mihail_Manoilescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Constantin_Argetoianu_for_sco"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Constantin_Argetoianu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Constantin_Visoianu_for_sco"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Constantin_Visoianu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Ion_Gigurtu_for_sco"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Ion_Gigurtu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Nicolae_Titulescu_for_sco"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Nicolae_Titulescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Victor_Antonescu_for_sco"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Victor_Antonescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Gheorghe_Tatarescu_for_ade"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Gheorghe_Tatarescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Grigore_Niculesco_Buzesti_for_ade"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Grigore_Niculesco_Buzesti.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Nicolae_Petrescu_Comnen_for_ade"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Nicolae_Petrescu_Comnen.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Ion_Antonescu_for_pau"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Ion_Antonescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Mihai_Antonescu_for_pau"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Mihai_Antonescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Mihail_Sturdza_for_pau"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Mihail_Sturdza.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Corneliu_Codreanu_for_npo"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Corneliu_Codreanu.png"
-	}
-
-	# Economy Minister
-	spriteType = {
-		name = "GFX_idea_RRM_Vasile_Luca_eco_tot"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Vasile_Luca.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Constantin_Antoniade_eco_sli"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Constantin_Antoniade.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Virgil_Madgearu_eco_sli"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Virgil_Madgearu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Constantin_Bratianu_eco_sco"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Constantin_Bratianu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Iuliu_Maniu_eco_sco"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Iuliu_Maniu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Mihail_Racovitza_eco_sco"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Mihail_Racovitza.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Caius_Brediceanu_eco_ade"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Caius_Brediceanu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Nicolae_Stoenescu_eco_ade"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Nicolae_Stoenescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Gheorghe_Dobre_eco_pau"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Gheorghe_Dobre.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Gheorghe_Potopeanu_eco_pau"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Gheorghe_Potopeanu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Constantin_Papanace_eco_npo"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Constantin_Papanace.png"
-	}
-
-	# Security Minister
-	spriteType = {
-		name = "GFX_idea_RRM_Teohari_Georgescu_sec_tot"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Teohari_Georgescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Armand_Calinescu_sec_sli"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Armand_Calinescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Ion_Mihalache_sec_sli"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Ion_Mihalache.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Vasile_Goldis_sec_sli"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Vasile_Goldis.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Aurel_Aldea_sec_sco"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Aurel_Aldea.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Istrate_Micescu_sec_sco"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Istrate_Micescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Nicolae_Radescu_sec_sco"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Nicolae_Radescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Cesare_Vaida_Voievod_sec_ade"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Cesare_Vaida_Voievod.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Ion_Boiteanu_sec_ade"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Ion_Boiteanu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_David_Popescu_sec_pau"
-		texturefile = "gfx/interface/ministers/RRM/RRM_David_Popescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Horia_Sima_sec_npo"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Horia_Sima.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Ion_Petrovicescu_sec_npo"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Ion_Petrovicescu.png"
-	}
-
-
-	### Chief of Staff
-	spriteType = {
-		name = "GFX_idea_RRM_Mihail_Lascar_cos_tot"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Mihail_Lascar.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Ioan_Ilcusu_cos_sli"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Ioan_Ilcusu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Mihail_Racovitza_cos_sli"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Mihail_Racovitza.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Constantin_Pantazi_cos_sco"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Constantin_Pantazi.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Gheorghe_Sinaia_Ionescu_cos_sco"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Gheorghe_Sinaia_Ionescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Constantin_Sanatescu_cos_ade"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Constantin_Sanatescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Florea_Tenescu_cos_ade"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Florea_Tenescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Ion_Antonescu_cos_pau"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Ion_Antonescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Radu_Korne_cos_pau"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Radu_Korne.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Victor_Antonescu_cos_pau"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Victor_Antonescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Gheorghe_Argeseanu_cos_npo"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Gheorghe_Argeseanu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Platon_Chirnoaga_cos_npo"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Platon_Chirnoaga.png"
-	}
-
-	### Chief of Army
-	spriteType = {
-		name = "GFX_idea_RRM_Damian_Rascu_carm_tot"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Damian_Rascu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Costin_Ionascu_carm_sli"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Costin_Ionascu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Gheorghe_Tatarescu_carm_sco"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Gheorghe_Tatarescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Marin_Ceausu_carm_sco"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Marin_Ceausu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Nicolae_Radescu_carm_sco"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Nicolae_Radescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Constantin_Sanatescu_carm_ade"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Constantin_Sanatescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Gheorghe_Mihail_carm_ade"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Gheorghe_Mihail.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Ilie_Steflea_carm_pau"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Ilie_Steflea.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Alexandru_Ioanitiu_carm_npo"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Alexandru_Ioanitiu.png"
-	}
-
-	### Chief of Navy
-	spriteType = {
-		name = "GFX_idea_RRM_Gheorghe_Iliesca_cnav_tot"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Gheorghe_Iliesca.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Nicolae_Caranfil_cnav_sco"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Nicolae_Caranfil.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Nicolai_Duca_di_Silvania_cnav_sco"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Nicolai_Duca_di_Silvania.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Horia_Macellariu_cnav_ade"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Horia_Macellariu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Nicolae_Sova_cnav_ade"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Nicolae_Sova.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Ioan_Georgescu_cnav_pau"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Ioan_Georgescu.png"
-	}
-
-	### Chief of Air Force
-	spriteType = {
-		name = "GFX_idea_RRM_Emanoil_Ionescu_cair_tot"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Emanoil_Ionescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Dante_Vizante_cair_sco"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Dante_Vizante.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Gheorghe_Vasiliu_cair_sco"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Gheorghe_Vasiliu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Gheorghe_Jienescu_cair_ade"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Gheorghe_Jienescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Paul_Teodorescu_cair_ade"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Paul_Teodorescu.png"
-	}
-	spriteType = {
-		name = "GFX_idea_RRM_Ermil_Gheorghiu_cair_pau"
-		texturefile = "gfx/interface/ministers/RRM/RRM_Ermil_Gheorghiu.png"
 	}
 
   ################################################################################################################################################################################################
@@ -49520,6 +49166,228 @@ spriteTypes = {
 		name = "GFX_idea_TUS_Vasco_Magrini_cair"
 		texturefile = "gfx/interface/ministers/TUS/TUS_Vasco_Magrini.png"
 	}
+	
+  ################################################################################################################################################################################################
+  ### TXS
+  ################################################################################################################################################################################################
+
+	### Head of Government
+	spriteType = {
+		name = "GFX_idea_TXS_Homer_Brooks_hog_syn"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Homer_Brooks.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Woodie_Guthrie_hog_rso"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Woodie_Guthrie.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Lyndon_Johnson_hog_sde"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Lyndon_Johnson.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_James_Allred_hog_sli"
+		texturefile = "gfx/interface/ministers/TXS/TXS_James_Allred.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Daniel_Moody_hog_sli"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Daniel_James_Moody.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_WL_Odaniel_hog_mli"
+		texturefile = "gfx/interface/ministers/TXS/TXS_WL_Odaniel.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Coke_Stevenson_hog_mli"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Coke_Stevenson.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_John_Nance_Garner_hog_sco"
+		texturefile = "gfx/interface/ministers/TXS/TXS_John_Nance_Garner.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_John_Nance_Garner_hog_ade"
+		texturefile = "gfx/interface/ministers/TXS/TXS_John_Nance_Garner.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Martin_Dies_Jr_hog_ade"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Martin_Dies_Jr.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Dwight_D_Eisenhower_hog_ade"
+		texturefile = "gfx/interface/ministers/USA/USA_Dwight_D_Eisenhower.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Ira_Clarence_Eaker_hog_pau"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Ira_Eaker.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Chester_W_Nimitz_hog_pau"
+		texturefile = "gfx/interface/ministers/USA/USA_Chester_William_Nimitz_Sr.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Torklid_Rieber_hog_npo"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Torklid_Reiber.png"
+	}
+
+	### Person of Influence
+	# Foreign Minister
+		spriteType = {
+		name = "GFX_idea_TXS_Homer_Brooks_for_syn"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Homer_Ross.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Manuela_Solis_Sager_for_syn"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Manuela_Solis_Sager.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Rosendo_Dorame_for_rso"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Rosendo_Dorame.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Pete_Seeger_for_rso"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Pete_Seeger.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Ralph_Yarborough_for_sde"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Ralph_Yarborough.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Ross_S_Sterling_for_sli"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Ross_S_Sterling.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Lynch_Davidson_for_mli"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Lynch_Davidson.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Frank_Ikard_for_sco"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Frank_Ikard.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Miram_Ferguson_for_ade"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Miram_Ferguson.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Haroldson_Lafayette_Hunt_for_pau"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Haroldson_Lafayette_Hunt.png"
+	}
+	
+	# Economy Minister
+	spriteType = {
+		name = "GFX_idea_TXS_Francisca_Reyes_Esparza_eco_syn"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Francisca_Reyes_Esparza.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Fernando_Palomares_eco_rso"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Fernando_Palomares.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Cisco_Houston_eco_rso"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Cisco_Houston.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Rentfro_Banton_Creager_eco_sde"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Rentfro_Banton_Creager.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Daniel_James_Moody_eco_sli"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Daniel_James_Moody.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Joe_Pool_eco_mli"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Joe_Pool.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_John_Redditt_eco_sco"
+		texturefile = "gfx/interface/ministers/TXS/TXS_John_Redditt.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Hank_Hill_eco_sco"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Hank_Hill.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Clyde_Garett_eco_ade"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Clyde_Garett.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Jesse_H_Jones_eco_pau"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Jesse_H_Jones.png"
+	}
+
+	# Security Minister
+	spriteType = {
+		name = "GFX_idea_TXS_Emma_Tenayuca_sec_syn"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Emma_Teneyuca.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Will_Geer_sec_rso"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Will_Geer.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Lyndon_Johnson_sec_sde"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Lyndon_Johnson.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Gerald_Mann_sec_sde"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Gerald_Mann.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Lady_Bird_Johnson_sec_sde"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Lady_Bird_Johnson.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Wright_Patman_sec_sli"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Wright_Patman.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Jerry_Sader_sec_mli"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Jerry_Sader.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Paul_Kilday_sec_sco"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Paul_Kilday.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_James_Earl_Rudder_sec_ade"
+		texturefile = "gfx/interface/ministers/TXS/TXS_James_Earl_Rudder.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Oscar_Holcombe_sec_pau"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Oscar_Holcombe.png"
+	}
+
+	### Chief of Staff
+	spriteType = {
+		name = "GFX_idea_TXS_William_Hood_Simpson_cos"
+		texturefile = "gfx/interface/ministers/TXS/TXS_William_Hood_Simpson.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_Bruce_Palmer_Jr_cos"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Bruce_Palmer_Jr.png"
+	}
+
+	### Chief of Army
+	spriteType = {
+		name = "GFX_idea_TXS_Dwight_D_Eisenhower_carm"
+		texturefile = "gfx/interface/ministers/USA/USA_Dwight_D_Eisenhower.png"
+	}
+	spriteType = {
+		name = "GFX_idea_TXS_William_Sidney_Graves_carm"
+		texturefile = "gfx/interface/ministers/TXS/TXS_William_Sidney_Graves.png"
+	}
+
+	### Chief of Navy
+	spriteType = {
+		name = "GFX_idea_TXS_Chester_William_Nimitz_Sr_cnav"
+		texturefile = "gfx/interface/ministers/USA/USA_Chester_William_Nimitz_Sr.png"
+	}
+
+	### Chief of Air Force
+	spriteType = {
+		name = "GFX_idea_TXS_Ira_Eaker_cair"
+		texturefile = "gfx/interface/ministers/TXS/TXS_Ira_Eaker.png"
+	}
+
 
   ################################################################################################################################################################################################
   ### UKR
@@ -51969,8 +51837,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/WLL/WLL_Jules_Mahieu.png"
 	}
 	spriteType = {
+		name = "GFX_idea_WLL_Fernand_Dehousse_hog_sde"
+		texturefile = "gfx/interface/ministers/WLL/WLL_Fernand_Dehousse.png"
+	}
+	spriteType = {
 		name = "GFX_idea_WLL_Victor_de_Laveleye_hog_sli"
 		texturefile = "gfx/interface/ministers/WLL/WLL_Victor_de_Laveleye.png"
+	}
+	spriteType = {
+		name = "GFX_idea_WLL_Georges_Truffaut_hog_sli"
+		texturefile = "gfx/interface/ministers/WLL/WLL_Georges_Truffaut.png"
 	}
 	spriteType = {
 		name = "GFX_idea_WLL_Auguste_Buisseret_hog_mli"
@@ -51989,8 +51865,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/WLL/WLL_Thilo_von_Wilmomsky.png"
 	}
 	spriteType = {
-		name = "GFX_idea_WLL_Jose_Streel_hog_pau"
-		texturefile = "gfx/interface/ministers/WLL/WLL_Jose_Streel.png"
+		name = "GFX_idea_WLL_Georges_Deffontaine_hog_ade"
+		texturefile = "gfx/interface/ministers/WLL/WLL_Georges_Deffontaine.png"
 	}
 	spriteType = {
 		name = "GFX_idea_WLL_Leon_Degrelle_hog_npo"
@@ -51999,6 +51875,14 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_WLL_Victor_Matthys_hog_npo"
 		texturefile = "gfx/interface/ministers/WLL/WLL_Victor_Matthys.png"
+	}
+	spriteType = {
+		name = "GFX_idea_WLL_Jose_Streel_hog_npo"
+		texturefile = "gfx/interface/ministers/WLL/WLL_Jose_Streel.png"
+	}
+	spriteType = {
+		name = "GFX_idea_WLL_Georges_Prosper_Remi_hog_npo"
+		texturefile = "gfx/interface/ministers/WLL/WLL_Georges_Prosper_Remi.png"
 	}
 
 	### Person of Influence

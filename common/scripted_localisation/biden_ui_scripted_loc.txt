@@ -527,8 +527,16 @@ defined_text = {
 	text = {
 		trigger = {
 			tag = COG
+			BEL_has_monarchy = no
 		}
 		localization_key = GV_OR_LEADER
+	}
+	text = {
+		trigger = {
+			tag = COG
+			BEL_has_monarchy = yes
+		}
+		localization_key = PM_OR_LEADER
 	}
 	text = {
 		trigger = {
@@ -586,8 +594,17 @@ defined_text = {
 	text = {
 		trigger = {
 			tag = FRA
+			NOT = { has_country_flag = FRA_Anarchy_Reign }
 		}
 		localization_key = GN_OR_LEADER
+	}
+	
+	text = {
+		trigger = {
+			tag = FRA
+			has_country_flag = FRA_Anarchy_Reign
+		}
+		localization_key = MK_OR_LEADER
 	}
 	
 	text = {
@@ -715,6 +732,19 @@ defined_text = {
 	text = {
 		trigger = {
 			tag = CAL
+			NOT = { 	
+				OR = {
+					has_country_leader = {
+						name = "Henry H. Arnold"
+						ruling_only = yes
+					}
+				
+					has_country_leader = {
+						name = "George Marshall"
+						ruling_only = yes
+					}
+				}
+			}
 		}
 		localization_key = EM_OR_LEADER
 	}
@@ -722,8 +752,17 @@ defined_text = {
 	text = {
 		trigger = {
 			tag = IRE
+			NOT = { has_country_flag = IRE_Basil_Brooke_SEC }
 		}
 		localization_key = KI_OR_TAO
+	}
+	
+	text = {
+		trigger = {
+			tag = IRE
+			has_country_flag = IRE_Basil_Brooke_SEC
+		}
+		localization_key = KI_OR_TAO_OR_MUA
 	}
 	
 	text = {
@@ -756,6 +795,13 @@ defined_text = {
 	
 	text = {
 		trigger = {
+			tag = WLL
+		}
+		localization_key = PM_OR_LEADER
+	}
+	
+	text = {
+		trigger = {
 			tag = SWE
 		}
 		localization_key = PM_OR_LEADER
@@ -779,7 +825,7 @@ defined_text = {
 		trigger = {
 			tag = POL
 		}
-		localization_key = PM_OR_LEADER
+		localization_key = PMREG_OR_LEADER
 	}
 		
 	text = {
@@ -1124,6 +1170,13 @@ defined_text = {
 		localization_key = BK_OR_MH
 	}
 
+	text = {
+		trigger = {
+			tag = COR
+		}
+		localization_key = GEN_OR_PRES
+	}
+
 }
 
 defined_text = {
@@ -1163,6 +1216,12 @@ defined_text = {
 			tag = BAT
 		}
 		localization_key = LAMA_OR_DUK
+	}
+	text = {
+		trigger = {
+			tag = IRE
+		}
+		localization_key = MUA_OR_TAO2
 	}
 }
 
@@ -1315,8 +1374,16 @@ defined_text = {
 	text = {
 		trigger = {
 			tag = COG
+			BEL_has_monarchy = no
 		}
 		localization_key = GG_OR_LEADER2
+	}
+	text = {
+		trigger = {
+			tag = COG
+			BEL_has_monarchy = yes
+		}
+		localization_key = PM_OR_LEADER2
 	}
 	text = {
 		trigger = {
@@ -1374,8 +1441,17 @@ defined_text = {
 	text = {
 		trigger = {
 			tag = FRA
+			NOT = { has_country_flag = FRA_Anarchy_Reign }
 		}
 		localization_key = GN_OR_LEADER2
+	}
+	
+	text = {
+		trigger = {
+			tag = FRA
+			has_country_flag = FRA_Anarchy_Reign
+		}
+		localization_key = MK_OR_LEADER2
 	}
 	
 	text = {
@@ -1504,6 +1580,19 @@ defined_text = {
 	text = {
 		trigger = {
 			tag = CAL
+			NOT = { 	
+				OR = {
+					has_country_leader = {
+						name = "Henry H. Arnold"
+						ruling_only = yes
+					}
+				
+					has_country_leader = {
+						name = "George Marshall"
+						ruling_only = yes
+					}
+				}
+			}
 		}
 		localization_key = EM_OR_LEADER2
 	}
@@ -1652,6 +1741,13 @@ defined_text = {
 	
 	text = {
 		trigger = {
+			tag = WLL
+		}
+		localization_key = PM_OR_LEADER2
+	}
+	
+	text = {
+		trigger = {
 			tag = SWE
 		}
 		localization_key = PM_OR_LEADER2
@@ -1675,7 +1771,7 @@ defined_text = {
 		trigger = {
 			tag = POL
 		}
-		localization_key = PM_OR_LEADER2
+		localization_key = PMREG_OR_LEADER2
 	}
 	
 	text = {
@@ -1902,6 +1998,13 @@ defined_text = {
 			has_country_flag = GANDHI_VISIBLE
 		}
 		localization_key = BK_OR_MH2
+	}
+	
+	text = {
+		trigger = {
+			tag = COR
+		}
+		localization_key = PR_OR_FC2
 	}
 }
 
@@ -2992,6 +3095,13 @@ defined_text = {
 		}
 		localization_key = WCC_Omar_Bradley_hog_ade
 	}
+	
+	text = {
+		trigger = {
+			has_idea = IRE_Basil_Brooke_sec_pau
+		}
+		localization_key = IRE_Basil_Brooke_sec_pau
+	}
 }
 
 defined_text = {
@@ -3749,6 +3859,13 @@ defined_text = {
 		localization_key = NZL_Eruera_Tirikatene_hog_sli
 	}
 	
+	text = { 
+		trigger = {
+			has_idea = NZL_Robert_Tutaki_hog_syn
+		}
+		localization_key = NZL_Robert_Tutaki_hog_syn
+	}
+
 	text = { 
 		trigger = {
 			has_idea = NZL_Evan_Parry_hog_ade
@@ -5246,9 +5363,23 @@ defined_text = {
 	
 	text = {
 		trigger = {
+			has_idea = IRE_Michael_Donnellan_hog_sli
+		}
+		localization_key = IRE_Michael_Donnellan_hog_sli
+	}
+	
+	text = {
+		trigger = {
 			has_idea = IRE_Richard_Mulcahy_hog_mli
 		}
 		localization_key = IRE_Richard_Mulcahy_hog_mli
+	}
+	
+	text = {
+		trigger = {
+			has_idea = IRE_Michael_Collins_hog_mli
+		}
+		localization_key = IRE_Michael_Collins_hog_mli
 	}
 	
 	text = {
@@ -5337,6 +5468,13 @@ defined_text = {
 	
 	text = {
 		trigger = {
+			has_idea = IRE_John_J_O_Kelly_hog_pau
+		}
+		localization_key = IRE_John_J_O_Kelly_hog_pau
+	}
+	
+	text = {
+		trigger = {
 			has_idea = IRE_William_Butler_Yeats_hog_pau
 		}
 		localization_key = IRE_William_Butler_Yeats_hog_pau
@@ -5347,6 +5485,13 @@ defined_text = {
 			has_idea = IRE_Betty_Sinclair_hog_tot
 		}
 		localization_key = IRE_Betty_Sinclair_hog_tot
+	}
+	
+	text = {
+		trigger = {
+			has_idea = IRE_James_Larkin_hog_syn
+		}
+		localization_key = IRE_James_Larkin_hog_syn
 	}
 	
 	text = {
@@ -5363,6 +5508,12 @@ defined_text = {
 		localization_key = IRE_James_Joyce_hog_rso
 	}
 	
+	text = {
+		trigger = {
+			has_idea = IRE_Owen_Sheehy_Skeffington_hog_rso
+		}
+		localization_key = IRE_Owen_Sheehy_Skeffington_hog_rso
+	}
 
 	### Danish PMs ###
 	
@@ -5508,6 +5659,64 @@ defined_text = {
 			has_idea = BEL_Achille_Van_Acker_hog_sde
 		}
 		localization_key = BEL_Achille_Van_Acker_hog_sde
+	}
+	
+	### Wallonia PMs ###
+	
+	text = {
+		trigger = {
+			has_idea = WLL_Leon_Degrelle_hog_npo
+		}
+		localization_key = WLL_Leon_Degrelle_hog_npo
+	}
+	
+	text = {
+		trigger = {
+			has_idea = WLL_Georges_Prosper_Remi_hog_npo
+		}
+		localization_key = WLL_Georges_Prosper_Remi_hog_npo
+	}
+	
+	text = {
+		trigger = {
+			has_idea = WLL_Fernand_Dehousse_hog_sde
+		}
+		localization_key = WLL_Fernand_Dehousse_hog_sde
+	}
+	
+	text = {
+		trigger = {
+			has_idea = WLL_Georges_Truffaut_hog_sli
+		}
+		localization_key = WLL_Georges_Truffaut_hog_sli
+	}
+	
+	text = {
+		trigger = {
+			has_idea = WLL_Auguste_Buisseret_hog_mli
+		}
+		localization_key = WLL_Auguste_Buisseret_hog_mli
+	}
+	
+	text = {
+		trigger = {
+			has_idea = WLL_Georges_Deffontaine_hog_ade
+		}
+		localization_key = WLL_Georges_Deffontaine_hog_ade
+	}
+	
+	text = {
+		trigger = {
+			has_idea = WLL_Victor_Matthys_hog_npo
+		}
+		localization_key = WLL_Victor_Matthys_hog_npo
+	}
+	
+	text = {
+		trigger = {
+			has_idea = WLL_Jose_Streel_hog_npo
+		}
+		localization_key = WLL_Jose_Streel_hog_npo
 	}
 	
 	### Swedish PMs ###
@@ -7046,6 +7255,13 @@ defined_text = {
 		localization_key = VIN_Duong_Van_Duong_hog_pau
 	}
 	
+	text = { 
+		trigger = {
+			has_idea = VIN_Huynh_Phu_So_hog_npo
+		}
+		localization_key = VIN_Huynh_Phu_So_hog_npo
+	}
+	
 	### Bulgarian PMs ###
 	
 	# text = { 
@@ -7600,16 +7816,16 @@ defined_text = {
 	
 	text = { 
 		trigger = {
-			has_idea = EGY_Aly_Maher_hog_sco
+			has_idea = EGY_Aly_Maher_hog_sli
 		}
-		localization_key = EGY_Aly_Maher_hog_sco
+		localization_key = EGY_Aly_Maher_hog_sli
 	}
 	
 	text = { 
 		trigger = {
-			has_idea = EGY_Ibrahim_Abdel_Hady_hog_sli
+			has_idea = EGY_Ibrahim_Abdel_Hady_hog_mli
 		}
-		localization_key = EGY_Ibrahim_Abdel_Hady_hog_sli
+		localization_key = EGY_Ibrahim_Abdel_Hady_hog_mli
 	}
 	
 	text = { 
@@ -7628,23 +7844,23 @@ defined_text = {
 	
 	text = { 
 		trigger = {
-			has_idea = EGY_Mohamed_Tawfik_Naseem_hog_ade
+			has_idea = EGY_Mohamed_Tawfik_Naseem_hog_sco
 		}
-		localization_key = EGY_Mohamed_Tawfik_Naseem_hog_ade
+		localization_key = EGY_Mohamed_Tawfik_Naseem_hog_sco
 	}
 	
 	text = { 
 		trigger = {
-			has_idea = EGY_Ahmad_Mahir_hog_sli
+			has_idea = EGY_Ahmad_Mahir_hog_mli
 		}
-		localization_key = EGY_Ahmad_Mahir_hog_sli
+		localization_key = EGY_Ahmad_Mahir_hog_mli
 	}
 	
 	text = { 
 		trigger = {
-			has_idea = EGY_Mohamed_Mahmoud_hog_mli
+			has_idea = EGY_Mohamed_Mahmoud_hog_sli
 		}
-		localization_key = EGY_Mohamed_Mahmoud_hog_mli
+		localization_key = EGY_Mohamed_Mahmoud_hog_sli
 	}
 	
 	text = { 
@@ -7677,9 +7893,9 @@ defined_text = {
 	
 	text = { 
 		trigger = {
-			has_idea = EGY_Mohammed_Naguib_hog_sli
+			has_idea = EGY_Mohammed_Naguib_hog_sde
 		}
-		localization_key = EGY_Mohammed_Naguib_hog_sli
+		localization_key = EGY_Mohammed_Naguib_hog_sde
 	}
 	
 	text = { 
@@ -7691,9 +7907,9 @@ defined_text = {
 	
 	text = { 
 		trigger = {
-			has_idea = EGY_Hassan_al_Hudaybi_hog_sco
+			has_idea = EGY_Hassan_al_Hudaybi_hog_ade
 		}
-		localization_key = EGY_Hassan_al_Hudaybi_hog_sco
+		localization_key = EGY_Hassan_al_Hudaybi_hog_ade
 	}
 	
 	text = { 
@@ -7849,6 +8065,13 @@ defined_text = {
 		localization_key = POL_Norbert_Barlicki_hog_sde
 	}
 	
+	text = { 
+		trigger = {
+			has_idea = POL_Wladyslaw_Grabski_hog_ade
+		}
+		localization_key = POL_Wladyslaw_Grabski_hog_ade
+	}
+	
 	### Baltics ###
 	
 	text = { 
@@ -7992,20 +8215,6 @@ defined_text = {
 	
 	###Others###
 	
-	text = {
-		trigger = {
-			has_idea = WLL_REX_ALBERT
-		}
-		localization_key = "Albert I"
-	}
-	
-	text = {
-		trigger = {
-			has_idea = WLL_REX_ADALBERT
-		}
-		localization_key = "Adalbert I"
-	}
-	
 	text = { #Fired by Minister Ideas
 		trigger = {
 			has_idea = TRM_Alexander_Kazembek_hog_tot
@@ -8051,6 +8260,12 @@ defined_text = {
 	}
 	text = { #Not by Minister Ideas
 		trigger = {
+			has_country_flag = FRA_Anarchy_Reign
+		}
+		localization_key = "Nestor Makhno"
+	}
+	text = { #Not by Minister Ideas
+		trigger = {
 			has_idea = TEX_philipregent_idea
 		}
 		localization_key = "Regent Philip Carroll"
@@ -8089,7 +8304,7 @@ defined_text = {
 		trigger = {
 			has_country_flag = EDDY_CHEIF
 		}
-		localization_key = "Edward VII"
+		localization_key = "Edward VIII"
 	}
 	
 	text = { #Not by Minister Ideas
@@ -8169,6 +8384,13 @@ defined_text = {
 			has_country_flag = GANDHI_VISIBLE
 		}
 		localization_key = "Mohandas Karamchand Gandhi"
+	}
+	
+	text = { #Not by Minister Ideas
+		trigger = {
+			has_idea = COR_George_Edward_Deatherage_hog_npo
+		}
+		localization_key = COR_George_Edward_Deatherage_hog_npo
 	}
 
 	#so on and so forth
@@ -8662,6 +8884,19 @@ defined_text = {
 }
 
 defined_text = {
+	name = EGYGetHOSTitle
+	text = {
+		trigger = {
+			has_country_flag = EGY_became_kingdom
+		}
+		localization_key = "King"
+	}
+	text = {
+		localization_key = "Sultan"
+	}
+}
+
+defined_text = {
 	name = AFGGetLeaderTitle
 	text = {
 		trigger = {
@@ -8676,6 +8911,38 @@ defined_text = {
 			}
 		}
 		localization_key = "Prime Minister"
+	}
+}
+
+defined_text = {
+	name = AFGGetHOSTitle
+	text = {
+		trigger = {
+			has_country_flag = AFG_king
+		}
+		localization_key = "King"
+	}
+	text = {
+		localization_key = "Emir"
+	}
+}
+
+defined_text = {
+	name = POLGetHOSTitle
+	text = {
+		trigger = {
+			OR = {
+				POL_has_regency_council = yes
+				has_country_leader = {
+					name = "Lucjan Żeligowski"
+					ruling_only = yes
+				}
+			}
+		}
+		localization_key = "Regent"
+	}
+	text = {
+		localization_key = "King"
 	}
 }
 
@@ -9160,6 +9427,24 @@ defined_text = {
 }
 
 defined_text = {
+	name = GetODuffyPortrait
+	text = {
+		trigger = {
+			has_country_flag = IRE_oduffy_uses_mil_portrait
+		}
+		localization_key = "GFX_Portrait_Ireland_Eoin_ODuffy"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = IRE_oduffy_uses_mil_portrait
+			}
+		}
+		localization_key = "GFX_Portrait_Ireland_Eoin_ODuffy_Civ"
+	}
+}
+
+defined_text = {
 	name = GetWLMKPortrait
 	text = {
 		trigger = {
@@ -9202,7 +9487,6 @@ defined_text = {
 	}
 }
 
-
 defined_text = {
 	name = GetPapenPortrait
 	text = {
@@ -9225,6 +9509,38 @@ defined_text = {
 	}
 	text = {
 		localization_key = "GFX_Portrait_Germany_Franz_von_Papen"
+	}
+}
+
+
+defined_text = {
+	name = GetDegrellePortrait
+	text = {
+		trigger = {
+			has_country_flag = WLL_degrelle_armor_portrait
+		}
+		localization_key = "GFX_Portrait_Belgium_Leon_Degrelle_LARP"
+	}
+	text = {
+		trigger = {
+			has_country_flag = WLL_degrelle_armor_scream_portrait
+		}
+		localization_key = "GFX_Portrait_Belgium_Leon_Degrelle_LARP_ANGRY"
+	}
+	text = {
+		trigger = {
+			has_country_flag = WLL_degrelle_beard_portrait
+		}
+		localization_key = "GFX_Portrait_Belgium_Leon_Degrelle_Beard"
+	}
+	text = {
+		trigger = {
+			has_country_flag = WLL_degrelle_armor_portrait
+		}
+		localization_key = "GFX_Portrait_Belgium_Leon_Degrelle"
+	}
+	text = {
+		localization_key = "GFX_Portrait_Belgium_Leon_Degrelle"
 	}
 }
 
@@ -9256,7 +9572,7 @@ defined_text = {
 		trigger = {
 			has_country_flag = EU_COUNCIL_VISIBLE
 		}
-		localization_key = GFX_Portrait_GER_Pan_Euro_Council
+		localization_key = GFX_Portrait_Germany_Pan_Euro_Council
 	}
 	text = {
 		trigger = {
@@ -9331,6 +9647,13 @@ defined_text = {
 			}
 		}
 		localization_key = GFX_Portrait_USA_Omar_Bradley
+	}
+	
+	text = {
+		trigger = {
+			has_idea = IRE_Basil_Brooke_sec_pau
+		}
+		localization_key = GFX_Portrait_Ulster_Basil_Brooke
 	}
 }
 
@@ -10090,6 +10413,13 @@ defined_text = {
 		}
 		localization_key = GFX_Portrait_NZL_Eruera_Tirikatene
 	}
+
+	text = { 
+		trigger = {
+			has_idea = NZL_Robert_Tutaki_hog_syn
+		}
+		localization_key = GFX_Portrait_NZL_Robert_Tutaki
+	}
 	
 	text = { 
 		trigger = {
@@ -10699,7 +11029,7 @@ defined_text = {
 		trigger = {
 			has_idea = USA_Jack_Reed_veep_syn
 		}
-		localization_key = GFX_Portrait_Jack_Reed
+		localization_key = GFX_Portrait_USA_Jack_Reed
 	}
 	
 	text = {
@@ -10916,7 +11246,7 @@ defined_text = {
 		trigger = {
 			has_idea = USA_Sam_Rayburn_veep_sco
 		}
-		localization_key = GFX_Portrait_sam_rayburn
+		localization_key = GFX_Portrait_USA_Sam_Rayburn
 	}
 	
 	text = {
@@ -11457,6 +11787,20 @@ defined_text = {
 	
 	text = {
 		trigger = {
+			has_idea = IRE_Michael_Donnellan_hog_sli
+		}
+		localization_key = GFX_Portrait_Ireland_Michael_Donnellan
+	}
+	
+	text = {
+		trigger = {
+			has_idea = IRE_Michael_Collins_hog_mli
+		}
+		localization_key = GFX_Portrait_Ireland_Michael_Collins
+	}
+	
+	text = {
+		trigger = {
 			has_idea = IRE_Richard_Mulcahy_hog_mli
 		}
 		localization_key = GFX_Portrait_Ireland_Richard_Mulcahy_Civilian
@@ -11536,7 +11880,7 @@ defined_text = {
 		trigger = {
 			has_idea = IRE_Eoin_O'Duffy_hog_pau
 		}
-		localization_key = GFX_Portrait_Ireland_Eoin_ODuffy
+		localization_key = [GetODuffyPortrait]
 	}
 	
 	text = {
@@ -11544,6 +11888,13 @@ defined_text = {
 			has_idea = IRE_Ned_Cronin_hog_pau
 		}
 		localization_key = GFX_Portrait_Ireland_Ned_Cronin
+	}
+	
+	text = {
+		trigger = {
+			has_idea = IRE_John_J_O_Kelly_hog_pau
+		}
+		localization_key = GFX_Portrait_Ireland_John_J_OKelly
 	}
 	
 	text = {
@@ -11562,6 +11913,13 @@ defined_text = {
 	
 	text = {
 		trigger = {
+			has_idea = IRE_James_Larkin_hog_syn
+		}
+		localization_key = GFX_Portrait_Ireland_Jim_Larkin
+	}
+	
+	text = {
+		trigger = {
 			has_idea = IRE_Maurice_Twomey_hog_rso
 		}
 		localization_key = GFX_Portrait_Ireland_Maurice_Twomey
@@ -11571,7 +11929,14 @@ defined_text = {
 		trigger = {
 			has_idea = IRE_James_Joyce_hog_rso
 		}
-		localization_key = "[GetJoycePortrait]"
+		localization_key = [GetJoycePortrait]
+	}
+	
+	text = {
+		trigger = {
+			has_idea = IRE_Owen_Sheehy_Skeffington_hog_rso
+		}
+		localization_key = GFX_Portrait_Ireland_Owen_Sheehy_Skeffington
 	}
 	
 	### Danish PMs ###
@@ -11718,6 +12083,57 @@ defined_text = {
 			has_idea = BEL_Achille_Van_Acker_hog_sde
 		}
 		localization_key = GFX_Portrait_Belgium_Achille_Van_Acker
+	}
+	
+	### Wallonia PMs ###
+	
+	text = {
+		trigger = {
+			has_idea = WLL_Leon_Degrelle_hog_npo
+		}
+		localization_key = [GetDegrellePortrait]
+	}
+	
+	text = {
+		trigger = {
+			has_idea = WLL_Georges_Prosper_Remi_hog_npo
+		}
+		localization_key = GFX_Portrait_Belgium_Georges_Prosper_Remi
+	}
+	
+	text = {
+		trigger = {
+			has_idea = WLL_Fernand_Dehousse_hog_sde
+		}
+		localization_key = GFX_Portrait_Belgium_Fernand_Dehousse
+	}
+	
+	text = {
+		trigger = {
+			has_idea = WLL_Auguste_Buisseret_hog_mli
+		}
+		localization_key = GFX_Portrait_Belgium_Auguste_Buisseret
+	}
+	
+	text = {
+		trigger = {
+			has_idea = WLL_Georges_Deffontaine_hog_ade
+		}
+		localization_key = GFX_Portrait_Belgium_Georges_Deffontaine
+	}
+	
+	text = {
+		trigger = {
+			has_idea = WLL_Victor_Matthys_hog_npo
+		}
+		localization_key = GFX_Portrait_Belgium_Victor_Matthys
+	}
+	
+	text = {
+		trigger = {
+			has_idea = WLL_Jose_Streel_hog_npo
+		}
+		localization_key = GFX_Portrait_Belgium_Jose_Streel
 	}
 	
 	### Swedish PMs ###
@@ -11932,7 +12348,7 @@ defined_text = {
 		trigger = {
 			has_idea = NOR_Haakon_Five_hog_sli
 		}
-		localization_key = GFX_Portrait_Norway_Carl_Haakon_Five
+		localization_key = GFX_Portrait_Norway_Haakon_Five
 	}
 	
 	text = { 
@@ -13256,6 +13672,13 @@ defined_text = {
 		localization_key = GFX_Portrait_Vietnam_Duong_Van_Duong
 	}
 	
+	text = { 
+		trigger = {
+			has_idea = VIN_Huynh_Phu_So_hog_npo
+		}
+		localization_key = GFX_Portrait_Vietnam_Huynh_Phu_So
+	}
+	
 	### Bulgarian PMs ###
 	
 	text = { 
@@ -13803,14 +14226,14 @@ defined_text = {
 	
 	text = { 
 		trigger = {
-			has_idea = EGY_Aly_Maher_hog_sco
+			has_idea = EGY_Aly_Maher_hog_sli
 		}
 		localization_key = GFX_Portrait_Egypt_Aly_Maher
 	}
 	
 	text = { 
 		trigger = {
-			has_idea = EGY_Ibrahim_Abdel_Hady_hog_sli
+			has_idea = EGY_Ibrahim_Abdel_Hady_hog_mli
 		}
 		localization_key = GFX_Portrait_Egypt_Ibrahim_Abdel_Hady_Pasha
 	}
@@ -13831,21 +14254,21 @@ defined_text = {
 	
 	text = { 
 		trigger = {
-			has_idea = EGY_Mohamed_Tawfik_Naseem_hog_ade
+			has_idea = EGY_Mohamed_Tawfik_Naseem_hog_sco
 		}
 		localization_key = GFX_Portrait_Egypt_Mohamed_Tawfik_Naseem
 	}
 	
 	text = { 
 		trigger = {
-			has_idea = EGY_Ahmad_Mahir_hog_sli
+			has_idea = EGY_Ahmad_Mahir_hog_mli
 		}
 		localization_key = GFX_Portrait_Egypt_Ahmad_Mahir
 	}
 	
 	text = { 
 		trigger = {
-			has_idea = EGY_Mohamed_Mahmoud_hog_mli
+			has_idea = EGY_Mohamed_Mahmoud_hog_sli
 		}
 		localization_key = GFX_Portrait_Egypt_Mohamed_Mahmoud
 	}
@@ -13880,7 +14303,7 @@ defined_text = {
 	
 	text = { 
 		trigger = {
-			has_idea = EGY_Mohammed_Naguib_hog_sli
+			has_idea = EGY_Mohammed_Naguib_hog_sde
 		}
 		localization_key = GFX_Portrait_EGY_Mohammed_Naguib
 	}
@@ -13894,7 +14317,7 @@ defined_text = {
 	
 	text = { 
 		trigger = {
-			has_idea = EGY_Hassan_al_Hudaybi_hog_sco
+			has_idea = EGY_Hassan_al_Hudaybi_hog_ade
 		}
 		localization_key = GFX_Portrait_EGY_Hassan_al_Hudaybi
 	}
@@ -14052,6 +14475,13 @@ defined_text = {
 		localization_key = GFX_Portrait_POL_Norbert_Barlicki
 	}
 	
+	text = { 
+		trigger = {
+			has_idea = POL_Wladyslaw_Grabski_hog_ade
+		}
+		localization_key = GFX_Portrait_POL_Wladyslaw_Grabski
+	}
+	
 	### Baltics ###
 	
 	text = { 
@@ -14194,20 +14624,6 @@ defined_text = {
 	}
 	
 	###Others###
-	
-	text = {
-		trigger = {
-			has_idea = WLL_REX_ALBERT
-		}
-		localization_key = GFX_Portrait_Belgium_Adalbert_I
-	}
-	
-	text = {
-		trigger = {
-			has_idea = WLL_REX_ADALBERT
-		}
-		localization_key = GFX_Portrait_Belgium_King_Albert
-	}
 	
 	text = { #Fired by Minister Ideas
 		trigger = {
@@ -14382,6 +14798,12 @@ defined_text = {
 	}
 	text = { #Not by Minister Ideas
 		trigger = {
+			has_country_flag = FRA_Anarchy_Reign
+		}
+		localization_key = GFX_Portrait_France_Nestor_Makhno
+	}
+	text = { #Not by Minister Ideas
+		trigger = {
 			has_idea = TEX_philipregent_idea
 		}
 		localization_key = GFX_Portrait_TEX_philip_the_first
@@ -14491,6 +14913,13 @@ defined_text = {
 			has_country_flag = GANDHI_VISIBLE
 		}
 		localization_key = GFX_Portrait_BHC_Mohandas_Karamchand_Gandhi
+	}
+	
+	text = { #Not by Minister Ideas
+		trigger = {
+			has_idea = COR_George_Edward_Deatherage_hog_npo
+		}
+		localization_key = GFX_Portrait_CGL_George_E_Deatherage
 	}
 	
 	#so on and so forth

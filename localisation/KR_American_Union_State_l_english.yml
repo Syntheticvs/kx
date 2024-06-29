@@ -80,8 +80,8 @@ TEX_national_populist_deadphill_regent_party:0 "Holy American League-National Sa
 TEX_national_populist_deadphill_regent_party_long:0 "Holy American League-National Salvation Faction\n§LFollowing the deadlocked and indecisive Congress in St. Mary's City, a compromise was found. No faction would be the one to rule them all, instead, every faction would rule...partially. Aspects of the factions' doctrines have been incorporated into the new "National Salvation Decree", which outlines the new policies that will be observed by the Empire. It has been decided that the Congress in St. Mary's will remain as a permanent governing institution, based on the model of the Ecumenical Councils. Officially this Council is the "Council of Guadalupe", but the introduction of the National Salvation Decree has led to many dubbing it the "National Salvation Faction." Guided by the hand of the Divine Trinity, the Regency shall carry the Empire into a holy future.§!"
 
 
-TEX_totalist_deadphill_party:0 "Red Legion of America"
-TEX_totalist_deadphill_party_long:0 "The Red Legion of America\n§LFormed as a merger of the largest anti-Day groups from all around the Empire, the Red Legion of America is the very definition of a contradiction. They support reintroducing segregation, even promoting policies like the Liberia Plan, which clearly places them in league with groups such as the Klan. Meanwhile, their unwavering support of Socialism and the Worker's Revolution clearly puts them in the camp of groups like the defunct Combined Syndicates. With a monarchist wing to top the cake, the Red Legion simply should not function as it does. Regardless of it's contradictory nature though, the Legionaries of the Red Legion march on, determined to remove Dorothy Day and create the perfect Socialist Kingdom for God's chosen race, the White Man.§!"
+TEX_totalist_deadphill_party:0 "Revolutionary Pilgrims of America"
+TEX_totalist_deadphill_party_long:0 "The Revolutionary Pilgrims of America\n§LFormed as a merger of the largest anti-Day groups from all around the Empire, the Revolutionary Pilgrims of America have created a somewhat contradictory message. Despite their support for some socialist policies, they are ardently opposed to internationalism and globalisation. Even though their core grew out of the Quebecois Social Credit movement around the Catholic Pilgrims of Saint Michael and Louis Even, the Revolutionaries support certain policies advocated by the Protestants like William Dudley Pelley and his Silver Legion or even the Dixiecrats and Klansmen. As such, the Revolutionary Pilgrims are united by one goal, the complete overthrow of the system instituted by Archregent Day who they perceive to be a puppet of 'international banking jewry' and creation of a 'socially just' popular 'monarchy' for a collective populace bonded by their Western heritage. Most surprisingly to some outside observers, the 'White Berets' are also heavily influenced by the populist rhetoric of French National Revolutionary advocate Pierre Poujade.§!"
 
 
 TEX_texan_democrat_party:0 "Democratic Party"
@@ -111,26 +111,21 @@ TEX_commonwealth_national_populist:0 "Commonwealth of America"
 TEX_commonwealth_national_populist_ADJ:0 "American"
 TEX_commonwealth_national_populist_DEF:0 "the Commonwealth of America"
 
-
 TEX_catholic:0 "Apostolic Realm of America"
 TEX_catholic_ADJ:0 "American"
 TEX_catholic_DEF:0 "The Apostolic Realm of America"
-
 
 TEX_catholic1:0 "Apostolic Realm of America"
 TEX_catholic1_ADJ:0 "American"
 TEX_catholic1_DEF:0 "The Apostolic Realm of America"
 
-
 TEX_catholic2:0 "Apostolic Realm of America"
 TEX_catholic2_ADJ:0 "American"
 TEX_catholic2_DEF:0 "The Apostolic Realm of America"
 
-
 TEX_catholic3:0 "Apostolic Realm of America"
 TEX_catholic3_ADJ:0 "American"
 TEX_catholic3_DEF:0 "The Apostolic Realm of America"
-
 
 TEX_catholic4:0 "Apostolic Realm of America"
 TEX_catholic4_ADJ:0 "American"
@@ -138,44 +133,43 @@ TEX_catholic4_DEF:0 "The Apostolic Realm of America"
 
 TEX_catholic_sreane:0 "Most Serene Republic of America"
 TEX_catholic_sreane_ADJ:0 "American"
-TEX_catholic_sreane_DEF:0 "The Serene Republic of the American Union State"
+TEX_catholic_sreane_DEF:0 "The Serene Republic of America"
 
 TEX_catholic_sreane1:0 "Most Serene Republic of America"
 TEX_catholic_sreane1_ADJ:0 "American"
-TEX_catholic_sreane1_DEF:0 "The Serene Republic of the American Union State"
+TEX_catholic_sreane1_DEF:0 "The Serene Republic of America"
 
 TEX_catholic_sreane2:0 "Most Serene Republic of America"
 TEX_catholic_sreane2_ADJ:0 "American"
-TEX_catholic_sreane2_DEF:0 "The Serene Republic of the American Union State"
+TEX_catholic_sreane2_DEF:0 "The Serene Republic of America"
 
 TEX_catholic_sreane3:0 "Most Serene Republic of America"
 TEX_catholic_sreane3_ADJ:0 "American"
-TEX_catholic_sreane3_DEF:0 "The Serene Republic of the American Union State"
+TEX_catholic_sreane3_DEF:0 "The Serene Republic of America"
 
 TEX_catholic_sreane4:0 "Most Serene Republic of America"
 TEX_catholic_sreane4_ADJ:0 "American"
-TEX_catholic_sreane4_DEF:0 "The Serene Republic of the American Union State"
+TEX_catholic_sreane4_DEF:0 "The Serene Republic of America"
 
 TEX_catholic_heaven:0 "Heavenly Kingdom of America"
 TEX_catholic_heaven_ADJ:0 "American"
-TEX_catholic_heaven_DEF:0 "The Heavenly Kingdom of American"
+TEX_catholic_heaven_DEF:0 "The Heavenly Kingdom of America"
 
 TEX_catholic_heaven1:0 "Heavenly Kingdom of America"
 TEX_catholic_heaven1_ADJ:0 "American"
-TEX_catholic_heaven1_DEF:0 "The Heavenly Kingdom of American"
+TEX_catholic_heaven1_DEF:0 "The Heavenly Kingdom of America"
 
 TEX_catholic_heaven2:0 "Heavenly Kingdom of America"
 TEX_catholic_heaven2_ADJ:0 "American"
-TEX_catholic_heaven2_DEF:0 "The Heavenly Kingdom of American"
+TEX_catholic_heaven2_DEF:0 "The Heavenly Kingdom of America"
 
 TEX_catholic_heaven3:0 "Heavenly Kingdom of America"
 TEX_catholic_heaven3_ADJ:0 "American"
-TEX_catholic_heaven3_DEF:0 "The Heavenly Kingdom of American"
+TEX_catholic_heaven3_DEF:0 "The Heavenly Kingdom of America"
 
 TEX_catholic_heaven4:0 "Heavenly Kingdom of America"
 TEX_catholic_heaven4_ADJ:0 "American"
-TEX_catholic_heaven4_DEF:0 "The Heavenly Kingdom of American"
-
+TEX_catholic_heaven4_DEF:0 "The Heavenly Kingdom of America"
 
 TEX_catholic_guad_totalist:0 "People's Holy Empire of Our Lady of Guadalupe"
 TEX_catholic_guad_totalist_ADJ:0 "American"
@@ -184,7 +178,6 @@ TEX_catholic_guad_totalist_DEF:0 "the People's Holy Empire of Our Lady of Guadal
 TEX_catholic_guad:0 "Empire of Our Lady of Guadalupe"
 TEX_catholic_guad_ADJ:0 "American"
 TEX_catholic_guad_DEF:0 "the Empire of Our Lady of Guadalupe"
-
 
 TEX_catholic_stuart:0 "Jacobite Kingdom of America"
 TEX_catholic_stuart_ADJ:0 "American"
@@ -530,6 +523,18 @@ TEX_cathamerica_first_idea:0 "America First"
 
 TEX_blessed_are_the_based:0 "Blessed are the Pure in Heart"
 
+TEX_american_noblity:0 "An American Noblity"
+
+TEX_starting_integralism:0 "Permanent Committee for the Downsizing of the American Government"
+
+TEX_commonman_integralism:0 "Integralism Tailored for the American Appetite"
+
+TEX_gudalopism:0 "The Guadalupist Theory of Integralism"
+
+TEX_conversions:0 "Conversion Efforts"
+TEX_conversions_desc:0 "While attempts to convert the American people have so far have good results, to the Leauge, things are just not going fast enough. To this end, large swaths of government resources are now totally mobilized for the sole reason of converting America to Catholicism. However, with not everyone being open to this, many have begun to flee America to avoid religious strife."
+
+
 ### Marland Ideas ###
 
 TEX_start_economic_revival:0 "American Economic Revival"
@@ -678,7 +683,7 @@ CP_Victory:0 "The Christian Party has Won"
 NPP_Victory:0 "The National Progressive Party has Won"
 AFP_Victory:0 "The America First Party has Won"
 TEX_allowed_catholic:0"We have Allied with the Catholics"
-TEX_regent_power:0 "The Empire is too be ruled under an eternal regency of compromise"
+TEX_regent_power:0 "The Empire is governed under an eternal regency of compromise"
 TEX_joe_power:0 "Joseph Kennedy has taken over the Empire in a military coup"
 TEX_deadlock_power:0 "The Second Holy American League Congress has survived a trip to the brink"
 TEX_carmody_power:0 "Supreme Knight Carmody has taken charge over the Empire"
@@ -1102,7 +1107,7 @@ TEX_catholic_captailist:0 "Father of Christian Capitalism"
 TEX_catholic_anarchist:0 "Regent of the Poor"
 TEX_Regency_of_comp:0 "Regency of Compromise"
 TEX_ideal_caliver:0 "The Caviler Ideal"
-TEX_socialism_for_white_man:0 "Architect of Red Legionarism"
+TEX_socialism_for_white_man:0 "Architect of the Pilgrim Revolution"
 
 ### Huey Successors ###
 TEX_the_longist_legacy:0 "The Next Step"
@@ -1362,7 +1367,7 @@ TEX_Lightning_Joe_desc:0 "Given how outdated the Army organization has become, G
 TEX_Terrible_Terry:0 "Terrible Terry"
 TEX_Terrible_Terry_desc:0 "The uncouth General Terry de la Mesa Allen Sr. has put forward a clear-thinking plan based on superior tactics, combat preparation, and pressing the enemy wherever they are weak. His independent command style means that the political class will have very little influence over him, for better or worse."
 TEX_Devers_Plan:0 "Smiling Jake"
-TEX_Devers_Plan_desc:0 "Eisenhower's most loathed general in the American Union State, Jake Devers desires to overcome the enemy using superior mobilization and tanks, arguing that tanks would easily overcome our more numerous and ill-prepared foes."
+TEX_Devers_Plan_desc:0 "Jake Devers desires to overcome the enemy using superior mobilization and tanks, arguing that tanks would easily overcome our more numerous and ill-prepared foes."
 TEX_rapid_construction:0 "Rapid Construction"
 TEX_rapid_construction_desc:0 "If the Union State is going to put out motorized vehicles at the rate it needs to, we must build our military industry in Texas as quickly as possible. We must do so even if it means using manpower for the task of building fortifications and military factories in the short term. It will have a much greater payoff of industrialization."
 TEX_towards_motorization:0 "Towards Motorization"
@@ -2081,7 +2086,7 @@ unionstate.5122.d:0 "President Smith has announced the construction of a museum 
 unionstate.5122.a:0 "The museum will be funded with the taxes of our citizens."
 unionstate.5122.b:0 "The Long family will lead a fundraising campaign across the country."
 unionstate.5122.c:0 "Smith and the AFP are Long's legacy and will conduct this fundraiser!"
-unionstate.5122.e:0 "It is Jews who must bare the burden of this museum if there is any justice in this country!"
+unionstate.5122.e:0 "It is Jews who must bear the burden of this museum if there is to be any justice in this country!"
 
 unionstate.5123.t:0 "Seymour Weiss Makes His Move"
 unionstate.5123.d:0 "The America First Party has just experienced yet another power struggle as Mayor of New Orleans and close confidant of Huey Long, Seymour Weiss, has attempted to wrestle away control of the Party from President Smith. Pointing to his association with men such as Henry Ford and James Eastland, Weiss has denounced Smith as a traitor to the late Kingfish's vision and a man unfit to succeed him or lead the good people of America. He has even dared to ask major party leaders to join him in voicing opposition to Smith so that they can put in place a new President that will restore the original purpose and ideals the Party once boasted, when the opportunity arises. Weiss' political rebellion was quickly put down following a series of scathing speeches in which the President has attacked Weiss. Smith has asserted that Weiss worked to sabotage Huey Long at every turn, leading a Jewish conspiracy to stop Huey Long from freeing the poor people in America from elitist forces. This conspiracy was responsible for most of Long's more questionable policies and, ultimately, his tragic assassination. Indeed, his Jewish last name is shared by Long's assassin, Dr. Carl Weiss, proving their connection and cementing the allegations as the truth in the eyes of Smith and his supporters. Tensions peaked as battle erupted in the French Quarter of New Orleans at one point, with mobs of enraged citizens threatening to exact revenge on Weiss for the death of Huey clashing with police. This morning, President Smith announced the arrest of Seymour Weiss, officially ending the fight for control. He commented, "It is abundantly clear that Mayor Weiss is guilty of murder, Judeo-negro collaboration, a wide variety of perversions, promoting jazz, thievery, treason, corruption, and tax evasion, and it is my expectation that he will be brought to justice."A mayoral election has been scheduled in New Orleans. Meanwhile, Weiss awaits trial, and a capital punishment sentence is speculated."
@@ -2512,7 +2517,7 @@ unionstate.309.a:0 "...Only Christ has the right to rule in America!"
 unionstate.309.b:0 "...We will finish what the Gunpowder Plot started!"
 
 unionstate.310.t:0 "Christ the King"
-unionstate.310.d:0 "In an event that left many Americans dumbfounded today, President Philip Acosta Carroll, Father Charles Coughlin, and the Holy American League led a joint declaration announcing that America, indeed, be transitioning to a form of monarchy.\n\nThe astonishment of the majority of Americans, counter-intuitively, did not stem from the concept of a monarchist America, but rather, the declaration from Carroll and Coughlin that none other than Jesus of Nazareth shall be the King of American. As it stands, this new political policy has shocked millions, millions who expected a president, chairman, or dictator perhaps, but never a king.\n\nFurther, in a similarly confounding statement, Philip Carroll announced that he would, in fact, be resigning as the President of the United States, instead assuming the title of Regent. This title of 'Regent,' as the name suggests, mean that Carroll shall be ruling in Christ's place, granting him nigh absolute control over the government.\n\nReactions to this declaration have been, to put it mildly, perhaps as varied and mixed as they have ever been in the former United States: many Americans, even those among the Christian faithful, are flabbergasted at the notion of the apparatus of state being granted to an ethereal being in the form of the Judaic Son of God.\n\nMeanwhile, the markedly more outspokenly cynical critics of the Holy American League have openly denounced the move as a nakedly obvious and even delusional attempt to galvanize the religious population in America under the clerical dictatorship of Philip Carroll. For the faithful Catholic however, this moves is not unexpected. According to the Church, Christ the King is King of all nations, and America is simply the first to put Him in his rightful place. Besides this, how Carroll intends to legitimize this seemingly insane decision to the rest of the population remains to be seen."
+unionstate.310.d:0 "In an event that left many Americans dumbfounded today, President Philip Acosta Carroll, Father Charles Coughlin, and the Holy American League led a joint declaration announcing that America, indeed, be transitioning to a form of monarchy.\n\nThe astonishment of the majority of Americans, counter-intuitively, did not stem from the concept of a monarchist America, but rather, the declaration from Carroll and Coughlin that none other than Jesus of Nazareth shall be the King of America. As it stands, this new political policy has shocked millions, millions who expected a president, chairman, or dictator perhaps, but never a king.\n\nFurther, in a similarly confounding statement, Philip Carroll announced that he would, in fact, be resigning as the President of the United States, instead assuming the title of Regent. This title of 'Regent,' as the name suggests, mean that Carroll shall be ruling in Christ's place, granting him nigh absolute control over the government.\n\nReactions to this declaration have been, to put it mildly, perhaps as varied and mixed as they have ever been in the former United States: many Americans, even those among the Christian faithful, are flabbergasted at the notion of the apparatus of state being granted to an ethereal being in the form of the Judaic Son of God.\n\nMeanwhile, the markedly more outspokenly cynical critics of the Holy American League have openly denounced the move as a nakedly obvious and even delusional attempt to galvanize the religious population in America under the clerical dictatorship of Philip Carroll. For the faithful Catholic however, this moves is not unexpected. According to the Church, Christ the King is King of all nations, and America is simply the first to put Him in his rightful place. Besides this, how Carroll intends to legitimize this seemingly insane decision to the rest of the population remains to be seen."
 unionstate.310.a:0 "Best pray that he succeeds, for it will take a miracle!"
 
 unionstate.311.t:0 "Saint Mary's City"
@@ -2792,14 +2797,14 @@ cathdeath.38.t:0 "Blessed Are The Peacemakers..."
 cathdeath.38.d:0 "Our leaders all breathe a collective sigh of relief, for their work has paid off. Today the Empire is saved and we are now the peacemakers, those who stood in the face of disaster and emerged victorious. The Empire shall survive ten thousand years with the lessons we have learned from this crisis!"
 cathdeath.38.a:0 "...for they shall be called children of God"
 
-cathdeath.100.t:0 "Formation of the Red Legion of America"
-cathdeath.100.d:0 "Following Archregent Day's rise to power, American politics were forever changed. While a devout Catholic, Day was an avid anarchist, and thus her rise legitimatized radical leftist politics. Despite this, many radical leftist groups, from the remains of the Combined Syndicalists to the Socialist Party of America to even the nigh defunct Communist Party of America were opposed to Day's vision of socialism, and thus begun working against her and her vision of socialism. Along with these groups, other fringe groups, such as the Sliver Legion and remnants of the Old Democratic Party also become more active, protesting against the rise of socialism in Day's personage. While these two groups have long been diametrical opposed, they were united in action against Day who they viewed as the ultimate threat. For the most part, this so-called unity was just an acknowledgement of the other's usefulness in opposing Day, for the time being at least. This changed today when, in Quebec, Louis Even, along with several prominent leaders from both the far-left and far-right of the anti-Day movement announced the creation of the Red Legion of America. Taking it's name from the old Sliver Legion that forms it's backbone, the Red Legion practices and preaches a strange and nigh contradictory ideology they call Red Legionarism or, as their motto puts it, 'Socialism for the White Man.' While normally this kind of thing would not be a massive threat, due to the Red Legion's uniting of both the far-left and far-right, it may just be a forced to reckoned with."
+cathdeath.100.t:0 "Formation of the Revolutionary Pilgrims of America"
+cathdeath.100.d:0 "Following Archregent Day's rise to power American politics were changed drastically. Despite being a devout Catholic, Dorothy Day is also an ardent supporter of Anarchism and certain doctrines inherited from the ashes of the Combined States. While this allowed the Socialsit camp to legitimize their positions in the reunified America, more radical members of the Left were dissatisfied with the supposed 'betrayal' of true Socialist values. As such, they began to collaborate with remnant Rightist figures and movements such as the Canadian Social Credit, Silver Legion, the most radical groups within the Holy American League or even certain Dixiecrats. Over the past months, this anger coalesced around the figure of Louis Even, a French-Canadian cleric responsible for introducing the Social Credit philosophy to a wider section of the Catholic population of Quebec. While already the leader of the Union des électeurs, Evan was also responsible for the creation of the more militant Pilgrims of Saint Michael, also known as Bérets-blancs or White Berets. Their message of anti-globalism, destruction of the banking elite, and anti-semitism as a way to create a socially just nation, sometimes even explicitly for a shared 'White' collective, appealed to the disgruntled sectors within our population, leading to the formation of the Revolutionary Pilgrims of America. The group is also said to be influenced by the specific brand of the French National Revolution advocated by Pierre Poujade."
 cathdeath.100.a:0 "Worrying, to say the least."
 
-cathdeath.101.t:0 "The Red Legion Attempts a Coup!"
-cathdeath.101.d:0 "Just a few short days after its creation, the Red Legion is already attempting to forcefully remove Archregent Day from power. All across the Empire, from Alaska to Argentina, Red Legion units are attempting to dislodge loyalist units from key urban centers. Thus far, they have already been able to wrest control of Portland, Atlanta, and Mexico City. The fighting is intense, and no one is sure who will come out on top...."
-cathdeath.101.a:0 "...the Red Legion succeeds! Long Live the Socialist Kingdom of God!"
-cathdeath.101.b:0 "...the Red Legion is beaten back! Long Live Archregent Day!"
+cathdeath.101.t:0 "The Revolutionary Pilgrims Attempts a Coup!"
+cathdeath.101.d:0 "Just a few short days after its creation, the Revolutionary Pilgrims are already attempting to forcefully remove Archregent Day from power. All across the Empire White Beret militants are attempting to dislodge loyalist units from key urban centers. Thus far, they have already been able to wrest control of Portland, Atlanta, and Mexico City. The fighting is intense, and no one is sure who will come out on top...."
+cathdeath.101.a:0 "...the Revolutionary Pilgrims succeed! Long Live the Socialist Kingdom of God!"
+cathdeath.101.b:0 "...the Revolutionary Pilgrims are beaten back! Long Live Archregent Day!"
 
 cathdeath.102.t:0 "The Return of Republican Democracy Under God’s Light and By the People’s Will"
 cathdeath.102.d:0 "With Arch-Regent Day continuing to pursue her dream of molding America into a true Socialist Kingdom of God, much has been changed on the road to proletarian utopia under the Lord. With political power, the means of production, and the very land we live up transferred to the hands of the people, all have begun to rejoice in egalitarian jubilation, though something has always felt missing. As we have progressed towards a perfected Socialist society through the teachings of God and the interpretation of Dorothy Day, the very American activity of democratic elections has been sorely missed by our people, and so Day has moved forward to organize national elections. Though she shall remain as Arch-Regent under God, the civilian government that rules alongside her shall come to represent the will of the people. \n\nBefore us stands four major democratic coalitions that have any chance at winning in Day’s government. The most dominant of the groups are Day’s hardliners and loyalists organized around ideas of Christian Socialism, Market Socialism, Eco-Socialism, Bellamyite Thought, and Distributism, though they eschew the more radical Anarchist sympathies of the Arch-Regent. Their main rivals are the coalition of Anarcho-Syndicalists, Syndicalists, Anarcho-Communists, and even a few Illegalists united in their loyalty to Day and devotion to the Lord. Standing in opposition to these radicals are the ‘Liberal’ group - a large broad Christian coalition of Social Democrats, Progressives, Left-minded Liberals, and any other democratic group willing to swallow some of their beliefs in order to have any shot at electoral success in this new America. Though they are the largest group, they lack the acceptance within the new government to be as dominant as Day’s faction or the Syndicalists. Finally, the dark horse of this race are the so-called ‘Christian Communists’ - a band of Browder-inspired Socialists united in a wide coalition, sharing more authoritarian beliefs and a shared zealotry to Christian doctrine. With the final votes being counted, who shall win the day and take their place at Arch-Regent Day’s side under the Lord to guide America?"
@@ -2868,7 +2873,7 @@ cathdeath.112.c:0 "Fly the Royal Standard of the United Kingdom!"
 cathdeath.112.e:0 "Fly the Arms of the King!"
 
 cathdeath.113.t:0 "A Question of Influence"
-cathdeath.113.d:0 "While externally, the Holy American League presents itself as a united organization, that while having some internal differences, stand together with but one goal, to spread, live out and protect the Catholic faith, and it's faithful. In reality, the group is divided as much if not more then the Roman Catholic Church. Everything from the followers of Dorothy Day's more socialistic approach to Catholicism, or the adherents of Father Feeney's strict interpretation of Extra Ecclesiam Nulla Salus, the Holy League is far from a unified whole. By and large however, members of the group typically defaulted to the influence of Regent Carroll, who despite being something of a moderate, has lead the League to following an Americanized version of Lusitanian Integralism. However, even Carroll's Integralism is far from orthodox. The influence of Action Française's Charles Maurras and even the teachings of Padre Pio, a freedom fighter against the Socialists in southern Italy, can be felt and seen in Carroll and the League's integralism. Due to this, ever once in a while a request to officially change the League's platform to one of these varied influences. "
+cathdeath.113.d:0 "While externally, the Holy American League presents itself as a united organization, that while having some internal differences, stand together with but one goal, to spread, live out and protect the Catholic faith, and it's faithful. In reality, the group is divided as much if not more then the Roman Catholic Church. Everything from the followers of Dorothy Day's more socialistic approach to Catholicism, or the adherents of Father Feeney's strict interpretation of Extra Ecclesiam Nulla Salus, the Holy League is far from a unified whole. By and large however, members of the group typically defaulted to the influence of Regent Carroll, who despite being something of a moderate, has lead the League to following an Americanized version of Lusitanian Integralism. However, even Carroll's Integralism is far from orthodox. The influence of Action Française's Charles Maurras and even the teachings of Padre Pio, can be felt and seen in Carroll and the League's integralism. Due to this, ever once in a while a request to officially change the League's platform to one of these varied influences. "
 cathdeath.113.a:0 "Lusitanian Integralism has led us this far, there is no need for change."
 cathdeath.113.b:0 "Charles Maurras is a genius! We simply must adopt Maurrassisme."
 cathdeath.113.c:0 "Padre Pio is almost a living Saint, and we must follow his example!"
@@ -3158,7 +3163,7 @@ kr_buick_tex:0 "Buick"
 kr_hudson_tex:0 "Hudson"
 kr_ford_tex:0 "Ford"
 
-kr_ingalls_shipbuilding_tex:0 "[kr_ingalls_shipbuilding_text] Shipbuilding"
+kr_ingalls_shipbuilding_tex:0 "Ingalls Shipbuilding"
 kr_electric_boat_tex:0 "Electric Boat"
 kr_mare_island_naval_shipyard_tex:0 "Mare Island Naval Shipyard"
 kr_kenworth_motor_truck_tex:0 "Kenworth Motor Truck"

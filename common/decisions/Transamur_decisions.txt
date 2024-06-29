@@ -4047,6 +4047,7 @@ TRM_russian_expansion = {
 						days = 1
 					}
 				}
+				RUS_enable_integration = yes
 			}
 		}
 	}
@@ -4819,7 +4820,7 @@ political_actions = {
 		name = RUS_Invite_Country
 		icon = eng_trade_unions_support
 		allowed = { tag = TRM }
-		targets = { NOR HOL MON LIB AFG }
+		targets = { NOR MON LIB AFG }
 		target_root_trigger = {
 			has_global_flag = TRM_MONBOL_ALLYS
 			is_faction_leader = yes
@@ -4828,7 +4829,6 @@ political_actions = {
 			FROM = {
 				OR = {
 					has_country_flag = NOR_monbol
-					has_country_flag = hol_monbol
 					has_country_flag = MON_gada_meiren_victory_flag
 					has_country_flag = LIB_monbol
 					has_country_flag = AFG_radical_emir

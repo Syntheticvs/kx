@@ -263,15 +263,6 @@ SOV_Join_The_Internationale: "Join the Internationale"
 SOV_Join_The_Internationale_desc: "Rather than having all of us try to stand up to the German imperialists on our own we should join hands with our comrades in Britain, France, Italy and beyond."
 SOV_Protect_The_Baltics: "Protect the Baltics"
 
-SOV_cooperative_economy_idea: "Cooperative Economy"
-SOV_rural_independence: "Rural Self-Efficiency"
-SOV_osoaviakhim: "Osoaviakhim"
-SOV_institutionalized_terror: "Institutionalized Terror"
-SOV_restored_draft: "Restored Draft"
-SOV_socialist_humanism: "Socialist Humanism"
-SOV_svr: "Main Intelligence Directorate"
-SOV_decentralized_syndicates: "Decentralized Syndicates"
-SOV_cult_of_bukharin: "Cult of Bukharin"
 ### Flags & Tooltips ###
 
 soviet_russia_restored: "Russian Socialist Republic has been established"
@@ -2888,7 +2879,7 @@ SOV_NKVD_decisions_Yezhov_purge: "Yezhovschina"
 SOV_NKVD_decisions_Yezhov_purge_desc: "With Nikolay Yezhov now a head of the Cheka, the new stage of purges is to come. We shall finally get rid of all anti-Soviet elements in our country and end the capitalist and nationalist influence in our country."
 
 SOV_NKVD_decisions_general_purge: "The Great Purge"
-SOV_NKVD_decisions_general_purge_desc_desc: "The Chekists are now in full control of the counter-revolutionary activities in the country and it is time to start a Great Purge - to get rid of all enemies and traitors, eradicating all anti-Soviet elements, whoever they are: party members, opposition, terrorists or even top military generals."
+SOV_NKVD_decisions_general_purge_desc: "The Chekists are now in full control of the counter-revolutionary activities in the country and it is time to start a Great Purge - to get rid of all enemies and traitors, eradicating all anti-Soviet elements, whoever they are: party members, opposition, terrorists or even top military generals."
 
 
 NKVD_leader_tt: "[GetNKVDLeaderDesc]

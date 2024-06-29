@@ -2198,24 +2198,12 @@ country_event = {
 				}
 			}
 		}
-		if = {
-			limit = {
-				has_government = social_democrat
-			}
-			set_politics = {
-				ruling_party = social_liberal
-				election_frequency = 48
-				elections_allowed = yes
-			}
-			else = {
-				set_politics = {
-					ruling_party = social_liberal
-					election_frequency = 48
-					elections_allowed = yes
-				}
-			}
-			add_socdem_to_coalition = yes
+		set_politics = {
+			ruling_party = social_liberal
+			election_frequency = 48
+			elections_allowed = yes
 		}
+		add_socdem_to_coalition = yes
 		add_popularity = {
 			ideology = social_liberal
 			popularity = 0.10
@@ -4861,7 +4849,7 @@ country_event = {
 	option = {
 		name = gre.119.a #Rather worrying...
 		ai_chance = {
-			factor = 1
+			factor = 65
 			modifier = {
 				factor = 0
 				has_game_rule = {
@@ -4885,7 +4873,7 @@ country_event = {
 	option = {
 		name = gre.119.b #Ban them from the election
 		ai_chance = {
-			factor = 1
+			factor = 35
 			modifier = {
 				factor = 0
 				has_game_rule = {

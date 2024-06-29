@@ -170,8 +170,8 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Dolores Ibáurri Gómez"
-	picture = "gfx/leaders/CNT/Portrait_CNT_Dolores_Ibaurri_Gomez.png"
+	name = "Dolores Ibárruri Gómez"
+	picture = "gfx/leaders/CNT/Portrait_CNT_Dolores_Ibarruri_Gomez.png"
 	expire = "1.1.1"
 	ideology = authcom_subtype
 	female = yes
@@ -292,4 +292,26 @@ create_navy_leader = {
 	attack_skill = 1
 	coordination_skill = 1
 	id = 325
+}
+
+create_navy_leader = {
+	name = "Luis González de Ubieta"
+	portrait_path = "gfx/leaders/CNT/Portrait_CNT_Luis_Gonzales_de_Ubieta.png"
+	traits = { }
+	skill = 1
+	maneuvering_skill = 1
+	defense_skill = 1
+	attack_skill = 1
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "Pedro Prado Mendizábal"
+	portrait_path = "gfx/leaders/CNT/Portrait_CNT_Pedro_Prado_Mendizabal.png"
+	traits = { }
+	skill = 1
+	maneuvering_skill = 1
+	defense_skill = 1
+	attack_skill = 1
+	coordination_skill = 1
 }

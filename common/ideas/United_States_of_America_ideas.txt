@@ -324,9 +324,6 @@ ideas = {
 				has_global_flag = USA_civil_war_begun_flag
 				NOT = { has_global_flag = USA_civil_war_over_flag }
 			}
-			modifier = {
-				unit_limit_ACW_in_progress = 0.15
-			}
 			removal_cost = -1
 		}
 		ACW_fired_up = {
@@ -3235,7 +3232,7 @@ ideas = {
 			removal_cost = -1
 			picture = USA_fighting_for_america
 			targeted_modifier = {
-				tag = USA
+				tag = var:361.owner
 				trade_cost_for_target_factor = -0.25
 				extra_trade_to_target_factor = 0.25
 			}
@@ -3251,7 +3248,7 @@ ideas = {
 			removal_cost = -1
 			picture = USA_fighting_for_america
 			targeted_modifier = {
-				tag = USA
+				tag = var:361.owner
 				trade_cost_for_target_factor = -0.50
 				extra_trade_to_target_factor = 0.50
 			}
@@ -3270,7 +3267,7 @@ ideas = {
 			removal_cost = -1
 			picture = USA_fighting_for_america
 			targeted_modifier = {
-				tag = USA
+				tag = var:361.owner
 				trade_cost_for_target_factor = -0.75
 				extra_trade_to_target_factor = 0.75
 			}
@@ -3456,6 +3453,18 @@ ideas = {
 			modifier = {
 				decryption_factor = 0.15
 				encryption_factor = 0.15
+			}
+		}
+		USA_mexican_resistance = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea USA_mexican_resistance"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = USA_mexican_resistance
+			modifier = {
+				stability_factor = -0.20
+				consumer_goods_factor = 0.15
+				political_power_cost = 0.15
+				resistance_growth = 0.1
 			}
 		}
 	}
@@ -3759,7 +3768,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea kr_western_cartridge_company"}
 			allowed = { is_american_tag = yes }
 			available = {
-				owns_state = 395
+				owns_state = 1154
 			}
 			traits = { infantry_equipment_producer_defense_0  }
 			research_bonus = { infantry_weapons = 0.1 }

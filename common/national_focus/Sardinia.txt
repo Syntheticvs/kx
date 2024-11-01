@@ -46,7 +46,13 @@ focus_tree = {
 	}
 	focus = {
 		id = SRD_protect_the_kingdom
-		icon = GFX_goal_SRD_protect_kingdom
+		icon = {
+			value = GFX_goal_SRD_protect_kingdom_fun
+			trigger = { has_global_flag = KX_POLICEMAN_SWEAR_TO_GOD }
+		}
+		icon = {
+			value = GFX_goal_SRD_protect_kingdom
+		}
 		cost = 5
 		prerequisite = {
 			focus = SRD_tackle_institutional_crisis
@@ -3660,6 +3666,11 @@ focus_tree = {
 				bonus = 0.75
 				uses = 2
 				category = cat_special_forces_generic
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = tech_assault_battalion_effect
+			hidden_effect = {
+				set_technology = { tech_assault_battalion = 1 popup = no }
 			}
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }

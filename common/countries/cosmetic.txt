@@ -671,8 +671,8 @@ YAK_TRM = {
 	color_ui = rgb { 216 244 247 }
 }
 YAK_SMOLIN = {
-	color = rgb { 216 244 247 }
-	color_ui = rgb { 216 244 247 }
+	color = rgb { 174 232 238 }
+	color_ui = rgb { 174 232 238 }
 }
 BRY_TRM = {
 	color = rgb { 216 244 247 }
@@ -1109,8 +1109,8 @@ CZE_czechoslovakia_poland = {
 	color_ui = rgb { 45 86 186 }
 }
 CZE_feminist = {
-	color = rgb { 200 80 150 }
-	color_ui = rgb { 200 80 150 }
+	color = rgb { 168 101 152 }
+	color_ui = rgb { 168 101 152 }
 }
 CZE_westafrica_colony = {
 	color = rgb { 75 104 179 }
@@ -1544,6 +1544,26 @@ KOG_KON = {
 	color_ui = rgb { 199 160 139 }
 }
 
+KOG_KONGO = {
+	color = rgb { 199 160 139 }
+	color_ui = rgb { 199 160 139 }
+}
+
+KOG_KONGO_ALT = {
+	color = rgb { 199 160 139 }
+	color_ui = rgb { 199 160 139 }
+}
+
+KOG_KONGO_ALT_2 = {
+	color = rgb { 199 160 139 }
+	color_ui = rgb { 199 160 139 }
+}
+
+KOG_KONGO_ALT_3 = {
+	color = rgb { 199 160 139 }
+	color_ui = rgb { 199 160 139 }
+}
+
 NIC_LIB = {
 	color = rgb { 189 35 53 }
 	color_ui = rgb { 189 25 53 }
@@ -1567,6 +1587,11 @@ RAS_ARB = {
 IFR = {
 	color = rgb { 15 207 0 }
 	color_ui = rgb { 15 207 0 }
+}
+
+EGY_UAS = {
+	color = rgb { 60 174 107 }
+	color_ui = rgb { 60 174 107 }
 }
 
 JBS_ARA = {
@@ -2068,7 +2093,10 @@ GXC_united_china_kuomintang = {
 	color = rgb { 245 12 55 }
 	color_ui = rgb { 245 12 55 }
 }
-
+GXC_united_china_right_kuomintang = {
+	color = rgb { 0 42 177 }
+	color_ui = rgb { 0 42 177 }
+}
 GXC_government_guangzhou = {
 	color = rgb { 149 93 127 }
 	color_ui = rgb { 149 93 127 }
@@ -2977,6 +3005,10 @@ ABP = {
 	color = rgb { 29 52 119 }
 	color_ui = rgb { 29 52 119 }
 }
+BDN_SAV = {
+	color = rgb { 2 73 124 }
+	color_ui = rgb { 2 73 124 }
+}
 ARG_LA_PLATA = {
 	color = rgb { 153 217 234 }
 	color_ui = rgb { 153 217 234 }
@@ -3058,6 +3090,22 @@ BAY_GREATER_FRANKIA = {
 	color = rgb { 0 0 135 }
 	color_ui = rgb { 90 90 90 }
 }
+AFG_MGH = {
+	color = rgb { 64 160 167 }
+	color_ui = rgb { 83 208 217 }
+}
+AFG_JBD = {
+	color = rgb { 64 160 167 }
+	color_ui = rgb { 83 208 217 }
+}
+AFG_CONFEDERATION = {
+	color = rgb { 64 160 167 }
+	color_ui = rgb { 83 208 217 }
+}
+AFG_KALAKANI_REVOLT = {
+	color = rgb { 190 0 0 }
+	color_ui = rgb { 190 0 0 }
+}
 AFG_KALAKANI_DURRANI = {
 	color = rgb { 0 102 51 }
 	color_ui = rgb { 0 102 51 }
@@ -3065,6 +3113,26 @@ AFG_KALAKANI_DURRANI = {
 AFG_DURRANI_CALIPHATE = {
 	color = rgb { 0 102 51 }
 	color_ui = rgb { 0 102 51 }
+}
+AFG_NADIR_KHAN = {
+	color = rgb { 64 160 167 }
+	color_ui = rgb { 83 208 217 }
+}
+AFG_MGH_NADIR = {
+	color = rgb { 64 160 167 }
+	color_ui = rgb { 83 208 217 }
+}
+AFG_DAOUD = {
+	color = rgb { 64 160 167 }
+	color_ui = rgb { 83 208 217 }
+}
+AFG_MGH_DAOUD = {
+	color = rgb { 64 160 167 }
+	color_ui = rgb { 83 208 217 }
+}
+AFG_DAOUD_KING = {
+	color = rgb { 64 160 167 }
+	color_ui = rgb { 83 208 217 }
 }
 AFG_DAOUD_KHORASAN = {
 	color = rgb { 190 0 0 }
@@ -4246,4 +4314,12 @@ KIK_EASTAFRICA_2 = {
 LEB_PHOENICIA = {
 	color = rgb { 109 0 205 }
 	color_ui = rgb { 109 0 205 }
+}
+AST_obu_iww = {
+	color = rgb { 97 6 6 }
+	color_ui = rgb { 97 6 6 }
+}
+AST_obu_slp = {
+	color = rgb { 97 6 6 }
+	color_ui = rgb { 97 6 6 }
 }

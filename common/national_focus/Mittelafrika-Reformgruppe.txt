@@ -2366,9 +2366,7 @@ country_event = { id = mittel.112 days = 1 }
 		id = MAF_RFG_meetthenewboss
 		icon = GFX_MAF_meet_the_new_boss
 		available = {
-			ZAM = {
-				is_subject_of = MAF
-			}
+			813 = { is_owned_and_controlled_by = MAF }
 		}
 		x = 14
 		y = 8
@@ -2382,7 +2380,6 @@ country_event = { id = mittel.112 days = 1 }
 			log = "[GetDateText]: [Root.GetName]: Focus MAF_RFG_meetthenewboss"
 				add_political_power = 100
 				add_stability = 0.12
-			
 			custom_effect_tooltip = MAF_improve_situation_in_nordrhodesia
 		}
 	}
@@ -3225,7 +3222,7 @@ country_event = { id = mittel.112 days = 1 }
 			hidden_effect = {
 			if = {
 				limit = {
-					NOT = { has_global_flag = wilhelmiided }
+					NOT = { has_global_flag = Wilhelm_II_Dead }
 				}
 				set_country_flag = MAF_kasier_willyII_gang	
 				create_country_leader = {
@@ -3278,7 +3275,7 @@ country_event = { id = mittel.112 days = 1 }
 			}
 			if = {	
 				limit = {
-					has_global_flag = wilhelmiided 
+					has_global_flag = Wilhelm_II_Dead 
 				}
 				create_country_leader = {
 					name = "Wilhelm I"

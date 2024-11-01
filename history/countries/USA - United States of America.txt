@@ -925,6 +925,8 @@ create_corps_commander = {#
 	name = "Frank W. Milburn"
 	portrait_path = "gfx/leaders/USA/Portrait_USA_Frank_W_Milburn.png"
 	traits = {
+		career_officer
+		infantry_officer
 	}
 	skill = 3
 	attack_skill = 3
@@ -1127,17 +1129,6 @@ create_navy_leader = {# Merlin O'Neill
 ### Operatives ###
 if = {
 	limit = { has_dlc = "La Resistance" }
-	create_operative_leader = {
-		name = "William J. Donovan"
-		GFX = GFX_portrait_william_donovan
-		traits = {
-			operative_natural_orator
-			operative_tough
-		}
-		bypass_recruitment = no
-		available_to_spy_master = yes
-		nationalities = { CSA COR USA TEX CAL NEE WCC }
-	}
 	create_operative_leader = {
 		name = "Sterling Hayden"
 		GFX = GFX_portrait_HOTB_sterling_hayden
